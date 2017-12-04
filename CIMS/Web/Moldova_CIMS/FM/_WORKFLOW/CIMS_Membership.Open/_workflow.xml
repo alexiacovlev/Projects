@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Membership.Open" version="2.0" created="2017-10-23T13:54:19" modified="2017-10-23T13:58:55" author="Admin Admin">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="aspnet_Membership" form="default_by_team" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+</Workflow>

@@ -1,0 +1,11 @@
+<view iconurl="ico.png" icon="false">
+  <row keyfield="Name" displayfield="Name">
+    <cell name="Name" title="Name" />
+    <cell name="Description" title="Description" width="150" />
+  </row>
+  <fetch>
+    <filter>
+      <condition attribute="Name" operator="like" value="MY[_]%" />
+    </filter>
+  </fetch>
+</view>

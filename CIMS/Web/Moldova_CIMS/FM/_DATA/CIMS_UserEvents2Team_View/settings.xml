@@ -1,0 +1,24 @@
+<entity version="4.0">
+  <header title="" />
+  <description title="" />
+  <datasource name="CIMS_UserEvents2Team_View" type="DB" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field title="ID" name="ID" type="Text" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Guid" />
+    <field title="Type Id" name="TypeId" type="Integer" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Int32" />
+    <field title="Activity Type" name="TypeName" type="Text" uimask="00111" readonly="false" required="false" size="50" description="" format="" dbtype="String" />
+    <field title="Activity Details" name="Message" type="Text" uimask="00111" readonly="false" required="false" size="1024" description="" format="textarea" dbtype="StringUnicode" />
+    <field title="Activity Data" name="Data" type="Text" uimask="00111" readonly="false" required="false" size="512" description="" format="textarea" dbtype="StringUnicode" />
+    <field title="User Name" name="UserName" type="Text" uimask="00111" readonly="false" required="false" size="255" description="" format="" dbtype="StringUnicode" />
+    <field title="User Id" name="UserId" type="Lookup" uimask="00111" readonly="false" required="false" size="" description="" format="" dbtype="Guid">
+      <extract view="default" table="aspnet_Membership" />
+    </field>
+    <field title="Event Time" name="EventTime" type="DateTime" uimask="00111" readonly="false" required="true" size="" description="" format="datetime" dbtype="DateTime" />
+    <field title="IP Address" name="IPAddress" type="Text" uimask="00111" readonly="false" required="false" size="50" description="" format="" dbtype="String" />
+    <field title="Application Id" name="ApplicationId" type="Text" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Guid" />
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="Team Id" description="" size="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="" />
+    </field>
+  </fields>
+</entity>

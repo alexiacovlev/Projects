@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<entity generator="1.5" version="1.5">
+  <datasource type="Provider" name="AX.FM.Explorer,AX.FM.Explorer.Providers.ProfileListProvider" />
+  <primarykey>Name</primarykey>
+  <fields>
+    <field name="Name" type="Text" format="" dbtype="" size="200" title="Name" required="true" readonly="false" uimask="00111" />
+    <field name="Roles" type="Text" format="" dbtype="" size="1000" title="Roles" required="false" readonly="false" uimask="00111" />
+		<field name="ParentName" type="Text" format="" dbtype="" size="200" title="ParentName" required="true" readonly="false" uimask="00111" />
+	  <field name="CreatedOn" type="DateTime" format="" dbtype="" size="100" title="Created On" description="" required="false" readonly="false" uimask="00111" />
+	  <field name="ModifiedOn" type="DateTime" format="datetime" dbtype="" size="100" title="Modified On" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

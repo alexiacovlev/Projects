@@ -1,0 +1,26 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Incidents_Comments" />
+  <primarykey>id</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="id" type="Text" format="" dbtype="Guid" size="" title="id" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Comments" type="Text" format="textarea" dbtype="String" size="10000" title="Comments" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ObjectId" type="Lookup" format="" dbtype="Guid" size="" title="Object Id" description="" required="false" readonly="false" uimask="001111">
+      <extract table="AX_Incidents" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" format="" dbtype="String" size="20" title="Modified IP" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Modified On" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedBy" type="Lookup" format="" dbtype="Guid" size="" title="Modified By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Created On" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedBy" type="Lookup" format="" dbtype="Guid" size="" title="Created By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" format="" dbtype="String" size="20" title="Created IP" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Subject" type="Text" format="" dbtype="String" size="250" title="Subject" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Email" type="Text" format="" dbtype="String" size="50" title="Email" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

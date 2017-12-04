@@ -1,0 +1,1 @@
+select ROUND(100*RAND(), 0, 0)

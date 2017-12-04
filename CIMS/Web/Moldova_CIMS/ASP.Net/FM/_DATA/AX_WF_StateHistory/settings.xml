@@ -1,0 +1,24 @@
+<entity version="4.0">
+  <header title="" />
+  <description title="" />
+  <datasource name="AX_WF_StateHistory" type="DB" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field title="ID" name="ID" type="Text" dbtype="Guid" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Instance Id" name="InstanceId" type="Text" dbtype="Guid" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Process Name" name="ProcessName" type="Text" dbtype="String" format="" description="" size="50" required="true" readonly="false" uimask="00111" />
+    <field title="Key Value" name="KeyValue" type="Text" dbtype="String" format="" description="" size="100" required="true" readonly="false" uimask="00111" />
+    <field title="State Name" name="StateName" type="Text" dbtype="String" format="" description="" size="100" required="true" readonly="false" uimask="00111" />
+    <field title="State Title" name="StateTitle" type="Text" dbtype="StringUnicode" format="" description="" size="200" required="false" readonly="false" uimask="00111" />
+    <field title="Initiated By" name="InitiatedBy" type="Lookup" dbtype="Guid" format="" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract view="" table="aspnet_Membership" />
+    </field>
+    <field title="Initiated On" name="InitiatedOn" type="DateTime" dbtype="DateTime" format="datetime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Completed By" name="CompletedBy" type="Lookup" dbtype="Guid" format="" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract view="" table="aspnet_Membership" />
+    </field>
+    <field title="Completed On" name="CompletedOn" type="DateTime" dbtype="DateTime" format="datetime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Table Name" name="TableName" type="Text" dbtype="String" format="" description="" size="50" required="true" readonly="false" uimask="00111" />
+  </fields>
+</entity>

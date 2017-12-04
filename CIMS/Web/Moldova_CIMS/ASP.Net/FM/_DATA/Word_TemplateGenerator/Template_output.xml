@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:o="urn:schemas-microsoft-com:office:office" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+  <o:DocumentProperties>
+    <o:Title>Template</o:Title>
+  </o:DocumentProperties>
+  <w:docPr>
+    <w:view w:val="print" />
+    <w:zoom w:percent="100" />
+    <w:doNotEmbedSystemFonts />
+    <w:attachedTemplate w:val="" />
+    <w:defaultTabStop w:val="720" />
+    <w:punctuationKerning />
+    <w:characterSpacingControl w:val="DontCompress" />
+    <w:optimizeForBrowser />
+    <w:validateAgainstSchema />
+    <w:saveInvalidXML w:val="off" />
+    <w:ignoreMixedContent w:val="off" />
+    <w:alwaysShowPlaceholderText w:val="off" />
+    <w:compat>
+      <w:breakWrappedTables />
+      <w:snapToGridInCell />
+      <w:wrapTextWithPunct />
+      <w:useAsianBreakRules />
+      <w:dontGrowAutofit />
+    </w:compat>
+  </w:docPr>
+  <w:body>
+    <wx:sect>
+      <w:p>
+        <w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:b />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+            <w:u w:val="single" />
+          </w:rPr>
+        </w:pPr>
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:b />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+            <w:u w:val="single" />
+          </w:rPr>
+          <w:t>Sectia 1</w:t>
+        </w:r>
+      </w:p>
+      <w:p>
+        <w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+        </w:pPr>
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+          <w:t>Field 1: </w:t>
+        </w:r>
+        <w:fldSimple w:instr=" MERGEFIELD  Field1  \* MERGEFORMAT ">
+          <w:r>
+            <w:rPr>
+              <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+              <wx:font wx:val="Tahoma" />
+              <w:noProof />
+              <w:sz w:val="20" />
+              <w:sz-cs w:val="20" />
+            </w:rPr>
+            <w:t>«Field1»</w:t>
+          </w:r>
+        </w:fldSimple>
+      </w:p>
+      <w:p>
+        <w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+        </w:pPr>
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+          <w:t>Field 1: </w:t>
+        </w:r>
+        <w:fldSimple w:instr=" MERGEFIELD  Field1  \* MERGEFORMAT ">
+          <w:r>
+            <w:rPr>
+              <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+              <wx:font wx:val="Tahoma" />
+              <w:noProof />
+              <w:sz w:val="20" />
+              <w:sz-cs w:val="20" />
+            </w:rPr>
+            <w:t>«Field1»</w:t>
+          </w:r>
+        </w:fldSimple>
+      </w:p>
+      <w:p>
+        <w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+        </w:pPr>
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+            <wx:font wx:val="Tahoma" />
+            <w:sz w:val="20" />
+            <w:sz-cs w:val="20" />
+          </w:rPr>
+          <w:t>Field 1: </w:t>
+        </w:r>
+        <w:fldSimple w:instr=" MERGEFIELD  Field1  \* MERGEFORMAT ">
+          <w:r>
+            <w:rPr>
+              <w:rFonts w:ascii="Tahoma" w:h-ansi="Tahoma" w:cs="Tahoma" />
+              <wx:font wx:val="Tahoma" />
+              <w:noProof />
+              <w:sz w:val="20" />
+              <w:sz-cs w:val="20" />
+            </w:rPr>
+            <w:t>«Field1»</w:t>
+          </w:r>
+        </w:fldSimple>
+      </w:p>
+      <w:p />
+      <w:sectPr>
+        <w:pgSz w:w="12240" w:h="15840" />
+        <w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="720" w:footer="720" w:gutter="0" />
+        <w:cols w:space="720" />
+        <w:docGrid w:line-pitch="360" />
+      </w:sectPr>
+    </wx:sect>
+  </w:body>
+</w:wordDocument>

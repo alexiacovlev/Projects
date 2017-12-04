@@ -1,0 +1,106 @@
+<form labelwidth="160">
+  <header title="Post an Incident" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Incident" name="sec_info" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Subject" name="Subject" colspan="2" />
+            </row>
+            <row>
+              <cell />
+              <cell title="Priority" name="PriorityCodeId">
+                <properties oncreatevalue="2" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="8" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell title="Number" name="IncidentNr">
+                <properties readonly="true" oncreatevalue="~AUTO:Incident" />
+              </cell>
+              <cell title="Created By" name="CreatedBy">
+                <properties readonly="true" oncreatevalue="~USERID" handlermode="off" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Type" name="IncidentTypeId">
+                <properties oncreatevalue="2" requiredlevel="required" />
+              </cell>
+              <cell title="Status" name="IncidentStatusId">
+                <properties oncreatevalue="1" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Reason" name="StateReason" colspan="2" rowspan="3" />
+            </row>
+            <row />
+            <row />
+            <row>
+              <cell title="Work Time (~, hours)" name="Work_Hours" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Screenshot" name="Tab3">
+      <sections>
+        <section title="Screenshot" name="sec2001" decoration="" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Screenshot" name="Screenshot" colspan="2" rowspan="16" titlepos="off" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="tab3" name="tab3">
+      <sections>
+        <section title="Section 1" name="sec301" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell title="File Attachments List" name="FileAttachments" colspan="2" titlepos="top" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell title="Requested By" name="RequestedBy">
+      <properties oncreatevalue="~USERID" handlermode="editable" />
+    </cell>
+  </hidden>
+</form>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<entity version="3.0">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Events_Categories" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field name="ID" type="Integer" format="" dbtype="Int32" size="" title="ID" description="" required="true" readonly="true" uimask="001111" />
+    <field name="Title" type="Text" format="" dbtype="StringUnicode" size="50" title="Title" description="" required="true" readonly="false" uimask="001111" />
+    <field name="BackgroundColor" type="Text" format="" dbtype="String" size="6" title="BackgroundColorolor" description="" required="false" readonly="false" uimask="001111" />
+    <field name="BorderColor" type="Text" format="" dbtype="String" size="6" title="BorderColor" description="" required="false" readonly="false" uimask="001111" />
+    <field name="TextColor" type="Text" format="" dbtype="String" size="6" title="TextColor" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ApplicationId" type="Text" format="" dbtype="Guid" size="" title="Application Id" description="" required="false" readonly="false" uimask="001111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+  </fields>
+</entity>

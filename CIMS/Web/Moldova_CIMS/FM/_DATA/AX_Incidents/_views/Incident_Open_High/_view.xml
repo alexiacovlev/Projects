@@ -1,0 +1,29 @@
+<view select="true" preview="false" icon="true" expandMode="Info" actions="true" check="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id" imagetype="IncidentType" recordtypefield="IncidentTypeId">
+    <cell name="IncidentNr" title="Incident Nr" width="80" />
+    <cell name="Subject" title="Subject" />
+    <cell name="CreatedOn" title="Created On" width="125" />
+    <cell name="CreatedBy" title="Created By" width="125" showicon="true" />
+    <cell name="IncidentTypeId" title="Type" width="100" align="left" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="IncidentStatusId" operator="eq" value="1" />
+      <condition attribute="PriorityCodeId" operator="eq" value="3" />
+    </filter>
+  </fetch>
+  <rowactions>
+    <item title="Open" handler="EDIT" />
+    <item title="Delete" handler="DELETE" />
+  </rowactions>
+  <rowstyle>
+    <style value="color:#011AF3">
+      <condition attribute="CreatedOn" operator="today" value="" />
+    </style>
+  </rowstyle>
+</view>

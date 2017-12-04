@@ -1,0 +1,25 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="ApplicationNr" title="Application Nr" width="150" />
+    <cell name="LastName" title="Last Name" />
+    <cell name="FirstName" title="First Name" width="147" />
+    <cell name="ApplicantAvgMark" title="Avg Mark" width="100" />
+    <cell name="SpecialCategory" title="Category" width="136" />
+    <cell name="TypeOfFinancing" title="Financing" width="95" />
+    <cell name="LocalityCategory" title="Locality" width="142" />
+    <cell name="Admission_Position" title="Position" width="79" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="TypeOfFinancing" ascending="true" />
+      <column name="SpecialCategory" ascending="true" />
+      <column name="LocalityCategory" ascending="true" />
+      <column name="Admission_Position" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="PersonStatus" operator="eq" value="3" />
+    </filter>
+  </fetch>
+</view>

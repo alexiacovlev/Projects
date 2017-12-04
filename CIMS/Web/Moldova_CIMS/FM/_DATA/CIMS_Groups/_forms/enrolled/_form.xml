@@ -1,0 +1,84 @@
+<form>
+  <header title="Group" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2" visible="false">
+          <rows>
+            <row>
+              <cell title="Group Nr" name="GroupNr">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="GroupStatus" name="GroupStatus">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Admission" name="Admission" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Specialty" name="Specialty" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Enrolled" name="sec1167" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell name="control_305" colspan="2">
+                <content>&lt;control type="GRID" height="550"&gt;
+ &lt;set name="TableName" value="CIMS_Applicant" /&gt;
+ &lt;set name="ViewName" value="enrolled2group" /&gt;
+ &lt;set name="OpenForm" value="PROFILE:CIMS_Applicant" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="false" /&gt;
+ &lt;set name="AllowDelete" value="false" /&gt;
+ &lt;set name="HandlerParameters" value="1200,850" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Admission=[Admission],Specialty=[Specialty]" /&gt;
+ &lt;set name="CustomActionsXml" value="&amp;lt;menu&amp;gt;&amp;lt;item title=&amp;quot;Add to group&amp;quot; image=&amp;quot;star.png&amp;quot; command=&amp;quot;WORKFLOW&amp;quot; width=&amp;quot;1000&amp;quot; height=&amp;quot;650&amp;quot; full=&amp;quot;&amp;quot; pos=&amp;quot;out&amp;quot; showoutlabel=&amp;quot;true&amp;quot; ico=&amp;quot;a0d1&amp;quot; value=&amp;quot;CIMS_EnrolledToGroup&amp;quot; attributes=&amp;quot;id,pid=[KeyValue]&amp;quot;/&amp;gt;&amp;lt;/menu&amp;gt;" /&gt;
+
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Group: #GroupNr#</windowMask>
+</form>

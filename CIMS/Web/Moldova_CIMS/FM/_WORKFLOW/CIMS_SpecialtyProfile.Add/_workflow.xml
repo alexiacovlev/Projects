@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_SpecialtyProfile.Add" version="2.0" created="2017-10-10T11:21:02" modified="2017-10-10T11:21:29" author="Iure Coroban">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_SpecialtyProfile" form="default" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+        <Field name="TeamId" value="~TEAM" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+</Workflow>

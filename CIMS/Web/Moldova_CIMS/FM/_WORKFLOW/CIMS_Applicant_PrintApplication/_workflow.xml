@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Applicant_PrintApplication" version="2.0" created="2017-11-03T12:07:23" modified="2017-11-03T12:09:05" author="Admin Admin">
+  <Sequence>
+    <SubWorkflow name="SubWorkflow47" title="Sub Workflow">
+      <Settings workflow="CIMS_ShowDocument" />
+      <Assign>
+        <Field name="TableName" value="'CIMS_Applicant'" />
+        <Field name="TemplateName" value="'cerere'" />
+        <Field name="RecordID" value="$id" />
+        <Field name="RefObjectID" value="$id" />
+        <Field name="Type" value="'PDF'" />
+      </Assign>
+    </SubWorkflow>
+  </Sequence>
+</Workflow>

@@ -1,0 +1,4 @@
+<mapNode type="GRID" modifiedby="Iure Coroban" modifiedon="2017-10-13T15:12:21">
+  <set name="TableName" value="CIMS_Sections" />
+  <set name="ViewName" value="by_team" />
+</mapNode>

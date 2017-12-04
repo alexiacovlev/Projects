@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<entity version="3.0">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="aspnet_Profile" />
+	<primarykey>UserId</primarykey>
+	<watermark>Images/Views/Logo_Default.png</watermark>
+	<fields>
+		<field name="UserId" type="Lookup" format="" dbtype="Guid" size="" title="User Id" description="" required="true" readonly="false" uimask="001111">
+			<extract table="aspnet_Users" view="default" />
+		</field>
+		<field name="PropertyNames" type="Text" format="textarea" dbtype="String" size="1073741823" title="Property Names" description="" required="true" readonly="false" uimask="001111" />
+		<field name="PropertyValuesString" type="Text" format="textarea" dbtype="String" size="1073741823" title="Property Values String" description="" required="true" readonly="false" uimask="001111" />
+		<field name="PropertyValuesBinary" type="Image" format="" dbtype="Byte[]" size="" title="Property Values Binary" description="" required="true" readonly="false" uimask="001111" />
+		<field name="LastUpdatedDate" type="DateTime" format="" dbtype="DateTime" size="" title="Last Updated Date" description="" required="true" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

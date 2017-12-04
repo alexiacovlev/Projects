@@ -1,0 +1,9 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2012-05-14T21:22:34">
+  <set name="TableName" value="BASE:UsersOnline" />
+  <set name="ViewName" value="default" />
+  <set name="OnRecordOpen" value="DoNothing" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Send Message to user(s)&quot; image=&quot;user_comment.png&quot; command=&quot;CLIENTCONTROL&quot; value=&quot;AX.OnlineTrackerIM|ASP.Net/System/Admin/OnlineTracker/AX.OnlineTracker.js&quot; attributes=&quot;SessionIDs=[ids]&quot; pos=&quot;out&quot; width=&quot;500&quot; height=&quot;200&quot; full=&quot;&quot; showoutlabel=&quot;true&quot;/&gt;&#xD;&#xA;	&lt;item title=&quot;Lock user(s)&quot; image=&quot;user_delete.png&quot; command=&quot;CLIENTCONTROL&quot; value=&quot;AX.OnlineTrackerLock|ASP.Net/System/Admin/OnlineTracker/AX.OnlineTracker.js&quot; attributes=&quot;SessionIDs=[ids]&quot; pos=&quot;out&quot; width=&quot;500&quot; height=&quot;150&quot; full=&quot;&quot; showoutlabel=&quot;true&quot;/&gt;&#xD;&#xA;	&lt;item title=&quot;Logout user(s)&quot; image=&quot;user_silhouette.png&quot; command=&quot;CLIENTCONTROL&quot; value=&quot;AX.OnlineTrackerLogout|ASP.Net/System/Admin/OnlineTracker/AX.OnlineTracker.js&quot; attributes=&quot;SessionIDs=[ids]&quot; pos=&quot;out&quot; width=&quot;450&quot; height=&quot;150&quot; full=&quot;&quot; showoutlabel=&quot;true&quot;/&gt;&#xD;&#xA;&lt;/menu&gt;&#xD;&#xA;" />
+  <set name="ShowGridFilterPanel" value="false" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

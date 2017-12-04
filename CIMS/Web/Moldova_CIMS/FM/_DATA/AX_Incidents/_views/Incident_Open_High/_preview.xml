@@ -1,0 +1,14 @@
+<preview>
+  <rows>
+    <row>
+      <cell name="Comments" title="Comments" />
+    </row>
+    <row>
+      <cell name="CreatedBy" title="Created By" />
+      <cell name="CreatedOn" title="Created On" />
+    </row>
+    <row>
+      <cell name="Description" title="Description" />
+    </row>
+  </rows>
+</preview>

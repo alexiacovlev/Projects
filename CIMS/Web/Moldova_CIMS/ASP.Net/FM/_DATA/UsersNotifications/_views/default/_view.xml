@@ -1,0 +1,21 @@
+<view select="true" preview="false" check="true" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Header" title="Header" width="150" />
+    <cell name="Text" title="Text" />
+    <cell name="UserId" title="Addressed To" width="125" />
+    <cell name="CreatedBy" title="Created By" width="125" />
+    <cell name="CreatedOn" title="Created On" width="125" />
+    <cell name="IsRead" title="Is Read" width="75" align="center" />
+    <cell name="ReadOn" title="Read On" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" value="" />
+    </filter>
+  </fetch>
+</view>

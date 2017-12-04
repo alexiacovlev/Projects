@@ -1,0 +1,48 @@
+<form padding="big">
+  <header title="Task Details" />
+  <description title="Task Details" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" columns="2" decoration="line" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Title" name="Title" colspan="2" />
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="3" />
+            </row>
+            <row />
+            <row />
+            <row>
+              <cell title="Is Completed" name="IsCompleted" />
+              <cell title="Completed On" name="CompletedOn" />
+            </row>
+            <row>
+              <cell title="Status" name="Status" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Regarding Id" name="RegardingId" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+  </hidden>
+</form>

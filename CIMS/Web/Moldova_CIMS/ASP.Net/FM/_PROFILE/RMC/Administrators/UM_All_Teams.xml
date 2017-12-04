@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false">
+  <set name="TableName" value="aspnet_Teams" />
+  <set name="ViewName" value="default" />
+  <set name="AllowCreate" value="True" />
+  <set name="AllowDelete" value="True" />
+  <set name="OnRecordOpen" value="OpenEditableForm" />
+  <set name="CreateParameters" value="400,250,false" />
+  <set name="HandlerParameters" value="400,250,false" />
+</mapNode>

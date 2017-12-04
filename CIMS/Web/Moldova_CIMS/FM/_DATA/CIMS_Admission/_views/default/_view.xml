@@ -1,0 +1,19 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Year" title="Year" width="100" />
+    <cell name="Status" title="Status" width="150" />
+    <cell name="TeamId" title="College" />
+    <cell name="ResponsiblePerson" title="Responsible Person" width="200" />
+    <cell name="CreatedOn" title="Created On" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Year" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

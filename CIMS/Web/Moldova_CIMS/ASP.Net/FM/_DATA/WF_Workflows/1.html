@@ -1,0 +1,87 @@
+<table border="1" cellpadding="2" cellspacing="0" style="BORDER-COLLAPSE: collapse"
+        width="100%">
+        <tr>
+            <th colspan="2" style="COLOR: white; BACKGROUND-COLOR: blue">
+                Incident " <%= IncidentNumber %> "</th>
+        </tr>
+        <tr>
+            <td style="HEIGHT: 18px">
+                Portal:</td>
+            <td style="HEIGHT: 18px">
+                <b><%= PortalName %><b></td>
+        </tr>
+        <tr>
+            <td>
+                Url:</td>
+            <td><a href='http://gdt.tirana.bz/gdt/Help.aspx' target='_blank'> Incident Management Page</a>
+                </td>
+        </tr>
+        <tr>
+            <td style="HEIGHT: 18px" nowrap>
+                Incident Number:</td>
+            <td style="HEIGHT: 18px">
+                <b><%= IncidentNumber %> </b></td>
+        </tr>
+        <tr>
+            <td style="HEIGHT: 18px">
+                Incident Type:</td>
+            <td style="HEIGHT: 18px">
+            <b>
+                   <%= IncidentType %>
+                </b>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                Submitted By:</td>
+            <td>
+                <b><%= SubmittedBy %></b>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                Email:</td>
+            <td> <A href="mailto:<%= SubmittedEmail %>"><%= SubmittedEmail %></A>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                SubmittedIP:</td>
+            <td width="100%">
+                <b><%= SubmittedIP %></b></td>
+        </tr>
+        <tr>
+            <td>
+                Date:</td>
+            <td width="100%">
+                <b><%= SubmittedOn %></b></td>
+        </tr>
+
+        <tr>
+            <td>
+                Incident Subject:</td>
+            <td>
+                <b><%= IncidentSubject %></b></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                Incident Description:</th>
+        </tr>
+        <tr>
+            <td colspan="2"><br>
+                <font color="black"><b><%= IncidentDescription %>
+                    <br>
+                </b></font></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                NOTE:</th>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                Please do not reply to this message, which was sent from an unmonitored e-mail address.<br>
+                Mail sent to this address cannot be answered.</td>
+        </tr>
+    </table>
+
+

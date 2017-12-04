@@ -1,0 +1,119 @@
+<form padding="big" labelwidth="100">
+  <header title="Lesson Time" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="false" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Hour Nr" name="HourNr" titlepos="top">
+                <properties requiredlevel="required" oncreatevalue="1" />
+              </cell>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Start Time" name="control_727" titlepos="top">
+                <content>&lt;input id='StartTime_Hours' class='fm' type='number' style='width:3em' maxlength='2' min='6' max='20'/&gt;
+&lt;label&gt;:&lt;/label&gt;
+&lt;input id='StartTime_Minutes' class='fm' type='number' style='width:3em' maxlength='2' min='0' max='59'/&gt;</content>
+              </cell>
+              <cell title="Duration" name="Duration" titlepos="top">
+                <properties requiredlevel="required" oncreatevalue="45" />
+              </cell>
+              <cell title="End Time" name="control_518" titlepos="top">
+                <content>&lt;input id='EndTime_Hours' class='fm' type='number' style='width:3em' maxlength='2' min='6' max='20' disabled='disabled'/&gt;
+&lt;label&gt;:&lt;/label&gt;
+&lt;input id='EndTime_Minutes' class='fm' type='number' style='width:3em' maxlength='2' min='0' max='59' disabled='disabled'/&gt;</content>
+              </cell>
+            </row>
+            <row>
+              <cell title="Comments" name="Comments" colspan="3" titlepos="top" />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1317" showlabel="true" decoration="line" columns="2" visible="false">
+          <rows>
+            <row>
+              <cell title="StartTime" name="StartTime">
+                <properties requiredlevel="required" oncreatevalue="480" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="EndTime" name="EndTime" titlepos="top">
+                <properties readonly="control" requiredlevel="required" oncreatevalue="525" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell title="TeamId" name="TeamId">
+      <properties oncreatevalue="~TEAM" />
+    </cell>
+  </hidden>
+  <handlers>
+    <onloadscript enablereadonly="true">var $h1= frm.getElement('StartTime_Hours');
+var $m1= frm.getElement('StartTime_Minutes');
+
+var mins= frm.getNumber('StartTime');
+var h= Math.floor(mins/60);
+var m= mins%60;
+$h1.val(DT_pad(h.toString()));
+$m1.val(DT_pad(m.toString()));
+
+var $h2= frm.getElement('EndTime_Hours');
+var $m2= frm.getElement('EndTime_Minutes');
+
+var mins= frm.getNumber('EndTime');
+var h= Math.floor(mins/60);
+var m= mins%60;
+$h2.val(DT_pad(h.toString()));
+$m2.val(DT_pad(m.toString()));
+
+var f= function(e){
+  var h= 0; var m= 0; var d= 45;
+  try { d=  parseInt(frm.getValue('Duration')); } catch (e) {}
+  try {
+    h= parseInt($h1.val().trim());
+    m= parseInt($m1.val().trim()); 
+    frm.setValue('StartTime', h*60+m);
+    frm.setValue('EndTime', h*60+m+d);
+    var mins= h*60+m+d;
+    h= Math.floor(mins/60);
+    m= mins%60;
+    $h2.val(DT_pad(h.toString()));
+    $m2.val(DT_pad(m.toString()));
+  } catch (e) {if (b!=null) fm.alert('Wrong number');}
+};
+$h1.change(f);
+$m1.change(f);</onloadscript>
+  </handlers>
+</form>

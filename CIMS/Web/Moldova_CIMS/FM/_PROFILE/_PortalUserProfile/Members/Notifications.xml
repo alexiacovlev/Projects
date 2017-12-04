@@ -1,0 +1,10 @@
+<mapNode type="GRID" modifiedon="2016-10-18T13:40:00" modifiedby="Michael ">
+  <set name="TableName" value="BASE:UsersNotifications" />
+  <set name="ViewName" value="personal" />
+  <set name="OpenForm" value="personal_open" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="HandlerParameters" value="500,350" />
+  <set name="ShowGridFilterPanel" value="false" />
+</mapNode>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list name="IsApproved">
+    <item title="Disabled" value="false" />
+    <item title="Approved" value="true" />
+  </list>
+  <list name="IsLockedOut">
+    <item title="Not locked" value="false" />
+    <item title="Locked" value="true" />
+  </list>
+  <list name="PasswordFormat">
+    <item title="Open" value="0" />
+    <item title="Encrypted" value="1" />
+  </list>
+</options>

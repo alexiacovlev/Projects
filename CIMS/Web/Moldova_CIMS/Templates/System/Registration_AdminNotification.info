@@ -1,0 +1,7 @@
+<info>
+  <description>This email will be send to the portal administrator after New user ragistration on the portal.</description>
+  <more>Available Varables:
+[# URL #]
+[# FullName #]
+[# UserName #]</more>
+</info>

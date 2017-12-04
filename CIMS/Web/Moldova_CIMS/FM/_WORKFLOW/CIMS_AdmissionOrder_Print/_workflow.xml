@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_AdmissionOrder_Print" version="2.0" created="2017-11-02T15:09:46" modified="2017-11-02T15:17:20" author="Admin Admin">
+  <Sequence>
+    <XmlIsland name="DATA967" title="Select">
+      <Settings table="CIMS_AdmissionOrders" />
+      <FieldSet>
+        <Field name="id" />
+        <Field name="Specialty" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <SubWorkflow name="SubWorkflow15" title="Sub Workflow">
+      <Settings workflow="CIMS_ShowDocument" />
+      <Assign>
+        <Field name="TableName" value="'CIMS_AdmissionOrders'" />
+        <Field name="TemplateName" value="'inmatriculare'" />
+        <Field name="RecordID" value="DATA967:_KEYVALUE_" />
+        <Field name="RefObjectID" value="DATA967:Specialty" />
+        <Field name="Type" value="'PDF'" />
+      </Assign>
+    </SubWorkflow>
+  </Sequence>
+</Workflow>

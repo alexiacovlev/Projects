@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-10T14:21:42">
+  <set name="TableName" value="CIMS_Groups" />
+  <set name="ViewName" value="default" />
+  <set name="OpenForm" value="PROFILE:CIMS_Groups_Show" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="HandlerParameters" value="1200,850" />
+</mapNode>

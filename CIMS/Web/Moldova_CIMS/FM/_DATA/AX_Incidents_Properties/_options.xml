@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list name="CopyToCC">
+    <item title="No" value="0" />
+    <item title="Yes" value="1" />
+  </list>
+  <list name="SendToServer">
+    <item title="No" value="0" />
+    <item title="Yes" value="1" />
+  </list>
+  <list name="CopyToCC_Update">
+    <item title="No" value="0" />
+    <item title="Yes" value="1" />
+  </list>
+</options>

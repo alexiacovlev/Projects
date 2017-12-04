@@ -1,0 +1,23 @@
+<view select="true" check="false" icon="false" preview="false">
+  <row keyfield="atID">
+    <cell title="Event Time" name="atDateCreated" width="125" />
+    <cell title="Action" name="atAction" width="75" />
+    <cell title="Table" name="atTable" width="150" />
+    <cell title="Context" name="atObject" width="100" />
+    <cell title="Info" name="atInfo" nowrap="true" />
+    <cell title="KeyValue" name="atKeyValue" width="273" />
+    <cell title="IP" name="atIP" width="100" />
+    <cell title="User" name="atUserId" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="atDateCreated" ascending="false" />
+    </sort>
+    <filter />
+    <groups>
+      <group name="atTable" ascending="false" />
+    </groups>
+  </fetch>
+  <header title="" />
+  <description title="" />
+</view>

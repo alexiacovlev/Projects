@@ -1,0 +1,84 @@
+<form>
+  <header title="Enrollement Order" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties oncreatevalue="~TEAM" requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Admission" name="Admission" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Specialty" name="Specialty" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Order Nr" name="OrderNr">
+                <properties requiredlevel="required" oncreatevalue="~AUTO:OrderNr" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Order Date" name="OrderDate">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Admission Chairman" name="AdmissionChairman">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Responsible Person" name="ResponsiblePerson">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1435" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="OrderStatus" name="OrderStatus">
+                <properties oncreatevalue="1" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+  </hidden>
+  <windowMask>Order: #OrderNr#, #Specialty#</windowMask>
+</form>

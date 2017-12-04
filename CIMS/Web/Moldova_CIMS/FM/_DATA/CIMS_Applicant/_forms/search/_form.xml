@@ -1,0 +1,63 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Personal Data" name="sec1257" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="First Name" name="FirstName">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Middle Name" name="MiddleName">
+                <properties requiredlevel="recommended" />
+              </cell>
+              <cell title="Last Name" name="LastName">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Birthday" name="BirthDay">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Gender" name="Gender">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Living Environment" name="LivingEnvironment" />
+            </row>
+            <row>
+              <cell title="Place Of Birth" name="BirthPlace" colspan="3">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

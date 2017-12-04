@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Study Plan" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="a0c2" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Study Plan Items" name="Items" image="folder.png" ico="a0c2" control="GRID" dependonkey="true">
+      <Folders />
+    </Folder>
+    <Folder title="Practice Plan Items" name="Practice_Plan_Items" image="folder.png" ico="a0c2" control="GRID" dependonkey="true">
+      <Folders />
+    </Folder>
+    <Folder title="Exams Plan Items" name="Exams_Plan_Items" image="folder.png" ico="a0c2" control="GRID" dependonkey="true">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Dashboard" type="Dashboard"/>
+	<xs:complexType name="Dashboard">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:normalizedString" default="Please Enter Title Here"/>
+			<xs:element name="Description" type="xs:normalizedString"/>
+			<xs:element name="ResourceFileName" type="xs:normalizedString" minOccurs="0"
+				maxOccurs="1"/>
+			<xs:element name="Charts" type="Charts"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Charts">
+		<xs:sequence>
+			<xs:element maxOccurs="9" minOccurs="1" name="ChartView" type="ChartView"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChartView">
+		<xs:sequence>
+			<xs:element name="Configuration" type="Configuration" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Subtitle" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Data" type="DataConfiguration" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AxisX" type="AxisX" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AxisY" type="AxisY" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ColorColumn" type="ColorColumn" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="TextColumn" type="TextColumn" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Legend" type="Legend" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ClickAction" type="ClickAction" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GaugeSettings" type="GaugeSettings" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Auto" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GaugeSettings">
+		<xs:sequence>
+			<xs:element name="PlotBands" type="PlotBands" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Pane" type="Pane" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="min" type="xs:int"/>
+		<xs:attribute name="max" type="xs:int"/>
+		<xs:attribute name="hideSeriesLabels" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="PlotBands">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" minOccurs="1" name="PlotBand" type="PlotBand"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PlotBand">
+		<xs:attribute name="from" type="xs:int" use="required"/>
+		<xs:attribute name="to" type="xs:int" use="required"/>
+		<xs:attribute name="color" type="xs:string" use="required"/>
+
+	</xs:complexType>
+	<xs:complexType name="Pane">
+		<xs:attribute name="startAngle" type="xs:int" use="required"/>
+		<xs:attribute name="endAngle" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="GridView">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Data" type="DataConfiguration" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Columns" type="Columns" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="OpenHandler" type="OpenHandler" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Columns">
+		<xs:sequence>
+			<xs:element name="Column" type="Column" minOccurs="1" maxOccurs="20"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OpenHandler">
+		<xs:attribute name="type" type="xs:normalizedString"/>
+		<xs:attribute name="name" type="xs:normalizedString"/>
+		<xs:attribute name="tableName" type="xs:normalizedString" use="optional"/>
+		<xs:attribute name="readonly" type="xs:boolean" use="optional"/>
+		<xs:attribute name="windowWidth" type="xs:int" default="800"/>
+		<xs:attribute name="windowHeight" type="xs:int" default="500"/>
+	</xs:complexType>
+	<xs:complexType name="Column">
+		<xs:attribute name="name" type="xs:normalizedString"/>
+		<xs:attribute name="title" type="xs:normalizedString"/>
+		<xs:attribute name="isId" type="xs:boolean" default="false"/>
+		<xs:attribute name="width" type="xs:int" default="100"/>
+		<xs:attribute name="hidden" type="xs:boolean" default="false"/>
+		<xs:attribute name="sortDirection" type="SortDirections" use="optional"/>
+		<xs:attribute name="sortable" type="xs:boolean" use="optional"/>
+		<xs:attribute name="align" type="HorizontalAlign" default="center" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ClickAction">
+		<xs:choice>
+			<xs:element name="DrillDownChart" type="ChartView" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="DrillDownGrid" type="GridView" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="JsFunction" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Legend">
+		<xs:attribute name="position" type="LegendPositions" default="bottom-right"/>
+		<xs:attribute name="title" type="xs:normalizedString" use="optional"/>
+		<xs:attribute name="layout" type="Layout" default="vertical"/>
+		<xs:attribute name="translate" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ColorColumn">
+		<xs:sequence>
+			<xs:element name="Data" type="DataColumnConfiguration" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TextColumn">
+		<xs:sequence>
+			<xs:element name="Data" type="DataColumnConfiguration" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AxisX">
+		<xs:sequence>
+			<xs:element name="Labels" type="ElementLabel" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Data" type="DataColumnConfiguration" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="TitleColumn" type="DataColumnConfiguration" minOccurs="0"
+				maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="title" type="xs:normalizedString"/>
+		<xs:attribute name="min" type="xs:string" use="optional"/>
+		<xs:attribute name="max" type="xs:string" use="optional"/>
+		<xs:attribute name="translate" type="xs:string" use="optional"/>
+		<xs:attribute name="opposite" type="xs:string" use="optional"/>
+		<xs:attribute name="reversed" type="xs:string" use="optional"/>
+		<xs:attribute name="logarithmic" type="xs:string" use="optional"/>
+		<xs:attribute name="rotation" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="AxisY">
+		<xs:sequence>
+			<xs:element name="Labels" type="ElementLabel" minOccurs="0" maxOccurs="1"
+				nillable="true"/>
+			<xs:element name="Ys" type="Ys" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="title" type="xs:normalizedString" use="optional"/>
+		<xs:attribute name="min" type="xs:string" use="optional"/>
+		<xs:attribute name="max" type="xs:string" use="optional"/>
+		<xs:attribute name="opposite" type="xs:string" use="optional"/>
+		<xs:attribute name="reversed" type="xs:string" use="optional"/>
+		<xs:attribute name="logarithmic" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Ys">
+		<xs:sequence>
+			<xs:element name="Y" type="Y" minOccurs="1" maxOccurs="20"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Y">
+		<xs:sequence>
+			<xs:element name="Data" type="DataColumnConfiguration"/>
+		</xs:sequence>
+		<xs:attribute name="title" type="xs:string" use="optional"/>
+		<xs:attribute name="translate" type="xs:boolean" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Configuration">
+		<xs:sequence>
+			<xs:element name="Style" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Colors" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="type" type="ChartTypes" default="column"/>
+		<xs:attribute name="showTitle" type="xs:boolean" default="true"/>
+		<xs:attribute name="showLegend" type="xs:boolean" default="true"/>
+		<xs:attribute name="showPrint" type="xs:boolean" default="false"/>
+		<xs:attribute name="showExport" type="xs:boolean" default="false"/>
+		<xs:attribute name="borderWidth" type="xs:int" use="optional"/>
+		<xs:attribute name="backgroundColor" type="xs:string" use="optional"/>
+		<xs:attribute name="borderColor" type="xs:string" use="optional"/>
+		<xs:attribute name="borderRadius" type="xs:int" use="optional"/>
+		<xs:attribute name="plotBorderWidth" type="xs:int" use="optional"/>
+		<xs:attribute name="plotBackgroundColor" type="xs:string" use="optional"/>
+		<xs:attribute name="plotBorderColor" type="xs:string" use="optional"/>
+
+		<xs:attribute name="spacingTop" type="xs:string" use="optional"/>
+		<xs:attribute name="spacingBottom" type="xs:string" use="optional"/>
+		<xs:attribute name="spacingLeft" type="xs:string" use="optional"/>
+		<xs:attribute name="spacingRight" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="DataConfiguration">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element name="Table" type="xs:normalizedString"/>
+				<xs:element name="SqlQuery" type="xs:normalizedString"/>
+				<xs:element name="StoredProcedure" type="StoredProcedure"/>
+				<xs:element name="FakeDataSet" type="FakeDataSet"/>
+			</xs:choice>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Parameters" type="Parameters" minOccurs="0"/>
+				<xs:element name="Labels" type="ElementLabel" minOccurs="0"/>
+				<xs:element name="Filters" type="Filters" minOccurs="0"/>
+			</xs:choice>
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:complexType name="Parameters">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="Parameter" type="Parameter"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Filters">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="Filter" type="Filter"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ElementLabel">
+		<xs:sequence>
+			<xs:element name="Formatter" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Format" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Style" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="rotation" type="xs:string" use="optional"/>
+		<xs:attribute name="color" type="xs:string" use="optional"/>
+		<xs:attribute name="align" type="HorizontalAlign" default="center" use="optional"/>
+		<xs:attribute name="verticalAlign" type="VerticalAlign" default="top" use="optional"/>
+		<xs:attribute name="y" type="xs:string" use="optional"/>
+		<xs:attribute name="x" type="xs:string" use="optional"/>
+		<xs:attribute name="truncate" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Parameter">
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="type" type="xs:string" use="required"/>
+		<xs:attribute name="from" type="DrillDownFrom" default="none"/>
+		<xs:attribute name="value" type="xs:normalizedString" use="optional"/>
+		<xs:attribute name="defaultValue" type="xs:normalizedString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Filter">
+		<xs:attribute name="field" type="xs:string" use="required"/>
+		<xs:attribute name="type" type="DataTypes" use="required"/>
+		<xs:attribute name="condition" type="xs:normalizedString" use="required"/>
+		<xs:attribute name="value" type="xs:normalizedString" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="StoredProcedure">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FakeDataSet">
+		<xs:sequence>
+			<xs:element name="Fields" type="Fields" minOccurs="0" maxOccurs="10"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Fields">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="Field" type="Field"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Field">
+		<xs:attribute name="type" type="DataTypes" default="string"/>
+		<xs:attribute name="name" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="DataColumnConfiguration">
+		<xs:attribute name="column" type="xs:normalizedString" use="required"/>
+		<xs:attribute name="sortDirection" type="SortDirections" use="optional"/>
+		<xs:attribute name="dataType" type="DataTypes" default="string"/>
+		<xs:attribute name="color" type="xs:string" use="optional"/>
+		<xs:attribute name="function" type="SqlAgregations" default="value"/>
+	</xs:complexType>
+
+	<xs:simpleType name="LegendPositions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="top-left"/>
+			<xs:enumeration value="topleft"/>
+			<xs:enumeration value="top-right"/>
+			<xs:enumeration value="topright"/>
+			<xs:enumeration value="top-center"/>
+			<xs:enumeration value="topcenter"/>
+			<xs:enumeration value="bottom-left"/>
+			<xs:enumeration value="bottomleft"/>
+			<xs:enumeration value="bottom-right"/>
+			<xs:enumeration value="bottomright"/>
+			<xs:enumeration value="bottom-center"/>
+			<xs:enumeration value="bottomcenter"/>
+			<xs:enumeration value="middle-left"/>
+			<xs:enumeration value="middleleft"/>
+			<xs:enumeration value="middle-right"/>
+			<xs:enumeration value="middleright"/>
+			<xs:enumeration value="middle-center"/>
+			<xs:enumeration value="middlecenter"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SortDirections">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="asc"/>
+			<xs:enumeration value="desc"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SqlAgregations">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="value"/>
+			<xs:enumeration value="sum"/>
+			<xs:enumeration value="average"/>
+			<xs:enumeration value="count"/>
+			<xs:enumeration value="min"/>
+			<xs:enumeration value="max"/>
+			<xs:enumeration value="year"/>
+			<xs:enumeration value="yearMonth"/>
+			<xs:enumeration value="month"/>
+			<xs:enumeration value="shortMonth"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HorizontalAlign">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VerticalAlign">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="top"/>
+			<xs:enumeration value="middle"/>
+			<xs:enumeration value="bottom"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Layout">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="vertical"/>
+			<xs:enumeration value="horizontal"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="int"/>
+			<xs:enumeration value="money"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="double"/>
+			<xs:enumeration value="dateTime"/>
+			<xs:enumeration value="time"/>
+			<xs:enumeration value="date"/>
+			<xs:enumeration value="boolean"/>
+			<xs:enumeration value="guid"/>
+			<xs:enumeration value="picklist"/>
+			<xs:enumeration value="lookup"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DrillDownFrom">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="serie"/>
+			<xs:enumeration value="x"/>
+			<xs:enumeration value="y"/>
+			<xs:enumeration value="parameterSerie"/>
+			<xs:enumeration value="parameterX"/>
+			<xs:enumeration value="parameterY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ChartTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="line"/>
+			<xs:enumeration value="pie"/>
+			<xs:enumeration value="bar"/>
+			<xs:enumeration value="area"/>
+			<xs:enumeration value="column"/>
+			<xs:enumeration value="stackedBar"/>
+			<xs:enumeration value="stackedColumn"/>
+			<xs:enumeration value="gauge"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

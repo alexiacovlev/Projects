@@ -1,0 +1,13 @@
+<preview>
+  <rows>
+    <row>
+      <cell name="Description" title="Description" />
+    </row>
+    <row>
+      <cell name="StateHistory" title="State History" />
+    </row>
+    <row>
+      <cell name="UserComments" title="Questions" />
+    </row>
+  </rows>
+</preview>

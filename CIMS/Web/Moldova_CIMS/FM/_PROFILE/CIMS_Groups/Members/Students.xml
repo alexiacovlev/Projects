@@ -1,0 +1,10 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-08T14:05:11">
+  <set name="TableName" value="CIMS_Student" />
+  <set name="ViewName" value="students_in_group" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="InputFilterField" value="GroupId=$id" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Add Enrolled&quot; image=&quot;star.png&quot; command=&quot;WORKFLOW&quot; width=&quot;1200&quot; height=&quot;850&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; ico=&quot;a0d1&quot; value=&quot;CIMS_Groups_AddEnrolled&quot; attributes=&quot;key=$id&quot;/&gt;&lt;/menu&gt;" />
+  <set name="OpenForm" value="PROFILE:CIMS_Student" />
+  <set name="HandlerParameters" value="1200,850" />
+</mapNode>

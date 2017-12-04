@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Michael " modifiedon="2014-01-24T16:07:10">
+  <set name="TableName" value="AX_Incidents_Type" />
+  <set name="ViewName" value="default" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

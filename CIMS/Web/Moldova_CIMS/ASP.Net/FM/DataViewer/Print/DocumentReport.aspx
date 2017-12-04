@@ -1,0 +1,1 @@
+<%@ Page language="C#" AutoEventWireup="false" Inherits="AX.FM.Export.DocumentReport" %>

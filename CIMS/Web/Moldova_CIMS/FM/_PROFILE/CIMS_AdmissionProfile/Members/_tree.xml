@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Admission" name="" image="" navigator="false" width="200">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="a0c2" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Applicants" name="Applicants" image="folder.png" ico="a0c2" control="">
+      <Folders>
+        <Folder title="Submitted" name="Submitted" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Accepted" name="Accepted" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Canceled" name="Canceled" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Rejected" name="Rejected" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Admission" name="Admission" image="folder.png" ico="a0c2" control="">
+      <Folders>
+        <Folder title="Candidates" name="Candidates" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Enrollment" name="Enrollment" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Enrolled" name="Enrolled" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Rejected" name="Rejected_Candidates" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Students" name="Students" image="folder.png" ico="a0c2" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

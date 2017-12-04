@@ -1,0 +1,6 @@
+<mapNode type="GRID" modifiedby="Michael " modifiedon="2012-09-07T16:02:02">
+  <set name="TableName" value="BASE:UsersNotifications" />
+  <set name="ViewName" value="default" />
+  <set name="ShowGridFilterPanel" value="false" />
+  <set name="AllowCreate" value="false" />
+</mapNode>

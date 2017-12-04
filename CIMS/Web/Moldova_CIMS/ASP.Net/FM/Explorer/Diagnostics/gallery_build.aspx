@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gallery_build.aspx.cs" Inherits="AX.FM.Explorer.GalleryBuilderForm" %>

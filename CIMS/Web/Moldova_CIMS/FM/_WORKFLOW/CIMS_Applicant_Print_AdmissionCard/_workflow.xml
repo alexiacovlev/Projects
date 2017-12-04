@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Applicant_Print_AdmissionCard" version="2.0" created="2017-11-06T12:17:38" modified="2017-11-06T12:19:52" author="Admin Admin">
+  <Sequence>
+    <SubWorkflow name="SubWorkflow47" title="Sub Workflow">
+      <Settings workflow="CIMS_ShowDocument" />
+      <Assign>
+        <Field name="TableName" value="'CIMS_Applicant'" />
+        <Field name="TemplateName" value="'fisa'" />
+        <Field name="RecordID" value="$id" />
+        <Field name="RefObjectID" value="$id" />
+        <Field name="Type" value="'PDF'" />
+      </Assign>
+    </SubWorkflow>
+  </Sequence>
+</Workflow>

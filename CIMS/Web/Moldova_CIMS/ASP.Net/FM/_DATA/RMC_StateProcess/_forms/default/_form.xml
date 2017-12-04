@@ -1,0 +1,29 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="Name" title="Name" colspan="2" />
+            </row>
+            <row>
+              <cell name="PublishedBy" title="Published By" colspan="2" />
+            </row>
+            <row>
+              <cell name="PublishedOn" title="Published On" colspan="2" />
+            </row>
+            <row>
+              <cell name="IsPublished" title="Is Published" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

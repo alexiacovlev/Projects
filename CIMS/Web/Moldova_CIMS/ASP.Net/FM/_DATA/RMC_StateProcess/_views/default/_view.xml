@@ -1,0 +1,17 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell title="Name" name="Name" width="200" />
+    <cell title="Title" name="Title" filter="true" />
+    <cell title="Instance Count" name="InstanceCount" width="150" align="center" />
+  </row>
+  <!--rowstyle>
+    <style value="font-weight:bold">
+      <condition attribute="IsPublished" operator="eq-true" value="" />
+    </style>
+  </rowstyle-->
+  <fetch>
+    <sort>
+      <column name="Title" ascending="true" />
+    </sort>
+  </fetch>
+</view>

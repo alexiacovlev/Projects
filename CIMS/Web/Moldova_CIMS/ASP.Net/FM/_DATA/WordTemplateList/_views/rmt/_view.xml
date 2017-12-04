@@ -1,0 +1,21 @@
+<view iconurl="ico.png" icon="true" actions="true">
+  <row keyfield="Name">
+    <cell name="Name" title="Name" width="175" />
+    <cell name="Title" title="Title" />
+    <cell name="Description" title="Description" width="100" />
+    <cell name="Author" title="Author" width="100" />
+    <cell name="LastAuthor" title="Last modified" width="100" />
+    <cell name="ModifiedOn" title="Modified On" width="100" />
+    <cell name="Company" title="Company" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+  <rowactions>
+    <item title="Export to PDF" handler="URL:ASP.Net/Resources/FM/DataViewer/Print/DocumentReportDownloader.aspx" window="NEW" width="200" height="150" scroll="false" full="false" image="PDF.png" attributes="t=RMT_Projects,template=[id],id=$id,type=PDF" />
+    <item title="Export to WORD" handler="URL:ASP.Net/Resources/FM/DataViewer/Print/DocumentReportDownloader.aspx" image="Word.png" window="NEW" attributes="t=RMT_Projects,template=[id],id=$id,type=DOCX" width="200" height="150" scroll="false" full="false" />
+  </rowactions>
+</view>

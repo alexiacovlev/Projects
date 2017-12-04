@@ -1,0 +1,22 @@
+<entity version="1.5">
+  <header title="AX_Statistics_UserEvents" />
+  <description title="" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <datasource type="DB" name="AX_Statistics_UserEvents" />
+  <primarykey>EventId</primarykey>
+  <fields>
+    <field name="EventId" type="Text" format="" dbtype="" size="" title="EventId" description="" required="false" readonly="false" uimask="00001" />
+    <field name="EventType" type="Text" format="text" dbtype="" size="50" title="EventType" description="" required="false" readonly="false" uimask="00111" />
+    <field name="EventTypeID" type="Integer" format="" dbtype="" size="" title="EventTypeID" description="" required="false" readonly="false" uimask="00111" />
+    <field name="Message" type="Text" format="textarea" dbtype="" size="" title="Message" description="" required="false" readonly="false" uimask="00111" />
+    <field name="UserName" type="Text" format="text" dbtype="" size="255" title="UserName" description="" required="false" readonly="false" uimask="00111" />
+    <field name="UserId" type="Lookup" format="" dbtype="" size="" title="UserId" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="EventTime" type="DateTime" format="date" dbtype="" size="" title="EventTime" description="" required="false" readonly="false" uimask="00111" />
+    <field name="IPAddress" type="Text" format="text" dbtype="" size="15" title="IPAddress" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" format="" dbtype="" size="" title="ApplicationId" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+  </fields>
+</entity>

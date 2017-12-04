@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Iure Coroban" modifiedon="2017-10-10T12:52:45">
+  <set name="TableName" value="CIMS_Applicant" />
+  <set name="HandlerParameters" value="1200,800" />
+  <set name="CreateParameters" value="1100,700" />
+  <set name="CreateForm" value="WORKFLOW:CIMS_Admission_Online" />
+  <set name="OpenForm" value="PROFILE:CIMS_Applicant.Admission" />
+  <set name="ViewName" value="applicants" />
+</mapNode>

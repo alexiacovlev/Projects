@@ -1,0 +1,15 @@
+<view iconurl="ico.png" icon="true" actions="true">
+  <row keyfield="Name">
+    <cell name="Name" title="Name" width="200" />
+    <cell name="Title" title="Title" />
+    <cell name="Description" title="Description" width="100" />
+    <cell name="LastAuthor" title="Last author" width="100" />
+    <cell name="ModifiedOn" title="Modified On" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form padding="big">
+  <header title="Event Category Properties" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Title" name="Title" colspan="2" />
+            </row>
+            <row>
+              <cell title="Background Color" name="BackgroundColor" colspan="2" description="Format RGB: 3366CC" showhelp="true" />
+            </row>
+            <row>
+              <cell title="Border Color" name="BorderColor" colspan="2" description="Format RGB: 3366CC" showhelp="true" />
+            </row>
+            <row>
+              <cell title="Text Color" name="TextColor" colspan="2" description="Format RGB: 3366CC" showhelp="true" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

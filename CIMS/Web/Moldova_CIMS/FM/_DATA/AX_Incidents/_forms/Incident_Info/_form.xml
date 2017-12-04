@@ -1,0 +1,154 @@
+<form labelwidth="100">
+  <header title="" />
+  <description title="" />
+  <windowMask>Incident</windowMask>
+  <handlers>
+    <onloadscript>var $lbl= frm.getElement('lblSubject');
+$lbl.text(frm.getValue('Subject'))
+
+var $lbl2= frm.getElement('lblDescription');
+$lbl2.html(frm.getValue('Description').replace('\n','&lt;br/&gt;'))</onloadscript>
+  </handlers>
+  <tabs>
+    <tab title="Info" name="tab_info">
+      <sections>
+        <section title="Section 1" name="sec3001" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell name="label_7874" colspan="2">
+                <content>&lt;div id='lblSubject' style='font-size:11pt;color:#0066cc;font-weight:bold;margin-top:0px;'&gt;&lt;/div&gt;
+&lt;div id='lblDescription' style='font-size:9pt;margin:10px 0 10px 20px;'&gt;&lt;/div&gt;</content>
+              </cell>
+            </row>
+            <row>
+              <cell title="Screenshot" name="Screenshot" colspan="2" titlepos="off" rowspan="14" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+        <section title="New Section" name="sec4983" decoration="line" columns="3" showlabel="false">
+          <rows>
+            <row>
+              <cell name="label_8335">
+                <content>&lt;control type="button" style='width:120px;position:absolute;bottom:0;left:0px'&gt;
+  &lt;set name="Text" value="Mark as Resolved"/&gt;
+  &lt;set name="Handler" value="WORKFLOW:Incident_ChangeStatus"/&gt;
+  &lt;set name="Attributes" value="id=[KeyValue],IncidentStatusId=7,Form=Incident_Accepted"/&gt;
+  &lt;set name="WindowParameters" value="450,460"/&gt;
+  &lt;set name="OnInvoke" value="SaveParentAfterSave"/&gt;
+&lt;/control&gt;</content>
+              </cell>
+              <cell name="control_474">
+                <content>&lt;control type="button" style='width:120px;position:absolute;bottom:0;left:170px'&gt;
+  &lt;set name="Text" value="Ready for Testing"/&gt;
+  &lt;set name="Handler" value="WORKFLOW:Incident_ChangeStatus"/&gt;
+  &lt;set name="Attributes" value="id=[KeyValue],IncidentStatusId=6,Form=Incident_ReadyForTesting"/&gt;
+  &lt;set name="WindowParameters" value="450,460"/&gt;
+  &lt;set name="OnInvoke" value="CloseParentAfterSave"/&gt;
+&lt;/control&gt;</content>
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Details" name="tab_general">
+      <sections>
+        <section title="Incident" name="sec_info" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Number" name="IncidentNr">
+                <properties readonly="true" oncreatevalue="~AUTO:Incident" />
+              </cell>
+              <cell title="Priority" name="PriorityCodeId">
+                <properties oncreatevalue="2" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Subject" name="Subject" colspan="2" />
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell title="Status" name="IncidentStatusId">
+                <properties oncreatevalue="1" />
+              </cell>
+              <cell title="Type" name="IncidentTypeId">
+                <properties oncreatevalue="2" requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Created By" name="CreatedBy">
+                <properties readonly="true" oncreatevalue="~USERID" handlermode="off" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Questions and Comments" name="sec9114" decoration="line" columns="2" showlabel="true" marginTop="20">
+          <rows>
+            <row>
+              <cell title="" name="UserComments" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Attachments" name="tab7403">
+      <sections>
+        <section title="Attachments" name="sec7403" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell title="File Attachments List" name="FileAttachments" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="History" name="tab5299">
+      <sections>
+        <section title="History" name="sec5299" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell title="State History" name="StateHistory" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties readonly="true" oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+  </hidden>
+</form>

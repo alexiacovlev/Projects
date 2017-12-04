@@ -1,0 +1,30 @@
+<form>
+  <header />
+  <description />
+  <print />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <cells>
+            <cell name="Name" title="Name" column="0" row="0" colspan="2" />
+          </cells>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+  </hidden>
+</form>

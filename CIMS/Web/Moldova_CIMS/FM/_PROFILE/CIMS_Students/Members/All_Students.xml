@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedon="2017-11-08T14:08:16" modifiedby="Admin Admin">
+  <set name="TableName" value="CIMS_Student" />
+  <set name="ViewName" value="students_by_group" />
+  <set name="OpenForm" value="PROFILE:CIMS_Student" />
+  <set name="HandlerParameters" value="1200,800" />
+  <set name="CreateForm" value="PROFILE:CIMS_Student" />
+</mapNode>

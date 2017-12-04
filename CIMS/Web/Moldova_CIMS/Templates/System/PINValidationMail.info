@@ -1,0 +1,8 @@
+<info>
+  <description>This email will be send to the user for PIN validation.</description>
+  <more>Available Varables:
+[# FullName #]
+[# Login #]
+[# PIN #]
+</more>
+</info>

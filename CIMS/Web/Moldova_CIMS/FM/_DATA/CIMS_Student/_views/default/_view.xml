@@ -1,0 +1,16 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="GroupId" title="Group" width="100" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="FirstName" title="First Name" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Specialty" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

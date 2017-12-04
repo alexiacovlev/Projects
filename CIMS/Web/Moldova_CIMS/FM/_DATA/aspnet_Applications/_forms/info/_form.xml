@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell title="ApplicationId" name="ApplicationId" colspan="2" />
+            </row>
+            <row>
+              <cell title="Name" name="ApplicationName" colspan="2">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="3" />
+            </row>
+            <row />
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

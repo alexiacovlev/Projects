@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedby="Michael " modifiedon="2016-11-03T17:49:05" visible="false">
+  <set name="ViewName" value="default" />
+  <set name="TableName" value="AX_EventLog" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Delete All Logs&quot; value=&quot;&quot; image=&quot;16_delete.png&quot; command=&quot;SET&quot; width=&quot;800&quot; height=&quot;600&quot; full=&quot;&quot; pos=&quot;in&quot; showoutlabel=&quot;&quot; attributes=&quot;preset=DeleteAllRecords,mode=BULKPROCESS&quot; /&gt;&lt;/menu&gt;" />
+  <set name="ChartSettings" value="|EventDetailCode|BAR|" />
+</mapNode>

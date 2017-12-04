@@ -1,0 +1,16 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Code" title="Code" width="125" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="Qualification" title="Qualification" width="200" />
+    <cell name="Profile" title="Profile" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

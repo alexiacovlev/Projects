@@ -1,0 +1,21 @@
+<entity version="1.5" generator="1.5">
+  <datasource name="AX.FM.Explorer,AX.FM.Explorer.Providers.ScheduledJobsListProvider" type="Provider" />
+  <primarykey>Name</primarykey>
+  <fields>
+    <field title="Title" name="Title" type="Text" uimask="00111" readonly="false" required="false" description="Title" size="" dbtype="" format="" />
+    <field title="Name" name="Name" type="Text" uimask="00111" readonly="false" required="true" description="Name" size="" dbtype="" format="" />
+    <field title="Description" name="Description" type="Text" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Created On" name="CreatedOn" type="DateTime" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Created By" name="CreatedBy" type="Text" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Modified On" name="ModifiedOn" type="DateTime" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="datetime" />
+    <field title="Enabled" name="Enabled" type="Boolean" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Expire On" name="ExpireOn" type="DateTime" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Repeat Interval" name="RepeatIntervalText" type="Text" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Repeat Times" name="RepeatTimes" type="Integer" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Tick Count" name="TickCount" type="Integer" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Success Count" name="SuccessCount" type="Integer" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Error Count" name="ErrorCount" type="Integer" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+    <field title="Last Invoke On" name="LastInvokeOn" type="DateTime" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="datetime" />
+    <field title="Performed On" name="PerformedOnText" type="Text" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="datetime" />
+  </fields>
+</entity>

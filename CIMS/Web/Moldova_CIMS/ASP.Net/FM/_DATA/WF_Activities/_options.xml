@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list name="Status" default="">
+    <item title="Initialized" value="0" />
+    <item title="Executing" value="1" />
+    <item title="Canceling" value="2" />
+    <item title="Closed" value="3" />
+    <item title="Compensating" value="4" />
+    <item title="Faulting" value="5" />
+  </list>
+</options>

@@ -1,0 +1,18 @@
+<view select="true" preview="true" icon="false" check="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="RoleId">
+    <cell name="RoleName" title="RoleName" />
+    <cell name="LoweredRoleName" title="LoweredRoleName" width="150" />
+    <cell name="Description" title="Description" width="100" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="RoleName" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+    </filter>
+  </fetch>
+</view>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="download.aspx.cs" Inherits="AX.FM.DataViewer.Modules.DownloadFile" %>

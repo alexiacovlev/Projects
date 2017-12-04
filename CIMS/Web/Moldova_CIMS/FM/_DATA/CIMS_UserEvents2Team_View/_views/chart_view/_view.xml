@@ -1,0 +1,16 @@
+<view select="true" preview="false" check="false" icon="false" expandMode="Off">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="EventTime" title="Event Time" width="125" />
+    <cell name="UserName" title="User Name" width="200" />
+    <cell name="IPAddress" title="IPAddress" width="125" />
+    <cell name="TypeName" title="Action" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

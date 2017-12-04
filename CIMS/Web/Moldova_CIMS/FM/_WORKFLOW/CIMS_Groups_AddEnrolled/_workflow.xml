@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Groups_AddEnrolled" version="2.0" created="2017-11-07T16:09:20" modified="2017-11-07T16:40:28" author="Admin Admin" trace="false" forceRefresh="true" title="">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_Groups" form="enrolled" readonly="true" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:key" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="true" />
+  </Handlers>
+</Workflow>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+  <datasource type="Provider" name="AX.FM.DataViewer,AX.FM.DataViewer.Print.TemplateListProvider" />
+  <primarykey>Name</primarykey>
+  <fields>
+    <field name="Name" type="Text" format="" dbtype="" size="200" title="Name" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Title" type="Text" format="" dbtype="" size="1000" title="Title" description="" required="false" readonly="false" uimask="00111" />
+    <field name="Subject" type="Text" format="" dbtype="" size="200" title="Subject" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Author" type="Text" format="" dbtype="" size="200" title="Author" description="" required="true" readonly="false" uimask="00111" />
+    <field name="LastAuthor" type="Text" format="" dbtype="" size="200" title="LastAuthor" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Company" type="Text" format="" dbtype="" size="200" title="Company" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Version" type="Text" format="" dbtype="" size="200" title="Version" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" format="" dbtype="" size="1000" title="Description" description="" required="false" readonly="false" uimask="00111" />
+	  <field name="CreatedOn" type="DateTime" format="" dbtype="" size="100" title="Created On" description="" required="false" readonly="false" uimask="00111" />
+	  <field name="ModifiedOn" type="DateTime" format="datetime" dbtype="" size="100" title="Modified On" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

@@ -1,0 +1,3 @@
+<mapNode type="SERVERCONTROL" content="AX.Highcharts,AX.Highcharts.ChartControl" modifiedby="Michael " modifiedon="2013-02-20T18:38:49">
+  <set name="ChartName" value="System/Incidents" />
+</mapNode>

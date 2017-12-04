@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Study Year" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="a0c2" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Groups" name="Groups" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Study Plans" name="Study_Plans" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+  <WindowMask table="CIMS_StudyYears">Study Year: #StudyYear#</WindowMask>
+</Tree>

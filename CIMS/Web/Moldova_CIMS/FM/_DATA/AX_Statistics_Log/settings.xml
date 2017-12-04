@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<entity version="3.0">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="AX_Statistics_Log" />
+	<primarykey>lID</primarykey>
+	<watermark>Images/Views/Logo_Default.png</watermark>
+	<fields>
+		<field name="lID" type="Integer" format="" dbtype="Int32" size="" title="ID" description="" required="true" readonly="true" uimask="001111" />
+		<field name="lApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="Application Id" description="" required="true" readonly="false" uimask="001111">
+			<extract table="aspnet_Applications" view="default" />
+		</field>
+		<field name="lUserId" type="Text" format="" dbtype="Guid" size="" title="User Id" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lDate" type="DateTime" format="" dbtype="DateTime" size="" title="Date" description="" required="true" readonly="false" uimask="001111" />
+		<field name="lSessionID" type="Text" format="" dbtype="String" size="255" title="Session ID" description="" required="true" readonly="false" uimask="001111" />
+		<field name="lPageID" type="Text" format="" dbtype="StringUnicode" size="255" title="Page ID" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lPageName" type="Text" format="" dbtype="StringUnicode" size="255" title="Page Name" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lIPAddress" type="Text" format="" dbtype="StringUnicode" size="255" title="IPAddress" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lHost" type="Text" format="" dbtype="StringUnicode" size="255" title="Host" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lUrl" type="Text" format="" dbtype="StringUnicode" size="511" title="Url" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lRefererUrl" type="Text" format="" dbtype="StringUnicode" size="511" title="Referer Url" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lBrowser" type="Text" format="" dbtype="StringUnicode" size="255" title="Browser" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lPlatform" type="Text" format="" dbtype="StringUnicode" size="50" title="Platform" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lUserAgent" type="Text" format="" dbtype="StringUnicode" size="511" title="User Agent" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lAcceptLanguage" type="Text" format="" dbtype="StringUnicode" size="255" title="Accept Language" description="" required="false" readonly="false" uimask="001111" />
+		<field name="lProcessingTime" type="Text" format="" dbtype="Double" size="" title="Processing Time" description="" required="true" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

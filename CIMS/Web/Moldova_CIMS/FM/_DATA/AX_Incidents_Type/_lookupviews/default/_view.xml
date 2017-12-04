@@ -1,0 +1,20 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Type" title="Type" />
+    <cell name="id" title="N" width="50" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="id" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="id" operator="eq" value="1" />
+      <condition attribute="id" operator="eq" value="2" />
+      <condition attribute="id" operator="eq" value="3" />
+      <condition attribute="id" operator="eq" value="4" />
+      <condition attribute="id" operator="eq" value="5" />
+    </filter>
+  </fetch>
+</view>

@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedon="2016-10-18T13:29:50" modifiedby="Michael ">
+  <set name="TableName" value="AX_PersonalTasks" />
+  <set name="AllowDelete" value="false" />
+  <set name="OpenForm" value="SERVERCONTROL:TASK" />
+  <set name="AllowCreate" value="false" />
+  <set name="ViewName" value="in" />
+  <set name="HandlerParameters" value="700,450" />
+</mapNode>

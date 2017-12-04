@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="" trace="false" version="2.0" created="0001-01-01T00:00:00" modified="0001-01-01T00:00:00">
+  <Sequence>
+    <XmlIsland name="SELECT5245">
+      <Settings table="AX_Incidents_Properties" form="" />
+      <FieldSet>
+        <Field name="ApplicationId" />
+        <Field name="id" />
+      </FieldSet>
+      <Assign>
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </XmlIsland>
+    <Invoke name="INVOKE9668" title="" control="Form">
+      <Settings table="AX_Incidents_Properties" form="" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="SELECT5245:_KEYVALUE_" />
+        <Field name="ModifiedBy" value="~USERID" />
+        <Field name="ModifiedIP" value="~IP" />
+        <Field name="ModifiedOn" value="~NOW" />
+      </Assign>
+    </Invoke>
+    <UpdateRecord name="UPDATE7913" title="Update aspnet_Application">
+      <Settings table="aspnet_Applications" form="" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="~APPLICATIONID" />
+        <Field name="Description" value="INVOKE9668:Name" />
+      </Assign>
+    </UpdateRecord>
+  </Sequence>
+  <Input />
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Save and Send" enabled="false" />
+    <Update title="Update" enabled="true" />
+    <Close title="Close" enabled="false" />
+  </Handlers>
+</Workflow>

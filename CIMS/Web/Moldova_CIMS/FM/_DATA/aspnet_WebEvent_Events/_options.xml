@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list name="EventDetailCode" default="">
+    <item title="Default" value="150001" />
+    <item title="Form" value="150010" />
+    <item title="Lookup dialog" value="150015" />
+    <item title="Grid" value="150020" />
+    <item title="Print Records" value="150028" />
+    <item title="Export Records" value="150029" />
+    <item title="Workflow" value="150030" />
+    <item title="Profile" value="150040" />
+    <item title="Control Loader" value="150050" />
+    <item title="Preview Details" value="150060" />
+  </list>
+</options>

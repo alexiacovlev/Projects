@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <header title="default" />
+  <tabs>
+    <tab title="General" name="Tab1">
+      <sections>
+        <section name="sec1" showlabel="false" title="Send Email Activity Properties">
+          <rows>
+            <row>
+              <cell name="From" title="From" />
+              <cell />
+            </row>
+            <row>
+              <cell name="To" title="To" />
+              <cell />
+            </row>
+            <row>
+              <cell name="Subject" title="Subject" colspan="2" />
+            </row>
+            <row>
+              <cell name="Body" title="Body" colspan="2">
+                <properties lines="14" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+</form>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_Applicant2Marks" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="String" format="" title="Created IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="Modified On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="String" format="" title="Modified IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="Application" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="Applicant" type="Lookup" dbtype="Guid" format="" title="Applicant" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Applicant" view="" />
+    </field>
+    <field name="Mark" type="Float" dbtype="Double" format="" title="Mark" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Subject" type="Picklist" dbtype="Guid" format="" title="Subject" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="Admission" to="Admission" />
+      <extract table="CIMS_Admission2Subjects" view="" />
+    </field>
+    <field name="Admission" type="Lookup" dbtype="Guid" format="" title="Admission" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Admission" view="" />
+    </field>
+  </fields>
+</entity>

@@ -1,0 +1,21 @@
+<view select="true" preview="false" icon="false" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Subject" title="Subject" />
+    <cell name="IncidentNr" title="Request  Nr" width="75" />
+    <cell name="IncidentStatusId" title="Status" width="100" />
+    <cell name="CreatedOn" title="Created On" width="75" />
+    <cell name="ProjectId" title="Project" width="200" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ProjectId" ascending="true" />
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+      <condition attribute="IncidentTypeId" operator="eq" value="6" />
+    </filter>
+  </fetch>
+</view>

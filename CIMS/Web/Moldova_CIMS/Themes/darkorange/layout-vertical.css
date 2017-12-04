@@ -1,0 +1,128 @@
+﻿body {
+	font-family:Verdana; font-size:10pt;
+	-webkit-font-smoothing: antialiased;
+	overflow:hidden;
+	background-color:#343434;
+	margin:0;padding:0;
+}
+
+#header {
+	position:absolute;left:0px;top:0;right:0px;
+	color:#FFF;
+}
+#appLogo {
+	position:absolute; top:0px;left:10px; display:none;
+	
+}
+#appTitle, #shaderTitle {
+	position:absolute;top:12px;left:20px;
+	color:#FFF;
+	font-size:14pt;
+}
+#appDesc {
+	position:absolute;top:28px;left:10px; display:none;
+	font-size:10pt;
+}
+
+
+#appMenu {
+	font-family:Verdana; font-size:11pt;
+	overflow-x:hidden;
+	position:absolute;
+	top:50px;left:0px;width:300px;bottom:40px;
+	z-index:1;
+}
+
+#content {
+	position:absolute;
+	left:300px;right:0px;
+	top:50px;
+	bottom:40px;
+	
+}
+
+#appMenu > a.appm {
+	display:block;
+	color: #FFF;
+	border-left:solid 5px #343434;
+	margin-bottom:2px;
+	padding:12px 8px 12px 0px;
+	text-decoration: none;
+	box-sizing:border-box;
+}
+#appMenu > a.selected, #appMenu > a.appm:hover {
+	border-left-color:#f85723;
+	background-color:#1d1d1d;
+}
+a.appm > .ax-ico { font-size:12pt;margin-left:8px; margin-right:4px; width:26px; }
+
+#appLinks {
+	position:absolute; top:25px;right:20px;
+	font-size:10pt;
+}
+#appLinks > a.appl, #appLang > a.lang {
+	text-decoration:none;
+	color:#FFF;
+	margin:3px;
+	padding:0 2px;
+	border-bottom:solid 2px #343434;
+}
+#appLinks > a.appl:hover, #appLinks > a.selected, #appLang > a.lang:hover, #appLang > a.selected {
+	color: #FFF;
+	border-bottom-color:#f85723;
+}
+#appLang {
+	position:absolute;top:5px;right:20px;
+	font-size:10pt;	color:#FFF;
+}
+.lang-flag { margin-left:6px; }
+
+
+@media screen and (max-width: 1700px) {
+	#content { left:200px; }
+	#appMenu { width:200px; }
+}
+
+@media screen and (max-width: 1500px) {
+	#content { left:40px; }
+	#appMenu { width:40px; }
+
+	a.appm { padding-right:0; }
+	span.appmt { display:none; }
+}
+
+#footer {
+	position:absolute; bottom:0px;left:0px; right:0px; 
+	height:35px;
+	font-family:'Lucida Sans Unicode';
+	font-size:10pt;
+	color: #d3d3d3;
+}
+#adminButton { position:relative; left:5px; top:9px; font-size:14pt; line-height:1px; color:#d3d3d3; cursor:pointer; margin-right:5px; }
+#copyright { position:relative; left:5px; top: 7px; }
+#userInfo {
+	position:absolute; right:20px; top:7px;
+	font-size:10pt;font-family:Verdana;
+}
+#userName,#userRole {
+	margin-left:5px;
+	margin-right:25px;
+}
+#loginButton {
+	position:absolute;right:6px;top:5px;
+	cursor:pointer;
+	color:transparent;
+	text-indent:-30px;
+	width: 24px; height: 24px;
+}
+A.Login { background-image: url(images/login24.png); }
+A.Logout { background-image: url(images/logout24.png); }
+
+#rolesBtn {
+	position:absolute;right:-15px;bottom:-1px;
+}
+
+#shaderLoader { background-image:url(images/loader.gif); width:90px;height:92px; margin:20% auto 0 auto; }
+
+#LoginWindow { margin:80px auto 0 auto; width:520px; }
+#LoginWindow > .axdlg-body { padding:5px 10px 10px 10px; }

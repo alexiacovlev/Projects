@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="" name="Administration" image="" navigator="true" width="270">
+  <Folders>
+    <Folder title="User Management" name="User_Management" image="Case_Judjements.png" control="">
+      <Folders>
+        <Folder title="Online" name="UM_UsersOnline" image="ico_16_manage_members.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Users" name="UM_All_Users" image="ico_16_9.png" control="GRID" autocount="">
+          <Folders>
+            <Folder title="Roles" name="UM_All_Roles" image="ico_18_1036.png" control="GRID" autocount="">
+              <Folders />
+            </Folder>
+            <Folder title="Teams" name="UM_All_Teams" image="ico_16_process.png" control="GRID" autocount="">
+              <Folders />
+            </Folder>
+          </Folders>
+        </Folder>
+        <Folder title="Activity History" name="UserEvents" image="client_account_template.png" control="CUSTOM" autocount="">
+          <Folders>
+            <Folder title="Today Activity" name="UserEventsForToday" image="client_account_template.png" control="GRID">
+              <Folders />
+            </Folder>
+            <Folder title="Activity Chart" name="UserEventsChart" image="16_reports.png" control="SERVERCONTROL">
+              <Folders />
+            </Folder>
+          </Folders>
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Records Management" name="RMC" image="ico_16_customRelationship_d.png" control="SL.FM.Explorer.MainPage,SL.FM.Explorer|ASP.Net/SL/FM/Explorer/SL.FM.Explorer.xap" autocount="false" playsound="false" dependonkey="false">
+      <Folders>
+        <Folder title="Data Objects" name="RMC_Tables" image="database_key.png" control="CUSTOM">
+          <Folders />
+        </Folder>
+        <Folder title="Workflows" name="RMC_Workflows" image="ico_16_customRelationship_d.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Profiles" name="RMC_Profiles" image="16_tree.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Scheduled Jobs" name="RMC_Jobs" image="16_schedule.png" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Incident Settings" name="Incidents" image="monitor2.png" control="">
+      <Folders>
+        <Folder title="Settings" name="Incidents_Properties" image="BProcessWarning.png" control="WORKFLOW">
+          <Folders />
+        </Folder>
+        <Folder title="All Incidents" name="Incidents_AllIncidents" image="Journal.png" control="GRID" autocount="" playsound="false" dependonkey="false">
+          <Folders />
+        </Folder>
+        <Folder title="Error Log" name="Incidents_Error_Log" image="bug.png" control="GRID" autocount="" playsound="false" dependonkey="false">
+          <Folders />
+        </Folder>
+        <Folder title="Errors Diagram" name="Incidents_Chart" image="chart_pie_alternative.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="Incidents Type" name="Incidents_Type" image="folder.png" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Templates" name="Email_Templates" image="email_to_friend.png" control="">
+      <Folders>
+        <Folder title="Email Templates (all)" name="Email_All" image="email_open.png" control="SERVERCONTROL">
+          <Folders>
+            <Folder title="System Templates" name="Email_System" image="documents_email.png" control="SERVERCONTROL">
+              <Folders />
+            </Folder>
+            <Folder title="Incidents Templates" name="Email_Incidents" image="email_to_friend.png" control="SERVERCONTROL">
+              <Folders />
+            </Folder>
+          </Folders>
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Calendar Settings" name="Calendar_Settings" image="16_schedule.png" control="">
+      <Folders>
+        <Folder title="Categories" name="Calendar_Categories" image="folder.png" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Locations" name="Calendar_Locations" image="folder.png" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="All Events" name="Calendar_All_Events" image="folder.png" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Statistics" name="Statistics" image="book_keeping.png" control="">
+      <Folders>
+        <Folder title="Error Log" name="Error_Log" image="folder.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Audit Trail" name="Audit_Trail" image="Accept_Claim.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Service Registry" name="ServiceGateway" image="folder.png" ico="f233" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Translations" name="ResxManager" image="Untitled-4.png" control="">
+      <Folders>
+        <Folder title="Site Map" name="Resx_ApplicationMap" image="ico_16_1001.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="Application (General)" name="Resx_ApplicationUI" image="ico_16_1001.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="Forms, Grids, Folders" name="Resx_RecordsManagement" image="ico_16_1001.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="Records Management (System)" name="Resx_RecordsManagementSystem" image="ico_16_1001.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="User Management" name="Resx_UserManagement" image="ico_16_1001.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder>UM_UsersOnline</DefaultFolder>
+</Tree>

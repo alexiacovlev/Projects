@@ -1,0 +1,41 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="ID" title="ID" colspan="2" />
+            </row>
+            <row>
+              <cell name="UserId" title="User Id" colspan="2" />
+            </row>
+            <row>
+              <cell name="Header" title="Header" colspan="2" />
+            </row>
+            <row>
+              <cell name="Text" title="Text" colspan="2" />
+            </row>
+            <row>
+              <cell name="IsRead" title="Is Read" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

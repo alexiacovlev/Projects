@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="" name="BASE:Administration" image="" navigator="true" width="240">
+  <Folders>
+    <Folder title="Records Management" name="RMC" image="cog.png" control="">
+      <Folders>
+        <Folder title="Data Objects" name="RMC_Tables" image="database_key.png" control="SERVERCONTROL">
+          <Folders />
+        </Folder>
+        <Folder title="Workflows" name="RMC_Workflows" image="ico_16_customRelationship_d.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Profiles" name="RMC_Profiles" image="16_tree.png" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="User Management" name="User_Management" image="Case_Judjements.png" control="">
+      <Folders>
+        <Folder title="Users Online" name="UM_UsersOnline" image="ico_16_manage_members.png" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="All Users" name="UM_All_Users" image="ico_16_9.png" control="GRID" autocount="" playsound="false" dependonkey="false">
+          <Folders />
+        </Folder>
+        <Folder title="All Roles" name="UM_All_Roles" image="ico_18_1036.png" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="All Teams" name="UM_All_Teams" image="ico_16_process.png" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder>RMC</DefaultFolder>
+</Tree>

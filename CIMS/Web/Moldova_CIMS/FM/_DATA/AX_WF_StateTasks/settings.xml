@@ -1,0 +1,39 @@
+<entity version="4.0">
+  <header title="" />
+  <description title="" />
+  <datasource name="AX_WF_StateTasks" type="DB" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field title="ID" name="ID" type="Text" dbtype="Guid" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Instance Id" name="InstanceId" type="Text" dbtype="Guid" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Process Name" name="ProcessName" type="Text" dbtype="StringUnicode" format="" description="" size="150" required="true" readonly="false" uimask="00111" />
+    <field title="State Name" name="StateName" type="Text" dbtype="String" format="" description="" size="150" required="true" readonly="false" uimask="00111" />
+    <field title="Is Multi Task" name="IsMultiTask" type="Boolean" dbtype="Boolean" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Regarding Id" name="RegardingId" type="Text" dbtype="String" format="" description="" size="50" required="true" readonly="false" uimask="00111" />
+    <field title="Title" name="Title" type="Text" dbtype="StringUnicode" format="" description="" size="400" required="true" readonly="false" uimask="00111" />
+    <field title="Description" name="Description" type="Text" dbtype="StringUnicode" format="textarea" description="" size="1000" required="false" readonly="false" uimask="00111" />
+    <field title="Assign To User" name="AssignToUser" type="Text" dbtype="Guid" format="" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Assign To Role" name="AssignToRole" type="Text" dbtype="StringUnicode" format="" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field title="Status" name="Status" type="Picklist" dbtype="Int32" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Is Completed" name="IsCompleted" type="Boolean" dbtype="Boolean" format="" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="Actual Start" name="ActualStart" type="DateTime" dbtype="DateTime" format="" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Created On" name="CreatedOn" type="DateTime" dbtype="DateTime" format="datetime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Completed On" name="CompletedOn" type="DateTime" dbtype="DateTime" format="datetime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Modified By" name="ModifiedBy" type="Text" dbtype="Guid" format="" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field title="Modified On" name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field title="Modified IP" name="ModifiedIP" type="Text" dbtype="StringUnicode" format="" description="" size="50" required="false" readonly="false" uimask="00111" />
+
+    <field name="Regarding" type="Lookup" format="" title="Regarding" description="" size="255" required="false" readonly="false" uimask="00111">
+      <extract dialog="AX_WF_StateTasks_Regarding" />
+      <relation table="AX_WF_StateTasks_Regarding">
+        <column name="TaskId" type="parentkey" />
+        <column name="RegardingId" type="childkey" />
+        <column name="RegardingType" type="typekey" />
+      </relation>
+    </field>
+
+  </fields>
+</entity>

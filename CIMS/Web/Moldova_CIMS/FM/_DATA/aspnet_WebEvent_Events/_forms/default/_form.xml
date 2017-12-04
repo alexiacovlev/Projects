@@ -1,0 +1,71 @@
+<form>
+  <header title="Event Details" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell name="EventId" title="Event Id" />
+              <cell />
+            </row>
+            <row>
+              <cell name="EventDetailCode" title="Category" />
+              <cell name="EventTime" title="Event Time" />
+            </row>
+            <row>
+              <cell name="Message" title="Message" colspan="2" />
+            </row>
+            <row>
+              <cell name="Details" title="Details" colspan="2">
+                <properties lines="5" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab name="tab3769" title="Additional">
+      <sections>
+        <section name="sec3769" showlabel="false" title="Additional" columns="2">
+          <rows>
+            <row>
+              <cell name="MachineName" title="Machine Name" />
+              <cell name="ApplicationPath" title="Application Path" />
+            </row>
+            <row>
+              <cell name="EventType" title="Event Type" />
+              <cell />
+            </row>
+            <row>
+              <cell name="EventSequence" title="Event Sequence">
+                <properties behavior="NaN|NaN" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="EventOccurrence" title="Event Occurrence">
+                <properties behavior="NaN|NaN" />
+              </cell>
+              <cell name="ApplicationId" title="Application Id" />
+            </row>
+            <row>
+              <cell name="EventCode" title="Event Code" />
+              <cell name="ApplicationVirtualPath" title="Application Virtual Path" />
+            </row>
+            <row>
+              <cell name="ExceptionType" title="Exception Type" />
+              <cell />
+            </row>
+            <row>
+              <cell name="RequestUrl" title="Request Url" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

@@ -1,0 +1,24 @@
+<view mode="List" check="false" icon="true" iconurl="ico.png">
+  <row keyfield="Name" displayfield="Name">
+    <cell title="Name" name="Name" width="150" />
+    <cell title="Title" name="Title" />
+    <cell title="Created On" name="CreatedOn" width="100" />
+    <cell title="Modified On" name="ModifiedOn" width="110" />
+    <cell title="Created By" name="CreatedBy" width="100" />
+    <cell title="Expire On" name="ExpireOn" width="100" />
+    <cell title="Repeat Every" name="RepeatIntervalText" width="100" />
+    <cell title="Last Invoke On" name="LastInvokeOn" width="100" />
+    <cell title="Tick Count" name="TickCount" width="100" />
+    <cell title="Performed On" name="PerformedOnText" width="100" />
+    <cell title="Error Count" name="ErrorCount" width="100" />
+    <cell title="Success Count" name="SuccessCount" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+  <header title="" />
+  <description title="" />
+</view>

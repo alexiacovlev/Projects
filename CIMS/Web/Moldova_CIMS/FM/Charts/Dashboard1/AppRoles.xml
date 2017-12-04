@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart title="Referral" type="halfdoughnut" table="" dbview="[SQLCODE]" allowClick="false" interval="4">
+	<dataview table="aspnet_Membership" />
+</chart>

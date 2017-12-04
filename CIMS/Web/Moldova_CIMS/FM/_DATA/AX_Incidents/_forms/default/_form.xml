@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="" />
+  <description title="" />
+  <windowMask>Update Incident: #Subject#</windowMask>
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="3" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Subject" title="Subject" colspan="3" titlepos="top" />
+            </row>
+            <row>
+              <cell name="Description" title="Description" rowspan="5" titlepos="top" />
+              <cell name="label_4521" title="" colspan="2" rowspan="12">
+                <content>XAML:&lt;f:XamlControlHolder Height="440" Margin="10 21 0 0" VerticalAlignment="Top" TypeName="SL.IncidentServices.Whiteboard.BoardPreviewControl,SL.IncidentServices" Package="/ASP.Net/SL/Modules/Administration/SL.IncidentServices.xap"&gt;  &lt;f:XamlControlHolder.Assign&gt;    &lt;f:XamlProperty Name="SourceType" Value="'AX_Incidents'" /&gt;    &lt;f:XamlProperty Name="SourceKey" Value="[KeyValue]" /&gt;    &lt;f:XamlProperty Name="Readonly" Value="True" /&gt;  &lt;/f:XamlControlHolder.Assign&gt;&lt;/f:XamlControlHolder&gt;</content>
+              </cell>
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell name="CreatedOn" title="Created On" titlepos="top">
+                <properties readonly="true" oncreatevalue="~NOW" />
+              </cell>
+            </row>
+            <row>
+              <cell name="CreatedBy" title="Created By" titlepos="top">
+                <properties handlermode="off" readonly="true" oncreatevalue="~USERID" />
+              </cell>
+            </row>
+            <row>
+              <cell name="IncidentTypeId" title="Incident Type" titlepos="top">
+                <properties requiredlevel="required" oncreatevalue="1" />
+              </cell>
+            </row>
+            <row>
+              <cell name="Comments" title="Syst. Information" titlepos="top">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="IncidentStatusId" title="Status">
+                <properties readonly="true" oncreatevalue="1" />
+              </cell>
+            </row>
+            <row>
+              <cell name="IncidentNr" title="Incident Nr" />
+            </row>
+            <row>
+              <cell />
+            </row>
+            <row>
+              <cell name="label_2820" title="" colspan="3">
+                <content>XAML:&lt;StackPanel Orientation="Horizontal"&gt;&lt;f:ExecuteCommandButton Margin="0 0 0 0" Width="170"ButtonType="OK"Text="Mark as Resolved"CommandName="WORKFLOW"Value="Incident_ChangeStatus"Attributes="id=[KeyValue],IncidentStatusId=7,Form=Incident_Accepted"WindowTitle="Resolve"WindowParameters="450,460,false"OnInvoke="CloseParentOnSave"/&gt;&lt;/StackPanel&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Questions and Comments" name="tab9114">
+      <sections>
+        <section title="Comments" columns="2" name="sec9114" showlabel="false">
+          <rows>
+            <row>
+              <cell name="UserComments" title="User Comments" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Attachments" name="tab7403">
+      <sections>
+        <section title="Attachments" columns="2" name="sec7403" showlabel="false">
+          <rows>
+            <row>
+              <cell name="FileAttachments" title="File Attachments List" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="History" name="tab5299">
+      <sections>
+        <section title="History" columns="2" name="sec5299" showlabel="false">
+          <rows>
+            <row>
+              <cell name="label_513" title="" colspan="2">
+                <content>XAML:
+&lt;f:XamlControlHolder TypeName="GRID" Height="500"&gt;
+ &lt;f:XamlControlHolder.Assign&gt;
+  &lt;f:XamlProperty Name="TableName" Value="AX_Incidents_StateHistory" /&gt;
+  &lt;f:XamlProperty Name="ViewName" Value="default" /&gt;
+  &lt;f:XamlProperty Name="OpenForm" Value="FORM:default" /&gt;
+  &lt;f:XamlProperty Name="CreateForm" Value="FORM:default" /&gt;
+  &lt;f:XamlProperty Name="AllowCreate" Value="False" /&gt;
+  &lt;f:XamlProperty Name="AllowDelete" Value="False" /&gt;
+  &lt;f:XamlProperty Name="ShowGridFilterPanel" Value="False" /&gt;
+ &lt;f:XamlProperty Name="InputFilterField" Value="IncidentId=[KeyValue]" /&gt;
+ &lt;/f:XamlControlHolder.Assign&gt;
+&lt;/f:XamlControlHolder&gt;
+</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application Id">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+  </hidden>
+</form>

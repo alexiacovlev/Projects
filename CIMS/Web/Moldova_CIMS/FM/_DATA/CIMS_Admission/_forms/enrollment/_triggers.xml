@@ -1,0 +1,39 @@
+<Triggers>
+
+	<OnBeforeSave>
+    <Query>
+    
+    declare @r int;
+    set @r = 0;
+
+    if ((@ID is null) and (@TeamId is null OR @Year is null)) set @r = 2;
+
+    if (@ID is not null and @TeamId is null) select @TeamId = TeamId from CIMS_Admission where id = @ID;
+    if (@ID is not null and @Year is null) select @Year = Year from CIMS_Admission where id = @ID;
+
+    if (@r = 0)
+      begin
+      select @r = case when exists(select id from CIMS_Admission where TeamId=@TeamId and Year=@Year and (id != @ID or @ID is null)) then 1
+        else 0
+        end
+      end
+
+    if (@r = 1)
+      begin
+        THROW 50001, 'Admission for selected college and year already exists',0;
+      end 
+    else if (@r = 2)
+      begin
+        THROW 50001, 'Please, provide all required parameters.',0;
+      end
+
+    
+		</Query>
+	  <Assign>
+	    <Field name="ID" value="[KeyValue]"/>
+	    <Field name="TeamId" value="[TeamId]"/>
+	    <Field name="Year" value="[Year]"/>
+	  </Assign>
+	</OnBeforeSave>
+
+</Triggers>

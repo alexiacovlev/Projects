@@ -1,0 +1,9 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Iure Coroban" modifiedon="2015-01-29T10:11:50">
+  <set name="TableName" value="aspnet_Roles" />
+  <set name="OpenForm" value="Default1" />
+  <set name="CreateForm" value="Default1" />
+  <set name="CreateParameters" value="400,300,false" />
+  <set name="HandlerParameters" value="400,300,false" />
+  <set name="AllowDelete" value="false" />
+  <set name="ShowGridFilterPanel" value="false" />
+</mapNode>

@@ -1,0 +1,40 @@
+<form padding="big">
+  <header title="State Info" />
+  <description title="State Info" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="State Title" name="StateTitle" colspan="2" />
+            </row>
+            <row>
+              <cell title="State Name" name="StateName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Process Name" name="ProcessName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Table Name" name="TableName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Key Value" name="KeyValue" colspan="2" />
+            </row>
+            <row>
+              <cell title="Initiated By" name="InitiatedBy" />
+              <cell title="Initiated On" name="InitiatedOn" />
+            </row>
+            <row>
+              <cell title="Completed By" name="CompletedBy" />
+              <cell title="Completed On" name="CompletedOn" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" title="" name="Incident_Open" trace="true" version="2.0" author="yury" created="2014-01-14T18:31:45" modified="2014-01-14T18:31:45">
+	<Sequence>
+		<XmlIsland name="Incidentdata" title="Select incident status">
+			<Settings table="AX_Incidents" form="" />
+			<FieldSet>
+				<Field name="IncidentStatusId" />
+			</FieldSet>
+			<Assign>
+				<Field name="_KEYVALUE_" value="$id" />
+			</Assign>
+		</XmlIsland>
+		<Switch name="Switch7591" title="If/Else">
+			<Case title="Expression" test="IncidentStatusId eq '1'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="FROM:Submitted" title="" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_Submitted" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '5'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="FORM:In Progress" title="Incident In Progress" control="Form">
+						<Settings table="AX_Incidents" form="Incident_FORM_In_Progress" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '6'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="Invoke_Ready_for_testing" title="Incident Readay for Testing" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_ready_for_testing" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '3'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="Invoke_On_Hold" title="Incident On Hold" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_On_Hold" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '8'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="Invoke_Cancelled" title="Incident Cancelled" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_Cancelled" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '7'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="Invoke_Resolved" title="Incident Resolved" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_Resolved" readonly="true" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+			<Case title="Expression" test="IncidentStatusId eq '9'" source="Incidentdata">
+				<Sequence>
+					<Invoke name="Invoke_Reopened" title="Incident Reopened" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Form_Submitted" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Case>
+
+			<Otherwise>
+				<Sequence>
+					<Invoke name="Invoke1870" title="Incident" control="Form">
+						<Settings table="AX_Incidents" form="Incident_Info" readonly="true" />
+						<Assign>
+							<Field name="_KEYVALUE_" value="$id" />
+						</Assign>
+					</Invoke>
+				</Sequence>
+			</Otherwise>
+		</Switch>
+	</Sequence>
+	<Description />
+	<Input />
+	<Output />
+	<Variables />
+	<Handlers>
+		<Roundtrip enabled="false" />
+		<Previous title="Previous Step" enabled="false" />
+		<Next title="Save and Close" enabled="true" />
+		<Update title="Update" enabled="false" />
+		<Close title="Close" enabled="true" />
+	</Handlers>
+</Workflow>

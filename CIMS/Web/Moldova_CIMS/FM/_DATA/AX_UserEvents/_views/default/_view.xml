@@ -1,0 +1,17 @@
+<view select="true" check="false" expandMode="Off" preview="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Event Time" name="EventTime" width="150" />
+    <cell title="User Name" name="UserName" width="175" />
+    <cell title="Activity Type" name="TypeName" width="200" />
+    <cell title="Details" name="Message" />
+    <cell title="Activity Data" name="Data" width="150" />
+    <cell title="User IP Address" name="IPAddress" width="150" align="center" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+  </fetch>
+</view>

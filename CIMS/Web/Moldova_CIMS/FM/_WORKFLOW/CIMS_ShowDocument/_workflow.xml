@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_ShowDocument" version="2.0" created="2017-11-01T16:07:51" modified="2017-11-02T14:01:36" author="Admin Admin">
+  <Sequence>
+    <Invoke name="frm_Permanent" title="Document Generation" control="Form">
+      <Settings table="CIMS_DUMMY" form="print_frm" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+        <Field name="tmpRecordID" value="INPUT:RecordID" />
+        <Field name="tmpTableName" value="INPUT:TableName" />
+        <Field name="tmpTemplateName" value="INPUT:TemplateName" />
+        <Field name="tmpRefObjectID" value="INPUT:RefObjectID" />
+      </Assign>
+    </Invoke>
+    <Invoke name="PDF_Permanent" title="Document Viewer" control="SERVERCONTROL" controlInfo="/ASP.Net/FM/DataViewer/Print/PDFViewer.ascx">
+      <Assign>
+        <Field name="TableName" value="INPUT:TableName" />
+        <Field name="TemplateName" value="INPUT:TemplateName" />
+        <Field name="RecordID" value="INPUT:RecordID" />
+        <Field name="Parameters" value="'RefObjectID:'+INPUT:RefObjectID" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+</Workflow>

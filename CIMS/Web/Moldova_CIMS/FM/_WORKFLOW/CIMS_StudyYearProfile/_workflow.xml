@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_StudyYearProfile" version="2.0" created="2017-11-16T11:45:30" modified="2017-11-16T11:49:40" author="Admin Admin" trace="true" forceRefresh="false" title="">
+  <Sequence>
+    <XmlIsland name="DATA600" title="Select">
+      <Settings table="CIMS_StudyYears" />
+      <FieldSet>
+        <Field name="StudyYear" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <Invoke name="Profile1" title="" control="PROFILE" controlInfo="">
+      <Settings table="" form="default" />
+      <Assign>
+        <Field name="id" value="INPUT:id" />
+        <Field name="ProfileName" value="'CIMS_StudyYear'" />
+        <Field name="StudyYear" value="DATA600:StudyYear" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="true" />
+  </Handlers>
+</Workflow>

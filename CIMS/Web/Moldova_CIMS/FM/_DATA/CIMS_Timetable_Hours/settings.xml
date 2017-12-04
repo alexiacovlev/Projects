@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_Timetable_Hours" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="String" format="" title="Created IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="Modified On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="String" format="" title="Modified IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="Application" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="TeamId" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="" />
+    </field>
+    <field name="HourNr" type="Picklist" dbtype="Int32" format="" title="HourNr" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="StartTime" type="Integer" dbtype="Int32" format="" title="StartTime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="EndTime" type="Integer" dbtype="Int32" format="" title="EndTime" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Duration" type="Picklist" dbtype="Int32" format="" title="Duration" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Comments" type="Text" dbtype="StringUnicode" format="" title="Comments" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="StartTimeF" type="Text" dbtype="String" format="" title="Start Time F" description="" size="5" required="false" readonly="true" uimask="00111" />
+    <field name="EndTimeF" type="Text" dbtype="String" format="" title="End Time F" description="" size="5" required="false" readonly="true" uimask="00111" />
+  </fields>
+</entity>

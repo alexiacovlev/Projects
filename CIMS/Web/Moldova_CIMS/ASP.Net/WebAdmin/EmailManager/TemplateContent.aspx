@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TemplateContent.aspx.cs" Inherits="AX.PortalAdmin.Modules.TemplateContent" %>

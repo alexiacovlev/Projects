@@ -1,0 +1,40 @@
+<view check="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="ApplicationNr" title="Application Nr" width="150" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="SpecialCategory" title="Category" width="110" />
+    <cell name="TypeOfFinancing" title="Financing" width="92" />
+    <cell name="LocalityCategory" title="Locality" width="132" />
+    <cell name="ApplicantAvgMark" title="Avg Mark" width="68" />
+    <cell name="Admission_Position" title="Position" width="74" />
+    <cell name="Admission_Result" title="Result" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="TypeOfFinancing" ascending="true" />
+      <column name="SpecialCategory" ascending="true" />
+      <column name="LocalityCategory" ascending="false" />
+      <column name="Admission_Position" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+      <condition attribute="PersonStatus" operator="eq" value="2" />
+      <condition attribute="Admission_Result" operator="eq" value="1" />
+    </filter>
+    <groups>
+      <group name="Specialty" ascending="true" title="" mode="" />
+    </groups>
+  </fetch>
+  <rowstyle>
+    <style value="color:red;font-weight:bold;">
+      <condition attribute="Admission_Result" operator="eq" value="2" />
+    </style>
+    <style value="color:#3D723A;">
+      <condition attribute="Admission_Result" operator="eq" value="1" />
+    </style>
+  </rowstyle>
+</view>

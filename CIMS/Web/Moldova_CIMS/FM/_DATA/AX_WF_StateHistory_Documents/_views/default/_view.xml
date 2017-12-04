@@ -1,0 +1,22 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="State Title" name="StateTitle" />
+    <cell title="Document Name" name="DocumentName" width="200" />
+    <cell title="Process Name" name="ProcessName" width="200" />
+    <cell title="Initiated On" name="InitiatedOn" width="125" />
+    <cell title="Completed On" name="CompletedOn" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="InitiatedOn" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+  <rowstyle>
+    <style value="font-weight:bold;">
+      <condition attribute="CompletedBy" operator="null" value="" />
+    </style>
+  </rowstyle>
+</view>

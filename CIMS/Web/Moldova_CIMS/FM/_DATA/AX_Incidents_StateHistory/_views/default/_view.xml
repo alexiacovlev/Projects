@@ -1,0 +1,16 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="StateName" title="State Name" width="230" />
+    <cell name="Reason" title="Reason" />
+    <cell name="CreatedBy" title="Created By" width="100" />
+    <cell name="CreatedOn" title="Created On" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Reason" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Michael " modifiedon="2012-09-26T15:14:35">
+  <set name="TableName" value="AX_Events_Categories" />
+  <set name="HandlerParameters" value="400,300" />
+  <set name="CreateParameters" value="400,300" />
+</mapNode>

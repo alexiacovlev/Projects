@@ -1,0 +1,36 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell name="ApplicationId" title="ApplicationId" />
+              <cell name="Id" title="Id" />
+            </row>
+            <row>
+              <cell name="IPAddress" title="IPAddress" />
+              <cell name="IsInvitedToChat" title="IsInvitedToChat" />
+            </row>
+            <row>
+              <cell name="LastActivityTime" title="LastActivityTime" />
+              <cell name="Page" title="Page" />
+            </row>
+            <row>
+              <cell name="SessionId" title="SessionId" />
+              <cell name="StartTime" title="StartTime" />
+            </row>
+            <row>
+              <cell name="UserId" title="UserId" />
+              <cell name="ChatRequestorId" title="ChatRequestorId" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

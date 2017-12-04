@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="First Chart" type="bar" table="MY_SmartUsers" groupBy="CountryID" allowClick="true">
+  <series title="Untyped" filter="Type:" />
+  <series filter="Type:1" />
+  <series filter="Type:2" />
+  <series filter="Type:3" />
+  <dataview table="MY_SmartUsers" view="default" />
+</chart>

@@ -1,0 +1,14 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Specialty" title="Specialty" />
+    <cell name="Profile" title="Profile" width="150" />
+    <cell name="OrderSpec" title="Order" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="OrderSpec" ascending="true" />
+    </sort>
+  </fetch>
+</view>

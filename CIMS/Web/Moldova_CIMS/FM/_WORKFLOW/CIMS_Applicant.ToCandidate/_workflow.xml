@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Applicant.ToCandidate" version="2.0" created="2017-10-24T16:59:52" modified="2017-11-17T16:22:31" author="Admin Admin" trace="false" forceRefresh="true" title="">
+  <Sequence>
+    <XmlIsland name="DATA294" title="Select">
+      <Settings table="CIMS_Applicant" />
+      <FieldSet>
+        <Field name="ApplicationStatus" />
+        <Field name="PersonStatus" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <Switch>
+      <Case test="DATA294:PersonStatus = '1'" details="Applicant;">
+        <Sequence>
+          <Invoke name="FORM1" title="" control="Form">
+            <Settings table="CIMS_DUMMY" form="ToCandidate" provider="DUMMY" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="INPUT:id" />
+            </Assign>
+          </Invoke>
+          <Switch>
+            <Case test="FORM1:YesNo = '1'" details="Yes;">
+              <Sequence>
+                <UpdateRecord name="Update57" title="Modify">
+                  <Settings table="CIMS_Applicant" form="default" />
+                  <Assign>
+                    <Field name="_KEYVALUE_" value="INPUT:id" />
+                    <Field name="PersonStatus" value="'2'" text="Candidate" />
+                  </Assign>
+                </UpdateRecord>
+              </Sequence>
+            </Case>
+            <Otherwise>
+              <Sequence />
+            </Otherwise>
+          </Switch>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="Control317" title="CONTROL" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Application status does not allow selected operation.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="false" />
+  </Handlers>
+</Workflow>

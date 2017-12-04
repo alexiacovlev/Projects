@@ -1,0 +1,107 @@
+<form labelwidth="180">
+  <header title="Employee" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Personal Details" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="3">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Status" name="Status" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="First Name" name="FirstName" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Middle Name" name="MiddleName" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Last Name" name="LastName" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="IDNP" name="IDNP" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Birthdate" name="Birthdate" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Gender" name="Gender" colspan="2" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Professional Details" name="sec1288" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Education" name="Education" colspan="2" />
+            </row>
+            <row>
+              <cell title="Didactic Degree" name="DidacticDegree" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Has Pedagogical Studies" name="HasPedagogicalStudies" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Didactic Experience Years" name="DidacticExperienceYears" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1195" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="Full Name" name="FullName" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Employee: #FullName#</windowMask>
+</form>

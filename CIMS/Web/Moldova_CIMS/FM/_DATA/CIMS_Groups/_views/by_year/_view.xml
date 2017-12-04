@@ -1,0 +1,17 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="GroupNr" title="Group Nr" width="150" />
+    <cell name="GroupStatus" title="Status" width="150" />
+    <cell name="Specialty" title="Specialty" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

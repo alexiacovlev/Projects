@@ -1,0 +1,16 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId">
+    <cell name="FullName" title="Full Name" />
+    <cell name="UserInRoles" title="UserInRoles" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Password" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

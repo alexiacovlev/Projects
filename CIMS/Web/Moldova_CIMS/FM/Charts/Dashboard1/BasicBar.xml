@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="" type="custom:panel" table="MY_SmartUsers" groupBy="CountryID" allowClick="true">
+  <series title="Is Super" description="Additional for dataset1" filter="IsSuper:1;Type:2" />
+  <series title="Not so" description="Additional for dataset2" filter="IsSuper:0;Type:2" />
+</chart>

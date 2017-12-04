@@ -1,0 +1,18 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Semester" title="Semester" width="100" />
+    <cell name="Name" title="Name" />
+    <cell name="TypeOfPractice" title="Type Of Practice" width="200" />
+    <cell name="NumberOfHours" title="Number Of Hours" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

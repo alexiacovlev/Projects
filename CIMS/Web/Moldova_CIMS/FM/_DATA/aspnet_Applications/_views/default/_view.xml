@@ -1,0 +1,13 @@
+<view select="true" preview="false">
+  <row keyfield="ApplicationId">
+    <cell name="Description" title="Description" />
+    <cell name="ApplicationName" title="ApplicationName" width="300" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="ApplicationName" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

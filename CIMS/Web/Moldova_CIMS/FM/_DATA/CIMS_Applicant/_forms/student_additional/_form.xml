@@ -1,0 +1,107 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="false" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Application Nr" name="ApplicationNr">
+                <properties readonly="true" oncreatevalue="~AUTO:Application" />
+              </cell>
+              <cell title="Application Status" name="ApplicationStatus">
+                <properties readonly="true" oncreatevalue="1" requiredlevel="required" />
+              </cell>
+              <cell title="Application Date" name="ApplicationDate">
+                <properties oncreatevalue="~NOW" requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Admission" name="Admission" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+                <event>var data = frm.getLookupInfo("Admission","TeamId,Year");
+frm.setValue("TeamId",data["TeamId"]);</event>
+              </cell>
+              <cell title="Person Status" name="PersonStatus">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties readonly="true" requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Specialty" name="Specialty" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Group" name="GroupId" colspan="2">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Dorm" name="sec1395" decoration="line" columns="3" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Dorm Nr" name="DormNr" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Address" name="DormAddress" colspan="3" />
+            </row>
+            <row>
+              <cell title="Floor" name="DormFloor" />
+              <cell title="Room Nr" name="DormRoomNr" />
+              <cell title="Room Capacity" name="DormRoomCapacity" />
+            </row>
+          </rows>
+        </section>
+        <section title="Facilities" name="sec1624" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Facilities" name="Facilities" colspan="2" />
+            </row>
+            <row>
+              <cell title="Proof for facilities" name="FacilitiesProof" colspan="2" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

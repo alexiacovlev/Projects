@@ -1,0 +1,26 @@
+<view ordernumber="false">
+  <row>
+    <cell name="StateName" title="Stage" width="150" />
+    <cell name="Reason" title="Reason" />
+    <cell name="CreatedBy" title="Created By" width="150">
+      <properties readonly="true" />
+    </cell>
+    <cell name="CreatedOn" title="Created On" width="125">
+      <properties readonly="true" />
+    </cell>
+  </row>
+  <handlers>
+    <smartedit enabled="false" />
+    <select enabled="false">
+    </select>
+    <create enabled="false">
+    </create>
+    <delete enabled="false" />
+  </handlers>
+  <autoNewRow>off</autoNewRow>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="true" />
+    </sort>
+  </fetch>
+</view>

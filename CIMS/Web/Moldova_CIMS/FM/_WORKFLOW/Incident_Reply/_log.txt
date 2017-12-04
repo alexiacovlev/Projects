@@ -1,0 +1,18 @@
+6:07:54 PM:	XmlIsland for "AX_Incidents_Properties"
+6:07:54 PM:	Assign:
+6:07:54 PM:	 ApplicationId = "6bac16bc-b5b7-4a24-9e15-44186aa54726"
+6:07:54 PM:	Select Record by filter fields.
+6:07:54 PM:	XmlIsland for "AX_Incidents"
+6:07:54 PM:	Assign:
+6:07:54 PM:	 _KEYVALUE_ = "dc0f35d0-64e5-4e78-af15-5e76b576d545"
+6:07:54 PM:	XmlIsland for "aspnet_Membership"
+6:07:54 PM:	Assign:
+6:07:54 PM:	 _KEYVALUE_ = "075237c8-7315-4841-b4e0-b155b9daf15c"
+6:07:54 PM:	Invoke "Reply to Sender"
+6:07:54 PM:	Assign:
+6:07:54 PM:	 Subject = "QUESTION: a1: Number#00732/0502"
+6:07:54 PM:	 CreatedBy = "352215fd-6e13-445c-a41c-8b8865fe2738"
+6:07:54 PM:	 Email = "michael@alfa-xp.com"
+6:07:54 PM:	 ObjectId = "dc0f35d0-64e5-4e78-af15-5e76b576d545"
+6:07:54 PM:	 ModifiedBy = ""
+6:07:54 PM:	 ModifiedBy = "075237c8-7315-4841-b4e0-b155b9daf15c"

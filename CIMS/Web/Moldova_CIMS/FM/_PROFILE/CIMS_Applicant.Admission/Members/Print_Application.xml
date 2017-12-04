@@ -1,0 +1,3 @@
+<mapNode type="WORKFLOW" modifiedby="Admin Admin" modifiedon="2017-11-03T12:07:19">
+  <set name="WorkflowName" value="CIMS_Applicant_PrintApplication" />
+</mapNode>

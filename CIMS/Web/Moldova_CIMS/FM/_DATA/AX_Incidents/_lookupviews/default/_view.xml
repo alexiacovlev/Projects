@@ -1,0 +1,16 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Subject" title="Subject" />
+    <cell name="IncidentNr" title="Incident Nr" width="100" />
+    <cell name="IncidentStatusId" title="Incident Status Id" width="100" />
+    <cell name="IncidentTypeId" title="Incident Type Id" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Subject" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

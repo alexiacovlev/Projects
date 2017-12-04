@@ -1,0 +1,22 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell name="Name" title="Name"/>
+    <cell name="Title" title="" width="100"/>
+    <cell name="FieldType" title="" width="100"/>
+		<cell name="DbType" title="" width="100"/>
+		<cell name="Format" title="" width="100"/>
+		<cell name="Length" title="" width="100"/>
+		<cell name="RefInfo" title="" width="100"/>
+		<cell name="Info" title="" width="100"/>
+		<cell name="Description" title="" width="100"/>		 
+		<cell name="R" title="" width="30"/>
+  </row>
+
+  <fetch>
+    <sort>
+			<column name="R" ascending="false" />
+      <column name="Name" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

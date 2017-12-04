@@ -1,0 +1,37 @@
+<form>
+  <header title="Subject" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties requiredlevel="required" oncreatevalue="~TEAM" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="Name" title="Name" colspan="2" />
+            </row>
+            <row>
+              <cell title="Type" name="Type">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Active" name="Active">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

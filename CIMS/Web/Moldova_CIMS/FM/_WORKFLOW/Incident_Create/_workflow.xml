@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Incident_Open" trace="true" version="2.0" created="0001-01-01T10:00:00+02:00" modified="2006-02-15T18:59:32.27572+02:00">
+  <Sequence>
+    <Invoke name="AddIncident" title="Add an Incident" control="Form">
+      <Settings table="AX_Incidents" form="Incident_Create" />
+      <Assign>
+        <Field name="SendNotification" value="#true" />
+      </Assign>
+    </Invoke>
+    <SubWorkflow name="SUBWORKFLOW1" title="Notifications">
+      <Settings workflow="Incident_OnCreate" />
+      <Assign>
+        <Field name="id" value="AddIncident:_KEYVALUE_" />
+      </Assign>
+    </SubWorkflow>
+  </Sequence>
+  <Input />
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Save and Close" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

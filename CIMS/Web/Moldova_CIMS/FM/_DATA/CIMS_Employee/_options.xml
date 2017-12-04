@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <list name="Type">
+    <item title="Lecturer" value="1" />
+    <item title="Management" value="2" />
+    <item title="Auxiliary" value="3" />
+  </list>
+  <list name="Status">
+    <item title="Employed" value="1" />
+    <item title="Quit" value="2" />
+  </list>
+  <list name="DidacticDegree">
+    <item title="No degree" value="1" />
+    <item title="Second" value="2" />
+    <item title="First" value="3" />
+    <item title="Highest" value="4" />
+  </list>
+  <list name="Education">
+    <item title="Primary education" value="1" />
+    <item title="Lower secondary education" value="2" />
+    <item title="Upper secondary education" value="3" />
+    <item title="Post-secondary non-tertiary education" value="4" />
+    <item title="Short-cycle tertiary education" value="5" />
+    <item title="Bachelor or equivalent" value="6" />
+    <item title="Master or equivalent" value="7" />
+    <item title="Doctoral or equivalent" value="8" />
+  </list>
+  <list name="EmploymentType">
+    <item title="Full time" value="1" />
+    <item title="Part time" value="2" />
+  </list>
+  <list name="ContractDuration">
+    <item title="Fixed term" value="1" />
+    <item title="Indefinite" value="2" />
+  </list>
+</options>

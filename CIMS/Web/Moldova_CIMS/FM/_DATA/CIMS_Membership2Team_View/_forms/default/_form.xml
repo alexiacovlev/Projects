@@ -1,0 +1,65 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <windowMask>#FirstName# #LastName# - Modify</windowMask>
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Personal" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell title="First Name" name="FirstName" />
+              <cell title="Address Line 1" name="AddressLine1" />
+            </row>
+            <row>
+              <cell title="Last Name" name="LastName" />
+              <cell title="Address Line 2" name="AddressLine2" />
+            </row>
+            <row>
+              <cell title="Email" name="Email" />
+              <cell title="City" name="City" />
+            </row>
+            <row>
+              <cell title="Comment" name="Comment" />
+              <cell title="Country" name="CountryName" />
+            </row>
+            <row>
+              <cell />
+              <cell title="Zip Code" name="ZipCode" />
+            </row>
+          </rows>
+        </section>
+        <section title="Security" name="sec1621" showlabel="true" columns="2" decoration="line" marginTop="20">
+          <rows>
+            <row>
+              <cell title="College" name="UserInTeams" colspan="2">
+              </cell>
+            </row>
+            <row>
+              <cell title="User Role" name="UserInRoles" rowspan="4" />
+              <cell title="Account status" name="IsApproved" description="Admistrator can Suspend User Account using this flag." showhelp="true">
+              </cell>
+            </row>
+            <row>
+              <cell title="Lock state" name="IsLockedOut" description="User can be locked due wrong password entering, after specified count of attempts." showhelp="true">
+                <properties readonly="true" onupdatevalue="0" oncreatevalue="0" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Registered On" name="CreateDate" />
+            </row>
+            <row>
+              <cell title="Last Login Date" name="LastLoginDate" />
+            </row>
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="ApplicationId" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

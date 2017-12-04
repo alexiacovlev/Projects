@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entity version="3.0">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="AX_Events_Locations" />
+	<primarykey>ID</primarykey>
+	<watermark>Images/Views/Logo_Default.png</watermark>
+	<fields>
+		<field name="ID" type="Integer" format="" dbtype="Int32" size="" title="ID" description="" required="true" readonly="true" uimask="001111" />
+		<field name="Title" type="Text" format="" dbtype="StringUnicode" size="200" title="Title" description="" required="true" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

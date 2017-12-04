@@ -1,0 +1,47 @@
+<form padding="big">
+  <header title="Instance Properties" />
+  <description title="Instance Properties" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Section" name="sec1874" showlabel="false" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell title="Error Message" name="ErrorMessage" colspan="2" rowspan="3" />
+            </row>
+            <row />
+            <row />
+            <row>
+              <cell name="control_811">
+                <content>&lt;control type="BUTTON"&gt;
+ &lt;set name="Text" value="Clear Message" /&gt;
+ &lt;set name="Command" value="SCRIPT" /&gt;
+ &lt;set name="Value" value="frm.setValue('ErrorMessage', '');" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

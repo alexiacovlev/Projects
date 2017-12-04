@@ -1,0 +1,18 @@
+<view select="true" check="false" expandMode="Off" preview="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Event Time" name="EventTime" width="125" nowrap="true" />
+    <cell title="User Name" name="UserName" width="200" />
+    <cell title="Details" name="Message" />
+    <cell title="User IP Address" name="IPAddress" width="110" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="EventTime" operator="today" value="" />
+    </filter>
+  </fetch>
+</view>

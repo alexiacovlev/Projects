@@ -1,0 +1,152 @@
+<Workflow name="Change status In Progress" modified="2014-04-26T12:16:24" created="0001-01-01T10:00:00+02:00" version="2.0" trace="true" author="Iure Coroban">
+  <Sequence>
+    <Invoke title="" name="IncidentForm" control="Form">
+      <Settings form="default" table="AX_Incidents" />
+      <Assign>
+        <Field name="_FORMNAME_" value="$Form" />
+        <Field name="_KEYVALUE_" value="$id" />
+        <Field name="IncidentStatusId" value="$IncidentStatusId" />
+        <Field name="ResolutionCode" value="'3'" />
+        <Field name="ModifiedOn" value="~NOW" />
+        <Field name="SendNotification" value="'false'" />
+        <Field name="ResultDate" value="~NOW" />
+      </Assign>
+    </Invoke>
+    <XmlIsland title="" name="IncidentData">
+      <Settings form="" table="AX_Incidents" />
+      <FieldSet>
+        <Field name="IncidentNr" />
+        <Field name="Subject" />
+        <Field name="Description" />
+        <Field name="IncidentStatusId" />
+        <Field name="IncidentTypeId" />
+        <Field name="CreatedBy" />
+        <Field name="CreatedOn" />
+        <Field name="ApplicationId" />
+        <Field name="StateReason" />
+        <Field name="RequestURL" />
+        <Field name="ModifiedBy" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <UpdateRecord title="Update State History" name="UpdateHistory1">
+      <Settings form="" table="AX_Incidents_StateHistory" />
+      <Assign>
+        <Field name="CreatedBy" value="~USERID" />
+        <Field name="CreatedBy_FullName" value="IncidentData:ModifiedBy(aspnet_Membership).FullName" />
+        <Field name="CreatedOn" value="~NOW" />
+        <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+        <Field name="StateID" value="IncidentData:IncidentStatusId" />
+        <Field name="StateName" value="IncidentData:IncidentStatusId(AX_Incidents_Status).Description" />
+        <Field name="Reason" value="IncidentData:StateReason" />
+        <Field name="CreatedIP" value="~IP" />
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </UpdateRecord>
+    <Switch name="IFELSE7397">
+      <Case test="IncidentForm:SendNotification eq 'true'" source="">
+        <Sequence>
+          <ExecuteRequest title="Send Mail 1" name="MAILSERVICE1" type="MailService" url="">
+            <Settings timeout="0" method="Send" />
+            <Assign>
+              <Field name="From" value="" />
+              <Field name="To" value="IncidentData:CreatedBy(aspnet_Membership).Email" />
+              <Field name="Subject" value="#Change Status: [#IncidentData:IncidentStatusId(AX_Incidents_Status).Status#]" />
+              <Field name="Body" value="" />
+              <Field name="Template" value="'Incidents/ChangeStatus'" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+    <XmlIsland name="CONFIG1" title="Read Incidents  Config">
+      <Settings form="" table="AX_Incidents_Properties" />
+      <FieldSet>
+        <Field name="CCopyTo_FullName" />
+        <Field name="CCopyToEmail" />
+        <Field name="CopyToCC" />
+        <Field name="SendToServer" />
+        <Field name="ServerURL" />
+        <Field name="ApplicationId" />
+        <Field name="ClientURL" />
+      </FieldSet>
+      <Assign>
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </XmlIsland>
+    <Switch name="IFELSE3937">
+      <Case test="CONFIG1:SendToServer eq '1'" source="">
+        <Sequence>
+          <ExecuteRequest title="Global AX_Incidents Comments" name="WEBSERVICE1" type="WebService" url="/FM/Services/Global_AX_Incidents_Comments/process.asmx" hideExceptions="true">
+            <Settings timeout="0" method="Execute" namespace="http://www.alfa-xp.com/FM/HumanWFService" />
+            <Assign>
+              <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+              <Field name="Subject" value="IncidentData:Subject" />
+              <Field name="IncidentStatusId" value="IncidentData:IncidentStatusId" />
+              <Field name="ModifiedOn" value="IncidentData:ModifiedOn" />
+              <Field name="StateReason" value="IncidentData:StateReason" />
+              <Field name="SendNotification" value="IncidentData:SendNotification" />
+              <Field name="SendTo" value="IncidentData:CreatedBy" />
+              <Field name="RequestURL" value="~APPLICATIONURL" />
+              <Field name="_URL_" value="#[#CONFIG1:ServerURL#]/FM/Services/Global_AX_Incidents_Comments/process.asmx" />
+            </Assign>
+          </ExecuteRequest>
+          <ExecuteRequest title="Global AX_Incidents StateHistory" name="WEBSERVICE2" type="WebService" url="/FM/Services/Global_AX_Incidents_StateHistory/process.asmx" hideExceptions="true">
+            <Settings timeout="0" method="Execute" namespace="http://www.alfa-xp.com/FM/HumanWFService" />
+            <Assign>
+              <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+              <Field name="StateName" value="UpdateRecord:StateName" />
+              <Field name="Reason" value="UpdateRecord:Reason" />
+              <Field name="CreatedOn" value="~NOW" />
+              <Field name="CreatedIP" value="~IP" />
+              <Field name="CreatedBy" value="~USERID" />
+              <Field name="CreatedBy_FullName" value="UpdateRecord:CreatedBy(aspnet_Membership).FullName" />
+              <Field name="RequestURL" value="~APPLICATIONURL" />
+              <Field name="_URL_" value="#[#CONFIG1:ServerURL#]/FM/Services/Global_AX_Incidents_StateHistory/process.asmx" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+    <Switch name="IFELSE6314">
+      <Case test="CONFIG1:CopyToCC eq '1'" source="">
+        <Sequence>
+          <ExecuteRequest title="Send CC Mail" name="MAILSERVICE2" type="MailService" url="">
+            <Settings timeout="0" method="Send" />
+            <Assign>
+              <Field name="From" value="" />
+              <Field name="To" value="CONFIG1:CCopyToEmail" />
+              <Field name="Subject" value="#Change Status: [#IncidentData:Subject#]" />
+              <Field name="Body" value="" />
+              <Field name="Template" value="'Incidents/ChangeStatus'" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Input>
+    <Param name="IncidentStatusId" type="Int32" />
+    <Param name="Form" type="String" />
+  </Input>
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Submit" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

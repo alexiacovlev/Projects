@@ -1,0 +1,10 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-10T14:22:20">
+  <set name="TableName" value="CIMS_Student" />
+  <set name="ViewName" value="students_in_group" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="InputFilterField" value="GroupId=$id" />
+  <set name="CustomActionsXml" value="&lt;menu/&gt;" />
+  <set name="OpenForm" value="PROFILE:CIMS_Student" />
+  <set name="HandlerParameters" value="1200,850" />
+</mapNode>

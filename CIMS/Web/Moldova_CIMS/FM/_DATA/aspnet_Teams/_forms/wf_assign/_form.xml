@@ -1,0 +1,63 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell name="Name" title="Team">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="Description" title="Description">
+                <properties lines="3" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="Address" title="Address">
+                <properties lines="3" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="EMailAddress" title="EMailAddress" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedOn" title="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedIP" title="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ApplicationId" title="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell name="ModifiedOn" title="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="DeletionStateCode" title="DeletionStateCode">
+      <properties oncreatevalue="0" />
+    </cell>
+    <cell name="CreatedIP" title="CreatedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+  </hidden>
+</form>

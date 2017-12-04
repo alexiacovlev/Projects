@@ -1,0 +1,10 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-22T13:58:54">
+  <set name="TableName" value="CIMS_AdmissionOrders" />
+  <set name="CreateForm" value="WORKFLOW:CIMS_Enrollment" />
+  <set name="Label_NEW" value="Enrollement" />
+  <set name="OpenForm" value="WORKFLOW:CIMS_Enrollment" />
+  <set name="HandlerParameters" value="1100,850,true" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Profile&quot; image=&quot;star.png&quot; command=&quot;PROFILE&quot; width=&quot;1100&quot; height=&quot;850&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; ico=&quot;a0c2&quot; value=&quot;CIMS_AdmissionOrder&quot; attributes=&quot;id&quot;/&gt;&lt;/menu&gt;" />
+  <set name="CreateParameters" value="900,550,true" />
+  <set name="InputFilterField" value="AdmissionStatus=1" />
+</mapNode>

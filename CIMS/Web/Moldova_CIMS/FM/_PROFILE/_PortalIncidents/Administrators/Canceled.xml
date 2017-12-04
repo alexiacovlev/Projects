@@ -1,0 +1,8 @@
+<mapNode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="GRID" visible="false" modifiedby="Michael " modifiedon="2012-08-28T17:09:11">
+  <set name="TableName" value="AX_Incidents" />
+  <set name="ViewName" value="Incident_Cancelled" />
+  <set name="AllowCreate" value="false" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="HandlerParameters" value="850,550" />
+  <set name="OpenForm" value="Incident_Info" />
+</mapNode>

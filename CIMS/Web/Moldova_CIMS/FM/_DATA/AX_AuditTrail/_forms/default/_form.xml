@@ -1,0 +1,57 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Action" name="atAction" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Application" name="atApplicationId" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Created At" name="atDateCreated" />
+              <cell />
+            </row>
+            <row>
+              <cell title="KeyValue" name="atKeyValue" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Context" name="atObject" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Table" name="atTable" />
+              <cell />
+            </row>
+            <row>
+              <cell title="User" name="atUserId" />
+              <cell />
+            </row>
+            <row>
+              <cell title="IP" name="atIP" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Info" name="atInfo" colspan="2">
+                <properties lines="8" />
+              </cell>
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

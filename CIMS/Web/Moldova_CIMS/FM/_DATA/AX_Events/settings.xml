@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Events" />
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <audittrail create="false" update="false" delete="false" search="false" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="Title" type="Text" dbtype="StringUnicode" format="" title="Title" description="" size="200" required="true" readonly="false" uimask="001111" />
+    <field name="Description" type="Text" dbtype="StringUnicode" format="textarea" title="Description" description="" size="1024" required="false" readonly="false" uimask="001111" />
+    <field name="StartTime" type="DateTime" dbtype="DateTime" format="datetime" title="Start Time" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="EndTime" type="DateTime" dbtype="DateTime" format="datetime" title="End Time" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="AllDay" type="Boolean" dbtype="Boolean" format="" title="All Day" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="RepeatMode" type="Integer" dbtype="Int32" format="" title="Repeat Mode" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="RepeatPeriod" type="Integer" dbtype="Int32" format="" title="Repeat Period" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="TeamID" type="Text" dbtype="Guid" format="" title="Team ID" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="true" readonly="false" uimask="001111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="true" readonly="false" uimask="001111" />
+    <field name="CreatedIP" type="Text" dbtype="StringUnicode" format="" title="Created IP" description="" size="20" required="true" readonly="false" uimask="001111" />
+    <field name="ModifiedBy" type="Text" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="false" uimask="001111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="Modified On" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedIP" type="Text" dbtype="StringUnicode" format="" title="Modified IP" description="" size="20" required="false" readonly="false" uimask="001111" />
+    <field name="ApplicationId" type="Text" dbtype="Guid" format="" title="Application Id" description="" size="" required="false" readonly="false" uimask="001111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="LocationID" type="Picklist" dbtype="Int32" format="" title="Location" description="" required="false" readonly="false" uimask="001111">
+      <extract table="AX_Events_Locations" view="default" />
+    </field>
+    <field name="CategoryID" type="Picklist" dbtype="Int32" format="" title="Category" description="" required="false" readonly="false" uimask="001111">
+      <extract table="AX_Events_Categories" view="default" />
+    </field>
+  </fields>
+</entity>

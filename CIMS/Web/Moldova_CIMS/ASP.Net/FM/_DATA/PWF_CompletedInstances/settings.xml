@@ -1,0 +1,18 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_WF_PROCESS_Completed" />
+  <primarykey>InstanceId</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field name="InstanceId" type="Text" format="" dbtype="Guid" size="" title="Instance Id" description="" required="true" readonly="false" uimask="001111" />
+    <field name="WorkflowName" type="Text" format="" dbtype="String" size="50" title="Workflow Name" description="" required="true" readonly="false" uimask="001111" />
+    <field name="Version" type="Integer" format="" dbtype="Int32" size="" title="Version" description="" required="true" readonly="false" uimask="001111" />
+    <field name="WorkflowContext" type="Text" format="textarea" dbtype="String" size="2147483647" title="Workflow Context" description="" required="true" readonly="false" uimask="001111" />
+    <field name="LastStateName" type="Text" format="" dbtype="String" size="50" title="Last State Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="LastStateTitle" type="Text" format="" dbtype="String" size="400" title="Last State Title" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Message" type="Text" format="textarea" dbtype="String" size="1000" title="Message" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StartedOn" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Started On" description="" required="true" readonly="false" uimask="00111" />
+    <field name="CompletedOn" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Completed On" description="" required="true" readonly="false" uimask="00111" />
+  </fields>
+</entity>

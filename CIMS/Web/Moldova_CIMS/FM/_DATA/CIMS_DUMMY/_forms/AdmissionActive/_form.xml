@@ -1,0 +1,67 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell />
+              <cell name="control_119" rowspan="10">
+                <content>
+                </content>
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Admission" name="AdmissionActive" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

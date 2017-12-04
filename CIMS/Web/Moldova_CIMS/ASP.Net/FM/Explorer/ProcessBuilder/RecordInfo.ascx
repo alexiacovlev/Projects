@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RecordInfo.ascx.cs" Inherits="AX.FM.Explorer.ProcessBuilder.RecordInfo" %>

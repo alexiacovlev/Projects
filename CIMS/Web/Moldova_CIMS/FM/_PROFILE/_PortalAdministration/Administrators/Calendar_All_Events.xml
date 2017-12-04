@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedby="Michael " modifiedon="2012-09-26T15:16:58">
+  <set name="TableName" value="AX_Events" />
+  <set name="ViewName" value="all" />
+  <set name="AllowCreate" value="false" />
+  <set name="OpenForm" value="info" />
+  <set name="CreateForm" value="info" />
+</mapNode>

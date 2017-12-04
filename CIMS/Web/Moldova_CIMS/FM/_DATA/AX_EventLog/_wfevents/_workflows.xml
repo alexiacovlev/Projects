@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workflows xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <workflow events="1000" name="ProcessEventLog" published="true">
+    <condition attribute="EventCode" operator="eq" value="150001" />
+  </workflow>
+  <workflow events="1000" name="ProcessCalendarLog" createdBy="Michael Isipciuc" createdOn="2008-05-28T16:33:16" published="true">
+    <condition attribute="EventCode" operator="eq" value="200001" />
+  </workflow>
+</workflows>

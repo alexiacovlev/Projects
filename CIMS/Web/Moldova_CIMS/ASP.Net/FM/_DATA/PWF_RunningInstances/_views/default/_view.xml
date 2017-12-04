@@ -1,0 +1,17 @@
+<view select="true" preview="false" icon="true" expandMode="Off">
+  <header title="" />
+  <description title="" />
+  <row keyfield="InstanceId" imagetype="_FormList">
+    <cell name="StateTitle" title="State Title" />
+    <cell name="StateName" title="State Name" width="100" />
+    <cell name="WorkflowName" title="Workflow Name" width="150" />
+    <cell name="CreatedOn" title="Created On" width="100" />
+    <cell name="InstanceId" title="Instance Id" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="" />
+  <description title="" />
+  <windowMask>Change to On Cancelled Stage</windowMask>
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Set Cancelled Stage" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Subject" title="Title" colspan="2" titlepos="off">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="Description" title="Description" colspan="2" rowspan="3" titlepos="top">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row />
+            <row />
+            <row>
+              <cell name="IncidentStatusId" title="Incident Status" colspan="2">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="ModifiedOn" title="Date" colspan="2">
+                <properties readonly="true" oncreatevalue="~NOW" onupdatevalue="~NOW" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Resolution" decoration="line" columns="2" name="sec4172" showlabel="true">
+          <rows>
+            <row>
+              <cell name="StateReason" title="Reason:" colspan="2" rowspan="3" titlepos="top">
+                <properties requiredlevel="recommended" />
+              </cell>
+            </row>
+            <row />
+            <row />
+            <row>
+              <cell name="SendNotification" title="Send Notification" colspan="2" />
+            </row>
+            <row>
+              <cell name="CreatedBy" title="To:" colspan="2">
+                <properties handlermode="editable" oncreatevalue="~USERID" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ApplicationId" title="Application Id">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell name="IncidentTypeId" title="Incident Type">
+      <properties requiredlevel="required" oncreatevalue="6" />
+    </cell>
+  </hidden>
+</form>

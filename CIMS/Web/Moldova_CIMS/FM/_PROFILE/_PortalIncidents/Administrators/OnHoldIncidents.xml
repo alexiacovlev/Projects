@@ -1,0 +1,8 @@
+<mapNode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="GRID" visible="false" modifiedby="Michael " modifiedon="2012-08-28T17:09:07">
+  <set name="TableName" value="AX_Incidents" />
+  <set name="ViewName" value="Incident_OnHold" />
+  <set name="OpenForm" value="Incident_Info" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Cancelled&quot; image=&quot;brick_delete.png&quot; command=&quot;WORKFLOW&quot; value=&quot;Incident_ChangeStatus&quot; attributes=&quot;id,IncidentStatusId=8,Form=Incident_Cancelled&quot; pos=&quot;out&quot; width=&quot;450&quot; height=&quot;500&quot; full=&quot;false&quot; showoutlabel=&quot;true&quot; /&gt;  &lt;item title=&quot;Ready for Testing&quot; image=&quot;brick_error.png&quot; command=&quot;WORKFLOW&quot; value=&quot;Incident_ChangeStatus&quot; attributes=&quot;id,IncidentStatusId=6,Form=Incident_ReadyForTesting&quot; pos=&quot;out&quot; width=&quot;450&quot; height=&quot;500&quot; full=&quot;false&quot; showoutlabel=&quot;true&quot; /&gt;  &lt;item title=&quot;Mark as Resolved&quot; image=&quot;brick_go.png&quot; command=&quot;WORKFLOW&quot; value=&quot;Incident_ChangeStatus&quot; attributes=&quot;id,IncidentStatusId=7,Form=Incident_Accepted&quot; pos=&quot;out&quot; width=&quot;450&quot; height=&quot;500&quot; full=&quot;false&quot; showoutlabel=&quot;true&quot; /&gt;&lt;/menu&gt;" />
+  <set name="HandlerParameters" value="850,550" />
+  <set name="AllowCreate" value="false" />
+</mapNode>

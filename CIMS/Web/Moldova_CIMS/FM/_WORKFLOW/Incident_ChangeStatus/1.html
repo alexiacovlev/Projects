@@ -1,0 +1,99 @@
+<style>
+	td { padding-top:1px; padding-bottom:1px; padding-left: 4px; border-bottom: #d6e8fe 1px solid; }
+</style>
+<table style="width: 90%; border-collapse: collapse;table-layout:fixed; margin:5px">
+  <colgroup>
+    <col width="200px" />
+    <col />
+  </colgroup>
+  <tbody style="font-size: 10pt; color: black; font-family: Verdana,Arial,Helvetica">
+    <tr>
+      <td colspan="2" style="border-bottom: #064497 1px solid;padding:4px;background-color:#3889f7;color:white;">
+        <b>[#Reply to Sender:Subject#]&nbsp;</b>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Portal:
+      </td>
+      <td>
+        [#xmldata1:ApplicationId(aspnet_Applications).Description#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Portal URL:
+      </td>
+      <td>
+        [#~APPLICATIONURL#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Number:
+      </td>
+      <td>
+        [#xmldata1:IncidentNr#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Type:
+      </td>
+      <td>
+        [#xmldata1:IncidentTypeId(AX_Incidents_Type).Type#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Question Sended by:
+      </td>
+      <td>
+        [#Reply to Sender:CreatedBy(aspnet_Membership).FullName#]
+      </td>
+    </tr>
+    <tr>
+      <td>
+        E-mail:
+      </td>
+      <td>
+        [#Reply to Sender:Email#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Date:
+      </td>
+      <td>
+        [#~NOW#]&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        IP:
+      </td>
+      <td>
+        [#~IP#]&nbsp;
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        Question<b>:</b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <b>[#Reply to Sender:Comments#]</b>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div  style="font-size: 8pt; color: black; font-family: Verdana,Arial,Helvetica">
+  <br />
+  Notes:
+  <br />
+  Please do not reply to this message, which was sent from an unmonitored e-mail address.<br />
+  Mail sent to this address cannot be answered.<br />
+  Provided by <a href="http://www.webassembler.net/">WebAssembler.NET 2012 SL</a>
+</div>

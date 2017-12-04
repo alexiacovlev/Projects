@@ -1,0 +1,14 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Status" title="Status" />
+    <cell name="id" title="id" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="id" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,13 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ApplicationId">
+    <cell name="PathId" title="Path Id" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="PathId" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

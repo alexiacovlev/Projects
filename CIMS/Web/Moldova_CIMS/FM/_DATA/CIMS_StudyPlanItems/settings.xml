@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_StudyPlanItems" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="String" format="" title="Created IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="Modified On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="String" format="" title="Modified IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="Application" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="StudyPlan" type="Lookup" dbtype="Guid" format="" title="StudyPlan" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_StudyPlans" view="" />
+    </field>
+    <field name="Semester" type="Picklist" dbtype="Guid" format="" title="Semester" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="TeamId" to="TeamId" />
+      <extract table="CIMS_Semesters" view="" />
+    </field>
+    <field name="Subject" type="Picklist" dbtype="Int32" format="" title="Subject" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="TeamId" to="TeamId" />
+      <extract table="CIMS_d_SubjectsToStudy" view="" />
+    </field>
+    <field name="SubjectMandatory" type="Picklist" dbtype="Int32" format="radio" title="SubjectMandatory" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TypeOfEvaluation" type="Picklist" dbtype="Int32" format="" title="TypeOfEvaluation" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursPerWeek" type="Float" dbtype="Double" format="" title="TotalHoursPerWeek" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursPerSemester" type="Float" dbtype="Double" format="" title="TotalHoursPerSemester" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursTheory" type="Float" dbtype="Double" format="" title="TotalHoursTheory" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursSeminars" type="Float" dbtype="Double" format="" title="TotalHoursSeminars" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursLaboratory" type="Float" dbtype="Double" format="" title="TotalHoursLaboratory" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursPractical" type="Float" dbtype="Double" format="" title="TotalHoursPractical" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TotalHoursIndividual" type="Float" dbtype="Double" format="" title="TotalHoursIndividual" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="NumberOfCredit" type="Float" dbtype="Double" format="" title="NumberOfCredit" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="TeamId" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="" />
+    </field>
+    <field name="LecturersTheory" type="Lookup" dbtype="" format="multi" title="LecturersTheory" description="" size="" required="false" readonly="false" uimask="00111">
+      <relation table="CIMS_StudyPlanItems2Lecturers">
+        <column name="ParentID" type="parentkey" />
+        <column name="ObjectID" type="childkey" />
+        <column name="HoursType" value="'1'" />
+      </relation>
+      <extract table="CIMS_Employee" view="" />
+    </field>
+    <field name="LecturersSeminars" type="Lookup" dbtype="" format="multi" title="LecturersSeminars" description="" size="" required="false" readonly="false" uimask="00111">
+      <relation table="CIMS_StudyPlanItems2Lecturers">
+        <column name="ParentID" type="parentkey" />
+        <column name="ObjectID" type="childkey" />
+        <column name="HoursType" value="'2'" />
+      </relation>
+      <extract table="CIMS_Employee" view="" />
+    </field>
+    <field name="LecturersLaboratory" type="Lookup" dbtype="" format="multi" title="LecturersLaboratory" description="" size="" required="false" readonly="false" uimask="00111">
+      <relation table="CIMS_StudyPlanItems2Lecturers">
+        <column name="ParentID" type="parentkey" />
+        <column name="ObjectID" type="childkey" />
+        <column name="HoursType" value="'3'" />
+      </relation>
+      <extract table="CIMS_Employee" view="" />
+    </field>
+    <field name="LecturersPractical" type="Lookup" dbtype="" format="multi" title="LecturersPractical" description="" size="" required="false" readonly="false" uimask="00111">
+      <relation table="CIMS_StudyPlanItems2Lecturers">
+        <column name="ParentID" type="parentkey" />
+        <column name="ObjectID" type="childkey" />
+        <column name="HoursType" value="'4'" />
+      </relation>
+      <extract table="CIMS_Employee" view="" />
+    </field>
+    <field name="LecturersIndividual" type="Lookup" dbtype="" format="multi" title="LecturersIndividual" description="" size="" required="false" readonly="false" uimask="00111">
+      <relation table="CIMS_StudyPlanItems2Lecturers">
+        <column name="ParentID" type="parentkey" />
+        <column name="ObjectID" type="childkey" />
+        <column name="HoursType" value="'5'" />
+      </relation>
+      <extract table="CIMS_Employee" view="" />
+    </field>
+  </fields>
+</entity>

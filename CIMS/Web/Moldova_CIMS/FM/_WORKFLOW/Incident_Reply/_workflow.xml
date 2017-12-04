@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" title="" name="Incident_Reply" trace="true" version="2.0" created="0001-01-01T10:00:00+02:00" modified="2006-11-13T15:22:12.7739403+02:00">
+  <Sequence>
+    <XmlIsland name="SELECT2181">
+      <Settings table="AX_Incidents_Properties" form="" />
+      <FieldSet>
+        <Field name="CCopyTo_FullName" />
+        <Field name="CCopyToEmail" />
+        <Field name="CopyToCC" />
+        <Field name="SendToServer" />
+        <Field name="ServerURL" />
+        <Field name="ApplicationId" />
+        <Field name="ClientURL" />
+      </FieldSet>
+      <Assign>
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </XmlIsland>
+    <XmlIsland name="xmldata1">
+      <Settings table="AX_Incidents" form="" />
+      <FieldSet>
+        <Field name="IncidentNr" />
+        <Field name="Subject" />
+        <Field name="Description" />
+        <Field name="IncidentStatusId" />
+        <Field name="IncidentTypeId" />
+        <Field name="CreatedBy" />
+        <Field name="CreatedOn" />
+        <Field name="ApplicationId" />
+        <Field name="RequestURL" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="#[#$id#][#$ObjectId#]" />
+      </Assign>
+    </XmlIsland>
+    <XmlIsland name="SELECT4504">
+      <Settings table="aspnet_Membership" form="" />
+      <FieldSet>
+        <Field name="Email" />
+        <Field name="FullName" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="~USERID" />
+      </Assign>
+    </XmlIsland>
+    <Invoke name="Reply to Sender" title="New Message" control="Form">
+      <Settings table="AX_Incidents_Comments" form="ReplyMessage" />
+      <Assign>
+        <Field name="Subject" value="#QUESTION: [#xmldata1:Subject#]: Number#[#xmldata1:IncidentNr#]" />
+        <Field name="CreatedBy" value="xmldata1:CreatedBy" />
+        <Field name="Email" value="xmldata1:CreatedBy(aspnet_Membership).Email" />
+        <Field name="ObjectId" value="#[#$id#][#$ObjectId#]" />
+        <Field name="ModifiedBy" value="Reply to Sender:CreatedBy(aspnet_Membership).Email" />
+        <Field name="ModifiedBy" value="~USERID" />
+      </Assign>
+    </Invoke>
+    <ExecuteRequest name="MAILSERVICE2996" title="Send Mail" url="" type="MailService">
+      <Settings method="Send" timeout="0" />
+      <Assign>
+        <Field name="From" value="#&quot;Bug Track - [#Reply to sender:ApplicationId(aspnet_Applications).Description#]&quot; bugTrack@webassembler.net" />
+        <Field name="To" value="Reply to Sender:Email" />
+        <Field name="Subject" value="Reply to Sender:Subject" />
+        <Field name="Body" value="" />
+      </Assign>
+    </ExecuteRequest>
+  </Sequence>
+  <Description />
+  <Input>
+    <Param name="ObjectId" type="Guid" />
+  </Input>
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="true" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Send" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

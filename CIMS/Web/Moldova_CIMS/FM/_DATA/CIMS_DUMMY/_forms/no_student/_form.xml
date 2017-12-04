@@ -1,0 +1,22 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="false" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="control_229" colspan="2">
+                <content>&lt;h3 style="padding-top:100px; text-align:center; color:red;"&gt;Student profile does not exists&lt;/h3&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

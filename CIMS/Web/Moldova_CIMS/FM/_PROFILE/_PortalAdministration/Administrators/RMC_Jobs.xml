@@ -1,0 +1,9 @@
+<mapNode type="GRID" modifiedon="2016-09-05T19:01:19" modifiedby="Michael ">
+  <set name="TableName" value="BASE:RMC_Jobs" />
+  <set name="ViewName" value="default" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="OpenForm" value="SERVERCONTROL:ASP.Net/FM/Explorer/UI/Jobs/SchedulerJob.ascx" />
+  <set name="ShowGridFilterPanel" value="false" />
+  <set name="OnRecordOpen" value="DoNothing" />
+</mapNode>

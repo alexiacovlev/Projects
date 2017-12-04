@@ -1,0 +1,17 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Title" title="Title" />
+    <cell name="BackgroundColor" title="Background" width="100" />
+    <cell name="BorderColor" title="Border" width="100" />
+    <cell name="TextColor" title="Text" width="100" />
+    <cell name="ID" title="ID" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ID" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

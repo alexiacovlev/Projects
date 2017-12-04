@@ -1,0 +1,20 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="ApplicationNr" title="Application Nr" width="150" />
+    <cell name="ApplicationDate" title="Application Date" width="150" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="ApplicationStatus" title="Application Status" width="138" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

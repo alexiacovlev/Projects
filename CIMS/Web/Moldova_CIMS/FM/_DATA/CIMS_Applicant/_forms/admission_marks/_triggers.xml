@@ -1,0 +1,24 @@
+﻿<Triggers>
+
+  <OnAfterSave>
+    <Query>
+declare @Admission uniqueidentifier;
+declare @MNDP decimal(4,2);
+declare @MNEA decimal(4,2);
+declare @MarkWeight_MNDP decimal(4,2);
+declare @MarkWeight_MNEA decimal(4,2);
+
+select @MNEA = MarkMNEA, @Admission = Admission from CIMS_Applicant where id = @id;
+select @MarkWeight_MNDP = MarkWeight_MNDP, @MarkWeight_MNEA = MarkWeight_MNEA from CIMS_Admission where id = @Admission;
+select @MNDP = avg(mark) from CIMS_Applicant2Marks where Applicant = @ID;
+select @MNDP, @MNEA, @MarkWeight_MNDP, @MarkWeight_MNEA, @MNDP*@MarkWeight_MNDP + @MNEA*@MarkWeight_MNEA
+
+update CIMS_Applicant set MarkMNDP = @MNDP,  ApplicantAvgMark = @MNDP*@MarkWeight_MNDP + @MNEA*@MarkWeight_MNEA where id = @id      
+
+    </Query>
+    <Assign>
+      <Field name="ID" value="[KeyValue]"/>
+    </Assign>
+  </OnAfterSave>
+
+</Triggers>

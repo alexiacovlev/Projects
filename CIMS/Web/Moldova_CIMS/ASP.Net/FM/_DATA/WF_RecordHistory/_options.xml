@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list name="Status" default="">
+    <item title="Created" value="0" />
+    <item title="Completed" value="1" />
+    <item title="Idle" value="2" />
+    <item title="Suspended" value="3" />
+    <item title="Resumed" value="4" />
+    <item title="Persisted" value="5" />
+    <item title="Unloaded" value="6" />
+    <item title="Loaded" value="7" />
+    <item title="Exception" value="8" />
+    <item title="Terminated" value="9" />
+    <item title="Aborted" value="10" />
+    <item title="Changed" value="11" />
+    <item title="Started" value="12" />
+  </list>
+</options>

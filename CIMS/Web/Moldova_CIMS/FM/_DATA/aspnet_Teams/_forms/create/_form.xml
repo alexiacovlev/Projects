@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Name" title="Team" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell name="Description" title="Description" colspan="2">
+                <properties lines="3" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="ApplicationId" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

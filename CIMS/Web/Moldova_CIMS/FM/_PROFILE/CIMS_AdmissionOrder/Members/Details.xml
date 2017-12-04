@@ -1,0 +1,4 @@
+<mapNode type="FORM" modifiedby="Admin Admin" modifiedon="2017-11-02T14:48:12">
+  <set name="TableName" value="CIMS_AdmissionOrders" />
+  <set name="FormName" value="details/READONLY" />
+</mapNode>

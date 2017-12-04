@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="DesignerService.asmx.cs" Class="AX.ChartDashboard.ChartDesignerService" %>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart title="Registered User Roles" type="halfdoughnut" table="" dbview="[SQLCODE]" groupBy="RoleName" allowClick="false">
+	<dataview table="aspnet_Membership" />
+</chart>

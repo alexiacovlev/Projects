@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedon="2017-06-15T18:03:56" modifiedby="Michael ">
+  <set name="TableName" value="AX_Events_Locations" />
+  <set name="HandlerParameters" value="400,300" />
+  <set name="CreateParameters" value="400,300" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="ShowGridFilterPanel" value="false" />
+</mapNode>

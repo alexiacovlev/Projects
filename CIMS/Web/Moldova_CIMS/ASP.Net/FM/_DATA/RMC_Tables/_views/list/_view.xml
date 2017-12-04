@@ -1,0 +1,19 @@
+<view icon="true" select="true" preview="false" actions="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="Name">
+    <cell name="Name" title="Name" width="200" />
+    <cell name="Description" title="Description" />
+    <cell name="FieldCount" title="Fields" width="75" align="center" />
+    <cell name="Title" title="Title" width="150" />
+		<cell name="Settings" title="Settings" width="250" />
+    <cell name="CreatedOn" title="Created On" width="125" />
+    <cell name="ModifiedOn" title="Modified On" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ModifiedOn" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

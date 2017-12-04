@@ -1,0 +1,11 @@
+<view select="true" preview="false">
+  <row keyfield="Id">
+    <cell name="Name" title="Name" />
+    <cell name="Description" title="Description" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="true" />
+    </sort>
+  </fetch>
+</view>

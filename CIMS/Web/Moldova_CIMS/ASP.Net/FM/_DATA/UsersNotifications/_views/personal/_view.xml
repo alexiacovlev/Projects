@@ -1,0 +1,20 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Header" title="Header" width="100" />
+    <cell name="Text" title="Text" />
+    <cell name="CreatedBy" title="Created By" width="125" />
+    <cell name="CreatedOn" title="Created On" width="125" />
+    <cell name="IsRead" title="Is Read" width="75" align="center" />
+    <cell name="ReadOn" title="Read On" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="UserId" operator="eq-userid" value="" />
+    </filter>
+  </fetch>
+</view>

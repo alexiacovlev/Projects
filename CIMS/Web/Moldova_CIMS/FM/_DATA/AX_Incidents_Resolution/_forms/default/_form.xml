@@ -1,0 +1,26 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="Resolution" title="Resolution" colspan="2" />
+            </row>
+            <row>
+              <cell name="Description" title="Description" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="ApplicationId" title="Application Id">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

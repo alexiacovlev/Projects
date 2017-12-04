@@ -1,0 +1,17 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="ApplicationNr" title="Application Nr" width="150" />
+    <cell name="ApplicationDate" title="Application Date" width="150" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="LastName" title="Last Name" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,6 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-17T16:03:20">
+  <set name="TableName" value="CIMS_Admission" />
+  <set name="HandlerParameters" value="900,750" />
+  <set name="CreateParameters" value="900,750" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Close Admission&quot; image=&quot;star.png&quot; command=&quot;WORKFLOW&quot; width=&quot;1100&quot; height=&quot;750&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; value=&quot;CIMS_Admission_Close&quot; attributes=&quot;id&quot;/&gt;&lt;item title=&quot;Admission Profile&quot; image=&quot;star.png&quot; command=&quot;PROFILE&quot; width=&quot;1200&quot; height=&quot;750&quot; full=&quot;true&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; value=&quot;CIMS_AdmissionProfile&quot; attributes=&quot;id&quot;/&gt;&lt;/menu&gt;" />
+</mapNode>

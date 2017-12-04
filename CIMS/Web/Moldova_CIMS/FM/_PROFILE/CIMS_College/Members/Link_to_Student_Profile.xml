@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-08T16:56:30">
+  <set name="TableName" value="CIMS_Student" />
+  <set name="ViewName" value="active_students" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="OpenForm" value="FORM:link_to_user" />
+  <set name="HandlerParameters" value="900,650" />
+</mapNode>

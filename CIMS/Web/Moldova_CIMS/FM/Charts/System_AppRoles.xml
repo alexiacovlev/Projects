@@ -1,0 +1,3 @@
+<chart title="Application Roles" table="" dbview="[SQLCODE]" groupBy="RoleName">
+	<parameter name="ApplicationId" value="~APPLICATIONID" />
+</chart>

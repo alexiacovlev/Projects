@@ -1,0 +1,25 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="aspnet_WebEvent_Events" />
+  <primarykey>EventId</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="EventId" type="Text" format="" dbtype="String" size="32" title="Event Id" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventTimeUtc" type="DateTime" format="" dbtype="DateTime" size="" title="Event Time Utc" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventTime" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Event Time" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventType" type="Text" format="" dbtype="String" size="256" title="Event Type" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventSequence" type="Integer" format="" dbtype="Decimal" size="" title="Event Sequence" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventOccurrence" type="Integer" format="" dbtype="Decimal" size="" title="Event Occurrence" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventCode" type="Text" format="" dbtype="Int32" size="" title="Event Code" description="" required="true" readonly="true" uimask="00111" />
+    <field name="EventDetailCode" type="Picklist" format="" dbtype="Int32" size="" title="Category" description="" required="true" readonly="true" uimask="00111" />
+    <field name="Message" type="Text" format="textarea" dbtype="String" size="1024" title="Message" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ApplicationPath" type="Text" format="" dbtype="String" size="256" title="Application Path" description="" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationVirtualPath" type="Text" format="" dbtype="String" size="256" title="Application Virtual Path" description="" required="false" readonly="true" uimask="00111" />
+    <field name="MachineName" type="Text" format="" dbtype="String" size="256" title="Machine Name" description="" required="true" readonly="true" uimask="00111" />
+    <field name="RequestUrl" type="Text" format="textarea" dbtype="String" size="1024" title="Request Url" description="" required="false" readonly="true" uimask="00111" />
+    <field name="ExceptionType" type="Text" format="" dbtype="String" size="256" title="Exception Type" description="" required="false" readonly="true" uimask="00111" />
+    <field name="Details" type="Html" format="" dbtype="String" size="1073741823" title="Details" description="" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationId" type="Text" format="" dbtype="Guid" size="" title="Application Id" description="" required="false" readonly="true" uimask="00111" />
+  </fields>
+</entity>

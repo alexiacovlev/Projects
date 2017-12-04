@@ -1,0 +1,20 @@
+<entity version="1.5">
+  <datasource type="Provider" name="AX.FM.Explorer,AX.FM.Explorer.WFEvents.WFWorkflowInstanceProvider" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field name="ID" type="Text" format="" dbtype="Guid" size="" title="ID" description="" required="true" readonly="false" uimask="00111" />
+    <field name="WorkspaceUrl" type="Text" format="" dbtype="String" size="50" title="Workspace Url" description="" required="false" readonly="false" uimask="001111" />
+    <field name="TableName" type="Text" format="" dbtype="String" size="50" title="Table Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="WorkflowName" type="Text" format="" dbtype="String" size="50" title="Workflow Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Status" type="Picklist" format="" dbtype="String" size="50" title="Status" description="" required="true" readonly="false" uimask="00111" />
+    <field name="RegardingID" type="Text" format="" dbtype="String" size="50" title="Regarding ID" description="" required="false" readonly="false" uimask="001111" />
+    <field name="RegardingType" type="Text" format="" dbtype="String" size="50" title="Regarding Type" description="" required="false" readonly="false" uimask="001111" />
+    <field name="RegardingText" type="Text" format="" dbtype="String" size="200" title="Regarding Text" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StartTime" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Start Time" description="" required="true" readonly="false" uimask="001111" />
+    <field name="StartedBy" type="Text" format="" dbtype="String" size="200" title="Started By" description="" required="false" readonly="false" uimask="001111" />
+    <field name="EventDateTime" type="DateTime" format="" dbtype="DateTime" size="" title="Event Date Time" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+  <header title="" />
+  <description title="" />
+</entity>

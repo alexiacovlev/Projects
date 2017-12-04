@@ -1,0 +1,22 @@
+<view select="true" preview="true" icon="true" check="false" expandMode="Off">
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId" imagetype="MembershipUser">
+    <cell name="UserId" title="Login" width="150" />
+    <cell name="FullName" title="FullName" />
+    <cell name="Email" title="Email" width="150" />
+    <cell name="IsApproved" title="IsApproved" width="100" align="center" />
+    <cell name="IsLockedOut" title="IsLockedOut" width="100" align="center" />
+    <cell name="CreateDate" title="CreateDate" width="100" />
+    <cell name="LastLoginDate" title="LastLoginDate" width="125" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="LastLoginDate" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+    </filter>
+  </fetch>
+</view>

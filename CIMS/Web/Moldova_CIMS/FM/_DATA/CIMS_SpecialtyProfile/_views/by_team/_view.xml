@@ -1,0 +1,19 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Code" title="Code" width="86" />
+    <cell name="Section" title="Section" width="195" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="Qualification" title="Qualification" width="200" />
+    <cell name="Profile" title="Profile" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

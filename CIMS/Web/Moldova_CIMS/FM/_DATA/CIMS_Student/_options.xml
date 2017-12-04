@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <list name="ApplicationStatus">
+    <item title="Draft" value="0" />
+    <item title="Active" value="1" />
+    <item title="Canceled" value="2" />
+  </list>
+  <list name="Gender">
+    <item title="Male" value="0" />
+    <item title="Female" value="1" />
+  </list>
+  <list name="NumberOfParents">
+    <item title="0" value="0" />
+    <item title="1" value="1" />
+    <item title="2" value="2" />
+  </list>
+  <list name="PersonStatus">
+    <item title="Applicant" value="1" />
+    <item title="Candidate" value="2" />
+    <item title="Enrolled" value="3" />
+    <item title="Student" value="4" />
+    <item title="Alumni" value="5" />
+    <item title="Rejected" value="6" />
+  </list>
+  <list name="AcceptReject">
+    <item title="Accepted" value="2" />
+    <item title="Rejected" value="4" />
+  </list>
+  <list name="Admission_Result">
+    <item title="Admitted" value="1" />
+    <item title="Not admitted" value="2" />
+  </list>
+</options>

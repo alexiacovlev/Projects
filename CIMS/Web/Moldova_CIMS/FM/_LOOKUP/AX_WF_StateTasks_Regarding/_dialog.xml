@@ -1,0 +1,3 @@
+<dialog>
+  <lookupview table="CRM_Company" view="default" type="110" title="Company" />
+</dialog>

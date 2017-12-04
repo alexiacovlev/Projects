@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+  <datasource type="Provider" name="AX.FM.Explorer,AX.FM.Explorer.GridProviders.XmlTableEntitiesProvider" />
+  <primarykey>Name</primarykey>
+  <fields>
+    <field name="Title" type="Text" format="" dbtype="" size="1000" title="Title" description="Title" required="false" readonly="false" uimask="00111" />
+    <field name="Name" type="Text" format="" dbtype="" size="200" title="Name" description="Name" required="true" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" format="" dbtype="" size="1000" title="Description" description="Description" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

@@ -1,0 +1,19 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="ModifiedOn" title="Canceled On" width="125" />
+    <cell name="Subject" title="Subject" />
+    <cell name="ModifiedBy" title="Canceled By" width="125" />
+    <cell name="IncidentTypeId" title="Type" width="100" align="left" />
+    <cell name="ApplicationId" title="Portal" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ModifiedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="IncidentStatusId" operator="eq" value="8" />
+    </filter>
+  </fetch>
+</view>

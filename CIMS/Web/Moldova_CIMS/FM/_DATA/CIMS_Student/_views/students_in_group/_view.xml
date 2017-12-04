@@ -1,0 +1,20 @@
+<view check="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="LastName" title="Last Name" />
+    <cell name="FirstName" title="First Name" width="200" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="LastName" ascending="true" />
+      <column name="FirstName" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+    <groups>
+      <group name="Specialty" ascending="true" title="" mode="" />
+    </groups>
+  </fetch>
+</view>

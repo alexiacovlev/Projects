@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Moldova_CIMS.DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f285c8d6-fc1a-4e0c-8e56-a6cc05af04af}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Moldova_CIMS.DB</RootNamespace>
+    <AssemblyName>Moldova_CIMS.DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>$/CIMS/DB/Moldova_CIMS.DB</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>http://tfs2013.alfa.local:8080/tfs/alfasoftprojects</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="sqlgen" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Data" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CI.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sqlgen\sqlgen.exe" />
+    <None Include="sqlgen\sqlgen.exe.config" />
+    <None Include="Scripts\Data\DataDelete.sql" />
+    <None Include="SchemaCompare.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Data\aspnet_Applications.sql" />
+    <None Include="Scripts\Data\aspnet_Roles.sql" />
+    <None Include="Scripts\Data\aspnet_SchemaVersions.sql" />
+    <None Include="Scripts\Data\aspnet_Teams.sql" />
+    <None Include="Scripts\Data\AX_Incidents_Priority.sql" />
+    <None Include="Scripts\Data\AX_Incidents_Properties.sql" />
+    <None Include="Scripts\Data\AX_Incidents_Status.sql" />
+    <None Include="Scripts\Data\AX_Incidents_Type.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\CIMS_StudyPlans.sql" />
+    <Build Include="dbo\Tables\CIMS_StudyPlanItems.sql" />
+    <Build Include="dbo\Tables\CIMS_Student2Practice.sql" />
+    <Build Include="dbo\Tables\CIMS_SpecialtyProfile.sql" />
+    <Build Include="dbo\Tables\CIMS_Semesters.sql" />
+    <Build Include="dbo\Tables\CIMS_Sections.sql" />
+    <Build Include="dbo\Tables\CIMS_PracticePlanItems.sql" />
+    <Build Include="dbo\Tables\CIMS_Practice2Groups.sql" />
+    <Build Include="dbo\Tables\CIMS_Practice.sql" />
+    <Build Include="dbo\Tables\CIMS_Groups.sql" />
+    <Build Include="dbo\Tables\CIMS_ExamsPlanItems.sql" />
+    <Build Include="dbo\Tables\CIMS_Employee2Subjects.sql" />
+    <Build Include="dbo\Tables\CIMS_Employee.sql" />
+    <Build Include="dbo\Tables\CIMS_DUMMY.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfSubjectsToStudy.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfPractice.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfMilitaryEvidence.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfInstitution.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfID.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfExams.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfEvaluation.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfDocument.sql" />
+    <Build Include="dbo\Tables\CIMS_d_SubjectsToStudy.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Subjects.sql" />
+    <Build Include="dbo\Tables\CIMS_d_StudyYears.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Specialties.sql" />
+    <Build Include="dbo\Tables\CIMS_d_SpecialAdmissionCategories.sql" />
+    <Build Include="dbo\Tables\CIMS_d_ShareOfAdmissionVacancies.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Semesters.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Raion.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Position.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Locality.sql" />
+    <Build Include="dbo\Tables\CIMS_d_LivingEnvironment.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Language.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Grade.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Gender.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Ethnicity.sql" />
+    <Build Include="dbo\Tables\CIMS_d_Country.sql" />
+    <Build Include="dbo\Tables\CIMS_d_ApplicationStatus.sql" />
+    <Build Include="dbo\Tables\CIMS_d_AdmissionStatus.sql" />
+    <Build Include="dbo\Tables\CIMS_Attachments.sql" />
+    <Build Include="dbo\Tables\CIMS_Applicant2Marks.sql" />
+    <Build Include="dbo\Tables\CIMS_Applicant.sql" />
+    <Build Include="dbo\Tables\CIMS_Admission2Subjects.sql" />
+    <Build Include="dbo\Tables\CIMS_Admission2Specialties.sql" />
+    <Build Include="dbo\Tables\CIMS_Admission.sql" />
+    <Build Include="dbo\Tables\AX_WF_StateTasks_Regarding.sql" />
+    <Build Include="dbo\Tables\AX_WF_StateTasks.sql" />
+    <Build Include="dbo\Tables\AX_WF_StateInstances.sql" />
+    <Build Include="dbo\Tables\AX_WF_StateHistory.sql" />
+    <Build Include="dbo\Tables\AX_UserEvents.sql" />
+    <Build Include="dbo\Tables\AX_PersonalTasks.sql" />
+    <Build Include="dbo\Tables\AX_Notifications.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Type.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Status.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_StateHistory.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Resolution.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Properties.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Priority.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Comments.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_CommentLabels.sql" />
+    <Build Include="dbo\Tables\AX_Incidents_Attachments.sql" />
+    <Build Include="dbo\Tables\AX_Incidents.sql" />
+    <Build Include="dbo\Tables\AX_Events_Locations.sql" />
+    <Build Include="dbo\Tables\AX_Events_Categories.sql" />
+    <Build Include="dbo\Tables\AX_Events.sql" />
+    <Build Include="dbo\Tables\AX_EventLog.sql" />
+    <Build Include="dbo\Tables\AX_AutoNumber.sql" />
+    <Build Include="dbo\Tables\AX_AuditTrail.sql" />
+    <Build Include="dbo\Tables\aspnet_WebEvent_Events.sql" />
+    <Build Include="dbo\Tables\aspnet_UsersInRoles.sql" />
+    <Build Include="dbo\Tables\aspnet_Users.sql" />
+    <Build Include="dbo\Tables\aspnet_UserHashHistory.sql" />
+    <Build Include="dbo\Tables\aspnet_Teams.sql" />
+    <Build Include="dbo\Tables\aspnet_Team2Users.sql" />
+    <Build Include="dbo\Tables\aspnet_SchemaVersions.sql" />
+    <Build Include="dbo\Tables\aspnet_Roles.sql" />
+    <Build Include="dbo\Tables\aspnet_Profile.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationPerUser.sql" />
+    <Build Include="dbo\Tables\aspnet_PersonalizationAllUsers.sql" />
+    <Build Include="dbo\Tables\aspnet_Paths.sql" />
+    <Build Include="dbo\Tables\aspnet_Membership.sql" />
+    <Build Include="dbo\Tables\aspnet_Applications.sql" />
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_User.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_Shared.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_WebPartState_Paths.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_UsersInRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Users.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Roles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Profiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_MembershipUsers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\vw_aspnet_Applications.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\CIMS_SpecialtyProfile2Admission_View.sql" />
+    <Build Include="dbo\Views\CIMS_Admission_View.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ax_getAutoNumberInfo.sql" />
+    <Build Include="dbo\Stored Procedures\aspnet_WebEvent_LogEvent.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_RemoveUsersFromRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_IsUserInRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_GetUsersInRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_GetRolesForUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_FindUsersInRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UsersInRoles_AddUsersToRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Users_DeleteUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Users_CreateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_UnRegisterSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Setup_RestorePermissions.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Setup_RemoveAllRoleMembers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_RoleExists.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_GetAllRoles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_DeleteRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Roles_CreateRole.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_RegisterSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_SetProperties.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetProperties.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_GetNumberOfInactiveProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_DeleteProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Profile_DeleteInactiveProfiles.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_SetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_ResetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationPerUser_GetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_SetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_ResetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAllUsers_GetPageSettings.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_ResetUserState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_ResetSharedState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_GetCountOfState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_FindState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_PersonalizationAdministration_DeleteAllState.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Personalization_GetApplicationId.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Paths_CreatePath.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UpdateUserInfo.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UpdateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_UnlockUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_SetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_ResetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByUserId.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByName.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetUserByEmail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetPasswordWithFormat.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetPassword.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetNumberOfUsersOnline.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_GetAllUsers.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_FindUsersByName.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_FindUsersByEmail.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_CreateUser.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Membership_ChangePasswordQuestionAndAnswer.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_CheckSchemaVersion.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_Applications_CreateApplication.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\aspnet_AnyDataInTables.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\CIMS_UserEvents2Team_View.sql" />
+    <Build Include="dbo\Views\CIMS_Membership2Team_View.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_UM_IsUserInTheSameTeam.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_UM_GetUserTeam.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_UM_AssignUserToTeam.sql" />
+    <Build Include="dbo\Tables\CIMS_d_TypeOfFinancing.sql" />
+    <Build Include="dbo\Tables\CIMS_d_SpecialAdmissionCategory_Items.sql" />
+    <Build Include="dbo\Tables\CIMS_d_LocalityCategory.sql" />
+    <Build Include="dbo\Tables\CIMS_AdmissionVacancies.sql" />
+    <Build Include="dbo\Tables\CIMS_Admission2Commission.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_AdmissionBySpecialty_Run.sql" />
+    <Build Include="dbo\Tables\CIMS_AdmissionOrders.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_AdmissionBySpecialty_Enrollement.sql" />
+    <Build Include="dbo\Tables\CIMS_Student.sql" />
+    <Build Include="dbo\Views\CIMS_Membership2TeamRole_View.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_GetStudentByUser.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_GetLecturerByUser.sql" />
+    <Build Include="dbo\Tables\CIMS_StudyYears.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_StudyYear_Start.sql" />
+    <Build Include="dbo\Stored Procedures\prc_CIMS_AdmissionStatus_Change.sql" />
+    <Build Include="dbo\Tables\CIMS_StudyPlanItems2Lecturers.sql" />
+    <Build Include="dbo\Tables\CIMS_Timetable_Hours.sql" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(Configuration)==sqlgen ($(ProjectDir)sqlgen\sqlgen.exe -c)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'sqlgen|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,29 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Title" name="Title" />
+    <cell title="CreatedOn" name="CreatedOn" width="100" />
+    <cell title="Instance Id" name="InstanceId" width="100" />
+    <cell title="Status" name="Status" width="100" align="center" />
+    <cell title="Assign To Role" name="AssignToRole" width="100" />
+    <cell title="Process Name" name="ProcessName" width="100" />
+  </row>
+	<fetch>
+    <sort>
+      <column name="Status" ascending="true" />
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+  </fetch>
+  <rowstyle>
+    <style value="color:black;font-weight:bold;">
+      <condition value="0" operator="eq" attribute="Status" />
+    </style>
+    <style value="color:black;font-weight:normal;">
+      <condition value="1" operator="eq" attribute="Status" />
+    </style>
+    <style value="color:#9f9f9f;">
+      <condition value="3" operator="eq" attribute="Status" />
+    </style>
+  </rowstyle>
+</view>

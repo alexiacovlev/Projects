@@ -1,0 +1,13 @@
+<view icon="true" select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID" recordtypefield="BackgroundColor" imagetype="Calendar_Color">
+    <cell name="Title" title="Title" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Title" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

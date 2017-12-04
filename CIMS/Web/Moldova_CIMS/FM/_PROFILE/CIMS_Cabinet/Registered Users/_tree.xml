@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Cabinet" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Login History" name="Login_History" image="folder.png" ico="e813" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

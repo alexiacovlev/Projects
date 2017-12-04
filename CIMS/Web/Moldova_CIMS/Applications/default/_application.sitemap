@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-16"?>
+<map xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="default" type="1" visible="true">
+  <theme>crmnew</theme>
+  <createdInfo>2017-08-29</createdInfo>
+  <dbprefix>CIMS_</dbprefix>
+  <title>CIMS</title>
+  <description>College Information Management System</description>
+  <tabs>
+    <mapNode type="SERVERCONTROL" name="Home" ico="b023" title="Home" content="/ASP.Net/Modules/Metro/home.ascx" roles="Administrators" visible="true" />
+    <mapNode type="SERVERCONTROL" name="Dashboard" ico="b025" title="Dashboard" content="AX.ChartDashboard,AX.ChartDashboard.DashboardControl" roles="Members" visible="true">
+      <set name="DashboardName" value="Dashboard1" />
+    </mapNode>
+    <mapNode type="PROFILE" name="Cabinet" ico="f2c3" title="Cabinet" content="CIMS_Cabinet" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Admission" ico="a0e0" title="Admission" content="CIMS_Admission" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Students" ico="a0d3" title="Students" content="CIMS_Students" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Staff" ico="b002" title="Staff" content="CIMS_Staff" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Accounting" ico="e80d" title="Accounting" content="CIMS_Accounting" roles="Members" visible="true" />
+    <mapNode type="" name="Timetable" ico="b002" title="Timetable" content="" roles="Members" visible="true" />
+    <mapNode type="" name="Examination" ico="e865" title="Examination" content="" roles="Members" visible="true" />
+    <mapNode type="" name="Attendance" ico="b002" title="Attendance" content="" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="College" ico="b001" title="College" content="CIMS_College" roles="Members" visible="true" />
+  </tabs>
+  <links>
+    <mapNode type="PROFILE" name="MyProfile" title="My Profile" content="_PortalUserProfile" roles="Members" visible="true" />
+    <mapNode type="HTML" name="Help" title="Help" content="Help" roles="" visible="true" />
+    <mapNode type="PROFILE" name="Incidents" title="Incidents" content="_PortalIncidents" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Processes" title="Processes" content="Processes" roles="Members" visible="true" />
+    <mapNode type="PROFILE" name="Settings" title="Settings" content="_PortalAdministration" roles="Administrators,NHI IT Analyst" visible="true" />
+    <mapNode type="PROFILE" name="Configuration" title="Configuration" content="CIMS_Configuration" roles="Members" visible="true" />
+  </links>
+</map>

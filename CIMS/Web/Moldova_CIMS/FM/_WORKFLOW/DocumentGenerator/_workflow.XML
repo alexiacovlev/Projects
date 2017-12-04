@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentViewer" trace="false" version="2.0" created="0001-01-01T00:00:00" modified="2016-12-07T18:00:42" author="Alexandr Pascalov">
+  <Sequence>
+    <XmlIsland title="ReportGenerator12" name="ReportGenerator12">
+      <Settings form="" table="" provider="AX.FM.Aspose,AX.FM.Export.DocumentReportFileGenerator" />
+      <FieldSet />
+      <Assign>
+        <Field name="TableName" value="$TableName" />
+        <Field name="TemplateName" value="$TemplateName" />
+        <Field name="RecordID" value="$RecordID" />
+        <Field name="RefObjectID" value="$RefObjectID" />
+        <Field name="Type" value="'PDF'" />
+        <Field name="Sign" value="'0'" />
+      </Assign>
+    </XmlIsland>
+    <!--XmlIsland name="Process_PDF12" title="Process PDF">
+      <Settings table="" provider="AX.DocumentUploader,AX.DocumentUploader.DataHandler" />
+      <Assign>
+        <Field name="FilePath" value="ReportGenerator12:FilePath" />
+        <Field name="Id" value="$RecordID" />
+        <Field name="CreatedBy" value="~USERID" />
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+        <Field name="CreatedIP" value="~IP" />
+        <Field name="CreatedOn" value="~NOW" />
+        <Field name="TypeCode" value="INPUT:TypeCode" />
+        <Field name="DocumentType" value="INPUT:DocumentType" />
+        <Field name="RefObjectID" value="INPUT:RefObjectID" />
+        <Field name="ObjectId" value="$RecordID" />
+        <Field name="Process_Area" value="INPUT:Process_Area" />
+        <Field name="Project_Phase" value="INPUT:Project_Phase" />
+        <Field name="SpecificGoal" value="INPUT:SpecificGoal" />
+        <Field name="SpecificPractice" value="INPUT:SpecificPractice" />
+        <Field name="ModifiedBy" value="~USERID" />
+        <Field name="ModifiedOn" value="~NOW" />
+        <Field name="Version" value="'1'" />
+        <Field name="VersionControl" value="INPUT:VersionControl" />
+      </Assign>
+    </XmlIsland-->
+          <Invoke title="PDF Viewer" name="FileViewer12" control="SERVERCONTROL" controlInfo="ASP.Net/FM/DataViewer/Modules/FileViewer.ascx">
+            <Assign>
+              <Field name="Url" value="ReportGenerator12:FileUrl" />
+            </Assign>
+          </Invoke>  </Sequence>
+  <Input />
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Next title="Next" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

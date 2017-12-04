@@ -1,0 +1,118 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="Admission Details" name="tab2">
+      <sections>
+        <section title="Parents" name="sec2271" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Father Name" name="FatherFullName" />
+              <cell title="Full Name" name="MotherFullName" />
+            </row>
+          </rows>
+        </section>
+        <section title="Family Components" name="sec2326" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Number Of Parents" name="NumberOfParents" />
+              <cell title="Number Of Children In Family" name="NumberOfChildrenInFamily" />
+            </row>
+          </rows>
+        </section>
+        <section title="Admission Category" name="sec2522" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Special Category" name="SpecialCategory" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Special Category Item" name="SpecialAdmissionCategoryItem" colspan="2" />
+            </row>
+            <row>
+              <cell title="Proof of Special Category" name="SpecialCategoryDocument" colspan="2" />
+            </row>
+            <row>
+              <cell title="Locality Category" name="LocalityCategory" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Language Of Studying" name="LanguageOfStudying" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Options" name="sec2697" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Need A Dorm" name="NeedADorm" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Type Of Financing" name="TypeOfFinancing" />
+              <cell title="Only State Budget" name="OnlyStateBudget" />
+            </row>
+            <row>
+              <cell title="Foreign Language Studied" name="ForeignLanguageStudied" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Work Experience" name="WorkExperience" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Recommendation" name="Recommendation" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Recommendation Details" name="RecommendationDetails" colspan="2" />
+            </row>
+            <row>
+              <cell title="Olympic Awards" name="OlympicAwards" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Olimpic Awards Details" name="OlimpicAwardsDetails" colspan="2" />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1415" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

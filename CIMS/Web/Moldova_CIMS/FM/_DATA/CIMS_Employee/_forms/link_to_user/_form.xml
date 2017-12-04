@@ -1,0 +1,78 @@
+<form labelwidth="120">
+  <header title="Employee" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Personal Details" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties requiredlevel="required" readonly="true" oncreatevalue="~TEAM" />
+              </cell>
+              <cell title="Status" name="Status">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="First Name" name="FirstName">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell title="Middle Name" name="MiddleName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Last Name" name="LastName">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="IDNP" name="IDNP" colspan="2">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="User" name="UserId" colspan="2">
+                <properties requiredlevel="recommended" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1195" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="Full Name" name="FullName" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Employee: #FullName#</windowMask>
+</form>

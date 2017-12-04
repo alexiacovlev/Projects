@@ -1,0 +1,72 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="Marks" name="tab6">
+      <sections>
+        <section title="Marks" name="sec6200" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Marks (subjects of profile)" name="Marks" colspan="2" titlepos="off" />
+            </row>
+            <row>
+              <cell title="Mark MNDP" name="MarkMNDP">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Mark MNEA" name="MarkMNEA">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Average Mark" name="ApplicantAvgMark">
+                <properties readonly="true" requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec127" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+  <triggers onload="false" onbeforesave="false" onaftersave="true" />
+</form>

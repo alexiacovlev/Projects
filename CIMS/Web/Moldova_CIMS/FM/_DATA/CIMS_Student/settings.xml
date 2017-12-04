@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_Student" />
+  <audittrail update="true" create="true" delete="true" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="String" format="" title="Created IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="Modified On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="String" format="" title="Modified IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="Application" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="TeamId" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="" />
+    </field>
+    <field name="FirstName" type="Text" dbtype="StringUnicode" format="" title="FirstName" description="" size="30" required="false" readonly="false" uimask="00111" />
+    <field name="LastName" type="Text" dbtype="StringUnicode" format="" title="LastName" description="" size="30" required="false" readonly="false" uimask="00111" />
+    <field name="MiddleName" type="Text" dbtype="StringUnicode" format="" title="MiddleName" description="" size="30" required="false" readonly="false" uimask="00111" />
+    <field name="ApplicationNr" type="Text" dbtype="StringUnicode" format="" title="ApplicationNr" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="CardNr" type="Text" dbtype="StringUnicode" format="" title="CardNr" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="BirthDay" type="DateTime" dbtype="DateTime" format="" title="BirthDay" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="BirthPlace" type="Text" dbtype="StringUnicode" format="" title="BirthPlace" description="" size="200" required="false" readonly="false" uimask="00111" />
+    <field name="Gender" type="Picklist" dbtype="Int32" format="" title="Gender" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Gender" view="" />
+    </field>
+    <field name="ID_Type" type="Picklist" dbtype="Int32" format="" title="ID_Type" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_TypeOfID" view="" />
+    </field>
+    <field name="ID_Number" type="Text" dbtype="StringUnicode" format="" title="ID_Number" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ID_IssuedBy" type="Text" dbtype="StringUnicode" format="" title="ID_IssuedBy" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ID_IssuedOn" type="DateTime" dbtype="DateTime" format="" title="ID_IssuedOn" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="IDNP" type="Text" dbtype="StringUnicode" format="" title="IDNP" description="" size="13" required="false" readonly="false" uimask="00111" />
+    <field name="Citizenship" type="Picklist" dbtype="Int32" format="" title="Citizenship" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Country" view="" />
+    </field>
+    <field name="Ethnicity" type="Picklist" dbtype="Int32" format="" title="Ethnicity" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Ethnicity" view="" />
+    </field>
+    <field name="MilitaryTypeOfEvidence" type="Picklist" dbtype="Int32" format="" title="MilitaryTypeOfEvidence" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_TypeOfMilitaryEvidence" view="" />
+    </field>
+    <field name="MilitaryDocumentNr" type="Text" dbtype="StringUnicode" format="" title="MilitaryDocumentNr" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="MilitaryDocumentIssuedOn" type="DateTime" dbtype="DateTime" format="" title="MilitaryDocumentIssuedOn" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ResidenceCountry" type="Picklist" dbtype="Int32" format="" title="ResidenceCountry" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Country" view="" />
+    </field>
+    <field name="ResidenceRaion" type="Picklist" dbtype="Int32" format="" title="ResidenceRaion" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Raion" view="" />
+    </field>
+    <field name="ResidenceLocality" type="Picklist" dbtype="Int32" format="" title="ResidenceLocality" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Locality" view="" />
+    </field>
+    <field name="ResidenceAddress" type="Text" dbtype="StringUnicode" format="" title="ResidenceAddress" description="" size="200" required="false" readonly="false" uimask="00111" />
+    <field name="ResidenceHomePhone" type="Text" dbtype="StringUnicode" format="" title="ResidenceHomePhone" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ResidenceParentPhone" type="Text" dbtype="StringUnicode" format="" title="ResidenceParentPhone" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ResidenceStudentMobile" type="Text" dbtype="StringUnicode" format="" title="ResidenceStudentMobile" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ResidenceStudentEMail" type="Text" dbtype="StringUnicode" format="" title="ResidenceStudentEMail" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="FatherFullName" type="Text" dbtype="StringUnicode" format="" title="FatherFullName" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="MotherFullName" type="Text" dbtype="StringUnicode" format="" title="MotherFullName" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="NumberOfParents" type="Picklist" dbtype="Int32" format="" title="NumberOfParents" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="NumberOfChildrenInFamily" type="Integer" dbtype="Int32" format="" title="NumberOfChildrenInFamily" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ShareOfAdmissionVacancies" type="Picklist" dbtype="Int32" format="" title="ShareOfAdmissionVacancies" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_ShareOfAdmissionVacancies" view="" />
+    </field>
+    <field name="SpecialCategory" type="Picklist" dbtype="Int32" format="" title="SpecialCategory" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_SpecialAdmissionCategories" view="" />
+    </field>
+    <field name="LanguageOfStudying" type="Picklist" dbtype="Int32" format="" title="LanguageOfStudying" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Language" view="" />
+    </field>
+    <field name="NeedADorm" type="Boolean" dbtype="Boolean" format="" title="NeedADorm" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="OnlyStateBudget" type="Boolean" dbtype="Boolean" format="" title="OnlyStateBudget" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ForeignLanguageStudied" type="Picklist" dbtype="Int32" format="" title="ForeignLanguageStudied" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Language" view="" />
+    </field>
+    <field name="WorkExperience" type="Integer" dbtype="Int32" format="" title="WorkExperience" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="OlympicAwards" type="Boolean" dbtype="Boolean" format="" title="OlympicAwards" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="OlimpicAwardsDetails" type="Text" dbtype="StringUnicode" format="" title="OlimpicAwardsDetails" description="" size="200" required="false" readonly="false" uimask="00111" />
+    <field name="GraduatedInstitutionName" type="Text" dbtype="StringUnicode" format="" title="GraduatedInstitutionName" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="GraduatedInstitutionCountry" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionCountry" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Country" view="" />
+    </field>
+    <field name="GraduatedInstitutionRaion" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionRaion" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Raion" view="" />
+    </field>
+    <field name="GraduatedInstitutionLocality" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionLocality" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Locality" view="" />
+    </field>
+    <field name="GraduatedInstitutionEnvironment" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionEnvironment" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_LivingEnvironment" view="" />
+    </field>
+    <field name="GraduatedInstitutionType" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionType" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_TypeOfInstitution" view="" />
+    </field>
+    <field name="GraduatedInstitutionGrade" type="Picklist" dbtype="Int32" format="" title="GraduatedInstitutionGrade" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_Grade" view="" />
+    </field>
+    <field name="GraduatedInstitutionYear" type="Integer" dbtype="Int32" format="" title="GraduatedInstitutionYear" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="GraduatedInstitutionAverageMark" type="Float" dbtype="Double" format="" title="GraduatedInstitutionAverageMark" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="LivingEnvironment" type="Picklist" dbtype="Int32" format="" title="LivingEnvironment" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_LivingEnvironment" view="" />
+    </field>
+    <field name="CertificateOfEducationType" type="Picklist" dbtype="Int32" format="" title="CertificateOfEducationType" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_TypeOfDocument" view="" />
+    </field>
+    <field name="CertificateOfEducationNumber" type="Text" dbtype="StringUnicode" format="" title="CertificateOfEducationNumber" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="CertificateOfEducationIssuedOn" type="DateTime" dbtype="DateTime" format="" title="CertificateOfEducationIssuedOn" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Specialty" type="Lookup" dbtype="Guid" format="" title="Specialty" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="Admission" to="Admission" />
+      <extract table="CIMS_SpecialtyProfile2Admission_View" view="" />
+    </field>
+    <field name="Admission" type="Lookup" dbtype="Guid" format="" title="Admission" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Admission" view="active" />
+    </field>
+    <field name="PersonStatus" type="Picklist" dbtype="Int32" format="" title="PersonStatus" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Photo" type="Image" dbtype="Byte[]" format="" title="Photo" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="GroupId" type="Lookup" dbtype="Guid" format="" title="Group" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Groups" view="" />
+    </field>
+    <field name="DormNr" type="Text" dbtype="StringUnicode" format="" title="DormNr" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="DormAddress" type="Text" dbtype="StringUnicode" format="" title="DormAddress" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="DormFloor" type="Integer" dbtype="Int32" format="" title="DormFloor" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="DormRoomNr" type="Text" dbtype="StringUnicode" format="" title="DormRoomNr" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="DormRoomCapacity" type="Integer" dbtype="Int32" format="" title="DormRoomCapacity" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Facilities" type="Text" dbtype="StringUnicode" format="" title="Facilities" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="FacilitiesProof" type="Text" dbtype="StringUnicode" format="textarea" title="FacilitiesProof" description="" size="1000" required="false" readonly="false" uimask="00111" />
+    <field name="DecisionReason" type="Text" dbtype="StringUnicode" format="textarea" title="DecisionReason" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="AcceptReject" type="Picklist" dbtype="" format="radio" title="AcceptReject" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="TypeOfFinancing" type="Picklist" dbtype="Int32" format="" title="TypeOfFinancing" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_TypeOfFinancing" view="" />
+    </field>
+    <field name="LocalityCategory" type="Picklist" dbtype="Int32" format="" title="LocalityCategory" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_d_LocalityCategory" view="" />
+    </field>
+    <field name="SpecialAdmissionCategoryItem" type="Picklist" dbtype="Int32" format="" title="SpecialAdmissionCategoryItem" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="SpecialCategory" to="Category" />
+      <extract table="CIMS_d_SpecialAdmissionCategory_Items" view="" />
+    </field>
+    <field name="Recommendation" type="Boolean" dbtype="Boolean" format="" title="Recommendation" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="RecommendationDetails" type="Text" dbtype="StringUnicode" format="" title="RecommendationDetails" description="" size="250" required="false" readonly="false" uimask="00111" />
+    <field name="ID_Series" type="Text" dbtype="StringUnicode" format="" title="ID_Series" description="" size="5" required="false" readonly="false" uimask="00111" />
+    <field name="CertificateOfEducationSeries" type="Text" dbtype="StringUnicode" format="" title="CertificateOfEducationSeries" description="" size="5" required="false" readonly="false" uimask="00111" />
+    <field name="SpecialCategoryDocument" type="Text" dbtype="StringUnicode" format="" title="SpecialCategoryDocument" description="" size="500" required="false" readonly="false" uimask="00111" />
+    <field name="Application" type="Lookup" dbtype="Guid" format="" title="Application" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Applicant" view="" />
+    </field>
+    <field name="UserId" type="Lookup" dbtype="Guid" format="" title="UserId" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Membership2TeamRole_View" view="myteam_student" />
+    </field>
+  </fields>
+</entity>

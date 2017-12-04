@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Dictionaries" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Application Status" name="Application_Status" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Gender" name="Gender" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Living Environment" name="Living_Environment" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Type of ID" name="Type_of_ID" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Countries" name="Countries" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Raion" name="Raion" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Locality" name="Locality" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Ethnicity" name="Ethnicity" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Type of military evidence" name="Type_of_military_evidence" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Languages" name="Languages" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Type of Institution" name="Type_of_Institution" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Grades" name="Grades" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Type of Documents" name="Type_of_Documents" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Specialties" name="Specialties" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Subjects" name="Subjects" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Admission Status" name="Admission_Status" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

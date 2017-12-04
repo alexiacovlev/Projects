@@ -1,0 +1,119 @@
+﻿.fm-profile-left {
+	color:#333333;
+	position:absolute;top:0;bottom:0;
+}
+.fm-profile-content {
+	position:absolute;
+	top:0;bottom:0;right:0;
+}
+.fm-content-toppanel {
+	height:24px;
+	background-color:#ffffff;
+}
+.fm-content-header {
+	display:inline-block;
+	position:relative; top:15px;left:12px;
+	color:#141414;
+}
+.fm-profile-toolbar {
+	height:24px; background-image:url(Images/toolbar_bg_24.png);
+}
+.fm-profile-panel {
+	font-family:Verdana; font-size:11px; 
+	position:absolute;top:24px;left:0;bottom:0;width:100%;
+	overflow-y:auto;
+	background-color:#ffffff;
+}
+
+.fm-profile-label {
+	color:#000;
+	position:absolute;left:5px;top:5px;
+	font-weight:bold;
+}
+.fm-profile-buttons {
+	position:absolute;right:3px;top:4px;
+}
+.fm-profile-splitter {
+	position:absolute;top:0;width:1px;bottom:0;
+	border-left:solid 1px #adadad;
+	cursor:col-resize;
+	background-color:#515151;
+}
+
+.fm-nav-tabs {
+	width:100%;
+	font-family:Verdana; font-size:11px; 
+	position:absolute;bottom:0px;
+}
+.fm-p-ul {
+	margin:0px;padding:0;
+}
+.fm-p-ul>li {
+	white-space:nowrap;
+	margin-top:1px;margin-left:1px;
+	list-style-type:none;
+}
+
+li>.fm-p-ul {
+	margin-left:16px;
+}
+
+.fm-p-a,.fm-p-f,.fm-p-d {
+  display:inline-block;
+  text-decoration:none;
+	
+	cursor:pointer;
+	padding:5px 8px 5px 4px;
+	-moz-user-select:none;
+  color:#333333;
+	line-height:11px;
+}
+.fm-p-d {
+	color:#6b6b6b;
+}
+.fm-p-t {
+	padding-left:4px;
+}
+
+.fm-p-a:hover {
+	border-radius:3px;
+	background-color:#464646; color:#FFF;
+}
+
+.fm-p-sel {
+	background-color:#333;
+	color:#FFF;
+	border-radius:3px;
+}
+
+/* end - Tree View */
+
+.fm-nav-a {
+	display:block;
+	padding:8px 8px 4px 8px;
+	cursor:pointer;
+	-moz-user-select:none;
+	white-space:nowrap;
+	color:#1a3d7d;font-weight:bold;
+
+	background-image: url(images/tab_bg.png);
+	background-position:0px 30px;
+	-moz-user-select:none;
+	white-space:nowrap;
+}
+
+.fm-nav-a-sel {
+	background-position:0px 0px;
+}
+
+.fm-nav-a:hover {
+	background-position:0px 0px;
+}
+
+.fm-p-i { width:17px;display:inline-block; }
+.fm-p-minus { background-image:url(images/p_minus.png); display:inline-block; width:16px;height:16px; position:relative;top:3px; }
+.fm-p-plus { background-image:url(images/p_plus.png); display:inline-block; width:16px;height:16px; position:relative;top:3px; }
+
+.fm-p-refresh { background-image:url(images/13_refresh.gif); display:inline-block; width:13px;height:13px; vertical-align:top;margin-top:1px; }
+.fm-p-role { background-image:url(images/16_group.png); display:inline-block; width:16px;height:16px;margin-right:9px; }
+.fm-p-admin { background-image:url(images/16_tree.gif); display:inline-block; width:16px;height:16px;margin-right:8px; }

@@ -1,0 +1,17 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="TeamId" title="College" width="476" />
+    <cell name="Name" title="Name" />
+    <cell name="Active" title="Active" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

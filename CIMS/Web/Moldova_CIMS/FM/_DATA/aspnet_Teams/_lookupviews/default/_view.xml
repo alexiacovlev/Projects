@@ -1,0 +1,8 @@
+<view select="true" preview="false" icon="true">
+  <row keyfield="Id">
+    <cell name="Name" title="Name" />
+  </row>
+  <fetch>
+    <sort />
+  </fetch>
+</view>

@@ -1,0 +1,114 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+body {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;line-height: 20px;
+	-webkit-font-smoothing: antialiased; 
+	overflow:hidden;
+	background-color: #002b36;
+
+	margin:0;padding:0;
+
+}
+
+#header {
+	background-color:#073642;
+	position:absolute;left:0px;top:0;right:0;height:50px;
+	color:#fff; font-size:17px;
+}
+#appLogo {
+	
+}
+#appTitle {
+	display:inline-block;
+	margin-top:12px;margin-left:22px;
+}
+#appDesc {
+	display:inline-block;
+	margin-top:12px;margin-left:10px;
+}
+
+#content {
+	position: absolute; left: 0px;right: 0px;top:80px;bottom:36px;
+}
+
+#appMenu {
+	overflow-x:hidden;
+	position:absolute;
+	top:40px;left:0px;right:0px;
+	z-index:1;
+	background-color:#073642;
+	height:40px;
+}
+
+#appMenu > a.appm {
+	display:inline-block;
+	color: #839ba1;
+	font-size:16px;
+	margin-left:5px;margin-right:5px;
+	padding:9px 8px 3px 0px;
+	text-decoration: none;
+	box-sizing:border-box;
+}
+
+#appMenu > a.selected { color:#fff; }
+#appMenu > a.appm:hover { color:#2aa198; }
+.appm > .ax-ico { margin-left:0px; width:29px; height:27px; padding-left:3px;}
+
+#appLinks {
+	position:absolute;top:20px;right:5px;
+	font-size:14px;
+}
+#appLinks > a.appl, #appLang > a.lang {
+	text-decoration:none;
+	color:#a9a9a9;
+	margin:3px;
+	padding:0 2px;
+}
+#appLinks > a.appl:hover, #appLinks > a.selected, #appLang > a.lang:hover, #appLang > a.selected {
+	color: #FFF;
+	border-bottom-color:#FFF;
+}
+#appLang {
+	position:absolute;top:3px;right:5px;
+	font-size:14px;	color:#FFF;
+}
+.lang-flag { margin-left:6px; }
+
+#footer {
+	position:absolute; bottom:0;left:0px; right:0; 
+	height:36px;
+	background-color:#073642;
+	font-size:14px;
+	color:#839496;
+}
+#adminButton { position:relative; left:5px; top:10px; font-size:14pt; line-height:1px; cursor:pointer; margin-right:5px; }
+#copyright { position:relative; left:5px; top:8px; }
+#userInfo { position:absolute; right:20px; top:7px;}
+#userName,#userRole { margin-left:5px; margin-right:25px; }
+
+#loginButton {
+	position:absolute;right:8px;top:6px;
+	cursor:pointer;
+	text-indent:-30px;
+	width: 24px; height: 24px;
+}
+.Login { background-image: url(images/login24.png); }
+.Logout { background-image: url(images/logout24.png); }
+
+#rolesBtn {
+	position:absolute;right:-15px;bottom:-1px;
+}
+#shader {  }
+#shaderTitle { 
+	background-color:#073642;
+	height:68px;
+	color:#fff; font-size:17px;
+	padding-top:12px;padding-left:22px;
+}
+#HtmlViewer { 
+	color:#d3d3d3; 
+	-ms-scrollbar-track-color:#343434; -ms-scrollbar-face-color:#f85723; -ms-scrollbar-shadow-color:#343434;
+}
+#shaderLoader { background-image:url(images/loader.gif); width:90px;height:92px; margin:20% auto 0 auto; }
+#LoginWindow { margin:80px auto 0 auto; width:520px; }
+#LoginWindow > .axdlg-body { padding:5px 10px 10px 10px; }

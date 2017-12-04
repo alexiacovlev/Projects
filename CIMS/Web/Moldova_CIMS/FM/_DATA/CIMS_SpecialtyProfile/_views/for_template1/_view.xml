@@ -1,0 +1,14 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Specialty" title="Specialty" width="100" />
+    <cell name="Language" title="Language" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

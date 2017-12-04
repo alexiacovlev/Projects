@@ -1,0 +1,167 @@
+<form labelwidth="120">
+  <header title="Student" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="false" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Admission" name="Admission" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+                <event>var data = frm.getLookupInfo("Admission","TeamId,Year");
+frm.setValue("TeamId",data["TeamId"]);</event>
+              </cell>
+              <cell title="Person Status" name="PersonStatus">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties readonly="true" requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Specialty" name="Specialty" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Group" name="GroupId" colspan="2">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="User" name="UserId" colspan="2">
+                <properties requiredlevel="recommended" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Personal Data" name="sec1257" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="First Name" name="FirstName">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell title="Middle Name" name="MiddleName">
+                <properties requiredlevel="recommended" readonly="true" />
+              </cell>
+              <cell title="Last Name" name="LastName">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Birthday" name="BirthDay">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell title="Gender" name="Gender">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Place Of Birth" name="BirthPlace" colspan="3">
+                <properties requiredlevel="required" readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Identification Document" name="sec1125" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Document Type" name="ID_Type">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Number" name="ID_Number">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Issued On" name="ID_IssuedOn">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Issued By" name="ID_IssuedBy" colspan="2">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="IDNP" name="IDNP">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Citizenship" name="Citizenship">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Ethnicity" name="Ethnicity">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Residence" name="sec143" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Country" name="ResidenceCountry">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Raion" name="ResidenceRaion">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Locality" name="ResidenceLocality">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Address" name="ResidenceAddress" colspan="2">
+                <properties readonly="true" />
+              </cell>
+              <cell title="EMail" name="ResidenceStudentEMail">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Home Phone" name="ResidenceHomePhone">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Parent Phone" name="ResidenceParentPhone">
+                <properties readonly="true" />
+              </cell>
+              <cell title="Mobile" name="ResidenceStudentMobile">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Student: #GroupId# #FirstName# #LastName#</windowMask>
+</form>

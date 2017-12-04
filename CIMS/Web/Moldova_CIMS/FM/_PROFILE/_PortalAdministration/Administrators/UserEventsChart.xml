@@ -1,0 +1,3 @@
+<mapNode content="AX.ChartDashboard,AX.ChartDashboard.ChartControl" type="SERVERCONTROL" modifiedon="2017-06-12T19:21:27" modifiedby="Michael ">
+  <set name="ChartName" value="System/UserEvents" />
+</mapNode>

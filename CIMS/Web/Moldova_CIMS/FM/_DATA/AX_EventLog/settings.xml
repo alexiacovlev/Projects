@@ -1,0 +1,24 @@
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_EventLog" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="EventTime" type="DateTime" dbtype="DateTime" format="datetime" title="Event Time" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="EventCode" type="Integer" dbtype="Int32" format="" title="Event Code" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="EventDetailCode" type="Picklist" dbtype="Int32" format="" title="Event Detail Code" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="Message" type="Text" dbtype="StringUnicode" format="textarea" title="Message" description="" size="2147483647" required="true" readonly="false" uimask="00111" />
+    <field name="Details" type="Text" dbtype="StringUnicode" format="textarea" title="Details" description="" size="2147483647" required="false" readonly="false" uimask="001111" />
+    <field name="Text1" type="Text" dbtype="StringUnicode" format="" title="Text1" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="Text2" type="Text" dbtype="StringUnicode" format="textarea" title="Text2" description="" size="1024" required="false" readonly="false" uimask="001111" />
+    <field name="IP" type="Text" dbtype="StringUnicode" format="" title="IP" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ApplicationID" type="Lookup" dbtype="Guid" format="" title="Application ID" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+  </fields>
+</entity>

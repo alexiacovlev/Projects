@@ -1,0 +1,23 @@
+<view check="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="FirstName" title="First Name" width="160" />
+    <cell name="LastName" title="Last Name" width="200" />
+    <cell name="ApplicationNr" title="Application Nr" />
+    <cell name="ApplicationDate" title="Application Date" width="150" />
+    <cell name="AdmissionOrder" title="Admission Order" width="131" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="AdmissionOrder" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+      <condition attribute="PersonStatus" operator="eq" value="4" />
+    </filter>
+    <groups>
+      <group name="Specialty" ascending="true" title="" mode="" />
+    </groups>
+  </fetch>
+</view>

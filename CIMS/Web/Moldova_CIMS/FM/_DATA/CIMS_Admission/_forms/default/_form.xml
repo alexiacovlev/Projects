@@ -1,0 +1,176 @@
+<form>
+  <header title="Admission" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="false" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties requiredlevel="required" oncreatevalue="~TEAM" readonly="true" />
+                <event>admissionIsUnique(frm);</event>
+              </cell>
+            </row>
+            <row>
+              <cell title="Year" name="Year">
+                <properties requiredlevel="required" />
+                <event>admissionIsUnique(frm);</event>
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Status" name="Status">
+                <properties requiredlevel="required" readonly="true" oncreatevalue="1" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Chairman" name="AdmissionChairman">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Responsible Secretary" name="ResponsiblePerson">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Commission" name="AdmissionCommission" rowspan="3">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell />
+            </row>
+            <row>
+              <cell />
+            </row>
+            <row>
+              <cell title="Mark Weight MNDP" name="MarkWeight_MNDP">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Mark Weight MNEA" name="MarkWeight_MNEA">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="control_508" colspan="2">
+                <content>&lt;div id="lblMessage" style='color:red;font-weight:bold; padding-top:20px;'&gt;&lt;/div&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Specialties" name="tab2">
+      <sections>
+        <section title="Specialties" name="sec2856" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell name="control_725" colspan="2">
+                <content>&lt;control type="GRID" height="450"&gt;
+ &lt;set name="TableName" value="CIMS_Admission2Specialties" /&gt;
+ &lt;set name="ViewName" value="default" /&gt;
+ &lt;set name="OpenForm" value="FORM:default" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="true" /&gt;
+ &lt;set name="AllowDelete" value="true" /&gt;
+ &lt;set name="HandlerParameters" value="800,500" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Admission=[KeyValue]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Subjects" name="tab3">
+      <sections>
+        <section title="Subjects" name="sec3520" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell name="control_505" colspan="2">
+                <content>&lt;control type="GRID" height="450"&gt;
+ &lt;set name="TableName" value="CIMS_Admission2Subjects" /&gt;
+ &lt;set name="ViewName" value="default" /&gt;
+ &lt;set name="OpenForm" value="FORM:default" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="true" /&gt;
+ &lt;set name="AllowDelete" value="true" /&gt;
+ &lt;set name="HandlerParameters" value="800,500" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Admission=[KeyValue]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Distribution of Vacancies" name="tab4">
+      <sections>
+        <section title="Section 1" name="sec4563" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell name="control_201" colspan="2">
+                <content>&lt;control type="GRID" height="450"&gt;
+ &lt;set name="TableName" value="CIMS_AdmissionVacancies" /&gt;
+ &lt;set name="ViewName" value="default" /&gt;
+ &lt;set name="OpenForm" value="FORM:default" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="true" /&gt;
+ &lt;set name="AllowDelete" value="true" /&gt;
+ &lt;set name="HandlerParameters" value="800,500" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Admission=[KeyValue]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Admission: #TeamId#, #Year#</windowMask>
+  <triggers onload="false" onbeforesave="true" onaftersave="false" />
+  <handlers>
+    <onloadscript enablereadonly="true">frm.admissionIsUnique = true;</onloadscript>
+    <onsavescript>frm.IsValid = frm.admissionIsUnique;</onsavescript>
+  </handlers>
+</form>

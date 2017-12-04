@@ -1,0 +1,4 @@
+<mapNode type="FORM" modifiedby="Admin Admin" modifiedon="2017-11-07T15:16:33">
+  <set name="TableName" value="CIMS_Groups" />
+  <set name="FormName" value="default" />
+</mapNode>

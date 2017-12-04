@@ -1,0 +1,1 @@
+AX.AppMenuHandler=function(a,b){};AX.AppMenuHandler.Open=function(e){var d=e.split("/");var f,a,b;switch(d[0]){case"QuickAdd":f="Add Folder";break}var f=profileName+" - Profile Manager";var c=AX.Window.createPopupWindow(f,a,b,transp,destroyOnClose)};

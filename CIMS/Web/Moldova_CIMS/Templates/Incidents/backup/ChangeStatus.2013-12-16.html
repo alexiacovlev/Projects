@@ -1,0 +1,122 @@
+<style>
+    td {padding-top: 1px;padding-bottom: 1px;padding-left: 4px;}
+</style>
+<h2>
+Incident Tracker - [#IncidentData:ApplicationId(aspnet_Applications).Description#]1</h2>
+<br />
+<br />
+<table style="margin: 2px; width: 90%; border-collapse: collapse; table-layout: fixed;">
+    <tbody style="color: black; font-family: Verdana, Arial, Helvetica; font-size: 8pt;">
+        <tr>
+            <td style="padding: 4px; color: white; border-bottom-color: #064497; border-bottom-width: 1px; border-bottom-style: solid; background-color: #3889f7;" colspan="2">
+            <strong>Subject: [#IncidentData:Subject#]&nbsp;</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Portal:
+            </td>
+            <td>
+            [#IncidentData:ApplicationId(aspnet_Applications).Description#]
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Portal URL:
+            </td>
+            <td>
+            [#~APPLICATIONURL#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Number:
+            </td>
+            <td>
+            [#IncidentData:IncidentNr#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Type:
+            </td>
+            <td>
+            [#IncidentData:IncidentTypeId(AX_Incidents_Type).Type#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Changed by:
+            </td>
+            <td>
+            <strong>[#IncidentData:ModifiedBy(aspnet_Membership).FullName#]</strong>&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            E-mail:
+            </td>
+            <td>
+            [#IncidentData:ModifiedBy(aspnet_Membership).Email#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Date:
+            </td>
+            <td>
+            [#~NOW#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Changed IP:
+            </td>
+            <td>
+            [#~IP#]&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Changed status to:
+            </td>
+            <td>
+            <strong>[#IncidentData:IncidentStatusId(AX_Incidents_Status).Status#]&nbsp;</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <strong>&nbsp;&nbsp;</strong>&nbsp;
+            </td>
+            <td>
+            <strong>&nbsp;</strong>&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            Reason<strong>:</strong>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <strong>[#IncidentData:Reason#]&nbsp;</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            &nbsp;
+            </td>
+            <td>
+            &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="width: 100%; font-family: Verdana, Arial, Helvetica; font-size: 8pt;">
+<br />
+Notes:
+<br />
+Please do not reply to this message, which was sent from an unmonitored e-mail address.<br />
+Mail sent to this address cannot be answered.<br />
+Provided by <a href="http://www.webassembler.net/">Webassembler.NET 2012</a>\
+</div>

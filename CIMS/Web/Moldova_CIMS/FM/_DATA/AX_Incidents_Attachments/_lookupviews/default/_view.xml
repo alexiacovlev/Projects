@@ -1,0 +1,14 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="FileName" title="File Name" />
+    <cell name="FileSize" title="File Size" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="FileName" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+  <datasource type="Provider" name="AX.FM.Explorer,AX.FM.Explorer.GridProviders.WordDbFieldListProvider" />
+  <primarykey>Name</primarykey>
+  <fields>
+    <field name="Title" type="Text" format="" dbtype="" size="1000" title="Title" description="Title" required="false" readonly="false" uimask="00111" />
+    <field name="Name" type="Text" format="" dbtype="" size="200" title="" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="FieldType" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="DbType" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="Format" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="Length" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="RefInfo" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />
+		<field name="R" type="Text" format="" dbtype="" size="1000" title="" description="" required="false" readonly="false" uimask="00111" />		 
+  </fields>
+</entity>

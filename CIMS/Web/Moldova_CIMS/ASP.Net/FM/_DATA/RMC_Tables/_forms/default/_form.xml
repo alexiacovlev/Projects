@@ -1,0 +1,18 @@
+<form>
+  <header />
+  <description />
+  <print />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <cells>
+            <cell name="Name" title="Name" column="0" row="0" colspan="2" rowspan="1" />
+          </cells>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

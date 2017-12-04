@@ -1,0 +1,4 @@
+<info>
+  <description>This email using to notify user who posted the incident about any modifications with the incident status or properties.</description>
+  <more>Used in the workflow Incident_ChangeStatus.</more>
+</info>

@@ -1,0 +1,16 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="info">
+    <cell name="WorkflowName" title="Workflow Name" width="100" />
+    <cell name="StartTime" title="Start Time" width="100" />
+    <cell name="Status" title="Status" width="100" />
+    <cell name="TableName" title="Table Name" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="StartTime" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

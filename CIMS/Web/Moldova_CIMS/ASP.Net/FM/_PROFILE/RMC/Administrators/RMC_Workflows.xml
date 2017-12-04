@@ -1,0 +1,9 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2013-12-03T19:05:51">
+  <set name="TableName" value="BASE:RMC_Workflows" />
+  <set name="ViewName" value="default" />
+  <set name="OpenForm" value="URL:ASP.Net/FM/Explorer/WorkflowBuilder/" />
+  <set name="HandlerParameters" value="1200,730,false" />
+  <set name="CreateParameters" value="1200,730,false" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

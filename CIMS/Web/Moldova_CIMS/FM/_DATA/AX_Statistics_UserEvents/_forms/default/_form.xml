@@ -1,0 +1,38 @@
+<form>
+  <header title="default" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab name="tab0" title="General">
+      <sections>
+        <section name="sec10" title="Info" showlabel="false" columns="2">
+          <rows>
+            <row>
+              <cell name="Message" title="Message" />
+              <cell />
+            </row>
+            <row>
+              <cell name="UserName" title="Login" />
+              <cell name="UserId" title="Full Name">
+                <properties handlermode="readonly" />
+              </cell>
+            </row>
+            <row>
+              <cell name="EventTime" title="EventTime" />
+              <cell name="IPAddress" title="IP Address" />
+            </row>
+            <row>
+              <cell name="EventType" title="EventType" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="ApplicationId" title="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

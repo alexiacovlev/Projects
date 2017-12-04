@@ -1,0 +1,9 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2013-12-03T18:57:09">
+  <set name="TableName" value="BASE:RMC_Profiles" />
+  <set name="ViewName" value="default" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Migrate from v1.4 format&quot; image=&quot;star.png&quot; command=&quot;URL&quot; value=&quot;ASP.Net/SL/FM/Converter/ProfileConverter.aspx&quot; attributes=&quot;profile=[id]&quot; pos=&quot;in&quot; width=&quot;800&quot; height=&quot;600&quot; full=&quot;&quot; showoutlabel=&quot;&quot;/&gt;&lt;/menu&gt;" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="HandlerParameters" value="380,330" />
+  <set name="OpenForm" value="SERVERCONTROL:ASP.Net/FM/Explorer/ProfileBuilder/admin.ascx" />
+</mapNode>

@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedon="2016-10-18T13:29:55" modifiedby="Michael ">
+  <set name="TableName" value="AX_PersonalTasks" />
+  <set name="ViewName" value="out" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;New Task&quot; image=&quot;page_red.png&quot; value=&quot;create&quot; width=&quot;900&quot; command=&quot;FORM&quot; height=&quot;550&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; attributes=&quot;&quot; /&gt;&lt;item title=&quot;New Message&quot; image=&quot;email_add.png&quot; value=&quot;message&quot; width=&quot;900&quot; command=&quot;FORM&quot; height=&quot;550&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; attributes=&quot;&quot; /&gt;&lt;item image=&quot;star.png&quot; width=&quot;900&quot; height=&quot;550&quot; pos=&quot;out&quot; attributes=&quot;&quot; /&gt;&lt;item title=&quot;Edit Properties&quot; image=&quot;16_edit2.png&quot; value=&quot;default&quot; width=&quot;900&quot; command=&quot;FORM&quot; height=&quot;550&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; attributes=&quot;id&quot; /&gt;&lt;/menu&gt;" />
+  <set name="AllowCreate" value="false" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+</mapNode>

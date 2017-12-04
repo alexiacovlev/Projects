@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart title="" type="custom:value" allowClick="true">
+  <counter title="Payments" description="Updated now" ico="a0e4:#dd0330" value="$23,543.00" table="AX_EventLog" />
+</chart>

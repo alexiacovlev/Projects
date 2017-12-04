@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="AX_Incidents_Resolution" />
+	<primarykey>id</primarykey>
+	<watermark>Images/Views/Logo_Default.gif</watermark>
+	<fields>
+		<field name="id" type="Integer" format="" dbtype="Int32" size="" title="id" description="" required="true" readonly="true" uimask="001111" />
+		<field name="Resolution" type="Text" format="" dbtype="String" size="50" title="Resolution" description="" required="false" readonly="false" uimask="001111" />
+		<field name="Description" type="Text" format="" dbtype="String" size="150" title="Description" description="" required="false" readonly="false" uimask="001111" />
+		<field name="ApplicationId" type="Text" format="" dbtype="Guid" size="" title="Application Id" description="" required="false" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

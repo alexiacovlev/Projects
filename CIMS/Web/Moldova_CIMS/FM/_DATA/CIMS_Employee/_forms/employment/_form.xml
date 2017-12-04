@@ -1,0 +1,64 @@
+<form padding="big">
+  <header title="Employee" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="Employment" name="tab2">
+      <sections>
+        <section title="Section 1" name="sec2532" decoration="line" columns="3" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Position" name="Position" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Employment Type" name="EmploymentType" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Contract Duration" name="ContractDuration" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Hours Per Week" name="HoursPerWeek" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Employed From" name="EmployedFrom" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Quit On" name="QuitOn" colspan="2" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Employee: #FullName#</windowMask>
+</form>

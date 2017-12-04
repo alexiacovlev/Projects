@@ -1,0 +1,6 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell name="Name" title="Name"/>
+    <cell name="Description" title="Description" width="300"/>
+  </row>
+</view>

@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-10-20T14:28:04">
+  <set name="TableName" value="CIMS_PracticePlanItems" />
+  <set name="ViewName" value="by_team" />
+  <set name="InputFilterField" value="StudyPlan=$id" />
+</mapNode>

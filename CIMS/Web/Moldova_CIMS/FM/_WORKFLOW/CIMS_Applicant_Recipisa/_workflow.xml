@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Applicant_Recipisa" version="2.0" created="2017-11-03T10:48:06" modified="2017-11-03T10:50:17" author="Admin Admin">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_Applicant" form="admission_documents" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <SubWorkflow name="SubWorkflow66" title="Sub Workflow">
+      <Settings workflow="CIMS_ShowDocument" />
+      <Assign>
+        <Field name="TableName" value="'CIMS_Applicant'" />
+        <Field name="TemplateName" value="'recipisa'" />
+        <Field name="RecordID" value="$id" />
+        <Field name="RefObjectID" value="$id" />
+        <Field name="Type" value="'PDF'" />
+      </Assign>
+    </SubWorkflow>
+  </Sequence>
+</Workflow>

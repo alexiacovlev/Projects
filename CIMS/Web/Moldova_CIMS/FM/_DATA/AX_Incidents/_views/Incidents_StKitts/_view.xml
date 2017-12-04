@@ -1,0 +1,25 @@
+<view select="true" preview="false" icon="true" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id" recordtypefield="IncidentTypeId" imagetype="IncidentType">
+    <cell name="IncidentNr" title="Incident Nr" width="80" />
+    <cell name="Subject" title="Subject" />
+    <cell name="IncidentStatusId" title="Status" width="100" align="center" />
+    <cell name="CreatedOn" title="Created On" width="110" />
+    <cell name="CreatedBy" title="Created By" width="100" />
+    <cell name="ModifiedOn" title="Modified On" width="120" align="center" />
+    <cell name="ResultDate" title="Result Date" width="100" align="center" />
+    <cell name="IncidentTypeId" title="Type" width="100" />
+    <cell name="Category" title="Category" width="70" />
+    <cell name="ApplicationId" title="Application Id" width="50" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq" value="40000000-0000-0000-0000-000000000004" />
+      <condition attribute="CreatedOn" operator="after-and-before" value="2011-07-01T00:00:00" value2="2011-07-31T23:59:59" />
+    </filter>
+  </fetch>
+</view>

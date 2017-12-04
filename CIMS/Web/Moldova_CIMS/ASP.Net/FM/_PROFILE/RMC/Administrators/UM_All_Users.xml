@@ -1,0 +1,10 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2012-06-06T14:41:34">
+  <set name="TableName" value="aspnet_Membership" />
+  <set name="ViewName" value="default" />
+  <set name="CreateParameters" value="600,550" />
+  <set name="HandlerParameters" value="800,500" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Register New User&quot; image=&quot;18_addResources.png&quot; command=&quot;SERVERCONTROL&quot; width=&quot;520&quot; height=&quot;480&quot; full=&quot;&quot; value=&quot;/ASP.Net/System/Admin/UserManagement/CreateUser.ascx&quot; attributes=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot;/&gt;&lt;item image=&quot;star.png&quot; width=&quot;&quot; full=&quot;&quot;/&gt;&lt;item title=&quot;Membership Info&quot; image=&quot;Contacts.png&quot; command=&quot;EDIT&quot; value=&quot;&quot; pos=&quot;out&quot; width=&quot;800&quot; height=&quot;500&quot; full=&quot;&quot; showoutlabel=&quot;true&quot; attributes=&quot;&quot;/&gt;&#xD;&#xA;	&lt;item title=&quot;Change Password&quot; image=&quot;change_password.png&quot; command=&quot;SERVERCONTROL&quot; value=&quot;/ASP.Net/System/Admin/UserManagement/ChangePassword.ascx&quot; attributes=&quot;UserID=[id]&quot; pos=&quot;out&quot; width=&quot;430&quot; height=&quot;160&quot; full=&quot;&quot; showoutlabel=&quot;true&quot;/&gt;&#xD;&#xA;	&lt;item title=&quot;Delete&quot; image=&quot;16_delete.png&quot; command=&quot;CLIENTCONTROL&quot; value=&quot;AX.UM_DeleteUserDialog|ASP.Net/System/Admin/UserManagement/AX.UserManagement.js&quot; attributes=&quot;UserID=[id]&quot; pos=&quot;in&quot; width=&quot;400&quot; height=&quot;150&quot; full=&quot;&quot; showoutlabel=&quot;&quot;/&gt;&#xD;&#xA;&lt;/menu&gt;&#xD;&#xA;" />
+  <set name="AllowDelete" value="false" />
+  <set name="AllowCreate" value="false" />
+  <set name="OpenForm" value="FORM:default" />
+</mapNode>

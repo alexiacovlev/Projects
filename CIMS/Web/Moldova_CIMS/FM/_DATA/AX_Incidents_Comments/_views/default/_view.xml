@@ -1,0 +1,17 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Comments" title="Comments" />
+    <cell name="CreatedBy" title="Created By" width="100" />
+    <cell name="CreatedOn" title="Created On" width="100" />
+    <cell name="ObjectId" title="Incident" width="100" />
+    <cell name="id" title="id" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Comments" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

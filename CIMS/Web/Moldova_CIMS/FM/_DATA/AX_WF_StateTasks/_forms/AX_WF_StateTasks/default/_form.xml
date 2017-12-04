@@ -1,0 +1,56 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="ID" title="ID" colspan="2" />
+            </row>
+            <row>
+              <cell name="InstanceId" title="Instance Id" colspan="2" />
+            </row>
+            <row>
+              <cell name="ProcessName" title="Process Name" colspan="2" />
+            </row>
+            <row>
+              <cell name="StateName" title="State Name" colspan="2" />
+            </row>
+            <row>
+              <cell name="IsMultiTask" title="Is Multi Task" colspan="2" />
+            </row>
+            <row>
+              <cell name="RegardingId" title="Regarding Id" colspan="2" />
+            </row>
+            <row>
+              <cell name="Title" title="Title" colspan="2" />
+            </row>
+            <row>
+              <cell name="Status" title="Status" colspan="2" />
+            </row>
+            <row>
+              <cell name="IsCompleted" title="Is Completed" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+  </hidden>
+</form>

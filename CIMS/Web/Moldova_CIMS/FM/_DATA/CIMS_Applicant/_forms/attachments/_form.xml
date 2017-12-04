@@ -1,0 +1,66 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="Attachments" name="tab5">
+      <sections>
+        <section title="Attachments" name="sec5947" showlabel="false" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="control_939" colspan="2">
+                <content>&lt;control type="GRID" height="550"&gt;
+ &lt;set name="TableName" value="CIMS_Attachments" /&gt;
+ &lt;set name="ViewName" value="default" /&gt;
+ &lt;set name="OpenForm" value="FORM:default" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="false" /&gt;
+ &lt;set name="AllowDelete" value="false" /&gt;
+ &lt;set name="HandlerParameters" value="900,550" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="ParentId=[KeyValue]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1487" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

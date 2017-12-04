@@ -1,0 +1,9 @@
+<mapNode type="GRID" modifiedon="2017-07-21T16:57:59" modifiedby="Michael ">
+  <set name="TableName" value="AX_AuditTrail" />
+  <set name="ViewName" value="default" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="AllowCreate" value="false" />
+  <set name="OpenForm" value="SERVERCONTROL:AX.FM.Explorer,AX.FM.Explorer.AuditTrailViewer" />
+  <set name="ChartSettings" value="|atDateCreated|BAR|" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

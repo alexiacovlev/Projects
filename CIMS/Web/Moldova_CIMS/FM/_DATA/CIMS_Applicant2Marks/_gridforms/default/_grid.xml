@@ -1,0 +1,14 @@
+<view>
+  <row>
+    <cell name="Subject" title="Subject">
+      <properties requiredlevel="required" />
+    </cell>
+    <cell name="Mark" title="Mark" width="150">
+      <properties requiredlevel="required" />
+    </cell>
+    <cell name="Admission" title="Admission" width="0" />
+  </row>
+  <header title="" />
+  <description title="" />
+  <autoNewRow>off</autoNewRow>
+</view>

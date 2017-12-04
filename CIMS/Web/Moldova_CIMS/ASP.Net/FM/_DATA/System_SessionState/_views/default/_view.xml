@@ -1,0 +1,6 @@
+<view>
+  <row keyfield="Name">
+    <cell name="Value" title="Value" width="300" />
+    <cell name="Name" title="Session Key" />
+  </row>
+</view>

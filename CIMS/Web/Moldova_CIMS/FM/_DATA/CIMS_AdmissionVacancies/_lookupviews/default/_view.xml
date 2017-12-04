@@ -1,0 +1,13 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Name" title="Name" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

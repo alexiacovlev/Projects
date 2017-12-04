@@ -1,0 +1,37 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Incidents_Attachments" />
+  <primarykey>id</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="id" type="Text" format="" dbtype="Guid" size="" title="id" description="" required="true" readonly="false" uimask="00001" />
+    <field name="ObjectId" type="Lookup" format="" dbtype="Guid" size="" title="Object Id" description="" required="false" readonly="false" uimask="001111">
+      <extract table="AX_Incidents" view="default" />
+    </field>
+    <field name="ObjectType" type="Integer" format="" dbtype="Int32" size="" title="Object Type" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Subject" type="Text" format="" dbtype="String" size="100" title="Subject" description="" required="false" readonly="false" uimask="001111" />
+    <field name="NoteText" type="Text" format="textarea" dbtype="String" size="2147483647" title="Note Text" description="" required="false" readonly="false" uimask="001111" />
+    <field name="FileAttachment" type="Image" format="attachment:filename=FileName,filesize=FileSize,fileextension=FileExtension" dbtype="Byte[]" size="" title="File Attachment" description="attachment:filename=FileName,filesize=File_Size,fileextension=FileExtension" required="false" readonly="false" uimask="00111" />
+    <field name="FileName" type="Text" format="" dbtype="String" size="100" title="File Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="FileExtension" type="Text" format="" dbtype="String" size="10" title="File Extension" description="" required="false" readonly="false" uimask="001111" />
+    <field name="FileContentType" type="Text" format="" dbtype="String" size="100" title="File Content Type" description="" required="false" readonly="false" uimask="001111" />
+    <field name="FileSize" type="Text" format="" dbtype="String" size="20" title="File Size" description="" required="false" readonly="false" uimask="00111" />
+    <field name="IsDocument" type="Boolean" format="" dbtype="Boolean" size="" title="Is Document" description="" required="false" readonly="false" uimask="001111" />
+    <field name="VersionNumber" type="Text" format="" dbtype="String" size="50" title="Version Number" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Images" type="Image" format="" dbtype="Byte[]" size="" title="Images" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedBy" type="Lookup" format="" dbtype="Guid" size="" title="Created By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" format="" dbtype="String" size="50" title="Created IP" description="" required="false" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Created On" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ModifiedIP" type="Text" format="" dbtype="String" size="50" title="Modified IP" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedBy" type="Lookup" format="" dbtype="Guid" size="" title="Modified By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Modified On" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="Application Id" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+  </fields>
+</entity>

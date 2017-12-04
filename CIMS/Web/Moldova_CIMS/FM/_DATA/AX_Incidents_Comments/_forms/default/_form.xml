@@ -1,0 +1,63 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="Comments" title="Comments" colspan="2" rowspan="12">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell name="ObjectId" title="Request" colspan="2">
+                <properties handlermode="editable" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="CreatedBy" title="Created By">
+                <properties oncreatevalue="~USERID" readonly="true" handlermode="editable" />
+              </cell>
+              <cell name="CreatedOn" title="Created On">
+                <properties oncreatevalue="~NOW" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="ModifiedBy" title="Modified By">
+                <properties oncreatevalue="~USERID" onupdatevalue="~USERID" readonly="true" handlermode="editable" />
+              </cell>
+              <cell name="ModifiedOn" title="Modified On">
+                <properties oncreatevalue="~NOW" onupdatevalue="~NOW" readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="Subject" title="Subject" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+  </hidden>
+</form>

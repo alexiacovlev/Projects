@@ -1,0 +1,1 @@
+<%@ Page language="C#" Codebehind="InfoService.aspx.cs" AutoEventWireup="false" Inherits="AX.FM.DataViewer.UI.InfoService" %>

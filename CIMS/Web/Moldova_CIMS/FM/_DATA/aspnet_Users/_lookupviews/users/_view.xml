@@ -1,0 +1,20 @@
+<view select="true" preview="true" icon="true" >
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId">
+    <cell name="UserName" title="UserName" />
+    <cell name="ApplicationId" title="Application" width="100" />
+    <cell name="LastActivityDate" title="LastActivityDate" width="100" />
+    <cell name="MobileAlias" title="MobileAlias" width="100" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="LastActivityDate" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+      <condition attribute="IsAnonymous" operator="eq-false" />
+    </filter>
+  </fetch>
+</view>

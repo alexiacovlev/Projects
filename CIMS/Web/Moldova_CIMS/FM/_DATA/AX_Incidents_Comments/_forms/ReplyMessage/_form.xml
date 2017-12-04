@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form labelwidth="160">
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="To" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Email" title="Email">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Subject" decoration="line" columns="2" marginTop="10" name="sec950" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Subject" title="Subject" colspan="2" titlepos="off">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Message" decoration="line" columns="2" marginTop="10" name="sec229" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Comments" title="Message" colspan="2" rowspan="12" titlepos="off">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties readonly="true" oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="From">
+      <properties requiredlevel="recommended" handlermode="editable" readonly="true" oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+  </hidden>
+</form>

@@ -1,0 +1,34 @@
+<form padding="big" labelwidth="100">
+  <header title="Role" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell title="Name" name="RoleName" colspan="2">
+                <event>frm.setValue('LoweredRoleName', frm.getValue('RoleName').toLowerCase());</event>
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Section 2" name="sec1275" showlabel="true" columns="2" decoration="line" visible="false">
+          <rows>
+            <row>
+              <cell title="LoweredRoleName" name="LoweredRoleName" colspan="2">
+                <properties readonly="control" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="ApplicationId" name="ApplicationId">
+      <properties readonly="true" oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Role: #RoleName#</windowMask>
+</form>

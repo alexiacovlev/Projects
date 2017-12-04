@@ -1,0 +1,13 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell title="Name" name="Name" />
+    <cell title="Created On" name="CreatedOn" width="125" />
+    <cell title="Modified On" name="ModifiedOn" width="175" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Name" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

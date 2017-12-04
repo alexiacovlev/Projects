@@ -1,0 +1,24 @@
+<view select="true" preview="false" icon="false" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="EventId">
+    <cell name="Message" title="Message" />
+    <cell name="EventDetailCode" title="Category" width="100" />
+    <cell name="EventTime" title="Event Time" width="100" />
+    <cell name="ApplicationId" title="Application Id" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="EventCode" operator="eq" value="150001" />
+      <condition attribute="EventTime" operator="last-seven-days" />
+    </filter>
+  </fetch>
+  <rowstyle>
+    <style value="color:blue;font-weight:bold;">
+      <condition attribute="EventTime" operator="today" value="" />
+    </style>
+  </rowstyle>
+</view>

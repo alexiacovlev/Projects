@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-17T14:53:23">
+  <set name="TableName" value="CIMS_StudyYears" />
+  <set name="ViewName" value="by_team" />
+  <set name="OpenForm" value="WORKFLOW:CIMS_StudyYearProfile" />
+  <set name="HandlerParameters" value="1000,700" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Start Study Year&quot; image=&quot;star.png&quot; command=&quot;WORKFLOW&quot; width=&quot;900&quot; height=&quot;550&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; ico=&quot;a0a3&quot; value=&quot;CIMS_StudyYear_Start&quot; attributes=&quot;id&quot;/&gt;&lt;/menu&gt;" />
+</mapNode>

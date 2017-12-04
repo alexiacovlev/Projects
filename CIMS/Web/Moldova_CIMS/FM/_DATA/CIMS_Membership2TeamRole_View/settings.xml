@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>UserId</primarykey>
+  <header title="User List with Full Name" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_Membership2TeamRole_View" />
+  <watermark>Images/wm_112.gif</watermark>
+  <audittrail create="true" update="true" delete="true" search="false" />
+  <fields>
+    <field name="UserId" type="Lookup" dbtype="Guid" format="" title="UserId" description="" size="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Users" view="default" />
+    </field>
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="ApplicationId" description="" size="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="Password" type="Text" dbtype="StringUnicode" format="" title="Password" description="" size="128" required="true" readonly="false" uimask="00111" />
+    <field name="PasswordFormat" type="Picklist" dbtype="Int32" format="" title="PasswordFormat" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="PasswordSalt" type="Text" dbtype="StringUnicode" format="" title="PasswordSalt" description="" size="128" required="true" readonly="false" uimask="00111" />
+    <field name="MobilePIN" type="Text" dbtype="StringUnicode" format="" title="MobilePIN" description="" size="16" required="false" readonly="false" uimask="00111" />
+    <field name="Email" type="Text" dbtype="StringUnicode" format="" title="Email" description="" size="256" required="false" readonly="false" uimask="00111" />
+    <field name="LoweredEmail" type="Text" dbtype="StringUnicode" format="" title="LoweredEmail" description="" size="256" required="false" readonly="false" uimask="00111" />
+    <field name="PasswordQuestion" type="Text" dbtype="StringUnicode" format="" title="PasswordQuestion" description="" size="256" required="false" readonly="false" uimask="00111" />
+    <field name="PasswordAnswer" type="Text" dbtype="StringUnicode" format="" title="PasswordAnswer" description="" size="128" required="false" readonly="false" uimask="00111" />
+    <field name="IsApproved" type="Boolean" dbtype="Boolean" format="checkbox" title="IsApproved" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field title="IsLockedOut" name="IsLockedOut" type="Boolean" uimask="00111" readonly="true" required="true" size="" description="" format="checkbox" dbtype="Boolean" />
+    <field name="CreateDate" type="DateTime" dbtype="DateTime" format="" title="CreateDate" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="LastLoginDate" type="DateTime" dbtype="DateTime" format="datetime" title="LastLoginDate" description="" size="" required="true" readonly="true" uimask="00111" />
+    <field name="LastPasswordChangedDate" type="DateTime" dbtype="DateTime" format="" title="LastPasswordChangedDate" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="LastLockoutDate" type="DateTime" dbtype="DateTime" format="" title="LastLockoutDate" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="FailedPasswordAttemptCount" type="Integer" dbtype="Int32" format="" title="FailedPasswordAttemptCount" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="FailedPasswordAttemptWindowStart" type="DateTime" dbtype="DateTime" format="" title="FailedPasswordAttemptWindowStart" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="FailedPasswordAnswerAttemptCount" type="Integer" dbtype="Int32" format="" title="FailedPasswordAnswerAttemptCount" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="FailedPasswordAnswerAttemptWindowStart" type="Integer" dbtype="DateTime" format="" title="FailedPasswordAnswerAttemptWindowStart" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="Comment" type="Text" dbtype="String" format="" title="Comment" description="" size="1073741823" required="false" readonly="false" uimask="00111" />
+    <field name="FirstName" type="Text" dbtype="StringUnicode" format="" title="FirstName" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="LastName" type="Text" dbtype="StringUnicode" format="" title="LastName" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="FullName" type="Text" dbtype="StringUnicode" format="" title="FullName" description="" size="101" required="false" readonly="true" uimask="00111" />
+    <field name="CountryName" type="Text" dbtype="StringUnicode" format="" title="CountryName" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="CountryCode" type="Text" dbtype="StringUnicode" format="" title="CountryCode" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="City" type="Text" dbtype="StringUnicode" format="" title="City" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="StateCounty" type="Text" dbtype="StringUnicode" format="" title="StateCounty" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="AddressLine1" type="Text" dbtype="StringUnicode" format="" title="AddressLine1" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="AddressLine2" type="Text" dbtype="StringUnicode" format="" title="AddressLine2" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="AddressLine3" type="Text" dbtype="StringUnicode" format="" title="AddressLine3" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="ZipCode" type="Text" dbtype="StringUnicode" format="" title="ZipCode" description="" size="15" required="false" readonly="false" uimask="00111" />
+    <field name="FullAddress" type="Text" dbtype="StringUnicode" format="" title="FullAddress" description="" size="369" required="false" readonly="true" uimask="00111" />
+    <field title="UserInRoles" name="UserInRoles" type="Lookup" uimask="00111" readonly="false" required="false" size="255" description="" format="multi" dbtype="">
+      <extract table="aspnet_Roles" view="default" />
+      <relation table="aspnet_UsersInRoles">
+        <column name="UserId" type="parentkey" />
+        <column name="RoleId" type="childkey" />
+      </relation>
+    </field>
+    <field name="UserInTeams" type="Lookup" dbtype="" format="" title="UserInTeams" description="" size="255" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="default" />
+      <relation table="aspnet_Team2Users">
+        <column name="PortalUserId" type="parentkey" />
+        <column name="TeamId" type="childkey" />
+      </relation>
+    </field>
+    <field name="CName" type="Text" dbtype="" format="" title="Corporate Name" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="CAddress" type="Text" dbtype="" format="" title="Corporate Address" description="" size="500" required="false" readonly="false" uimask="00111" />
+    <field name="CPhone" type="Text" dbtype="" format="" title="Corporate Phone" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="CEmail" type="Text" dbtype="" format="" title="Corporate Email" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="CAdministratorName" type="Text" dbtype="" format="" title="Corporate Administrator Name" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="CAdministratorEMail" type="Text" dbtype="" format="" title="Corporate Administrator EMail" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="CNIPT" type="Text" dbtype="" format="" title="Corporate NIPT" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="CFiscalCode" type="Text" dbtype="" format="" title="Corporate Fiscal Code" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CName" type="Text" dbtype="" format="" title="VF Corporate Name" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CAddress" type="Text" dbtype="" format="" title="VF Corporate Address" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CPhone" type="Text" dbtype="" format="" title="VF Corporate Phone" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CEmail" type="Text" dbtype="" format="" title="VF Corporate Email" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CAdministratorName" type="Text" dbtype="" format="" title="VF Corporate Administrator Name" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CAdministratorEMail" type="Text" dbtype="" format="" title="VF Corporate Administrator EMail" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CNIPT" type="Text" dbtype="" format="" title="VF Corporate NIPT" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="VF_CFiscalCode" type="Text" dbtype="" format="" title="VF Corporate Fiscal Code" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="Title" type="Text" dbtype="StringUnicode" format="" title="Title" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="PhoneNumber1" type="Text" dbtype="StringUnicode" format="" title="Phone Number1" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="PhoneNumber2" type="Text" dbtype="StringUnicode" format="" title="Phone Number2" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedBy" type="Text" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="datetime" title="Modified On" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedIP" type="Text" dbtype="StringUnicode" format="" title="Modified IP" description="" size="20" required="false" readonly="false" uimask="001111" />
+    <field name="Boolean1" type="Boolean" dbtype="Boolean" format="" title="Boolean1" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="Boolean2" type="Boolean" dbtype="Boolean" format="" title="Boolean2" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="BillingCountryName" type="Text" dbtype="StringUnicode" format="" title="Billing Country Name" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="BillingCity" type="Text" dbtype="StringUnicode" format="" title="Billing City" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="BillingStateCounty" type="Text" dbtype="StringUnicode" format="" title="Billing State County" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="BillingAddressLine1" type="Text" dbtype="StringUnicode" format="" title="Billing Address Line1" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="BillingAddressLine2" type="Text" dbtype="StringUnicode" format="" title="Billing Address Line2" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="BillingZipCode" type="Text" dbtype="StringUnicode" format="" title="Billing Zip Code" description="" size="15" required="false" readonly="false" uimask="001111" />
+    <field name="BillingFirstName" type="Text" dbtype="StringUnicode" format="" title="Billing First Name" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="BillingLastName" type="Text" dbtype="StringUnicode" format="" title="Billing Last Name" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="CMS_CurrentFolderID" type="Integer" dbtype="Int32" format="" title="Currentfolderid" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="DigitalSignature" type="Image" dbtype="Byte[]" format="" title="Digital Signature" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="DigitalSignature_FileName" type="Text" dbtype="StringUnicode" format="" title="Digital Signature_File Name" description="" size="50" required="false" readonly="false" uimask="001111" />
+    <field name="Birthday" type="DateTime" dbtype="DateTime" format="" title="Birthday" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="PublicKey" type="Text" dbtype="StringUnicode" format="textarea" title="Public Key" description="" size="2147483647" required="false" readonly="false" uimask="001111" />
+    <field name="LastUpdatedDate" type="DateTime" dbtype="DateTime" format="datetime" title="Last Updated Date" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ProviderId" type="Lookup" dbtype="Guid" format="" title="Provider Id" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="PM_Providers" view="default" />
+    </field>
+    <field name="FingerPrint1" type="Image" dbtype="Byte[]" format="" title="Finger Print1" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="FingerPrint2" type="Image" dbtype="Byte[]" format="" title="Finger Print2" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="HasFingerPrint" type="Boolean" dbtype="Boolean" format="" title="Has Finger Print" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="Birthday1" type="DateTime" format="" dbtype="DateTime" size="" title="Birthday1" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Description_Box" type="Text" dbtype="String" format="textarea" title="Description Box" description="you can add description in this field" size="100" required="true" readonly="false" uimask="00111" />
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="Team Id" description="" size="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="" />
+    </field>
+    <field name="RoleName" type="Text" dbtype="StringUnicode" format="" title="Role Name" description="" size="256" required="true" readonly="false" uimask="00111" />
+    <field name="AssigneToProfile" type="Integer" dbtype="Int32" format="" title="Assigne To Profile" description="" size="" required="false" readonly="true" uimask="00111" />
+  </fields>
+</entity>

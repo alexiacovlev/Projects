@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_StudyYear_Start" version="2.0" created="2017-11-17T14:53:30" modified="2017-11-17T15:07:00" author="Admin Admin">
+  <Sequence>
+    <XmlIsland name="DATA633" title="Select">
+      <Settings table="CIMS_StudyYears" />
+      <FieldSet>
+        <Field name="Status" />
+        <Field name="StudyYear" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <Switch>
+      <Case test="DATA633:Status = '1'" details="Under Formation;">
+        <Sequence>
+          <Invoke name="Control887" title="CONTROL" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Click on Next to start selected study year&lt;br /&gt; or click on Close if you do not want to do it.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+          <ExecStoredProcedure name="SP894" title="SP">
+            <Settings method="prc_CIMS_StudyYear_Start" />
+            <Assign>
+              <Field name="YearId" value="INPUT:id" />
+              <Field name="College" value="~TEAM" />
+              <Field name="YearNr" value="DATA633:StudyYear" />
+            </Assign>
+          </ExecStoredProcedure>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="Control823" title="CONTROL" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Selected study year cannot be opened.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+</Workflow>

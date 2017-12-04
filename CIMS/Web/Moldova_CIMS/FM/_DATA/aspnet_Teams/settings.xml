@@ -1,0 +1,32 @@
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>Id</primarykey>
+  <header title="Portal Team Information" />
+  <description title="ASP Net Teams" />
+  <datasource type="DB" name="aspnet_Teams" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="Id" type="Text" dbtype="Guid" format="" title="Id" description="" size="" required="true" readonly="false" uimask="00001" />
+    <field name="DeletionStateCode" type="Integer" dbtype="Int32" format="" title="DeletionStateCode" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="OrganizationId" type="Text" dbtype="Guid" format="" title="OrganizationId" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="BusinessUnitId" type="Text" dbtype="Guid" format="" title="BusinessUnitId" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Name" type="Text" dbtype="String" format="" title="Name1" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" dbtype="StringUnicode" format="textarea" title="Description" description="" size="2147483647" required="false" readonly="false" uimask="00111" />
+    <field name="Address" type="Text" dbtype="StringUnicode" format="textarea" title="Address" description="" size="2147483647" required="false" readonly="false" uimask="00111" />
+    <field name="EMailAddress" type="Text" dbtype="StringUnicode" format="email" title="EMailAddress" description="" size="100" required="false" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="CreatedOn" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="CreatedBy" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="StringUnicode" format="" title="CreatedIP" description="" size="20" required="false" readonly="false" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="" title="ModifiedOn" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="ModifiedBy" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="StringUnicode" format="" title="ModifiedIP" description="" size="20" required="false" readonly="false" uimask="00111" />
+    <field name="DomainName" type="Text" dbtype="StringUnicode" format="" title="DomainName" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="ApplicationId" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="Workspace" />
+    </field>
+    <field name="PortalUserId" type="Text" dbtype="Guid" format="" title="Portal User Id" description="" size="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

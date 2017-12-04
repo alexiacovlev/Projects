@@ -1,0 +1,23 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Statistics_UsersOnline" />
+  <primarykey>Id</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="Id" type="Text" format="" dbtype="" size="" title="Id" description="" required="true" readonly="false" uimask="00111" />
+    <field name="UserId" type="Lookup" format="" dbtype="" size="" title="UserId" description="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Users" view="default" />
+    </field>
+    <field name="SessionId" type="Text" format="" dbtype="" size="256" title="SessionId" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Page" type="Text" format="" dbtype="" size="256" title="Page" description="" required="true" readonly="false" uimask="00111" />
+    <field name="StartTime" type="DateTime" format="datetime" dbtype="" size="" title="StartTime" description="" required="true" readonly="false" uimask="00111" />
+    <field name="LastActivityTime" type="DateTime" format="datetime" dbtype="" size="" title="LastActivityTime" description="" required="true" readonly="false" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" format="" dbtype="" size="" title="ApplicationId" description="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="IPAddress" type="Text" format="" dbtype="" size="20" title="IPAddress" description="" required="true" readonly="false" uimask="00111" />
+    <field name="IsInvitedToChat" type="Boolean" format="" dbtype="" size="" title="IsInvitedToChat" description="" required="true" readonly="false" uimask="00111" />
+    <field name="ChatRequestorId" type="Text" format="" dbtype="" size="" title="ChatRequestorId" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

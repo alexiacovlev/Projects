@@ -1,0 +1,9 @@
+<info>
+  <description>Данное письмо отправляется пользователю после успешной регистрации на сайте.</description>
+  <more>Available Variables:
+[# FullName #] - User Full Name
+[# UserName #] - User Account Name
+[# Password #] - Password
+[# URL #] - Web Site Url
+</more>
+</info>

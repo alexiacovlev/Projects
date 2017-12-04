@@ -1,0 +1,4 @@
+<mapNode type="FORM" modifiedby="Iure Coroban" modifiedon="2017-10-09T15:18:24">
+  <set name="TableName" value="CIMS_Employee" />
+  <set name="FormName" value="details" />
+</mapNode>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Admission_Online" version="2.0" created="2017-09-28T10:54:53" modified="2017-11-22T13:53:44" author="Admin Admin" trace="true" forceRefresh="false" title="">
+  <Sequence>
+    <Invoke name="FORM357" title="FORM" control="Form">
+      <Settings table="CIMS_DUMMY" form="AdmissionActive" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <XmlIsland name="DATA64" title="Select">
+      <Settings table="CIMS_Admission" />
+      <FieldSet>
+        <Field name="TeamId" />
+        <Field name="Status" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="FORM357:AdmissionActive" />
+      </Assign>
+    </XmlIsland>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_Applicant" form="default" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+        <Field name="Admission" value="FORM357:AdmissionActive" />
+        <Field name="TeamId" value="DATA64:TeamId" />
+        <Field name="PersonStatus" value="'1'" text="Applicant" />
+        <Field name="AdmissionStatus" value="DATA64:Status" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous enabled="false" title="" />
+  </Handlers>
+</Workflow>

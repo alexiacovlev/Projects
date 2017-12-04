@@ -1,0 +1,13 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId">
+    <cell name="PropertyNames" title="Property Names" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="PropertyNames" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

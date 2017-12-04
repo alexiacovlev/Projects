@@ -1,0 +1,19 @@
+<view select="true" preview="false" check="false" icon="true" expandMode="Off">
+  <row keyfield="Id" imagetype="MembershipUser">
+    <cell name="UserId" title="User Name" width="150" />
+    <cell name="Page" title="Page" />
+    <cell name="IPAddress" title="IP" width="100" />
+    <cell name="LastActivityTime" title="LastActivityTime" width="125" />
+    <cell name="StartTime" title="StartTime" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="LastActivityTime" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+    </filter>
+  </fetch>
+  <header title="" />
+  <description title="" />
+</view>

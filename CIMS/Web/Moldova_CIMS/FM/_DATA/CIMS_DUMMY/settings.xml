@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_DUMMY" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="AdmissionActive" type="Lookup" dbtype="" format="" title="AdmissionActive" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="CIMS_Admission" view="active" />
+    </field>
+    <field name="YesNo" type="Picklist" dbtype="Int32" format="radio" title="YesNo" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="SpecialtyByAdmission" type="Lookup" dbtype="Guid" format="" title="SpecialtyByAdmission" description="" size="" required="false" readonly="false" uimask="00111">
+      <binding from="AdmissionActive" to="Admission" />
+      <extract table="CIMS_SpecialtyProfile2Admission_View" view="" />
+    </field>
+    <field name="tmpRecordID" type="Text" dbtype="Guid" format="" title="tmpRecordID" description="" size="36" required="false" readonly="false" uimask="00111" />
+    <field name="tmpTableName" type="Text" dbtype="StringUnicode" format="" title="tmpTableName" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="tmpTemplateName" type="Text" dbtype="String" format="" title="tmpTemplateName" description="" size="255" required="false" readonly="false" uimask="00111" />
+    <field name="tmpRefObjectID" type="Text" dbtype="Guid" format="" title="tmpRefObjectID" description="" size="36" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

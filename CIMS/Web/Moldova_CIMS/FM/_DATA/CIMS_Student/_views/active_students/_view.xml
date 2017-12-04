@@ -1,0 +1,25 @@
+<view check="false" icon="false" mode="Grouping">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="GroupId" title="Group" width="100" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="MiddleName" title="Middle Name" width="125" />
+    <cell name="IDNP" title="IDNP" width="150" />
+    <cell name="UserId" title="User" width="150" />
+    <cell name="Specialty" title="Specialty" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Specialty" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+      <condition attribute="PersonStatus" operator="eq" value="4" />
+    </filter>
+    <groups>
+      <group name="GroupId" ascending="true" title="" mode="" />
+    </groups>
+  </fetch>
+</view>

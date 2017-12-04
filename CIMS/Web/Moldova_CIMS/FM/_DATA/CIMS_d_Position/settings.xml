@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>ID</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="CIMS_d_Position" />
+  <fields>
+    <field name="ID" type="Text" dbtype="Int32" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="Name" type="Text" dbtype="StringUnicode" format="" title="Name" description="" size="200" required="true" readonly="false" uimask="00111" />
+  </fields>
+</entity>

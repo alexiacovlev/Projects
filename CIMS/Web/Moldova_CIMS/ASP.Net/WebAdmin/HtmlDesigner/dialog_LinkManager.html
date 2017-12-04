@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/tr/xhtml11/dtd/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="redLinkManager"><head>
+<base target="_self" />
+<title>
+        Hyperlink Manager
+</title>
+<link href="axd_dialog_linkmanager.skins.form.css" type="text/css" rel="stylesheet" />
+</head>
+<body><form method="post" action="Telerik.Web.UI.DialogHandler.aspx?DialogName=LinkManager&amp;UseRSM=true&amp;Skin=Default&amp;Title=Hyperlink+Manager&amp;doid=7641970f-7c9c-4cbc-bf61-393cb650a852&amp;dpptn=&amp;dp=aWFXSiwmV1BzZGdOG2cYXGIfC201ZxE0TDQDMwEwSzsMOjdRCgQWFwd5CQ9iD3lTWm4gEiEcaUl4ZDJLIlwITlp7G1U3Oy8xdRU2BwoKdTI1WxVYCwEzWTdpZVJuak9aXlskEhQcFkl0dBAXIHMycGEfIUMOBgo2YwkPIQIwSy01BCxZCikWHjp5JE5tDWVGYVsOVxQTfUxDAWJSE3cmX1oPYFcCHRE2dRhOHDowZjIEBAZYJXARHS5tJG9lDG1QbFoKaRYMaQlvZT5GFwAmBm4kD0swAzcZeiM5HwodX3QCLjR4JQQoNgZmBll6eAIYYltXcRAcZkVEeyZqIAMiQGElaAkAOREZYRoTFRULaXQDAiRYJwUOJix5aXVmDX18bFoGFhcMYUhDexxqI3cYRG8fMggCOTMVS38fIzoxaXQPEwpYIi8OHy5mMHZleGEcb3ESbBEeHmlwaz5oFEobQGwkFwoOZDg7eSM1HwshaXQBBRFTIhQ0NzVEHlJVaG1Qb3MsYSAcfWRyXRhPFwB%2fem8kMUoCAjQ4SwoDHTkNcXUCPjBsJBQoNjV6EmhleGJTb1oGaRQOH0V0ZxcQE2giB2IQE0wNAgUETho9BzpVVzsDLgYbJwE8KTp5JEJtbkBdd3IWbywcGlJFZBBJG2MycGEfIUMOBgo2YwsLLBYvYRYAAnASCXISGzp5FkttaGFeYls0SS8MeVdwXhBdG2YEB10fIVU3ZxUtdRUqBwoKdTI1WxVYCzs8OwBAClR4DVtQbgQWUhcnfUpFZBhIDXUQX1oAF1UYETAyfSA9BztVZnw%3d" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="RadStyleSheetManager1_TSSM" id="RadStyleSheetManager1_TSSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA8WAh4RX2RpYWxvZ1BhcmFtZXRlcnMy4wUAAQAAAP////8BAAAAAAAAAAwCAAAAWFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTMuMy4xMDE1LjQ1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQFAQAAAB9UZWxlcmlrLldlYi5VSS5EaWFsb2dQYXJhbWV0ZXJzBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcggCAAAA7FE4PwoAAAAKChEAAAAJAwAAAAkEAAAAEAMAAAAIAAAABgUAAAAITGFuZ3VhZ2UGBgAAABNFbmFibGVFbWJlZGRlZFNraW5zBgcAAAAXU2NyaXB0TWFuYWdlclByb3BlcnRpZXMGCAAAABNFeHRlcm5hbERpYWxvZ3NQYXRoBgkAAAAQTG9jYWxpemF0aW9uUGF0aAYKAAAAC0lzU2tpblRvdWNoBgsAAAAcRW5hYmxlRW1iZWRkZWRCYXNlU3R5bGVzaGVldAYMAAAAJ1RlbGVyaWsuRGlhbG9nRGVmaW5pdGlvbi5EaWFsb2dUeXBlTmFtZRAEAAAACAAAAAYNAAAABWVuLVVTCAEBBg4AAAAACQ4AAAAJDgAAAAgBAAgBAQYPAAAAkAFUZWxlcmlrLldlYi5VSS5FZGl0b3IuRGlhbG9nQ29udHJvbHMuTGlua01hbmFnZXJEaWFsb2csIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTMuMy4xMDE1LjQ1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDQLFgICAQ9kFgICAQ9kFgJmD2QWCGYPFgIeE0VuYWJsZVNjcmlwdENvbWJpbmVnZAIBDxYCHhdFbmFibGVTdHlsZVNoZWV0Q29tYmluZWdkAgMPD2QWAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAgQPZBYCZg9kFgRmDw8WCB4EU2tpbgUHRGVmYXVsdB4cRW5hYmxlRW1iZWRkZWRCYXNlU3R5bGVzaGVldGceE0VuYWJsZUVtYmVkZGVkU2tpbnNnHghMYW5ndWFnZQUFZW4tVVNkFgJmDxYCHgRUZXh0BbEoPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KLy88IVtDREFUQVsNCmlmICh0eXBlb2YobG9jYWxpemF0aW9uKSA9PSAidW5kZWZpbmVkIikNCnsNCgl2YXIgbG9jYWxpemF0aW9uID0gew0KCQlfZmlsbCA6IGZ1bmN0aW9uKG5ld1N0cmluZ3MpDQoJCXsNCgkJCWZvciAodmFyIGtleSBpbiBuZXdTdHJpbmdzKQ0KCQkJew0KCQkJCXRoaXNba2V5XSA9IG5ld1N0cmluZ3Nba2V5XTsNCgkJCX0NCgkJfSwNCgkJc2V0VGl0bGUgOiBmdW5jdGlvbihlbGVtZW50SWQsIHJlc291cmNlS2V5KSB7DQoJCQkkZ2V0KGVsZW1lbnRJZCkudGl0bGUgPSB0aGlzW3Jlc291cmNlS2V5XTsNCgkJfQ0KCX07DQp9DQpsb2NhbGl6YXRpb24uX2ZpbGwoe0FjdHVhbFNpemU6IkFjdHVhbCBTaXplIixBZGQ6IkFkZCIsQWRkQ3VzdG9tQ29sb3I6IkFkZCBDdXN0b20gQ29sb3IuLi4iLEFkZEN1c3RvbVRhcmdldDoiW2FkZCBjdXN0b20gdGFyZ2V0Li4uXSIsQWxsb3dlZEV4dGVuc2lvbnM6IkZpbGUgZXh0ZW5zaW9ucyBhbGxvd2VkIixBbGxQcm9wZXJ0aWVzOiJBbGwgUHJvcGVydGllcy4uLiIsQXBwbHlDbGFzczoiQXBwbHkgQ2xhc3MiLEJhY2s6IkJhY2siLEJhY2tncm91bmRDb2xvcjoiQmFja2dyb3VuZCBDb2xvciIsQmFja2dyb3VuZEltYWdlOiJCYWNrIEltYWdlIixCZXN0Rml0OiJCZXN0IEZpdCIsQm9yZGVyQ29sb3I6IkJvcmRlciBDb2xvciIsQm9yZGVyV2lkdGg6IkJvcmRlciBXaWR0aCIsQm90dG9tOiJCb3R0b20iLGJ5dGVzOiJieXRlcyIsQ2FuY2VsOiJDYW5jZWwiLENlbGxDc3M6IkNlbGwgQ1NTIixDbGFzc0lEOiJTcGVjaWZ5IENsYXNzIElEIixDbGFzc0lEVGV4dDoiQ2xhc3MgSUQiLENsZWFyOiJDbGVhciIsQ2xlYXJDbGFzczoiQ2xlYXIgQ2xhc3MiLENsaWVudF9BbGVydEZpbGU6IlBsZWFzZSwgcHJvdmlkZSBmaWxlIHRvIHVwbG9hZCEiLENvbmZpcm1EZWxldGU6IkFyZSB5b3Ugc3VyZSB5b3Ugd2FudCB0byBkZWxldGUgdGhlIHNlbGVjdGVkIGl0ZW0/XHJcbkl0IG1pZ2h0IHN0aWxsIGJlIGluIHVzZS4gSWYgZGVsZXRlZCwgc29tZSBwYWdlcyB3aWxsIG5vdCBiZSBkaXNwbGF5ZWQgcHJvcGVybHkuXHJcblByZXNzIFwiT0tcIiB0byBjb25maXJtIGRlbGV0aW9uLiIsQ2xvc2U6IkNsb3NlIixDb25zdHJhaW5Qcm9wb3J0aW9uczoiQ29uc3RyYWluIHByb3BvcnRpb25zPyIsQ29udHJvbEJ1dHRvbnM6IkNvbnRyb2wgQnV0dG9ucyIsQ29weToiQ29weSIsQ3JlYXRlOiJDcmVhdGUiLENyZWF0ZU5ld0ZvbGRlcjoiRW50ZXIgdGhlIG5ldyBmb2xkZXIgbmFtZSIsQ3JlYXRlVGh1bWJuYWlsOiJDcmVhdGUgdGh1bWJuYWlsIixDc3NDbGFzczoiQ1NTIENsYXNzIixEZWNyZWFzZToiRGVjcmVhc2UiLERlbGV0ZToiRGVsZXRlIixHcmlkVmlldzoiR3JpZCBWaWV3IixUaHVtYm5haWxzVmlldzoiVGh1bWJuYWlscyBWaWV3IixEaW1lbnNpb25Vbml0OiJEaW1lbnNpb24gdW5pdCIsRmlsZUV4aXN0czoiQSBmaWxlIHdpdGggYSBuYW1lIHNhbWUgYXMgdGhlIHRhcmdldCBhbHJlYWR5IGV4aXN0cyEiLEZpbGVMaXN0U3VtbWFyeToiVGFibGUgdGhhdCBsaXN0cyB0aGUgY29udGVudHMgb2YgdGhlIGN1cnJlbnQgZGlyZWN0b3J5IixGb3J3YXJkOiJGb3J3YXJkIixHcmlkUGFnZXJUZXh0OiJ7NH0gUGFnZSA8c3Ryb25nPnswfTwvc3Ryb25nPiBvZiA8c3Ryb25nPnsxfTwvc3Ryb25nPi4gSXRlbXMgPHN0cm9uZz57Mn08L3N0cm9uZz4gdG8gPHN0cm9uZz57M308L3N0cm9uZz4gb2YgPHN0cm9uZz57NX08L3N0cm9uZz4iLEdyaWRTb3J0ZWRBc2NUb29sVGlwOiJTb3J0IGFzYyIsR3JpZFNvcnRlZERlc2NUb29sVGlwOiJTb3J0IGRlc2MiLEdyaWRTb3J0VG9vbFRpcDoiQ2xpY2sgaGVyZSB0byBzb3J0IixIZWlnaHQ6IkhlaWdodCIsSWQ6IklkIixJbWFnZUFsdFRleHQ6IkFsdCBUZXh0IixJbWFnZVRpdGxlVGV4dDoiVGl0bGUgVGV4dCIsSW1hZ2VFZGl0b3I6IkltYWdlIEVkaXRvciIsSW1hZ2VGaWVsZFNldDoiSW1hZ2UgUHJvcGVydGllcyIsSW5jcmVhc2U6IkluY3JlYXNlIixJbnNlcnQ6Ikluc2VydCIsSW52YWxpZENoYXJhY3RlcnNJblBhdGg6IkludmFsaWQgY2hhcmFjdGVycyBpbiBmb2xkZXIgbmFtZS4iLEludmFsaWRGaWxlRXh0ZW5zaW9uOiJUaGUgZXh0ZW5zaW9uIG9mIHRoZSB1cGxvYWRlZCBmaWxlIGlzIG5vdCB2YWxpZC4gUGxlYXNlLCBwcm92aWRlIGEgdmFsaWQgZmlsZSEiLEludmFsaWRGaWxlU2l6ZToiVGhlIHNpemUgb2YgdGhlIHVwbG9hZGVkIGZpbGUgZXhjZWVkcyBtYXggc2l6ZSBhbGxvd2VkIixLaWxvYnl0ZXM6IktCIixMZWZ0OiJMZWZ0IixMb29rSW46Ikxvb2sgaW4iLE1heEZpbGVTaXplOiJNYXggZmlsZSBzaXplIGFsbG93ZWQiLE1hcmdpbjoiTWFyZ2luIixNZWdhYnl0ZXM6Ik1CIixNZXNzYWdlQ2Fubm90V3JpdGVUb0ZvbGRlcjoiQ2Fubm90IHdyaXRlIHRvIHRoZSB0YXJnZXQgZm9sZGVyISIsTWVzc2FnZU5vVmFsaWREaW1lbnNpb25zOiJQbGVhc2UsIHByb3ZpZGUgdmFsaWQgaW1hZ2UgZGltZW5zaW9ucyIsTWVzc2FnZVNvdXJjZU5vdExvY2FsOiJUaGUgc3BlY2lmaWVkIGZvciBjb252ZXJzaW9uIGltYWdlIGZpbGUgcmVzaWRlcyBvbiBhIGRpZmZlcmVudCBzZXJ2ZXIhIixNaWRkbGU6Ik1pZGRsZSIsTmFtZUV4aXN0czoiQW4gb2JqZWN0IHdpdGggdGhlIHNhbWUgbmFtZSBhbHJlYWR5IGV4aXN0cyBpbiB0aGlzIGRpcmVjdG9yeSEiLE5ld0ZvbGRlcjoiTmV3IEZvbGRlciIsTmV3SW1hZ2VOYW1lOiJOZXcgaW1hZ2UgbmFtZSIsTm86Ik5vIixOb25lOiJOb25lIixOb25FeGlzdGluZ0ZvbGRlcjoiWW91IGFyZSB0cnlpbmcgdG8gbmF2aWdhdGUgdG8gYSBub24tZXhpc3RpbmcgZm9sZGVyIG9yIHlvdSBkbyBub3QgaGF2ZSBwcm9wZXIgcGVybWlzc2lvbnMgdG8gdmlldyB0aGlzIGZvbGRlci4gUGxlYXNlLCBjb250YWN0IHRoZSBhZG1pbmlzdHJhdG9yLiIsTm9QZXJtaXNzaW9uc1RvQ3JlYXRlRm9sZGVyOiJUaGUgc2VsZWN0ZWQgZm9sZGVyIGNvdWxkIG5vdCBiZSBjcmVhdGVkIGJlY2F1c2UgdGhlIGFwcGxpY2F0aW9uIGRpZCBub3QgaGF2ZSBlbm91Z2ggcGVybWlzc2lvbnMuIFBsZWFzZSwgY29udGFjdCB0aGUgYWRtaW5pc3RyYXRvci4iLE5vUGVybWlzc2lvbnNUb0RlbGV0ZUZpbGU6IlRoZSBzZWxlY3RlZCBmaWxlIGNvdWxkIG5vdCBiZSBkZWxldGVkIGJlY2F1c2UgdGhlIGFwcGxpY2F0aW9uIGRpZCBub3QgaGF2ZSBlbm91Z2ggcGVybWlzc2lvbnMuIFBsZWFzZSwgY29udGFjdCB0aGUgYWRtaW5pc3RyYXRvci4iLE5vUGVybWlzc2lvbnNUb0RlbGV0ZUZvbGRlcjoiVGhlIHNlbGVjdGVkIGZvbGRlciBjb3VsZCBub3QgYmUgZGVsZXRlZCBiZWNhdXNlIHRoZSBhcHBsaWNhdGlvbiBkaWQgbm90IGhhdmUgZW5vdWdoIHBlcm1pc3Npb25zLiBQbGVhc2UsIGNvbnRhY3QgdGhlIGFkbWluaXN0cmF0b3IuIixOb1VwbG9hZGVkRmlsZToiUGxlYXNlLCBzZWxlY3QgYSBmaWxlIHRvIHVwbG9hZCEiLE9LOiJPSyIsT3BlbjoiT3BlbiIsT3ZlcndyaXRlRXhpc3Rpbmc6Ik92ZXJ3cml0ZSBpZiBmaWxlIGV4aXN0cz8iLFBlcmNlbnQ6IlBlcmNlbnQiLFBpeGVsOiJQaXhlbCIsUHJldmlldzoiUHJldmlldyIsUHJvcGVydGllczoiUHJvcGVydGllcyIsUHJvcGVydGllc1BhbmVsOiJQcm9wZXJ0aWVzIHBhbmVsIixSZWZyZXNoOiJSZWZyZXNoIixSZW1vdmU6IlJlbW92ZSIsUmVuYW1lOiJSZW5hbWUiLFJpZ2h0OiJSaWdodCIsU2VsZWN0OiJTZWxlY3QiLFNlbGVjdEZpbGU6IlNlbGVjdCBmaWxlIixTb3J0QnlFeHQ6IkV4dCIsU29ydEJ5RXh0VGl0bGU6IlNvcnQgYnkgRXh0ZW5zaW9uIixTb3J0QnlGaWxlbmFtZToiRmlsZW5hbWUiLFNvcnRCeUZpbGVuYW1lVGl0bGU6IlNvcnQgYnkgRmlsZW5hbWUiLFNvcnRCeVNpemU6IlNpemUiLFNvcnRCeVNpemVUaXRsZToiU29ydCBieSBTaXplIixTdHlsZUJ1aWxkZXI6IlN0eWxlIEJ1aWxkZXIiLFRhYmxlQ3NzOiJUYWJsZSBDU1MiLFRhcmdldDoiVGFyZ2V0IixUYXJnZXRCbGFuazoiTmV3IFdpbmRvdyIsVGFyZ2V0TWVkaWE6Ik1lZGlhIFBhbmUiLFRhcmdldFBhcmVudDoiUGFyZW50IFdpbmRvdyIsVGFyZ2V0U2VhcmNoOiJTZWFyY2ggUGFuZSIsVGFyZ2V0U2VsZjoiU2FtZSBXaW5kb3ciLFRhcmdldFRvcDoiQnJvd3NlciBXaW5kb3ciLFRvcDoiVG9wIixVcDoiVXAiLFVwbG9hZDoiVXBsb2FkIixVcGxvYWRGaWxlOiJVcGxvYWQiLFVwbG9hZGluZzoiVXBsb2FkaW5nLi4uIixVcmw6IlVSTCIsV2lkdGg6IldpZHRoIixZZXM6IlllcyIsWm9vbUluOiJab29tIEluIixab29tT3V0OiJab29tIE91dCIsQmxhY2s6IkJsYWNrIixCbHVlOiJCbHVlIixHcmVlbjoiR3JlZW4iLE5vQ29sb3I6Ik5vIENvbG9yIixPcmFuZ2U6Ik9yYW5nZSIsUmVkOiJSZWQiLFdoaXRlOiJXaGl0ZSIsWWVsbG93OiJZZWxsb3ciLEN1c3RvbVRhcmdldHM6IkN1c3RvbSBUYXJnZXRzIixQcmVzZXRUYXJnZXRzOiJQcmVzZXQgVGFyZ2V0cyIsUGFzdGU6IlBhc3RlIixVc2VDb250cm9sVk1lc3NhZ2U6IlBsZWFzZSwgdXNlIENUUkwgKyBWIHRvIHBhc3RlIGJlbG93IHRoZSBjb250ZW50IHlvdSB3b3VsZCBsaWtlIHRvIGJlIGNsZWFuZWQiLFBhc3RlSHRtbE1lc3NhZ2U6IlBsZWFzZSwgaW5zZXJ0IHRoZSBIdG1sIGNvbnRlbnQsIHdoaWNoIHlvdSB3YW50IHRvIHBhc3RlIixQYXN0ZU1hcmtkb3duTWVzc2FnZToiUGxlYXNlLCBpbnNlcnQgdGhlIE1hcmtkb3duIGNvbnRlbnQsIHdoaWNoIHlvdSB3YW50IHRvIHBhc3RlIn0pOw0KbG9jYWxpemF0aW9uLl9maWxsKHtBbmNob3JUYWI6IkFuY2hvciIsRW1haWxUYWI6IkUtbWFpbCIsRXhpc3RpbmdBbmNob3I6IkV4aXN0aW5nIEFuY2hvciIsSHlwZXJsaW5rVGFiOiJIeXBlcmxpbmsiLExpbmtBZGRyZXNzOiJBZGRyZXNzIixMaW5rTmFtZToiTmFtZSIsTGlua1N1YmplY3Q6IlN1YmplY3QiLExpbmtUYXJnZXQ6IlRhcmdldCIsTGlua1RleHQ6IkxpbmsgVGV4dCIsTGlua1Rvb2x0aXA6IlRvb2x0aXAiLExpbmtUeXBlOiJUeXBlIixMaW5rVXJsOiJVUkwiLE90aGVyOiJvdGhlciIsTGlua0lkOiJJRCIsQW5jaG9ySWQ6IklEIixFbWFpbElkOiJJRCIsRW1haWxUb29sdGlwOiJUb29sdGlwIixHZW5lcmF0ZUlkOiJHZW5lcmF0ZSBJRCIsVGl0bGU6Ikh5cGVybGluayBNYW5hZ2VyIn0pOw0KLy9dXT4NCjwvc2NyaXB0Pg0KZAIBD2QWBAIBDxQrAAIUKwACDxYGHwQFB0RlZmF1bHQfBWcfBmdkEBYDZgIBAgIWAxQrAAIPFgYfCAUJSHlwZXJsaW5rHgdUb29sVGlwBQlIeXBlcmxpbmseEkltcGxpY2l0UGFnZVZpZXdJRAURaHlwZXJsaW5rRmllbGRzZXRkZBQrAAIPFgYfCAUGQW5jaG9yHwkFBkFuY2hvch8KBQ5hbmNob3JGaWVsZHNldGRkFCsAAg8WBh8IBQZFLW1haWwfCQUGRS1tYWlsHwoFDWVtYWlsRmllbGRzZXRkZA8WA2ZmZhYBBW9UZWxlcmlrLldlYi5VSS5SYWRUYWIsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTMuMy4xMDE1LjQ1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTEyMWZhZTc4MTY1YmEzZDRkFgZmDw8WBh8IBQlIeXBlcmxpbmsfCQUJSHlwZXJsaW5rHwoFEWh5cGVybGlua0ZpZWxkc2V0ZGQCAQ8PFgYfCAUGQW5jaG9yHwkFBkFuY2hvch8KBQ5hbmNob3JGaWVsZHNldGRkAgIPDxYGHwgFBkUtbWFpbB8JBQZFLW1haWwfCgUNZW1haWxGaWVsZHNldGRkAgMPFCsAAg8WBB8EBQdEZWZhdWx0HwVnZBUDEWh5cGVybGlua0ZpZWxkc2V0DmFuY2hvckZpZWxkc2V0DWVtYWlsRmllbGRzZXQWBGYPZBYEAgEPZBYCAgEPDxYGHwQFB0RlZmF1bHQfBWcfBmdkZAIFDw8WBh8EBQdEZWZhdWx0HwVnHwZnZGQCAg9kFgICAQ8PFgYfBAUHRGVmYXVsdB8FZx8GZ2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYJBRBkaWFsb2dzRGVjb3JhdG9yBQtpbml0aWFsaXplcgUNZGlhbG9nQ29udHJvbAUUcmVzb3VyY2VzTGlua01hbmFnZXIFDkxpbmtNYW5hZ2VyVGFiBQ9kaWFsb2dNdWx0aVBhZ2UFFURvY3VtZW50TWFuYWdlckNhbGxlcgUMTGlua0Nzc0NsYXNzBQ1FbWFpbENzc0NsYXNzTx6g2QUtIG54q7VwLKiHq0zFt54uuDv2y0R4rYNV5pU=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<script src="axd_dialog_forms.js" type="text/javascript"></script>
+<script src="axd_dialog_linkmanager.js" type="text/javascript"></script>
+
+
+<div class="aspNetHidden">
+
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAIdabSi6z7C4AJ2Ukbn7LkNr1eUXYH2SY42AOoXP1wAY8xBLWbOQuAd66dPtsuVo9bOBO3t91pBB2CTeLQqKZsT" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('RadScriptManager1', 'Form1', [], [], [], 90, '');
+//]]>
+</script>
+<input type="hidden" name="dialogParametersHolder" id="dialogParametersHolder" /><div id="dialogsDecorator" class="RadFormDecorator" style="display:none;">
+        <!-- 2013.3.1015.45 --><script type="text/javascript">
+//<![CDATA[
+if (typeof(WebForm_AutoFocus) != 'undefined')
+{
+        var old_WebForm_AutoFocus = WebForm_AutoFocus;
+        WebForm_AutoFocus = function(arg)
+        {
+                Sys.Application.add_load(function()
+                {
+                        old_WebForm_AutoFocus(arg);
+                        WebForm_AutoFocus = old_WebForm_AutoFocus;
+                });
+        }
+}
+if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
+{
+        if (Telerik.Web.UI.RadFormDecorator)
+        {
+                Telerik.Web.UI.RadFormDecorator.initializePage("dialogsDecorator", "", "Default", 65527);
+        }
+}
+//]]>
+</script><input id="dialogsDecorator_ClientState" name="dialogsDecorator_ClientState" type="hidden" />
+</div><div id="initializer">
+        <div id="dialogControl">
+                <div id="resourcesLinkManager">
+                        <script type="text/javascript">
+//<![CDATA[
+if (typeof(localization) == "undefined")
+{
+        var localization = {
+                _fill : function(newStrings)
+                {
+                        for (var key in newStrings)
+                        {
+                                this[key] = newStrings[key];
+                        }
+                },
+                setTitle : function(elementId, resourceKey) {
+                        $get(elementId).title = this[resourceKey];
+                }
+        };
+}
+localization._fill({ActualSize:"Actual Size",Add:"Add",AddCustomColor:"Add Custom Color...",AddCustomTarget:"[add custom target...]",AllowedExtensions:"File extensions allowed",AllProperties:"All Properties...",ApplyClass:"Apply Class",Back:"Back",BackgroundColor:"Background Color",BackgroundImage:"Back Image",BestFit:"Best Fit",BorderColor:"Border Color",BorderWidth:"Border Width",Bottom:"Bottom",bytes:"bytes",Cancel:"Cancel",CellCss:"Cell CSS",ClassID:"Specify Class ID",ClassIDText:"Class ID",Clear:"Clear",ClearClass:"Clear Class",Client_AlertFile:"Please, provide file to upload!",ConfirmDelete:"Are you sure you want to delete the selected item?\r\nIt might still be in use. If deleted, some pages will not be displayed properly.\r\nPress \"OK\" to confirm deletion.",Close:"Close",ConstrainProportions:"Constrain proportions?",ControlButtons:"Control Buttons",Copy:"Copy",Create:"Create",CreateNewFolder:"Enter the new folder name",CreateThumbnail:"Create thumbnail",CssClass:"CSS Class",Decrease:"Decrease",Delete:"Delete",GridView:"Grid View",ThumbnailsView:"Thumbnails View",DimensionUnit:"Dimension unit",FileExists:"A file with a name same as the target already exists!",FileListSummary:"Table that lists the contents of the current directory",Forward:"Forward",GridPagerText:"{4} Page <strong>{0}</strong> of <strong>{1}</strong>. Items <strong>{2}</strong> to <strong>{3}</strong> of <strong>{5}</strong>",GridSortedAscToolTip:"Sort asc",GridSortedDescToolTip:"Sort desc",GridSortToolTip:"Click here to sort",Height:"Height",Id:"Id",ImageAltText:"Alt Text",ImageTitleText:"Title Text",ImageEditor:"Image Editor",ImageFieldSet:"Image Properties",Increase:"Increase",Insert:"Insert",InvalidCharactersInPath:"Invalid characters in folder name.",InvalidFileExtension:"The extension of the uploaded file is not valid. Please, provide a valid file!",InvalidFileSize:"The size of the uploaded file exceeds max size allowed",Kilobytes:"KB",Left:"Left",LookIn:"Look in",MaxFileSize:"Max file size allowed",Margin:"Margin",Megabytes:"MB",MessageCannotWriteToFolder:"Cannot write to the target folder!",MessageNoValidDimensions:"Please, provide valid image dimensions",MessageSourceNotLocal:"The specified for conversion image file resides on a different server!",Middle:"Middle",NameExists:"An object with the same name already exists in this directory!",NewFolder:"New Folder",NewImageName:"New image name",No:"No",None:"None",NonExistingFolder:"You are trying to navigate to a non-existing folder or you do not have proper permissions to view this folder. Please, contact the administrator.",NoPermissionsToCreateFolder:"The selected folder could not be created because the application did not have enough permissions. Please, contact the administrator.",NoPermissionsToDeleteFile:"The selected file could not be deleted because the application did not have enough permissions. Please, contact the administrator.",NoPermissionsToDeleteFolder:"The selected folder could not be deleted because the application did not have enough permissions. Please, contact the administrator.",NoUploadedFile:"Please, select a file to upload!",OK:"OK",Open:"Open",OverwriteExisting:"Overwrite if file exists?",Percent:"Percent",Pixel:"Pixel",Preview:"Preview",Properties:"Properties",PropertiesPanel:"Properties panel",Refresh:"Refresh",Remove:"Remove",Rename:"Rename",Right:"Right",Select:"Select",SelectFile:"Select file",SortByExt:"Ext",SortByExtTitle:"Sort by Extension",SortByFilename:"Filename",SortByFilenameTitle:"Sort by Filename",SortBySize:"Size",SortBySizeTitle:"Sort by Size",StyleBuilder:"Style Builder",TableCss:"Table CSS",Target:"Target",TargetBlank:"New Window",TargetMedia:"Media Pane",TargetParent:"Parent Window",TargetSearch:"Search Pane",TargetSelf:"Same Window",TargetTop:"Browser Window",Top:"Top",Up:"Up",Upload:"Upload",UploadFile:"Upload",Uploading:"Uploading...",Url:"URL",Width:"Width",Yes:"Yes",ZoomIn:"Zoom In",ZoomOut:"Zoom Out",Black:"Black",Blue:"Blue",Green:"Green",NoColor:"No Color",Orange:"Orange",Red:"Red",White:"White",Yellow:"Yellow",CustomTargets:"Custom Targets",PresetTargets:"Preset Targets",Paste:"Paste",UseControlVMessage:"Please, use CTRL + V to paste below the content you would like to be cleaned",PasteHtmlMessage:"Please, insert the Html content, which you want to paste",PasteMarkdownMessage:"Please, insert the Markdown content, which you want to paste"});
+localization._fill({AnchorTab:"Anchor",EmailTab:"E-mail",ExistingAnchor:"Existing Anchor",HyperlinkTab:"Hyperlink",LinkAddress:"Address",LinkName:"Name",LinkSubject:"Subject",LinkTarget:"Target",LinkText:"Link Text",LinkTooltip:"Tooltip",LinkType:"Type",LinkUrl:"URL",Other:"other",LinkId:"ID",AnchorId:"ID",EmailId:"ID",EmailTooltip:"Tooltip",GenerateId:"Generate ID",Title:"Hyperlink Manager"});
+//]]>
+</script>
+<input id="resourcesLinkManager_ClientState" name="resourcesLinkManager_ClientState" type="hidden" />
+                </div>
+<script type="text/javascript">
+
+        Type.registerNamespace("Telerik.Web.UI.Widgets");
+
+        Telerik.Web.UI.Widgets.LinkManager = function (element) {
+                Telerik.Web.UI.Widgets.LinkManager.initializeBase(this, [element]);
+                this._clientParameters = null;
+        }
+
+        Telerik.Web.UI.Widgets.LinkManager.prototype = {
+                initialize: function () {
+                        Telerik.Web.UI.Widgets.LinkManager.callBaseMethod(this, "initialize");
+                        this.setupChildren();
+                },
+
+                dispose: function () {
+                        $clearHandlers(this._linkTargetCombo);
+                        this._linkTargetCombo = null;
+                        if (this._existingAnchor)
+                                $clearHandlers(this._existingAnchor);
+                        this._existingAnchor = null;
+                        if (this._insertButton)
+                                $clearHandlers(this._insertButton);
+                        this._insertButton = null;
+                        if (this._cancelButton)
+                                $clearHandlers(this._cancelButton);
+                        this._cancelButton = null;
+                        Telerik.Web.UI.Widgets.LinkManager.callBaseMethod(this, "dispose");
+                },
+
+                clientInit: function (clientParameters) {
+                        this._clientParameters = clientParameters;
+                        var selectedIndex = this._clientParameters.selectedTabIndex;
+                        if (selectedIndex && selectedIndex >= 0) {
+                                this._tab.set_selectedIndex(selectedIndex);
+                        }
+                        //clean
+                        this._cleanInputBoxes();
+                        this._loadLinkArchor();
+                        //load data
+                        this._loadLinkProperties();
+                },
+
+                _cleanInputBoxes: function () {
+                        this._linkUrl.value = "";
+                        this._linkText.value = "";
+                        if (this._linkTargetCombo.options && this._linkTargetCombo.options.length > 0) {
+                                this._linkTargetCombo.options[0].selected = true;
+                        }
+
+                        this._linkIdLink.value = "";
+                        this._linkTooltip.value = "";
+                        this._anchorName.value = "";
+                        this._linkIdAnchor.value = "";
+                        this._emailAddress.value = "";
+                        this._emailLinkText.value = "";
+                        this._emailSubject.value = "";
+                        this._emailToolTip.value = "";
+                        this._linkIdEmail.value = "";
+                        this._linkCssClass.set_value("");
+                        this._emailCssClass.set_value("");
+                },
+
+                _loadLinkProperties: function () {
+                        var currentLink = this._clientParameters.get_value();
+                        var currentHref = currentLink.getAttribute("href", 2);
+                        var anchors = this._clientParameters.documentAnchors;
+
+
+                        if (this._clientParameters.showText) {
+                                this._linkText.value = currentLink.innerHTML;
+                                this._emailLinkText.value = currentLink.innerHTML;
+
+                                if (this._texTextBoxParentNode) this._texTextBoxParentNode.style.display = "";
+                                if (this._emailTextBoxParentNode) this._emailTextBoxParentNode.style.display = "";
+                        }
+                        else {
+                                if (this._texTextBoxParentNode) this._texTextBoxParentNode.style.display = "none";
+                                if (this._emailTextBoxParentNode) this._emailTextBoxParentNode.style.display = "none";
+                        }
+
+                        this._loadCssClasses(currentLink);
+
+                        if (currentHref && currentHref.match(/^(mailto:)([^\?&]*)/ig)) // "email"
+                        {
+                                this._loadEmailAddressAndSubject();
+                                this._tab.set_selectedIndex(2);
+                                return;
+                        }
+
+                        if (currentLink.name && currentLink.name.trim() != "") // "anchor"
+                        {
+                                this._anchorName.value = currentLink.name;
+                                this._tab.set_selectedIndex(1);
+                                return;
+                        }
+
+                        var href = "http://"; //"link"
+
+                        if (currentLink.href) {
+                                href = currentHref;
+                        }
+
+                        this._linkUrl.value = href;
+                        this._loadLinkTarget();
+                        this._linkTooltip.value = currentLink.title;
+
+                        this._linkIdEmail.value =
+                        this._linkIdLink.value =
+                        this._linkIdAnchor.value =
+                                currentLink.getAttribute("id") || "";
+
+                        this._emailToolTip.value = currentLink.getAttribute("title");
+
+
+                        this._tab.set_selectedIndex(0);
+                },
+
+                _loadLinkTarget: function () {
+                        var linkTarget = this._clientParameters.get_value().target;
+
+                        if (!linkTarget) {
+                                return;
+                        }
+
+                        var optgroups = this._linkTargetCombo.getElementsByTagName("optgroup");
+
+                        for (var i = 0; i < optgroups.length; i++) {
+                                if (optgroups[i].nodeName.toLowerCase() == "optgroup") {
+                                        var options = optgroups[i].getElementsByTagName("option");
+
+                                        for (var j = 0; j < options.length; j++) {
+                                                if (options[j].nodeName.toLowerCase() == "option" &&
+                                        options[j].value.toLowerCase() == linkTarget.toLowerCase()) {
+                                                        options[j].selected = true;
+                                                        return;
+                                                }
+                                        }
+                                }
+                        }
+
+                        var customOption = document.createElement("option");
+                        customOption.value = linkTarget;
+                        customOption.text = linkTarget;
+                        this._linkTargetCombo.options.add(customOption);
+                        customOption.selected = true;
+                },
+
+                _loadLinkArchor: function () {
+                        if (!this._existingAnchor) {
+                                return;
+                        }
+                        var anchors = this._clientParameters.documentAnchors;
+                        var linkHref = this._clientParameters.get_value().getAttribute("href", 2) ? this._clientParameters.get_value().getAttribute("href", 2).toLowerCase() : "";
+                        //clear existing options
+                        this._existingAnchor.innerHTML = "";
+                        this._existingAnchor.options.add(new Option(localization["None"], ""));
+                        this._existingAnchor.options[0].selected = true;
+
+                        for (var i = 0; i < anchors.length; i++) {
+                                var anchorOption = new Option(anchors[i].name, "#" + anchors[i].name);
+                                this._existingAnchor.options.add(anchorOption);
+
+                                if ("#" + anchors[i].name.toLowerCase() == linkHref) {
+                                        anchorOption.selected = true;
+                                }
+                        }
+                },
+
+                _loadCssClasses: function (currentLink) {
+                        var cssClasses = this._clientParameters.CssClasses;
+
+                        //localization
+                        this._linkCssClass.set_showText(true);
+                        this._linkCssClass.set_clearclasstext(localization["ClearClass"]);
+                        this._linkCssClass.set_text(localization["ApplyClass"]);
+                        this._linkCssClass.set_value("");
+                        this._emailCssClass.set_showText(true);
+                        this._emailCssClass.set_clearclasstext(localization["ClearClass"]);
+                        this._emailCssClass.set_text(localization["ApplyClass"]);
+                        this._emailCssClass.set_value("");
+
+                        //Copy the css classes to avoid one collection being modified by the other dropdown
+                        this._linkCssClass.set_items(cssClasses.concat([]));
+                        this._emailCssClass.set_items(cssClasses);
+
+                        if (currentLink.className != null && currentLink.className != "") {
+                                this._linkCssClass.updateValue(currentLink.className);
+                                this._emailCssClass.updateValue(currentLink.className);
+                        }
+                },
+
+                _loadEmailAddressAndSubject: function () {
+                        var linkEl = this._clientParameters.get_value(),
+                                currentHref = linkEl.getAttribute("href", 2);
+
+                        this._emailAddress.value = RegExp.$2;
+
+                        if (currentHref.match(/(\?|&)subject=([^\b]*)/ig)) {
+                                var val = RegExp.$2.replace(/&amp;/gi, "&");
+                                val = unescape(val);
+                                this._emailSubject.value = val;
+                        }
+                },
+
+                getModifiedLink: function () {
+                        var resultLink = this._clientParameters.get_value();
+                        var selectedTabValue = this._tab.get_selectedTab().get_value();
+
+                        if (selectedTabValue == "HyperlinkTab")//"link"
+                        {
+                                resultLink.href = this._linkUrl.value;
+                                if (this._linkTargetCombo.value == "_none") {
+                                        resultLink.removeAttribute("target", 0);
+                                }
+                                else {
+                                        resultLink.target = this._linkTargetCombo.value;
+                                }
+
+                                if (this._texTextBoxParentNode && this._texTextBoxParentNode.style.display != "none") {
+                                        resultLink.innerHTML = this._linkText.value;
+                                }
+
+                                if (resultLink.innerHTML.trim() == "" || resultLink.innerHTML.trim().length < this._linkText.value.trim().length) {
+                                        resultLink.innerHTML = this._linkText.value.replace(/&/gi, "&amp;").replace(/</gi, "&lt;").replace(/>/gi, "&gt;");
+                                }
+
+                                if (resultLink.innerHTML.trim() == "") {
+                                        resultLink.innerHTML = resultLink.href;
+                                }
+
+                                if (this._linkIdLink && this._linkIdLink.value.trim())
+                                        resultLink.id = this._linkIdLink.value.trim();
+
+
+                                if (this._linkTooltip.value.trim() == "") {
+                                        resultLink.removeAttribute("title", 0);
+                                }
+                                else {
+                                        resultLink.title = this._linkTooltip.value;
+                                }
+
+                                this._setClass(resultLink, this._linkCssClass);
+                        }
+                        else if (selectedTabValue == "AnchorTab")//"anchor"
+                        {
+                                resultLink.removeAttribute("name");
+                                resultLink.removeAttribute("NAME");
+                                resultLink.name = null;
+                                resultLink.name = this._anchorName.value;
+                                resultLink["NAME"] = this._anchorName.value;
+                                if (this._linkIdAnchor && this._linkIdAnchor.value.trim())
+                                        resultLink.id = this._linkIdAnchor.value.trim();
+
+                                //Make sure the href and some other attributes are removed just in case they are present
+                                resultLink.removeAttribute("href");
+                                resultLink.removeAttribute("target");
+                                resultLink.removeAttribute("title");
+                        }
+                        else //"email"
+                        {
+                                resultLink.href = "mailto:" + this._emailAddress.value;
+
+                                if (this._emailSubject.value != "") {
+                                        resultLink.href += "?subject=" + this._emailSubject.value;
+                                }
+
+                                if (this._emailTextBoxParentNode && this._emailTextBoxParentNode.style.display != "none") {
+                                        resultLink.innerHTML = this._emailLinkText.value;
+                                }
+
+                                if (this._linkIdEmail && this._linkIdEmail.value.trim())
+                                        resultLink.id = this._linkIdEmail.value.trim();
+
+                                if (this._emailToolTip && this._emailToolTip.value.trim())
+                                        resultLink.title = this._emailToolTip.value.trim();
+
+
+                                this._setClass(resultLink, this._emailCssClass);
+                        }
+
+                        return resultLink;
+                },
+
+                _setClass: function (element, cssClassHolder) {
+                        if (cssClassHolder.get_value() == "") {
+                                $telerik.$(element).removeClass();
+                        }
+                        else {
+                                element.className = cssClassHolder.get_value();
+                        }
+                },
+
+                setupChildren: function () {
+                        this._linkUrl = $get("LinkURL");
+                        if (this._linkUrl == null) {
+                                this._linkUrl = {};
+                                this._linkUrl.value = "";
+                        }
+                        this._linkText = $get("LinkText");
+
+                        this._linkTargetCombo = $get("LinkTargetCombo");
+                        this._setLinkTargetLocalization();
+                        this._existingAnchor = $get("ExistingAnchor");
+                        this._linkTooltip = $get("LinkTooltip");
+                        this._linkIdLink = $get("linkIdLink");
+                        this._linkGenIdBtn = $get("linkGenIdBtn");
+                        if (this._linkGenIdBtn)
+                                this._linkGenIdBtn.title = localization["GenerateId"];
+
+                        //NEW: Document manager support
+                        this._documentManager = $find("DocumentManagerCaller");
+
+                        this._linkCssClass = $find("LinkCssClass");
+
+                        this._anchorName = $get("AnchorName");
+                        this._linkIdAnchor = $get("linkIdAnchor");
+                        this._anchorGenIdBtn = $get("anchorGenIdBtn");
+                        if (this._anchorGenIdBtn)
+                                this._anchorGenIdBtn.title = localization["GenerateId"];
+
+                        this._emailAddress = $get("EmailAddress");
+                        this._emailLinkText = $get("EmailLinkText");
+                        this._emailSubject = $get("EmailSubject");
+                        this._emailCssClass = $find("EmailCssClass");
+                        this._emailToolTip = $get("EmailToolTip")
+                        this._linkIdEmail = $get("linkIdEMail");
+                        this._emailGenIdBtn = $get("emailGenIdBtn");
+                        if (this._emailGenIdBtn)
+                                this._emailGenIdBtn.title = localization["GenerateId"];
+
+
+                        this._insertButton = $get("lmInsertButton");
+                        if (this._insertButton)
+                                this._insertButton.title = localization["OK"];
+                        this._cancelButton = $get("lmCancelButton");
+                        if (this._cancelButton)
+                                this._cancelButton.title = localization["Cancel"];
+                        this._tab = $find("LinkManagerTab");
+
+                        //NEW: In IE RadFormDecorator styles textboxes in a way that the direct parent [of the textbox] changes, so the original implementation stopped working properly (in IE)
+                        this._texTextBoxParentNode = $get("texTextBoxParentNode");
+                        this._emailTextBoxParentNode = $get("emailTextBoxParentNode");
+
+                        this._initializeChildEvents();
+                },
+
+                _initializeChildEvents: function () {
+                        this._linkCssClass.add_valueSelected(this._cssValueSelected);
+                        this._emailCssClass.add_valueSelected(this._cssValueSelected);
+                        //NEW: Document manager
+                        if (this._documentManager) {
+                                this._documentManager.add_valueSelected(Function.createDelegate(this, this._documentManagerClicked));
+                        }
+
+                        $addHandlers(document, { "keydown": this._keyDownHandler }, this); //NEW add ENTER click handler
+                        $addHandlers(this._linkTargetCombo, { "change": this._linkTargetChangeHandler }, this);
+                        if (this._existingAnchor)
+                                $addHandlers(this._existingAnchor, { "change": this._existingAnchorChangeHandler }, this);
+                        if (this._insertButton)
+                                $addHandlers(this._insertButton, { "click": this._insertClickHandler }, this);
+                        if (this._cancelButton)
+                                $addHandlers(this._cancelButton, { "click": this._cancelClickHandler }, this);
+                        if (this._linkGenIdBtn)
+                                $addHandlers(this._linkGenIdBtn, { "click": this._getIdBtnClickHandler }, this);
+                        if (this._anchorGenIdBtn)
+                                $addHandlers(this._anchorGenIdBtn, { "click": this._getIdBtnClickHandler }, this);
+                        if (this._emailGenIdBtn)
+                                $addHandlers(this._emailGenIdBtn, { "click": this._getIdBtnClickHandler }, this);
+                },
+
+                //NEW: Document manager
+                _documentManagerClicked: function (oTool, args) {
+                        //Editor object is supplied to all dialogs in the dialog parameters
+                        var editor = this._clientParameters.editor;
+                        var callbackFunction = Function.createDelegate(this, function (sender, args) {
+                                //For the time being just set the URL
+                                //Returned link - TODO: Use args.get_value() when the dialog returm methods are changed to return proper args object
+                                var link = args.get_value ? args.get_value() : args.Result;
+                                if (link && link.tagName == "A") {
+                                        //Set various fileds - classname, target, etc - but only if their value in the returned link is != ""
+                                        var href = link.getAttribute("href", 2);
+                                        this._linkUrl.value = href;
+                                        if (!this._linkText.value) this._linkText.value = href;
+                                        var target = link.target;
+                                        if (target) this._linkTargetCombo.value = target;
+                                        var title = link.title;
+                                        if (title) this._linkTooltip.value = title;
+                                        var className = link.className;
+                                        if (className) this._linkCssClass.set_value(className);
+                                }
+                        });
+                        var modifiedLink = this.getModifiedLink();
+                        var argument = new Telerik.Web.UI.EditorCommandEventArgs("DocumentManager", null, modifiedLink);
+                        Telerik.Web.UI.Editor.CommandList._getDialogArguments(argument, "A", editor, "DocumentManager");
+                        editor.showDialog("DocumentManager", argument, callbackFunction);
+                },
+
+                _cssValueSelected: function (oTool, args) {
+                        if (!oTool) return;
+                        var commandName = oTool.get_name();
+
+                        if ("ApplyClass" == commandName) {
+                                var attribValue = oTool.get_selectedItem();
+                                oTool.updateValue(attribValue);
+                        }
+                },
+
+                _linkTargetChangeHandler: function (e) {
+                        if (this._linkTargetCombo.value == "_custom") {
+                                var targetprompttext = "Type Custom Target Here";
+                                var targetprompt = prompt(targetprompttext, "CustomWindow");
+
+                                if (targetprompt) {
+                                        var newoption = document.createElement("option"); // create new <option> node
+                                        newoption.innerHTML = targetprompt; // set innerHTML to the new <option> none
+                                        newoption.setAttribute("selected", "selected"); // set the new <option> node selected="selected"
+                                        newoption.setAttribute("value", targetprompt); // change the value of the new <option> node with the value of the prompt
+                                        this._linkTargetCombo.getElementsByTagName("optgroup")[1].appendChild(newoption); // append the new <option> node to the <optgroup>
+                                        return;
+                                }
+
+                                this._linkTargetCombo.selectedIndex = 0;
+                        }
+                },
+
+                _setLinkTargetLocalization: function () {
+                        var optgroups = this._linkTargetCombo.getElementsByTagName("optgroup");
+                        for (var i = 0; i < optgroups.length; i++) {
+                                var options = optgroups[i].getElementsByTagName("option");
+                                var grpName = optgroups[i].label;
+                                if (localization[grpName])
+                                        optgroups[i].label = localization[grpName];
+                                for (var j = 0; j < options.length; j++) {
+                                        var optName = options[j].text;
+                                        if (localization[optName])
+                                                options[j].text = localization[optName];
+                                }
+                        }
+                },
+
+                _existingAnchorChangeHandler: function (e) {
+                        if (this._existingAnchor.selectedIndex != 0) {
+                                this._linkUrl.value = this._existingAnchor.value;
+                        }
+                },
+
+                _insertClickHandler: function (e) {
+                        var modifiedLink = this.getModifiedLink();
+                        var args = new Telerik.Web.UI.EditorCommandEventArgs("LinkManager", null, modifiedLink);
+                        //backwards compatibility
+                        args.realLink = modifiedLink;
+                        Telerik.Web.UI.Dialogs.CommonDialogScript.get_windowReference().close(args);
+                },
+
+                _cancelClickHandler: function (e) {
+                        Telerik.Web.UI.Dialogs.CommonDialogScript.get_windowReference().close();
+                },
+
+                _keyDownHandler: function (e) {
+                        if (e.keyCode == 13)
+                                this._insertClickHandler(null);
+                        else if (e.keyCode == 27)
+                                this._cancelClickHandler(e);
+                },
+
+                _getIdBtnClickHandler: function (e) {
+                        var elem = e.rawEvent.currentTarget || e.rawEvent.srcElement,
+                                tabName = (elem.tagName.toLowerCase() == "a") ? elem.id.replace("GenIdBtn", "") : elem.parentNode.id.replace("GenIdBtn", ""),
+                                relatedTextBox = this["_linkId" + tabName.charAt(0).toUpperCase() + tabName.substring(1)];
+
+                        relatedTextBox.value = this._generateId(tabName);
+
+                        $telerik.cancelRawEvent(e.rawEvent);
+                },
+
+                _generateId: function (prefix) {
+                        return prefix + "_" + new Date().getTime();
+                }
+        }
+
+        Telerik.Web.UI.Widgets.LinkManager.registerClass("Telerik.Web.UI.Widgets.LinkManager", Telerik.Web.UI.RadWebControl, Telerik.Web.IParameterConsumer);
+
+</script>
+<div id="LinkManagerTab" class="RadTabStrip RadTabStrip_Default RadTabStripTop_Default RadTabStripTop_Default_Baseline">
+                        <div class="rtsLevel rtsLevel1">
+                                <ul class="rtsUL"><li class="rtsLI rtsFirst"><a title="Hyperlink" class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Hyperlink</span></span></span></a></li><li class="rtsLI"><a title="Anchor" class="rtsLink rtsAfter" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Anchor</span></span></span></a></li><li class="rtsLI rtsLast"><a title="E-mail" class="rtsLink" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">E-mail</span></span></span></a></li></ul>
+                        </div><input id="LinkManagerTab_ClientState" name="LinkManagerTab_ClientState" type="hidden" />
+                </div>
+<div class="redWrapper reDialog LinkManager NoMarginDialog">
+        <div class="redSection redSectionTop">
+
+                                <div id="dialogMultiPage">
+                        <div id="hyperlinkFieldset">
+
+
+
+                                                                        <div class="redRow">
+                                                                                <label class="redLabel" for="LinkURL">
+                                                                                        <script type="text/javascript">document.write(localization["LinkUrl"]);</script>
+                                                                                </label>
+                                                                                <input type="text" id="LinkURL" class="redInputTool" />
+                                                                                <div class="redInlineBlock">
+                                                                                <div class="reToolWrapper Default">
+                                        <a id="DocumentManagerCaller" title="Document Manager" class="reTool" href="#"><span class="DocumentManager">&nbsp;</span></a>
+                                </div></div>
+                                                                        </div>
+
+
+
+
+                                                        <div class="redRow" id="texTextBoxParentNode">
+                                                                <label class="redLabel" for="LinkText">
+                                                                        <script type="text/javascript">document.write(localization["LinkText"]);</script>
+                                                                </label>
+                                                                <input type="text" id="LinkText" />
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="linkIdLink">
+                                                                        <script type="text/javascript">document.write(localization["LinkId"]);</script>
+                                                                </label>
+                                                                <input type="text" id="linkIdLink" class="redInputTool" />
+                                                                        <a href="javascipr:void(0);" id="linkGenIdBtn" class="reTool reGenIdLink"><span class="reGenerateId" unselectable="on">&nbsp;</span> </a>
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="LinkTargetCombo">
+                                                                <script type="text/javascript">
+                                                                        document.write(localization["LinkTarget"]);
+                                                                </script>
+                                                                </label>
+                                                                <select id="LinkTargetCombo">
+                                                                        <optgroup label="PresetTargets">
+                                                                                <option value="_none">None</option>
+                                                                                <option value="_self">TargetSelf</option>
+                                                                                <option value="_blank">TargetBlank</option>
+                                                                                <option value="_parent">TargetParent</option>
+                                                                                <option value="_top">TargetTop</option>
+                                                                                <option value="_search">TargetSearch</option>
+                                                                                <option value="_media">TargetMedia</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="CustomTargets">
+                                                                                <option value="_custom">AddCustomTarget</option>
+                                                                        </optgroup>
+                                                                </select>
+                                                        </div>
+
+
+
+
+
+                                                                <div class="redRow">
+                                                                        <label class="redLabel" for="ExistingAnchor">
+                                                                        <script type="text/javascript">
+                                                                                document.write(localization["ExistingAnchor"]);
+                                                                        </script>
+                                                                        </label>
+                                                                        <select id="ExistingAnchor">
+                                                                                        <option selected="selected">None</option>
+                                                                        </select>
+                                                                </div>
+
+
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="LinkTooltip">
+                                                                        <script type="text/javascript">document.write(localization["LinkTooltip"]);</script>
+                                                                </label>
+                                                                <input type="text" id="LinkTooltip" />
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="LinkCssClass">
+                                                                        <script type="text/javascript">document.write(localization["CssClass"]);</script>
+                                                                </label>
+                                                                <div class="redInlineBlock redMiddle">
+                                                                        <div class="reToolWrapper Default">
+                                        <a id="LinkCssClass" title="ApplyClass" class="reDropdown" href="#"><span class="ApplyClass" style="width:80px;">ApplyClass</span></a>
+                                </div>
+                                                                </div>
+                                                        </div>
+
+
+                        </div><div id="anchorFieldset" class="rmpHiddenView">
+
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="linkIdAnchor">
+                                                                        <script type="text/javascript">document.write(localization["AnchorId"]);</script>
+                                                                </label>
+                                                                <input type="text" id="linkIdAnchor" class="redInputTool" />
+                                                                        <a href="javascipr:void(0);" id="anchorGenIdBtn" class="reTool reGenIdLink">
+                                                                        <span class="reGenerateId" unselectable="on">&nbsp;</span></a>
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="AnchorName">
+                                                                        <script type="text/javascript">document.write(localization["LinkName"]);</script>
+                                                                </label>
+                                                                <input type="text" id="AnchorName" />
+                                                        </div>
+
+                        </div><div id="emailFieldset" class="rmpHiddenView">
+
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="EmailAddress">
+                                                                        <script type="text/javascript">document.write(localization["LinkAddress"]);</script>
+                                                                </label>
+                                                                <input type="text" id="EmailAddress" />
+                                                        </div>
+
+                                                        <div class="redRow" id="emailTextBoxParentNode">
+                                                                <label class="redLabel" for="EmailLinkText">
+                                                                        <script type="text/javascript">document.write(localization["LinkText"]);</script>
+                                                                </label>
+                                                                <input type="text" id="EmailLinkText" />
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="EmailSubject">
+                                                                        <script type="text/javascript">document.write(localization["LinkSubject"]);</script>
+                                                                </label>
+                                                                <input type="text" id="EmailSubject" />
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="linkIdEMail">
+                                                                        <script type="text/javascript">document.write(localization["EmailId"]);</script>
+                                                                </label>
+                                                                <input type="text" id="linkIdEMail" class="redInputTool" />
+                                                                        <a href="javascipr:void(0);" id="emailGenIdBtn" class="reTool reGenIdLink">
+                                                                        <span class="reGenerateId" unselectable="on">&nbsp;</span> </a>
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="EmailCssClass">
+                                                                        <script type="text/javascript">document.write(localization["CssClass"]);</script>
+                                                                </label>
+                                                                <div class="redInlineBlock redMiddle">
+                                                                        <div class="reToolWrapper Default">
+                                        <a id="EmailCssClass" title="ApplyClass" class="reDropdown" href="#"><span class="ApplyClass" style="width:80px;">ApplyClass</span></a>
+                                </div>
+                                                                </div>
+                                                        </div>
+
+                                                        <div class="redRow">
+                                                                <label class="redLabel" for="EmailToolTip">
+                                                                        <script type="text/javascript">document.write(localization["EmailTooltip"]);</script>
+                                                                </label>
+                                                                <input type="text" id="EmailToolTip" />
+                                                        </div>
+
+                        </div><input id="dialogMultiPage_ClientState" name="dialogMultiPage_ClientState" type="hidden" />
+                </div>
+
+        </div>
+        <div class="redActionButtonsWrapper redActionButtonsWrapperLinkManager">
+                        <button type="button" id="lmInsertButton">
+                                <script type="text/javascript">
+                                        setInnerHtml("lmInsertButton", localization["OK"]);
+                                </script>
+                        </button>
+                        <button type="button" id="lmCancelButton">
+                                <script type="text/javascript">
+                                        setInnerHtml("lmCancelButton", localization["Cancel"]);
+                                </script>
+                        </button>
+                </div>
+</div>
+
+<input id="dialogControl_ClientState" name="dialogControl_ClientState" type="hidden" />
+        </div><input id="initializer_ClientState" name="initializer_ClientState" type="hidden" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('RadStyleSheetManager1_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2013.3.1015.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:7a1d9c2d-6cf2-464f-9ad3-e479c730ac61:e347b32f:a942ad92:eede8ae4:8a83f7a4:8cee9284:ed057d30:a3b7d93f:e59a902c:c8a024b';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        //Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadFormDecorator, {"_renderMode":2,"clientStateFieldID":"dialogsDecorator_ClientState","decoratedControls":65527,"enableRoundedCorners":false,"enabled":true,"skin":"Default"}, null, null, $get("dialogsDecorator"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":0,"_skin":"Default","clientStateFieldID":"LinkManagerTab_ClientState","multiPageID":"dialogMultiPage","selectedIndexes":["0"],"tabData":[{"value":"HyperlinkTab","_implPageViewID":"hyperlinkFieldset"},{"value":"AnchorTab","_implPageViewID":"anchorFieldset"},{"value":"EmailTab","_implPageViewID":"emailFieldset"}]}, null, null, $get("LinkManagerTab"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.EditorButton, {"addClickHandler":true,"clientStateFieldID":"DocumentManagerCaller_ClientState","name":"DocumentManager","skin":"Default"}, null, null, $get("DocumentManagerCaller"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.Editor.ApplyClassDropDown, {"addClickHandler":true,"clientStateFieldID":"LinkCssClass_ClientState","name":"ApplyClass","skin":"Default"}, null, null, $get("LinkCssClass"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.Editor.ApplyClassDropDown, {"addClickHandler":true,"clientStateFieldID":"EmailCssClass_ClientState","name":"ApplyClass","skin":"Default"}, null, null, $get("EmailCssClass"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"dialogMultiPage_ClientState","pageViewData":[{"id":"hyperlinkFieldset"},{"id":"anchorFieldset"},{"id":"emailFieldset"}],"selectedIndex":0}, null, null, $get("dialogMultiPage"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.Widgets.LinkManager, {"clientStateFieldID":"dialogControl_ClientState"}, null, null, $get("dialogControl"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.Dialogs.DialogInitializer, {"clientStateFieldID":"initializer_ClientState","parameterConsumers":["dialogControl"]}, null, null, $get("initializer"));
+});
+//]]>
+</script>
+</form></body></html>

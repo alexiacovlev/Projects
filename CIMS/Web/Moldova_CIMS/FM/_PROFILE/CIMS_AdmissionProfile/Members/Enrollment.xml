@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-17T16:37:09">
+  <set name="TableName" value="CIMS_AdmissionOrders" />
+  <set name="OpenForm" value="WORKFLOW:CIMS_Enrollment" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="InputFilterField" value="Admission=$id" />
+  <set name="HandlerParameters" value="1200,850" />
+</mapNode>

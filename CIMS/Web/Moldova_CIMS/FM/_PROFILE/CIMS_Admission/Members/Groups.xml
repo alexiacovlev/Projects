@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-10T14:26:01">
+  <set name="TableName" value="CIMS_Groups" />
+  <set name="ViewName" value="under_formation" />
+  <set name="CreateForm" value="WORKFLOW:CIMS_Groups.Add" />
+  <set name="OpenForm" value="PROFILE:CIMS_Groups" />
+  <set name="HandlerParameters" value="1200,850" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Finish Group Formation&quot; image=&quot;star.png&quot; command=&quot;WORKFLOW&quot; width=&quot;900&quot; height=&quot;550&quot; full=&quot;&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; ico=&quot;e82a&quot; value=&quot;CIMS_Groups_FinishFormation&quot; attributes=&quot;id&quot;/&gt;&lt;/menu&gt;" />
+</mapNode>

@@ -1,0 +1,17 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="InstanceId">
+    <cell name="CompletedOn" title="Completed On" width="150" />
+    <cell name="WorkflowName" title="Workflow Name" Width="100" width="150" />
+    <cell name="StateTitle" title="State Title" width="150" />
+    <cell name="Message" title="Message" />
+    <cell name="InstanceId" title="Instance Id" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CompletedOn" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

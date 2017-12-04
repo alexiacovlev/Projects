@@ -1,0 +1,15 @@
+<entity version="1.5">
+  <datasource name="AX.FM.Explorer,AX.FM.Explorer.ProcessBuilder.Providers.ProcessListProvider" type="Provider" />
+  <primarykey>Name</primarykey>
+  <watermark>ico1062.png</watermark>
+  <fields>
+    <field title="Title" name="Title" type="Text" uimask="00111" readonly="false" required="false" description="Title" size="1000" dbtype="" format="" />
+    <field title="Name" name="Name" type="Text" uimask="00111" readonly="false" required="true" description="Name" size="200" dbtype="" format="" />
+    <field title="Published By" name="PublishedBy" type="Text" uimask="00111" readonly="false" required="true" description="" size="100" dbtype="" format="" />
+    <field title="Published On" name="PublishedOn" type="DateTime" uimask="00111" readonly="false" required="true" description="" size="" dbtype="" format="" />
+    <field title="Version" name="Version" type="Text" uimask="00111" readonly="false" required="false" description="" size="10" dbtype="" format="" />
+    <field title="Category" name="Category" type="Text" uimask="00111" readonly="false" required="false" description="" size="10" dbtype="" format="" />
+    <field title="Is Published" name="IsPublished" type="Boolean" uimask="00111" readonly="false" required="true" description="" size="" dbtype="" format="" />
+    <field title="InstanceCount" name="InstanceCount" type="Integer" uimask="00111" readonly="false" required="false" description="" size="" dbtype="" format="" />
+  </fields>
+</entity>

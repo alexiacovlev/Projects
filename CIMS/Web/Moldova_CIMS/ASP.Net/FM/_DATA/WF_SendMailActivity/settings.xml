@@ -1,0 +1,15 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="" name="SendMailActivity" />
+  <primarykey>From</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field name="From" type="Text" format="" dbtype="String" size="" title="From" description="" required="true" readonly="false" uimask="00111" />
+    <field name="To" type="Text" format="" dbtype="String" size="" title="To" description="" required="true" readonly="false" uimask="00111" />
+    <field name="CC" type="Text" format="" dbtype="String" size="" title="CC" description="" required="false" readonly="false" uimask="00111" />
+    <field name="BCC" type="Text" format="" dbtype="String" size="" title="BCC" description="" required="false" readonly="false" uimask="00111" />
+    <field name="Body" type="Html" format="textarea" dbtype="String" size="" title="Body" description="" required="false" readonly="false" uimask="00111" />
+    <field name="Subject" type="Text" format="" dbtype="String" size="255" title="Subject" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

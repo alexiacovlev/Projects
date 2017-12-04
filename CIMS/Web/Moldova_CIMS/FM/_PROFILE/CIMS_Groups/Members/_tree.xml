@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Group" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="b031" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Students" name="Students" image="folder.png" ico="a0d3" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+  <WindowMask table="CIMS_Groups">Group: #GroupNr#</WindowMask>
+</Tree>

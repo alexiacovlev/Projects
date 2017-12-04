@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<link href="/ASP.Net/FM/Explorer/Scripts/page.css" rel="stylesheet" type="text/css" />
+	<link href="/ASP.Net/FM/Explorer/Scripts/ax.window.css" rel="stylesheet" type="text/css" />
+	<link href="/ASP.Net/FM/Explorer/Scripts/fm.common.css" rel="stylesheet" type="text/css" />
+
+	<link href="/ASP.Net/FM/Explorer/admin_dialogs.css" rel="stylesheet" type="text/css" />
+	<link href="designer.css" rel="stylesheet" type="text/css" />
+
+	
+
+  <script src="/ASP.Net/FM/Explorer/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="/ASP.Net/FM/Explorer/Scripts/ax.kernel.js" type="text/javascript"></script>
+	<script src="/ASP.Net/FM/Explorer/Scripts/fm.global.js" type="text/javascript"></script>
+	<script src="/ASP.Net/FM/Explorer/Scripts/ax.window.js" type="text/javascript"></script>
+
+	<script src="/ASP.Net/FM/Explorer/admin_utils.js" type="text/javascript"></script>
+
+	<script src="js/FMS.ProcessDesigner.js" type="text/javascript"></script>
+	<script src="js/ax.schema.js" type="text/javascript"></script>
+	<script src="js/ax.schema.activities.js" type="text/javascript"></script>
+	<script src="js/ax.schema.design.js" type="text/javascript"></script>
+
+</head>
+<body onload="FMS.ProcessDesigner_Load()">
+<div id="topmenu" style="position:absolute;top:0;left:0;right:0;height:25px;background-color:#b6d6fc;border-bottom:solid 1px #76b1ed;">
+	<span cmd="Properties">Properties</span>
+	<span cmd="Print">Print</span>
+	<span cmd="Save">Save</span>
+	<span cmd="Publish">Publish</span>	
+	<span cmd="Back" style="font-weight:bold;display:none">Back</span>	
+</div>
+<div id="toolbar" style="position:absolute;top:26px;height:45px;position:relative;background-color:#b6d6fc;border-top:solid 1px #eaf3fe;border-bottom:solid 1px #76b1ed;">
+	<div style="position:absolute;right:0px;">
+		<span n="RecordState" class="item" style="width:70px" draggable="true">
+			<img src="images/toolbar/ico_state_small.png" width="45" height="24" alt="RecordState" draggable="false" />
+			<label>State</label>
+		</span>
+		<span n="SubProcess" class="item" style="width:80px" draggable="true">
+			<img src="images/toolbar/sub_process_small.png" width="45" height="24" alt="SubProcess" draggable="false" />
+			<label>Sub-Process</label>
+		</span>
+		<span n="MultiTask" class="item" style="width:70px" draggable="true">
+			<img src="images/toolbar/ico_multitask_small.png" width="45" height="24" alt="MultiTask" draggable="false" />
+			<label>Multi Task</label>
+		</span>
+
+		<span class="separator"></span>
+		<span n="Data" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/end_small.png" width="24" height="24" alt="Data" draggable="false" />
+			<label>Update</label>
+		</span>
+		<span n="SendMail" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/message_small.png" width="24" height="24" alt="SendMail" draggable="false" />
+			<label>Mail</label>
+		</span>
+		<span n="StoredProcedure" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/sp_small.png" width="24" height="24" alt="StoredProcedure" draggable="false" />
+			<label>SP</label>
+		</span>
+		<span n="Module" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/end_small.png" width="24" height="24" alt="Module" draggable="false" />
+			<label>Module</label>
+		</span>
+
+		<span class="separator"></span>
+		<span n="IfElse" class="item" style="width:60px" draggable="true">
+			<img src="images/toolbar/decision_small.png" width="30" height="24" alt="IfElse" draggable="false" />
+			<label>Decision</label>
+		</span>
+		<span n="Link" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/link_small.png" width="24" height="24" alt="Link" draggable="false" />
+			<label>Link</label>
+		</span>
+		<span n="End" class="item" style="width:50px" draggable="true">
+			<img src="images/toolbar/end_red_small.png" width="24" height="24" alt="End" draggable="false" />
+			<label>End</label>
+		</span>
+	</div>
+</div>
+<div id="schemaInfo" style="position:absolute;right:10px;top:6px;"></div>
+<div id="subTitle" style="position:absolute;left:100px;top:6px;font-weight:bold"></div>
+<div id="canvasPanel" style="position:absolute;top:74px;bottom:0px;left:0;right:0;overflow:scroll;background-color:#f0f8ff">
+	<iframe id="canvasFrame" src="canvas.html"></iframe>
+</div>
+<div id="zoomPanel" style="position:absolute;right:23px;bottom:21px;"><span title="zoom in" cmd="in">+</span><span title="fit to window / restore" cmd="restore">100%</span><span title="zoom out" cmd="out">-</span></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<entity version="1.5">
+  <header title="aspnet_Roles" />
+  <description title="" />
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <datasource type="DB" name="aspnet_Roles" />
+  <primarykey>RoleId</primarykey>
+  <fields>
+    <field name="ApplicationId" type="Lookup" format="" dbtype="" size="" title="ApplicationId" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="" />
+    </field>
+    <field name="RoleId" type="Text" format="text" dbtype="" size="" title="RoleId" description="" required="false" readonly="false" uimask="00111" />
+    <field name="RoleName" type="Text" format="text" dbtype="" size="256" title="RoleName" description="" required="false" readonly="false" uimask="00111" />
+    <field name="LoweredRoleName" type="Text" format="text" dbtype="" size="256" title="LoweredRoleName" description="" required="false" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" format="textarea" dbtype="" size="256" title="Description" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

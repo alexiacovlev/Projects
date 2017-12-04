@@ -1,0 +1,12 @@
+<view>
+  <row>
+    <cell title="Title" name="StateTitle" />
+    <cell title="Initiated On" name="InitiatedOn" width="125" />
+    <cell title="Completed On" name="CompletedOn" width="125" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="InitiatedOn" ascending="true" />
+    </sort>
+  </fetch>
+</view>

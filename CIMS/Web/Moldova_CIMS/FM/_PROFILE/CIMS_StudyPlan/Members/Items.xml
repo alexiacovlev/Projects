@@ -1,0 +1,6 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-22T15:33:14">
+  <set name="TableName" value="CIMS_StudyPlanItems" />
+  <set name="ViewName" value="by_team" />
+  <set name="InputFilterField" value="StudyPlan=$id" />
+  <set name="HandlerParameters" value="1100,550" />
+</mapNode>

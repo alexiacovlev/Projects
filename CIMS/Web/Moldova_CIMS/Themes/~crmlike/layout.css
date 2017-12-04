@@ -1,0 +1,128 @@
+﻿body {
+	font-family:Verdana; font-size:11pt;
+	-webkit-font-smoothing: antialiased;
+	overflow:hidden;
+	background:linear-gradient(to bottom,  #fefefe 0%,#d9d9d9 100%);
+	background-color: #FFF;
+	margin:0;padding:0;
+}
+
+#header {
+	position:absolute;left:0px;top:0;right:0px;height:51px;
+	background:linear-gradient(to bottom,  #fefefe 0%,#d9d9d9 100%);
+	color:#000;
+}
+#appLogo {
+	position:absolute; top:0px;left:10px; display:none;
+	
+}
+#appTitle {
+	position:absolute;top:12px;left:20px;
+	font-size:14pt;
+}
+#appDesc {
+	position:absolute;top:28px;left:10px; display:none;
+	font-size:10pt;
+}
+#shaderTitle {
+	margin:50px; font-size:12pt;
+}
+
+#appMenu {
+	font-family:Verdana; font-size:10pt;
+	overflow-x:hidden;
+	position:absolute;
+	top:52px;left:0px;right:0px;
+	z-index:1;
+	background:linear-gradient(to bottom,  #fefefe 0%,#d9d9d9 100%);
+	border-bottom: solid 1px #adadad;
+}
+
+#content {
+	position:absolute;
+	left:0px; right:0px;
+	top:86px;
+	bottom:32px;
+}
+
+#appMenu > a.appm {
+	display:inline-block;
+	color: #000;
+	padding:8px 15px 8px 5px;
+	text-decoration: none;
+	box-sizing:border-box;
+}
+#appMenu > a.selected {
+	border-bottom:solid 3px #333333;
+	padding-bottom:5px;
+	color: #000;
+}
+#appMenu > a.appm:hover {
+	color: #0080c0;
+}
+a.appm > .ax-ico { font-size:11pt;margin-left:8px; width:26px; }
+
+#appLinks {
+	position:absolute; top:25px;right:20px;
+	font-size:10pt;
+}
+#appLinks > a.appl, #appLang > a.lang {
+	text-decoration:none;
+	color:#000;
+	margin:3px;
+	padding:0 2px;
+}
+#appLinks > a.appl:hover, #appLinks > a.selected, #appLang > a.lang:hover, #appLang > a.selected {
+	color: #FFF;
+	border-bottom-color:#f85723;
+}
+#appLang {
+	position:absolute;top:5px;right:20px;
+	font-size:9pt;	color:#FFF;
+}
+.lang-flag { margin-left:6px; }
+
+@media screen and (max-width: 1500px) {
+	#appMenu > a.appm { padding: 5px 9px 5px 5px; }
+	a.appm > .ax-ico { font-size:14pt; }
+	span.appmt { display:none; }
+	#appMenu > a.selected { background-color:#f85723; color: #FFF; }
+}
+
+
+#footer {
+	position:absolute; bottom:0px;left:0px; right:0px; 
+	height:31px;
+	font-family:'Lucida Sans Unicode';
+	font-size:9pt;
+	color: #000;
+	border-top: solid 1px #adadad;
+	background:linear-gradient(to bottom,  #fefefe 0%,#d9d9d9 100%);
+}
+#adminButton { position:relative; left:5px; top:9px; font-size:14pt; line-height:1px; cursor:pointer; margin-right:5px; }
+#copyright { position:relative; left:5px; top: 7px; }
+#userInfo {
+	position:absolute; right:20px; top:7px;
+	font-size:10pt;font-family:Verdana;
+}
+#userName,#userRole {
+	margin-left:5px;
+	margin-right:25px;
+}
+
+#loginButton {
+	position:absolute;right:8px;top:7px;
+	cursor:pointer;
+	color:transparent;
+	text-indent:-30px;
+	width: 24px; height: 24px;
+}
+A.Login { background-image: url(images/login24.png); }
+A.Logout { background-image: url(images/logout24.png); }
+
+#rolesBtn {
+	position:absolute;right:-15px;bottom:-1px;
+}
+
+#LoginWindow { margin:80px auto 0 auto; width:520px; }
+#LoginWindow > .axdlg-body { padding:5px 10px 10px 10px; }

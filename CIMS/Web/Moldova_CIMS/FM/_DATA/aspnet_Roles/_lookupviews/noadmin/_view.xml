@@ -1,0 +1,15 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="RoleId">
+    <cell name="RoleName" title="RoleName" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="RoleName" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="RoleName" operator="ne" value="Administrators" />
+    </filter>
+  </fetch>
+</view>

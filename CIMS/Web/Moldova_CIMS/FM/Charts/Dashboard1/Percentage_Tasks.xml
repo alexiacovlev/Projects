@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart title="" type="circle" allowClick="true">
+  <counter title="Tasks" table="AX_WF_StateTasks" type="percentage" filter="Status:3" />
+</chart>

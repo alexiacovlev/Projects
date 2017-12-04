@@ -1,0 +1,18 @@
+<view select="true" check="false" icon="true" preview="false">
+  <row recordtypefield="Status" imagetype="MembershipUser" keyfield="Id">
+    <cell title="User Name" name="UserName" width="200" />
+    <cell title="Last User Activity" name="Page" />
+    <cell title="Activity Time" name="LastActivityTime" width="150" />
+    <cell title="IP" name="IPAddress" width="125" />
+    <cell title="Browser" name="Browser" width="100" />
+    <cell title="Status" name="Status" width="60" />
+    <cell title="Duration" name="DurationText" width="200" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="LastActivityTime" ascending="false" />
+    </sort>
+  </fetch>
+  <header title="" />
+  <description title="" />
+</view>

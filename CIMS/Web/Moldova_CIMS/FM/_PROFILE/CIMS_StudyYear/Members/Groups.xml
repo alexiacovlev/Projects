@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-16T11:51:58">
+  <set name="TableName" value="CIMS_Groups" />
+  <set name="ViewName" value="by_year" />
+  <set name="InputFilterField" value="CurrentStudyYear=$StudyYear" />
+  <set name="OpenForm" value="PROFILE:CIMS_Groups_Show" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

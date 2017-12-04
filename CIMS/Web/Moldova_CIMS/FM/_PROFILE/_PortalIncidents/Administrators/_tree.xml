@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Incidents" name="Incidents" image="" navigator="false" refreshSec="120" refreshOnChange="true" width="200" level="10">
+  <Folders>
+    <Folder title="Submitted" name="Submitted" image="brick_add.png" control="Grid" autocount="true" playsound="true">
+      <Folders>
+        <Folder title="High!" name="Submited_High" image="book_error.png" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="In Progress" name="In Progress" image="clock_history_frame.png" control="GRID" autocount="true" dependonkey="false">
+      <Folders />
+    </Folder>
+    <Folder title="Ready for Testing" name="ReadyforTesting" image="brick_error.png" control="GRID" autocount="true" playsound="false" dependonkey="false">
+      <Folders />
+    </Folder>
+    <Folder title="On Hold" name="OnHoldIncidents" image="clock_select_remain.png" control="GRID" autocount="true" playsound="false" dependonkey="false">
+      <Folders />
+    </Folder>
+    <Folder title="Cancelled" name="Canceled" image="brick_delete.png" control="GRID" autocount="true" playsound="false" dependonkey="false">
+      <Folders />
+    </Folder>
+    <Folder title="Resolved" name="ResolvedIncidents" image="brick_go.png" control="GRID" autocount="true" playsound="false" dependonkey="false">
+      <Folders />
+    </Folder>
+    <Folder title="All Incidents" name="AllIncidents" image="brick.png" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Statistics" name="Chart" image="16_reports.png" control="SERVERCONTROL">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder>OpenIncidents</DefaultFolder>
+</Tree>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Lecturer_Details_Show" version="2.0" created="2017-11-10T13:25:49" modified="2017-11-10T13:26:31" author="Admin Admin">
+  <Sequence>
+    <ExecStoredProcedure name="SP247" title="SP">
+      <Settings method="prc_CIMS_GetLecturerByUser" />
+      <Assign>
+        <Field name="UserId" value="~USERID" />
+      </Assign>
+    </ExecStoredProcedure>
+    <Switch>
+      <Case test="SP247:returnValue = ''" details=";">
+        <Sequence>
+          <Invoke name="FORM675" title="FORM" control="Form">
+            <Settings table="CIMS_DUMMY" form="no_student" provider="DUMMY" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="SP247:ReturnValue" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="FORM1" title="" control="Form">
+            <Settings table="CIMS_Employee" form="details" readonly="true" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="SP247:returnValue" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+</Workflow>

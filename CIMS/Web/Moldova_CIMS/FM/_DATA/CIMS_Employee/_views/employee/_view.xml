@@ -1,0 +1,18 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Type" title="Type" width="100" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="MiddleName" title="Middle Name" width="150" />
+    <cell name="UserId" title="User" width="150" />
+    <cell name="Position" title="Position" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

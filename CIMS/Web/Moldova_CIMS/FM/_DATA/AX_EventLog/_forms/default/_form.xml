@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="Error Log Details" />
+  <description title="Error Log Details" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="EventTime" title="Event Time" />
+              <cell />
+            </row>
+            <row>
+              <cell name="EventDetailCode" title="Event Detail Code" />
+              <cell name="EventCode" title="Event Code" />
+            </row>
+            <row>
+              <cell name="Message" title="Message" colspan="2" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell name="Details" title="Details" colspan="2" rowspan="9" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+        <section title="Created by" decoration="line" columns="2" name="sec2748" showlabel="true">
+          <rows>
+            <row>
+              <cell name="CreatedBy" title="Created By">
+                <properties oncreatevalue="~USERID" />
+              </cell>
+              <cell name="IP" title="IP" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

@@ -1,0 +1,21 @@
+<view ordernumber="false">
+  <row>
+    <cell name="StateName" title="State Name" width="170" />
+    <cell name="CreatedBy" title="Created By" width="100" />
+    <cell name="Reason" title="Reason" />
+    <cell name="CreatedOn" title="Date" width="115" />
+  </row>
+  <handlers>
+    <smartedit enabled="false" />
+    <select enabled="false">default</select>
+    <create enabled="false">
+    </create>
+    <delete enabled="false" />
+  </handlers>
+  <autoNewRow>off</autoNewRow>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="true" />
+    </sort>
+  </fetch>
+</view>

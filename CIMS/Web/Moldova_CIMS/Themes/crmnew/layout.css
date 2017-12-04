@@ -1,0 +1,128 @@
+﻿body {
+	font-family:'Open Sans',sans-serif; font-size:13px;
+	-webkit-font-smoothing: antialiased; -ms-font-smoothing: antialiased;
+	overflow:hidden;
+	background-color:#fff;
+	color:#333;
+	margin:0;padding:0;
+}
+
+#header {
+	background-color:#00204f;
+	position:absolute;left:0px;top:0;right:0;height:40px;
+	color:#BECFE0;
+	font-size:17px;
+}
+#appLogo {
+
+}
+#appTitle {
+	display:inline-block;
+	margin-top:12px;margin-left:22px; color:#FFF;
+}
+#appDesc {
+	display:inline-block;
+	margin-top:12px;margin-left:10px;
+}
+
+#content {
+	position:absolute;
+	left:0;right:0;
+	top:120px;
+	bottom:28px;
+}
+
+#appMenu {
+	font-size:12px;
+	overflow-x:hidden; white-space:nowrap;
+	position:absolute;
+	top:40px;height:80px;left:0;right:0;
+	z-index:1;
+	background-color:#d2d6dc;
+}
+
+#appMenu > .appm {
+	margin:8px 0px 0px 10px; padding:7px 7px 10px 7px; width:140px;
+	display:inline-block;
+	background-color:#20617b;
+	color: #ffffff;
+	text-decoration: none;
+	font-size:11px;overflow-x:hidden;
+	box-sizing:border-box;
+	text-transform:uppercase;
+	box-shadow:0px 2px 10px #383838;-webkit-box-shadow:0px 2px 10px #383838;-moz-box-shadow:0px 2px 10px #383838;
+}
+
+#appMenu > .appm:nth-child(2) { background-color:#2b2b2b; }
+#appMenu > .appm:nth-child(3) { background-color:#bc4b00; }
+#appMenu > .appm:nth-child(4) { background-color:#603dbb; }
+#appMenu > .appm:nth-child(5) { background-color:#550d6b; }
+#appMenu > .appm:nth-child(6) { background-color:#3052a9; }
+#appMenu > .appm:nth-child(7) { background-color:#3d723a; }
+#appMenu > .appm:nth-child(8) { background-color:#555555; }
+#appMenu > .appm:nth-child(9) { background-color:#804000; }
+
+
+#appMenu > a.selected, #appMenu > a.appm:hover {
+	padding-bottom: 7px;
+	border-bottom:solid 3px #fff; color:#fff;
+}
+.appm > .ax-ico { font-size:16pt;display:block; margin-bottom:8px; margin-left:1px; }
+
+#appLinks {
+	position:absolute; top:22px;right:5px;
+	font-size:12px;
+}
+#appLinks > a.appl, #appLang > a.lang {
+	text-decoration:none;
+	color:#becfe0;
+	margin:3px;
+	padding:0 2px;
+}
+#appLinks > a.appl:hover, #appLinks > a.selected, #appLang > a.lang:hover, #appLang > a.selected {
+	color: #FFF;
+	border-bottom-color:#FFF;
+}
+#appLang {
+	position:absolute;top:7px;right:5px;
+	font-size:11px;	color:#FFF;
+}
+.lang-flag { margin-left:6px; }
+
+#footer {
+	position:absolute; bottom:0;left:0px; right:0;
+	height:28px;
+	background-color:#f2f2f2;
+
+	font-size:12px;
+	color: #777;
+}
+#adminButton { position:relative; left:5px; top:8px; font-size:12pt; line-height:1px; color:#495b6c; cursor:pointer; margin-right:5px; }
+#copyright { position:relative; left:5px; top:8px; }
+#userInfo { position:absolute; right:20px; top:6px; font-size:10pt;}
+#userName,#userRole { margin-left:5px; margin-right:25px; }
+
+#loginButton {
+	position:absolute;right:3px;bottom:1px;
+	cursor:pointer;
+	color:transparent;
+	text-indent:-30px;
+	width: 24px; height: 24px;
+}
+.Login { background-image: url(images/login24.png); }
+.Logout { background-image: url(images/logout24.png); }
+
+#rolesBtn {
+	position:absolute;right:-15px;bottom:-1px;
+}
+#shader { background-color: #2b333c !important; }
+#shaderTitle { color:#BECFE0; font-size:17px; margin-top:12px;margin-left:22px; }
+#shaderLoader { background-image:url(images/loader.gif); width:90px;height:92px; margin:20% auto 0 auto; }
+#LoginWindow { margin:80px auto 0 auto; width:520px; }
+#LoginWindow > .axdlg-body { padding:5px 10px 10px 10px; }
+
+@media screen and (max-width: 1200px) {
+	#appMenu > .appm { width:70px; text-align:center; padding-top:10px; }
+	a.appm > .ax-ico { font-size:22pt;margin-left:11px; }
+	span.appmt { display:none; }
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Change status In Progress" trace="true" version="2.0" created="0001-01-01T10:00:00+02:00" modified="2006-08-22T14:15:53.9893042+03:00">
+  <Sequence>
+    <Invoke name="IncidentForm" title="" control="Form">
+      <Settings table="AX_Incidents" form="default" />
+      <Assign>
+        <Field name="_FORMNAME_" value="$Form" />
+        <Field name="_KEYVALUE_" value="$id" />
+        <Field name="IncidentStatusId" value="$IncidentStatusId" />
+        <Field name="ResolutionCode" value="'3'" />
+        <Field name="ModifiedOn" value="~NOW" />
+        <Field name="SendNotification" value="'false'" />
+        <Field name="ResultDate" value="~NOW" />
+      </Assign>
+    </Invoke>
+    <XmlIsland name="IncidentData" title="">
+      <Settings table="AX_Incidents" form="" />
+      <FieldSet>
+        <Field name="IncidentNr" />
+        <Field name="Subject" />
+        <Field name="Description" />
+        <Field name="IncidentStatusId" />
+        <Field name="IncidentTypeId" />
+        <Field name="CreatedBy" />
+        <Field name="CreatedOn" />
+        <Field name="ApplicationId" />
+        <Field name="StateReason" />
+        <Field name="RequestURL" />
+        <Field name="ModifiedBy" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <UpdateRecord name="UpdateHistory1" title="Update State History">
+      <Settings table="AX_Incidents_StateHistory" form="" />
+      <Assign>
+        <Field name="CreatedBy" value="~USERID" />
+        <Field name="CreatedBy_FullName" value="IncidentData:ModifiedBy(aspnet_Membership).FullName" />
+        <Field name="CreatedOn" value="~NOW" />
+        <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+        <Field name="StateID" value="IncidentData:IncidentStatusId" />
+        <Field name="StateName" value="IncidentData:IncidentStatusId(AX_Incidents_Status).Description" />
+        <Field name="Reason" value="IncidentData:StateReason" />
+        <Field name="CreatedIP" value="~IP" />
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </UpdateRecord>
+    <Switch name="IFELSE7397">
+      <Case test="IncidentForm:SendNotification eq 'true'" source="">
+        <Sequence>
+          <ExecuteRequest name="MAILSERVICE1" title="Send Mail 1" url="" type="MailService">
+            <Settings method="Send" timeout="0" />
+            <Assign>
+              <Field name="From" value="" />
+              <Field name="To" value="IncidentData:CreatedBy(aspnet_Membership).Email" />
+              <Field name="Subject" value="#Change Status: [#IncidentData:IncidentStatusId(AX_Incidents_Status).Status#]" />
+              <Field name="Body" value="#&lt;style&gt;&#xD;td {padding-top: 1px;padding-bottom: 1px;padding-left: 4px;}&#xD;&lt;/style&gt;&#xD;&lt;h2&gt;&#xD;Incident Tracker - [#IncidentData:ApplicationId(aspnet_Applications).Description#]&lt;/h2&gt;&#xD;&lt;br /&gt;&#xD;&lt;br /&gt;&#xD;&lt;table style=&quot;width: 90%; border-collapse: collapse; table-layout: fixed; margin: 2px&quot;&gt;&#xD;&lt;tbody style=&quot;font-size: 10pt; color: black; font-family: Verdana,Arial,Helvetica&quot;&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: #064497 1px solid;padding:4px;background-color:#3889f7;color:white;&quot;&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;Subject: [#IncidentData:Subject#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Portal:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#IncidentData:ApplicationId(aspnet_Applications).Description#]&#xD;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Portal URL:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#~APPLICATIONURL#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Number:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#IncidentData:IncidentNr#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Type:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#IncidentData:IncidentTypeId(AX_Incidents_Type).Type#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Changed by:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;[#IncidentData:ModifiedBy(aspnet_Membership).FullName#]&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;E-mail:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#IncidentData:ModifiedBy(aspnet_Membership).Email#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Date:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#~NOW#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Changed IP:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;[#~IP#]&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;Changed status to:&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;[#IncidentData:IncidentStatusId(AX_Incidents_Status).Status#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;&amp;nbsp;&amp;nbsp;&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td colspan=&quot;2&quot;&gt;&#xD;&#x9;&#x9;&#x9;Reason&lt;b&gt;:&lt;/b&gt;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td colspan=&quot;2&quot;&gt;&#xD;&#x9;&#x9;&#x9;&lt;b&gt;[#IncidentData:Reason#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&amp;nbsp;&#xD;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&lt;/tr&gt;&#xD;&lt;/tbody&gt;&#xD;&lt;/table&gt;&#xD;&lt;div style=&quot;font-size: 8pt; width: 100%; font-family: Verdana,Arial,Helvetica&quot;&gt;&#xD;&lt;br /&gt;&#xD;Notes:&#xD;&lt;br /&gt;&#xD;Please do not reply to this message, which was sent from an unmonitored e-mail address.&lt;br /&gt;&#xD;Mail sent to this address cannot be answered.&lt;br /&gt;&#xD;Provided by &lt;a href=&quot;http://www.webassembler.net/&quot;&gt;Webassembler.NET 2012&lt;/a&gt;\&#xD;&lt;/div&gt;" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+    <XmlIsland name="CONFIG1">
+      <Settings table="AX_Incidents_Properties" form="" />
+      <FieldSet>
+        <Field name="CCopyTo_FullName" />
+        <Field name="CCopyToEmail" />
+        <Field name="CopyToCC" />
+        <Field name="SendToServer" />
+        <Field name="ServerURL" />
+        <Field name="ApplicationId" />
+        <Field name="ClientURL" />
+      </FieldSet>
+      <Assign>
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </XmlIsland>
+    <Switch name="IFELSE3937">
+      <Case test="CONFIG1:SendToServer eq '1'" source="">
+        <Sequence>
+          <ExecuteRequest hideExceptions="true" name="WEBSERVICE1" title="Global AX_Incidents Comments" url="/FM/Services/Global_AX_Incidents_Comments/process.asmx" type="WebService">
+            <Settings method="Execute" namespace="http://www.alfa-xp.com/FM/HumanWFService" timeout="0" />
+            <Assign>
+              <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+              <Field name="Subject" value="IncidentData:Subject" />
+              <Field name="IncidentStatusId" value="IncidentData:IncidentStatusId" />
+              <Field name="ModifiedOn" value="IncidentData:ModifiedOn" />
+              <Field name="StateReason" value="IncidentData:StateReason" />
+              <Field name="SendNotification" value="IncidentData:SendNotification" />
+              <Field name="SendTo" value="IncidentData:CreatedBy" />
+              <Field name="RequestURL" value="~APPLICATIONURL" />
+              <Field name="_URL_" value="#[#CONFIG1:ServerURL#]/FM/Services/Global_AX_Incidents_Comments/process.asmx" />
+            </Assign>
+          </ExecuteRequest>
+          <ExecuteRequest hideExceptions="true" name="WEBSERVICE2" title="Global AX_Incidents StateHistory" url="/FM/Services/Global_AX_Incidents_StateHistory/process.asmx" type="WebService">
+            <Settings method="Execute" namespace="http://www.alfa-xp.com/FM/HumanWFService" timeout="0" />
+            <Assign>
+              <Field name="IncidentId" value="IncidentData:_KEYVALUE_" />
+              <Field name="StateName" value="UpdateRecord:StateName" />
+              <Field name="Reason" value="UpdateRecord:Reason" />
+              <Field name="CreatedOn" value="~NOW" />
+              <Field name="CreatedIP" value="~IP" />
+              <Field name="CreatedBy" value="~USERID" />
+              <Field name="CreatedBy_FullName" value="UpdateRecord:CreatedBy(aspnet_Membership).FullName" />
+              <Field name="RequestURL" value="~APPLICATIONURL" />
+              <Field name="_URL_" value="#[#CONFIG1:ServerURL#]/FM/Services/Global_AX_Incidents_StateHistory/process.asmx" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+    <Switch name="IFELSE6314">
+      <Case test="CONFIG1:CopyToCC eq '1'" source="">
+        <Sequence>
+          <ExecuteRequest name="MAILSERVICE2" title="Send CC Mail" url="" type="MailService">
+            <Settings method="Send" timeout="0" />
+            <Assign>
+              <Field name="From" value="" />
+              <Field name="To" value="CONFIG1:CCopyToEmail" />
+              <Field name="Subject" value="#Change Status: [#IncidentData:Subject#]" />
+              <Field name="Body" value="#&lt;style&gt;&#xD;&#x9;&#x9;td {&#xD;&#x9;&#x9;&#x9;padding-top: 1px;&#xD;&#x9;&#x9;&#x9;padding-bottom: 1px;&#xD;&#x9;&#x9;&#x9;padding-left: 4px;&#xD;&#x9;&#x9;}&#xD;&#x9;&lt;/style&gt;&#xD;&#x9;&lt;h2&gt;&#xD;&#x9;&#x9;Incident Tracker - [#IncidentData:ApplicationId(aspnet_Applications).Description#]&lt;/h2&gt;&#xD;&#x9;&lt;br /&gt;&#xD;&#x9;&lt;br /&gt;&#xD;&#x9;&lt;table style=&quot;width: 90%; border-collapse: collapse; table-layout: fixed; margin: 2px&quot;&gt;&#xD;&#x9;&#x9;&lt;tbody style=&quot;font-size: 10pt; color: black; font-family: Verdana,Arial,Helvetica&quot;&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: #064497 1px solid;padding:4px;background-color:#3889f7;color:white;&quot;&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;Subject: [#IncidentData:Subject#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Portal:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#UpdateRecord:ApplicationId(aspnet_Applications).Description#]&#xD;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Portal URL:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#~APPLICATIONURL#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Number:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#IncidentData:IncidentNr#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Type:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#IncidentData:IncidentTypeId(AX_Incidents_Type).Type#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Changed by:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;[#UpdateRecord:CreatedBy(aspnet_Membership).FullName#]&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;E-mail:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#UpdateRecord:CreatedBy(aspnet_Membership).Email#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Date:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#~NOW#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Changed IP:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;[#~IP#]&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Changed status to:&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;[#UpdateRecord:StateName#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;&amp;nbsp;&amp;nbsp;&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot;&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;Reason&lt;b&gt;:&lt;/b&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot;&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;b&gt;[#UpdateRecord:Reason#]&amp;nbsp;&lt;/b&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&#x9;&lt;tr&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xD;&#x9;&#x9;&#x9;&#x9;&#x9;&amp;nbsp;&#xD;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xD;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xD;&#x9;&#x9;&lt;/tbody&gt;&#xD;&#x9;&lt;/table&gt;&#xD;&#x9;&lt;div style=&quot;font-size: 8pt; width: 100%; font-family: Verdana,Arial,Helvetica&quot;&gt;&#xD;&#x9;&#x9;&lt;br /&gt;&#xD;&#x9;&#x9;Notes:&#xD;&#x9;&#x9;&lt;br /&gt;&#xD;&#x9;&#x9;Please do not reply to this message, which was sent from an unmonitored e-mail address.&lt;br /&gt;&#xD;&#x9;&#x9;Mail sent to this address cannot be answered.&lt;br /&gt;&#xD;&#x9;&#x9;Provided by &lt;a href=&quot;http://www.webassembler.net/&quot;&gt;Webassembler.NET 2012 SL&lt;/a&gt;&lt;/div&gt;" />
+            </Assign>
+          </ExecuteRequest>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Input>
+    <Param name="IncidentStatusId" type="Int32" />
+    <Param name="Form" type="String" />
+  </Input>
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Submit" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

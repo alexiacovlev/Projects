@@ -1,0 +1,6 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Iure Coroban" modifiedon="2015-01-29T10:15:13">
+  <set name="TableName" value="aspnet_Teams" />
+  <set name="ViewName" value="default" />
+  <set name="CreateParameters" value="400,250,false" />
+  <set name="HandlerParameters" value="400,250,false" />
+</mapNode>

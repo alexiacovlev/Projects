@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-16"?>
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false">
+  <set name="OpenForm" value="Incident_Info" />
+  <set name="TableName" value="AX_Incidents" />
+  <set name="HandlerParameters" value="980,650,false" />
+  <set name="AllowDelete" value="True" />
+  <set name="Label_DELETE" value="Delete Incident(s)" />
+  <set name="SelectForm" value="Incident_Update" />
+  <set name="Label_NEW" value="Post an Incident" />
+  <set name="RowHeight" value="20" />
+  <set name="ShowJumpbar" value="False" />
+  <set name="ViewName" value="Incident_All" />
+  <set name="CreateForm" value="Incident_Create" />
+  <set name="AllowCreate" value="True" />
+  <set name="ViewList" value="Incident_All" />
+  <set name="DetailForm" value="Incident" />
+  <set name="OnRecordOpen" value="OpenEditableForm" />
+  <set name="CreateParameters" value="800,510,false" />
+</mapNode>

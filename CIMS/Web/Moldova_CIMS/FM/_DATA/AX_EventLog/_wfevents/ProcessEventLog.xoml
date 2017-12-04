@@ -1,0 +1,12 @@
+<ns0:RecordsWorkflow x:Name="RecordsWorkflow1" Context="{x:Null}" xmlns:ns1="clr-namespace:AX.FM.Workflow.Activities;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:AX.FM.Workflow;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null">
+  <ns1:SendMailActivity x:Name="SENDMAIL488" KeyValue="">
+    <ns1:SendMailActivity.Assign>
+      <x:Array Type="{x:Type p12:ColumnInfo}" xmlns:p12="clr-namespace:AX.FM.Workflow.Data;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null">
+        <ns2:ColumnInfo Name="From" Value="#michael@lafa-xp.com" xmlns:ns2="clr-namespace:AX.FM.Workflow.Data;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null" />
+        <ns2:ColumnInfo Name="To" Value="#michael@lafa-xp.com" xmlns:ns2="clr-namespace:AX.FM.Workflow.Data;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null" />
+        <ns2:ColumnInfo Name="Subject" Value="#EventLog" xmlns:ns2="clr-namespace:AX.FM.Workflow.Data;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null" />
+        <ns2:ColumnInfo Name="Body" Value="PrimaryEntity:Message" xmlns:ns2="clr-namespace:AX.FM.Workflow.Data;Assembly=AX.FM.Workflow, Version=1.5.0.0, Culture=neutral, PublicKeyToken=null" />
+      </x:Array>
+    </ns1:SendMailActivity.Assign>
+  </ns1:SendMailActivity>
+</ns0:RecordsWorkflow>

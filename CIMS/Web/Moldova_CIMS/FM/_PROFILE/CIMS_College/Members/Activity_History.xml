@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-10-20T17:24:39">
+  <set name="TableName" value="CIMS_UserEvents2Team_View" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="ViewName" value="by_team" />
+</mapNode>

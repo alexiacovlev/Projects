@@ -1,0 +1,24 @@
+<view select="true" preview="false" icon="false" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Subject" title="Subject" />
+    <cell name="IncidentNr" title="Incident Nr" width="80" />
+    <cell name="Description" title="Description" width="300" />
+    <cell name="CreatedOn" title="Created On" width="120" />
+    <cell name="ResultDate" title="Result Date" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ResultDate" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="IncidentStatusId" operator="eq" value="7" />
+    </filter>
+  </fetch>
+  <rowstyle>
+    <style value="color:#011AF3">
+      <condition attribute="ModifiedOn" operator="today" value="" />
+    </style>
+  </rowstyle>
+</view>

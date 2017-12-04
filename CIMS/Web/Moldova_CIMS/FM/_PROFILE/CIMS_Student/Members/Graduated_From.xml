@@ -1,0 +1,4 @@
+<mapNode type="FORM" modifiedby="Admin Admin" modifiedon="2017-11-08T13:19:07">
+  <set name="TableName" value="CIMS_Student" />
+  <set name="FormName" value="school" />
+</mapNode>

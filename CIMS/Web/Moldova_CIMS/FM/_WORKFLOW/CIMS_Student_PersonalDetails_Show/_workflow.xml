@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Student_PersonalDetails_Show" version="2.0" created="2017-11-10T12:16:53" modified="2017-11-10T12:34:46" author="Admin Admin" trace="false" forceRefresh="false" title="">
+  <Sequence>
+    <ExecStoredProcedure name="SP247" title="SP">
+      <Settings method="prc_CIMS_GetStudentByUser" />
+      <Assign>
+        <Field name="UserId" value="~USERID" />
+      </Assign>
+    </ExecStoredProcedure>
+    <Switch>
+      <Case test="SP247:returnValue = ''" details=";">
+        <Sequence>
+          <Invoke name="FORM675" title="FORM" control="Form">
+            <Settings table="CIMS_DUMMY" form="no_student" provider="DUMMY" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="SP247:ReturnValue" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="FORM1" title="" control="Form">
+            <Settings table="CIMS_Student" form="general" readonly="true" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="SP247:returnValue" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous enabled="false" title="" />
+    <Update enabled="false" title="" />
+    <Next enabled="false" title="" />
+  </Handlers>
+</Workflow>

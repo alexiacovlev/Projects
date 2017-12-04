@@ -1,0 +1,16 @@
+<view select="true" check="false" expandMode="Info" icon="false" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Event Time" name="EventTime" width="125" />
+    <cell title="Event Detail Code" name="EventDetailCode" width="100" />
+    <cell title="Message" name="Message" />
+    <cell title="Details" name="Details" width="300" />
+    <cell title="Created By" name="CreatedBy" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+  </fetch>
+</view>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<entity version="4.0">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="AX_Notifications" />
+	<primarykey>ID</primarykey>
+	<watermark>Images/Views/Logo_Default.png</watermark>
+	<fields>
+		<field name="ID" type="Text" dbtype="Guid" format="" title="ID" description="" size="" required="true" readonly="false" uimask="00111" />
+		<field name="UserId" type="Text" dbtype="Guid" format="" title="User Id" description="" size="" required="true" readonly="false" uimask="00111" />
+		<field name="Header" type="Text" dbtype="StringUnicode" format="" title="Header" description="" size="50" required="true" readonly="false" uimask="00111" />
+		<field name="Text" type="Text" dbtype="StringUnicode" format="textarea" title="Text" description="" size="1024" required="true" readonly="false" uimask="00111" />
+		<field name="IsRead" type="Boolean" dbtype="Boolean" format="" title="Is Read" description="" size="" required="true" readonly="false" uimask="00111" />
+		<field name="ReadOn" type="DateTime" dbtype="DateTime" format="" title="Read On" description="" size="" required="false" readonly="false" uimask="00111" />
+		<field name="CreatedOn" type="DateTime" dbtype="DateTime" format="" title="Created On" description="" size="" required="false" readonly="false" uimask="00111" />
+		<field name="CreatedBy" type="Text" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="false" uimask="00111">
+			<extract table="aspnet_Membership" view="default" />
+		</field>
+		<field name="ApplicationId" type="Text" dbtype="Guid" format="" title="Application Id" description="" size="" required="false" readonly="false" uimask="00111">
+			<extract table="aspnet_Applications" view="default" />
+		</field>
+	</fields>
+</entity>
+			

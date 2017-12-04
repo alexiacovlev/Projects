@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="College" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Study Years" name="Study_Years" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Study Plans" name="Study_Plans" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Semesters" name="Semesters" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Sections" name="Sections" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Study Groups" name="Study_Groups" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Specialty Profiles" name="Specialty_Profiles" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Subjects to Study" name="Subjects_to_Study" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Specialties (name)" name="Specialties" image="folder.png" ico="a0c2" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Timetable Hours" name="Timetable_Hours" image="folder.png" ico="e81b" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="College Users" name="College_users" image="folder.png" ico="a0c2" control="">
+      <Folders>
+        <Folder title="Users" name="Users" image="folder.png" ico="a0d3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Activity History" name="Activity_History" image="folder.png" ico="a0d4" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Today Activity" name="Today_Activity" image="folder.png" ico="a0d4" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Link to Student Profile" name="Link_to_Student_Profile" image="folder.png" ico="a0d4" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Link to Employee Profile" name="Link_to_Employee_Profile" image="folder.png" ico="a0d4" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

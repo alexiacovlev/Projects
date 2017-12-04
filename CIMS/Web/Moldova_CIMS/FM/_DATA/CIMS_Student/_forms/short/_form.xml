@@ -1,0 +1,129 @@
+<form labelwidth="120">
+  <header title="Student" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="false" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Admission" name="Admission" colspan="2">
+                <properties requiredlevel="required" readonly="true" />
+                <event>var data = frm.getLookupInfo("Admission","TeamId,Year");
+frm.setValue("TeamId",data["TeamId"]);</event>
+              </cell>
+              <cell title="Person Status" name="PersonStatus">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties readonly="true" requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Specialty" name="Specialty" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Group" name="GroupId" colspan="2" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Personal Data" name="sec1257" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="First Name" name="FirstName">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Middle Name" name="MiddleName">
+                <properties requiredlevel="recommended" />
+              </cell>
+              <cell title="Last Name" name="LastName">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Birthday" name="BirthDay">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Gender" name="Gender">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Living Environment" name="LivingEnvironment" />
+            </row>
+            <row>
+              <cell title="Place Of Birth" name="BirthPlace" colspan="3">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Identification Document" name="sec1125" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Document Type" name="ID_Type" />
+              <cell title="Number" name="ID_Number" />
+              <cell title="Issued On" name="ID_IssuedOn" />
+            </row>
+            <row>
+              <cell title="Issued By" name="ID_IssuedBy" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="IDNP" name="IDNP" />
+              <cell title="Citizenship" name="Citizenship" />
+              <cell title="Ethnicity" name="Ethnicity" />
+            </row>
+          </rows>
+        </section>
+        <section title="Residence" name="sec143" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Country" name="ResidenceCountry" />
+              <cell title="Raion" name="ResidenceRaion" />
+              <cell title="Locality" name="ResidenceLocality" />
+            </row>
+            <row>
+              <cell title="Address" name="ResidenceAddress" colspan="2" />
+              <cell title="EMail" name="ResidenceStudentEMail" />
+            </row>
+            <row>
+              <cell title="Home Phone" name="ResidenceHomePhone" />
+              <cell title="Parent Phone" name="ResidenceParentPhone" />
+              <cell title="Mobile" name="ResidenceStudentMobile" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Student: #GroupId# #FirstName# #LastName#</windowMask>
+</form>

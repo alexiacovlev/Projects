@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-16T13:50:37">
+  <set name="TableName" value="CIMS_StudyPlans" />
+  <set name="ViewName" value="by_team" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="InputFilterField" value="StudyYear=$StudyYear" />
+  <set name="OpenForm" value="PROFILE:CIMS_StudyPlan" />
+</mapNode>

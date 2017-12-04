@@ -1,0 +1,18 @@
+<view select="true" preview="false" icon="true">
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId">
+    <cell name="FullName" title="FullName" />
+    <cell name="Email" title="Email" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="FullName" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+  <handlers>
+    <property enabled="true">default/READONLY</property>
+    <view enabled="true">info/READONLY</view>
+  </handlers> 
+</view>

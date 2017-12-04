@@ -1,0 +1,52 @@
+div.metro-header {font-size:18pt;margin:30px 0 0 30px;font-family:Verdana;}
+table.metro {
+margin-top:4%;
+width: 80%;
+height:60%;
+table-layout:fixed;
+}
+
+table.metro A {
+  display:block;
+  height:120px;
+
+  position:relative;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+  border:solid 1px transparent;
+
+  transform: rotateY(-90deg);
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+
+}
+table.metro A:hover {
+  box-shadow: 2px 2px 20px #000;
+  border-color:#FFF;
+}
+
+table.metro label{
+  color:#FFF;
+  font-size:1.2em;
+  position:absolute;
+  bottom:5px;left:15px;
+}
+
+table.metro img{
+display:inline-block;
+width:64px;
+height:64px;
+margin-top:20px;
+}
+table.metro td.space {
+background-color:transparent;
+}
+table.metro a.color1 {background-color:#603dbb;}
+table.metro a.color2 {background-color:#0097a8;}
+table.metro a.color3 {background-color:#018b02;}
+table.metro a.color4 {background-color:#2b82ec;}
+table.metro a.color5 {background-color:#9b00a4;}
+table.metro a.color6 {background-color:#bc1d46;}
+table.metro a.color7 {background-color:#db4f2e;}
+table.metro a.color8 {background-color:#000ed9;}

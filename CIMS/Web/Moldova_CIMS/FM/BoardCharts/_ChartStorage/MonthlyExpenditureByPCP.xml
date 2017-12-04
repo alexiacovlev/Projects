@@ -1,0 +1,73 @@
+﻿<Dashboard>
+  <Title />
+  <Description />
+  <Charts>
+    <ChartView>
+      <Configuration type="column" showTitle="false" showLegend="false" showPrint="true" showExport="true">
+        <Colors />
+      </Configuration>
+      <Title>Expense Summary By PCP</Title>
+      <Subtitle>Current Year</Subtitle>
+      <Description />
+      <Data>
+        <StoredProcedure>
+          <Name>RAWA_sp_chart_PaymentsByProviders</Name>
+        </StoredProcedure>
+        <Labels rotation="" align="center" color="#ffffff" x="" y="">
+          <Format>{y} $</Format>
+          <Style />
+        </Labels>
+        <Parameters>
+          <Parameter name="providerTypeIds" type="string" value="3" defaultValue="" />
+        </Parameters>
+      </Data>
+      <AxisX title="" min="" max="" translate="false" rotation="">
+        <Labels rotation="" align="left" x="" y="" />
+        <Data column="Title" sortDirection="asc" dataType="string" function="value" color="#d62323" />
+      </AxisX>
+      <AxisY title="" min="" max="" opposite="false" reversed="false" logarithmic="false">
+        <Labels rotation="" align="left" x="" />
+        <Ys>
+          <Y translate="true">
+            <Data column="Value" sortDirection="asc" dataType="double" function="sum" color="#f21111" />
+          </Y>
+        </Ys>
+      </AxisY>
+      <Legend position="bottomcenter" title="Caseload" layout="horizontal" />
+    </ChartView>
+    <ChartView>
+      <Configuration type="pie" showTitle="false" showLegend="true" showPrint="true" showExport="true">
+        <Colors>#D2691e,#cc54ee,#7FFF00,#0000FF,#FF0000,#6A5ACD</Colors>
+      </Configuration>
+      <Title>Expense Summary By SS</Title>
+      <Subtitle>Current Year </Subtitle>
+      <Description />
+      <Data>
+        <StoredProcedure>
+          <Name>RAWA_sp_chart_PaymentsByMonth</Name>
+        </StoredProcedure>
+        <Labels rotation="" align="center" color="#ec1b1b" x="" y="">
+          <Format>{y} $</Format>
+          <Style />
+        </Labels>
+        <Parameters>
+          <Parameter name="providerTypeIds" type="string" value="1,2,4,5,6" defaultValue="" />
+        </Parameters>
+        <Filters />
+      </Data>
+      <AxisX title="" min="" max="" translate="false" rotation="">
+        <Labels rotation="" align="left" x="" y="" />
+        <Data column="ProviderType" sortDirection="asc" dataType="string" function="value" color="" />
+      </AxisX>
+      <AxisY title="" min="" max="" opposite="false" reversed="false" logarithmic="false">
+        <Labels rotation="" align="left" x="" />
+        <Ys>
+          <Y>
+            <Data column="Value" sortDirection="asc" dataType="double" function="sum" color="" />
+          </Y>
+        </Ys>
+      </AxisY>
+      <Legend position="bottomcenter" title="Caseload" layout="horizontal" />
+    </ChartView>
+  </Charts>
+</Dashboard>

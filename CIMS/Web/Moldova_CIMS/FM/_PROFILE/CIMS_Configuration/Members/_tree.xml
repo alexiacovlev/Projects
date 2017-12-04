@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Configuration" name="" image="" navigator="true" width="330">
+  <Folders>
+    <Folder title="Dictionaries" name="Dictionaries" image="folder.png" control="">
+      <Folders>
+        <Folder title="Application Status" name="Application_Status" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Admission Categories" name="Admission_Categories" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Admission Status" name="Admission_Status" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Countries" name="Countries" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Ethnicity" name="Ethnicity" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Gender" name="Gender" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Grades" name="Grades" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Languages" name="Languages" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Living Environment" name="Living_Environment" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Locality" name="Locality" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Locality Category" name="Locality_Category" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Positions" name="Positions" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Raion" name="Raion" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Subjects" name="Subjects" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Specialties (name)" name="Specialties" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Subjects to Study" name="Subjects_to_Study" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of ID" name="Type_of_ID" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of military evidence" name="Type_of_military_evidence" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of Institution" name="Type_of_Institution" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of Documents" name="Type_of_Documents" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of Practice" name="Type_of_Practice" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of Subjects to Study" name="Type_of_Subjects_to_Study" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of Exams" name="Type_of_Exams" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+        <Folder title="Type of financing" name="Type_of_financing" image="folder.png" ico="a0c3" control="GRID">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder>Dictionaries</DefaultFolder>
+</Tree>

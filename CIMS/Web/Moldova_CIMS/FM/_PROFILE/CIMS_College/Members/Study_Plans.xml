@@ -1,0 +1,6 @@
+<mapNode type="GRID" modifiedby="Iure Coroban" modifiedon="2017-10-13T17:08:19">
+  <set name="TableName" value="CIMS_StudyPlans" />
+  <set name="ViewName" value="by_team" />
+  <set name="OpenForm" value="PROFILE:CIMS_StudyPlan" />
+  <set name="HandlerParameters" value="1100,750" />
+</mapNode>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+  <datasource type="Provider" name="StimulsoftReports,StimulsoftReports.Admin.ReportListProvider" />
+  <primarykey>Name</primarykey>
+  <watermark>ico1062.png</watermark>
+  <fields>
+    <field name="Name" type="Text" format="" dbtype="" size="200" title="Name" description="" required="true" readonly="false" uimask="00111" />
+    <field name="CreatedOn" type="DateTime" format="datetime" dbtype="" size="" title="Created On" description="" required="true" readonly="false" uimask="00111" />
+    <field name="ModifiedOn" type="DateTime" format="datetime" dbtype="" size="" title="Modified On" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" format="" dbtype="" size="200" title="Description" description="" required="true" readonly="false" uimask="00111" />
+  </fields>
+</entity>

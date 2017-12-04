@@ -1,0 +1,8 @@
+4:24:47 PM:	XmlIsland for "AX_Incidents"
+4:24:47 PM:	Assign:
+4:24:47 PM:	 _KEYVALUE_ = "b78f0ad2-3623-4228-bb34-ca3180b21cb9"
+4:24:47 PM:	Switch
+4:24:47 PM:	 #Case Test="IncidentStatusId eq '1'" - True
+4:24:47 PM:	Invoke "FROM_Submitted"
+4:24:47 PM:	Assign:
+4:24:47 PM:	 _KEYVALUE_ = "b78f0ad2-3623-4228-bb34-ca3180b21cb9"

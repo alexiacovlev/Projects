@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
+  <primarykey>Id</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="Provider" name="AX.PortalAdmin,AX.PortalAdmin.OnlineTracker.GridProvider" />
+  <fields>
+    <field name="Id" type="Text" dbtype="" format="" title="Id" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="UserId" type="Lookup" dbtype="" format="" title="UserId" description="" size="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Users" view="default" />
+    </field>
+    <field name="UserName" type="Text" dbtype="" format="" title="User Name" description="" size="256" required="true" readonly="false" uimask="00111" />
+    <field name="SessionId" type="Text" dbtype="" format="" title="SessionId" description="" size="256" required="true" readonly="false" uimask="00111" />
+    <field name="Page" type="Text" dbtype="" format="" title="Page" description="" size="256" required="true" readonly="false" uimask="00111" />
+    <field name="StartTime" type="DateTime" dbtype="" format="datetime" title="StartTime" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="LastActivityTime" type="DateTime" dbtype="" format="dd MMM HH:mm" title="LastActivityTime" description="" size="" required="true" readonly="false" uimask="00111" />
+    <field name="IPAddress" type="Text" dbtype="" format="" title="IPAddress" description="" size="20" required="true" readonly="false" uimask="00111" />
+    <field name="Browser" type="Text" dbtype="" format="" title="Browser" description="" size="20" required="true" readonly="false" uimask="00111" />
+    <field name="DurationText" type="Text" dbtype="" format="" title="Duration" description="" size="20" required="true" readonly="false" uimask="00111" />
+    <field name="Status" type="Picklist" dbtype="" format="" title="Status" description="" size="" required="true" readonly="false" uimask="00111" />
+  </fields>
+</entity>

@@ -1,0 +1,17 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="DocumentNr" title="Document Nr" width="100" />
+    <cell name="DocumentDate" title="Document Date" width="128" />
+    <cell name="DocumentType" title="Document Type" width="200" />
+    <cell name="File_FileName" title="File Name" />
+    <cell name="File_Size" title="File Size" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

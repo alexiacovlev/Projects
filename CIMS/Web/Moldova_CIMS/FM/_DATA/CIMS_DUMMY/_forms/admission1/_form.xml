@@ -1,0 +1,25 @@
+<form>
+  <header title="Admission" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Admission" name="AdmissionActive" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="SpecialtyByAdmission" name="SpecialtyByAdmission" colspan="2">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

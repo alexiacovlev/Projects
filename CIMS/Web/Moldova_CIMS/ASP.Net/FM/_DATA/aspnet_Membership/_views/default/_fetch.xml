@@ -1,0 +1,11 @@
+<fetch version="1.0" output-format="xml-platform" mapping="logical">
+  <entity name="aspnet_Membership">
+    <order attribute="CreateDate" descending="false" />
+    <attribute name="LastLoginDate" />
+    <attribute name="IsLockedOut" />
+    <attribute name="IsApproved" />
+    <attribute name="Email" />
+    <attribute name="CreateDate" />
+    <attribute name="UserId" />
+  </entity>
+</fetch>

@@ -1,0 +1,38 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="WorkflowName" title="Workflow Name" />
+              <cell />
+            </row>
+            <row>
+              <cell name="Version" title="Version">
+                <properties behavior="NaN|NaN" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="StartedOn" title="Started On" />
+              <cell />
+            </row>
+            <row>
+              <cell name="CompletedOn" title="Completed On" />
+              <cell />
+            </row>
+            <row>
+              <cell name="Message" title="Message" colspan="2" titlepos="top" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

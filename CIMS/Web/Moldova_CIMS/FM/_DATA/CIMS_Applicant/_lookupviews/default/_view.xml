@@ -1,0 +1,17 @@
+<view select="true" preview="false" check="false" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="ApplicationNr" title="ApplicationNr" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+  <handlers>
+    <view window="1200,850">PROFILE:CIMS_Applicant.Admission</view>
+    <view_ro window="1200,850">PROFILE:CIMS_Applicant.Admission</view_ro>
+  </handlers>
+</view>

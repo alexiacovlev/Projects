@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form labelwidth="100">
+  <header title="" />
+  <description title="" />
+  <windowMask>Update Incident: #Subject#</windowMask>
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Incident" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell title="" name="PriorityCodeId">
+                <properties oncreatevalue="2" />
+              </cell>
+              <cell title="Screenshot" name="Screenshot" rowspan="13" titlepos="top" />
+            </row>
+            <row>
+              <cell title="Subject" name="Subject" />
+            </row>
+            <row>
+              <cell title="Description" name="Description" rowspan="7" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell title="Number" name="IncidentNr">
+                <properties readonly="true" oncreatevalue="~AUTO:Incident" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Created By" name="CreatedBy">
+                <properties handlermode="off" readonly="true" oncreatevalue="~USERID" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Status" name="IncidentStatusId">
+                <properties oncreatevalue="1" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Type" name="IncidentTypeId">
+                <properties requiredlevel="required" oncreatevalue="2" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Questions and Comments" decoration="line" columns="2" marginTop="10" name="sec9114" showlabel="true">
+          <rows>
+            <row>
+              <cell title="" name="UserComments" colspan="2" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Attachments" name="tab7403">
+      <sections>
+        <section title="Attachments" columns="2" name="sec7403" showlabel="false">
+          <rows>
+            <row>
+              <cell title="File Attachments List" name="FileAttachments" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="History" name="tab5299">
+      <sections>
+        <section title="History" columns="2" name="sec5299" showlabel="false">
+          <rows>
+            <row>
+              <cell title="State History" name="StateHistory" colspan="2" titlepos="off" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <list name="OrderStatus">
+    <item title="Pending" value="1" />
+    <item title="Finished" value="2" />
+  </list>
+</options>

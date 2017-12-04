@@ -1,0 +1,58 @@
+﻿<script>
+	var dt1= null;
+	var _url= "";
+	var index= 0;
+	var mode= 0;
+
+	function send_request() {
+		if (mode == 0) {
+			$.ajax({
+				type: "POST",
+				url: _url,
+				contentType: "application/x-www-form-urlencoded; charset=utf-8",
+				dataType: "html",
+				success: complete,
+				error: function (xhr, status, e) { alert("Error \n" + xhr.status + ": " + e); }
+			});
+		} else if (mode == 1) {
+			
+			$.ajax({
+				type: "POST",
+				url: _url,
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				data: [],
+				success: complete,
+				error: function (xhr, status, e) { alert("Error \n" + xhr.status + ": " + e); }
+			});
+		}
+	}
+
+	function complete(o) {
+		index+= 1;
+		if (mode == 0) {
+			var s= o;
+			var s1= "<!--[CONTENT]-->";
+			var i= o.indexOf(s1);
+			var json= s.substr(0, i);
+			var html= s.substr(i + s1.length);
+			
+			var settings= $.parseJSON(json);
+		}
+		if (index >= max) done();
+		else send_request();
+	}
+
+	function done() {
+		var dt2= new Date();
+		alert("mode: " + mode + "\ntime: " + (dt2-dt1));
+	}
+
+	var max= 1;
+
+
+	//dt1= new Date(); mode= 0; index= 0; _url= "/ASP.Net/FM/DataViewer/ResTestLoader.aspx?p1=1"; send_request();
+	//dt1= new Date(); mode= 1; index= 0; _url= "/ASP.Net/FM/DataViewer/ScriptModuleService.asmx/Load"; send_request();
+
+</script>
+

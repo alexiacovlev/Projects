@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entity version="1.5">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="AX_Incidents_Status" />
+	<primarykey>id</primarykey>
+	<watermark>Images/Views/Logo_Default.gif</watermark>
+	<fields>
+		<field name="id" type="Integer" format="" dbtype="Int32" size="" title="id" description="" required="true" readonly="true" uimask="001111" />
+		<field name="Status" type="Text" format="" dbtype="String" size="50" title="Status" description="" required="false" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

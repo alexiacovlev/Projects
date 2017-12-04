@@ -1,0 +1,26 @@
+<entity version="1.5">
+  <header title="aspnet_Users" />
+  <description title="" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <datasource type="DB" name="aspnet_Users" />
+  <primarykey>UserId</primarykey>
+  <fields>
+    <field name="ApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="ApplicationId" description="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="" />
+    </field>
+    <field name="UserId" type="Text" format="text" dbtype="Guid" size="" title="UserId" description="" required="true" readonly="false" uimask="00111" />
+    <field name="UserName" type="Text" format="text" dbtype="String" size="256" title="UserName" description="" required="true" readonly="false" uimask="00111" />
+    <field name="LoweredUserName" type="Text" format="text" dbtype="String" size="256" title="LoweredUserName" description="" required="true" readonly="false" uimask="00111" />
+    <field name="MobileAlias" type="Text" format="text" dbtype="String" size="16" title="MobileAlias" description="" required="false" readonly="false" uimask="00111" />
+    <field name="IsAnonymous" type="Boolean" format="" dbtype="Boolean" size="" title="IsAnonymous" description="" required="true" readonly="false" uimask="00111" />
+    <field name="LastActivityDate" type="DateTime" format="date" dbtype="DateTime" size="" title="LastActivityDate" description="" required="true" readonly="false" uimask="00111" />
+    <field name="UserInRoles" type="Lookup" format="" dbtype="" size="255" title="UserInRoles" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Roles" view="default" />
+      <relation table="aspnet_UsersInRoles">
+        <column name="UserId" type="parentkey" />
+        <column name="RoleId" type="childkey" />
+      </relation>
+    </field>
+    <field name="ProviderId" type="Text" format="" dbtype="Guid" size="" title="Provider Id" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

@@ -1,0 +1,18 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_WF_PROCESS_Instances" />
+  <primarykey>InstanceId</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field name="InstanceId" type="Text" format="" dbtype="Guid" size="" title="Instance Id" description="" required="true" readonly="false" uimask="001111" />
+    <field name="WorkflowContext" type="Text" format="textarea" dbtype="String" size="2147483647" title="Workflow Context" description="" required="true" readonly="false" uimask="00111" />
+    <field name="PresentationState" type="Text" format="textarea" dbtype="String" size="2147483647" title="Presentation State" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StateInfo" type="Text" format="" dbtype="String" size="100" title="State Info" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedOn" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Created On" description="" required="true" readonly="false" uimask="00111" />
+    <field name="WorkflowName" type="Text" format="" dbtype="String" size="50" title="Workflow Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="Version" type="Integer" format="" dbtype="Int32" size="" title="Version" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StateName" type="Text" format="" dbtype="String" size="50" title="State Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StateTitle" type="Text" format="" dbtype="String" size="200" title="State Title" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

@@ -1,0 +1,18 @@
+<DbService>
+  <Query>
+    select case 
+      when exists(select id 
+				from CIMS_Admission 
+				where TeamId=@TeamId 
+				and Year=@Year 
+				and id != @id) 
+      then 1
+      else 0
+    end as r
+  </Query>
+  <Assign>
+    <Field name="id" value="INPUT" />
+    <Field name="TeamId" value="INPUT" />
+    <Field name="Year" value="INPUT" />
+  </Assign>
+</DbService>

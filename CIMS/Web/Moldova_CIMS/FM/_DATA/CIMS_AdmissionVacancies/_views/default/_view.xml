@@ -1,0 +1,17 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Specialty" title="Specialty" />
+    <cell name="TypeOfFinancing" title="Financing" width="102" />
+    <cell name="AdmissionCategory" title="Admission Category" width="145" />
+    <cell name="LocalityCategory" title="Locality Category" width="150" />
+    <cell name="NrOfVacancies" title="Nr Of Vacancies" width="107" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Specialty" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

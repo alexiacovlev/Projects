@@ -1,0 +1,15 @@
+<view select="true" preview="false" check="false" icon="true">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="FullName" title="Full Name" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

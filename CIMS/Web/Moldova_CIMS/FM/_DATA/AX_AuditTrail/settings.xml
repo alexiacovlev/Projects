@@ -1,0 +1,24 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_AuditTrail" />
+  <primarykey>atID</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="atID" type="Text" format="" dbtype="Guid" size="" title="ID" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="Application" description="" required="true" readonly="true" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="atUserId" type="Lookup" format="" dbtype="Guid" size="" title="User" description="" required="true" readonly="true" uimask="00111">
+      <extract table="aspnet_Users" view="default" />
+    </field>
+    <field name="atDateCreated" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Created At" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atIP" type="Text" format="" dbtype="String" size="50" title="IP" description="" required="false" readonly="false" uimask="00111" />
+    <field name="atKeyValue" type="Text" format="" dbtype="String" size="50" title="KeyValue" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atTable" type="Text" format="" dbtype="String" size="255" title="Table" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atObject" type="Text" format="" dbtype="String" size="255" title="Context" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atURL" type="Text" format="url" dbtype="StringUnicode" size="1000" title="URL" description="" required="false" readonly="false" uimask="00111" />
+    <field name="atAction" type="Picklist" format="" dbtype="Int16" size="" title="Action" description="" required="true" readonly="true" uimask="00111" />
+    <field name="atInfo" type="Html" format="" dbtype="String" size="1073741823" title="Info" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

@@ -1,0 +1,9 @@
+<info>
+  <description>Send notification email when user reached max wrong attempts to log in in the system</description>
+  <more>Available Variables:
+[# FullName #] - User Full Name
+[# UserName #] - User Account Name
+[# Email #] - User contact's email
+[# IP #] - Request IP
+[# URL #] - Quick url to view user profile.</more>
+</info>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Cabinet" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Profile" name="Profile" image="folder.png" ico="f2c3" control="">
+      <Folders>
+        <Folder title="Details" name="Details" image="folder.png" ico="a0c2" control="WORKFLOW">
+          <Folders />
+        </Folder>
+        <Folder title="Employment" name="Employment" image="folder.png" ico="a0c2" control="WORKFLOW">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Timetable" name="Timetable" image="folder.png" ico="e816" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Notifications" name="Notifications" image="folder.png" ico="e81b" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Login History" name="Login_History" image="folder.png" ico="e813" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

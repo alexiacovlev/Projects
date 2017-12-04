@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Send E-mail" decoration="line" columns="2" name="sec53" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Name" title="Portal Name">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="CopyToCC" title="Send All Incident">
+                <properties oncreatevalue="0" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="CCopyTo_FullName" title="Copy To, Full Name" />
+              <cell />
+            </row>
+            <row>
+              <cell name="CCopyToEmail" title="Copy To, Email" />
+              <cell />
+            </row>
+            <row>
+              <cell name="CopyToCC_Update" title="Copy To, Update">
+                <properties oncreatevalue="0" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="ClientURL" title="Client URL" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Sync all Incident to External BugTrack server" decoration="line" columns="2" name="sec2933" showlabel="true">
+          <rows>
+            <row>
+              <cell name="SendToServer" title="Send To Server?">
+                <properties oncreatevalue="0" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="ServerURL" title="Server URL" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application Id">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

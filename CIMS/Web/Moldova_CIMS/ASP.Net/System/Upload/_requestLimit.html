@@ -1,0 +1,26 @@
+﻿1.Maximum request length exceeded.
+
+If you post large data to a web service or a aspx file using a form you may get this error message:
+
+System.Web.HttpException: Maximum request length exceeded.
+   at System.Web.HttpRequest.GetEntireRawContent()
+   at System.Web.HttpRequest.get_InputStream()
+   at com...ProcessRequest(HttpContext context)
+
+The problem is that .NET limits the maximum data sent in each request to 4MB by default. The size can be changed to any value you want in machine.config or in web.config by configuring the httpRuntime maxRequestLength:
+
+<div class=cf>
+<!--
+httpRuntime Attributes:
+    maxRequestLength="[KBytes]" - KBytes size of maximum request length to accept
+-->
+<httpRuntime 
+      maxRequestLength="4096"
+/>
+</div>
+
+
+2.
+
+
+http://www.iis.net/ConfigReference/system.webServer/security/requestFiltering/requestLimits

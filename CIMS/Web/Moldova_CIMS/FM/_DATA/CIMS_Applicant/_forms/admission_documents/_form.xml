@@ -1,0 +1,118 @@
+<form labelwidth="240">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="Documents" name="tab4">
+      <sections>
+        <section title="Documents" name="sec4504" showlabel="false" decoration="line" columns="3" marginTop="50">
+          <rows>
+            <row>
+              <cell title="Application" name="DocApplication" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Certificate Of Studies" name="DocStudiesCertificate" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Medical Certificate" name="DocMedicalCertificate" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Copy Of Certificate Of Birth" name="DocCopyOfBirthCertificate" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Copy Of Personal ID" name="DocCopyOfPersonalID" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="6 Color Photo (3x4 cm)" name="DocPhoto" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Copy Of Personal ID Of One Parent" name="DocCopyOfPersonalIDParent" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Certificate Of Family Components" name="DocFamilyComponentsCertificate" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Copy Of Recruiting Certificate" name="DocCopyOfRecrutingCertificate" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Other" name="DocOther" colspan="2" rowspan="3" />
+              <cell />
+            </row>
+            <row>
+              <cell />
+            </row>
+            <row>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec156" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell name="control_38">
+                <content>&lt;control type="BUTTON" style="width:300px;"&gt;
+ &lt;set name="Text" value="Descarca documentul" /&gt;
+ &lt;set name="Command" value="URL" /&gt;
+ &lt;set name="Attributes" value="t=CIMS_Applicant,template=recipisa,id=[KeyValue],RefObjectID=[KeyValue]" /&gt;
+ &lt;set name="Value" value="/ASP.Net/FM/DataViewer/Print/WordReportDownloader.aspx" /&gt;
+ &lt;set name="WindowParameters" value="500,250" /&gt;
+ &lt;set name="WindowTitle" value="Download document dialog" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

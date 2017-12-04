@@ -1,0 +1,9 @@
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\bin\Debug\Moldova_CIMS.DB.dacpac
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\bin\Debug\Moldova_CIMS.DB.dll
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\bin\Debug\Moldova_CIMS.DB.pdb
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\Model.xml
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\refactor.xml
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\postdeploy.sql
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\predeploy.sql
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\Moldova_CIMS.DB.dll
+E:\Workspaces\AlfaSoftProjects\CIMS\DB\Moldova_CIMS.DB\obj\Debug\Moldova_CIMS.DB.pdb

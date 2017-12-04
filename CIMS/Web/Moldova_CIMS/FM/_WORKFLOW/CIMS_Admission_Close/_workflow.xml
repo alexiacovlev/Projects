@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Admission_Close" version="2.0" created="2017-11-10T14:40:07" modified="2017-11-22T14:04:06" author="Admin Admin" trace="false" forceRefresh="true" title="">
+  <Sequence>
+    <XmlIsland name="DATA656" title="Select">
+      <Settings table="CIMS_Admission" />
+      <FieldSet>
+        <Field name="Status" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <Switch>
+      <Case test="DATA656:Status = '1'" details="Active;">
+        <Sequence>
+          <Invoke name="Control470" title="Attention" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Click on Next to close selected admission process &lt;br /&gt; or click on Close if you do not want to do it.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+          <ExecStoredProcedure name="SP574" title="SP">
+            <Settings method="prc_CIMS_AdmissionStatus_Change" />
+            <Assign>
+              <Field name="id" value="INPUT:id" />
+              <Field name="Status" value="'2'" />
+            </Assign>
+          </ExecStoredProcedure>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="Control47" title="Attention" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Selected admission process is closed already.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="false" />
+  </Handlers>
+</Workflow>

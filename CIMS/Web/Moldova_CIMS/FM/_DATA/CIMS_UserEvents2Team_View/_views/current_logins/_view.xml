@@ -1,0 +1,21 @@
+<view select="true" check="false" icon="false" preview="false" expandMode="Off">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Event Time" name="EventTime" width="125" />
+    <cell title="Activity Type" name="TypeName" width="150" />
+    <cell title="Details" name="Message" />
+    <cell title="User IP Address" name="IPAddress" width="110" align="center" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="false" />
+    </sort>
+    <filter>
+      <condition value="" attribute="UserId" operator="eq-userid" />
+      <condition value="101" attribute="TypeId" operator="eq" />
+      <condition value="103" attribute="TypeId" operator="eq" />
+      <condition value="104" attribute="TypeId" operator="eq" />
+    </filter>
+  </fetch>
+</view>

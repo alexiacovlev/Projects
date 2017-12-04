@@ -1,0 +1,18 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="HourNr" title="Hour Nr" width="77" align="center" />
+    <cell name="StartTimeF" title="Start Time" width="100" />
+    <cell name="EndTimeF" title="End Time" width="100" />
+    <cell name="Comments" title="Comments" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="HourNr" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

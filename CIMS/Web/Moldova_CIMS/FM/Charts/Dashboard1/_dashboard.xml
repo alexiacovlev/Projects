@@ -1,0 +1,18 @@
+<dashboard>
+<row height="10%">
+    <panel name="Value_Capacity"  />
+    <panel name="Value_Activity" />
+    <panel name="Value_Incidents" />
+    <panel name="Value_Errors" />
+    <panel name="Value_Bills" />
+  </row>
+  <row height="35%">
+    <panel name="Incidents" columns="3" />
+    <panel name="CRM_Contracts" columns="3" />
+  </row>
+  <row height="40%">
+    <panel name="MyStats" />
+    <panel name="UserEvents" columns="2" />
+    <panel name="AppRoles" columns="2" />
+  </row>
+</dashboard>

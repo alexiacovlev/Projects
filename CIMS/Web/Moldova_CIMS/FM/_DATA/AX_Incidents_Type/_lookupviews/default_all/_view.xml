@@ -1,0 +1,13 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id">
+    <cell name="Type" title="Type" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="Type" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

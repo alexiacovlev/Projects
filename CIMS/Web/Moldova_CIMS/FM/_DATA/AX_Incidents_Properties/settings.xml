@@ -1,0 +1,31 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Incidents_Properties" />
+  <primarykey>id</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="id" type="Text" format="" dbtype="Guid" size="" title="id" description="" required="true" readonly="false" uimask="00001" />
+    <field name="Name" type="Text" format="" dbtype="String" size="50" title="Name" description="" required="false" readonly="false" uimask="00111" />
+    <field name="CopyToCC" type="Picklist" format="" dbtype="Int32" size="" title="Sen  All Incident to?" description="" required="false" readonly="false" uimask="00111" />
+    <field name="CCopyToEmail" type="Text" format="" dbtype="String" size="100" title="CCopy To Email" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CCopyTo_FullName" type="Text" format="" dbtype="String" size="100" title="CCopy To_Full Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="SendToServer" type="Picklist" format="" dbtype="Int32" size="" title="Send To Server" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ServerURL" type="Text" format="" dbtype="String" size="150" title="Server URL" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedIP" type="Text" format="" dbtype="String" size="20" title="Modified IP" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Modified On" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedBy" type="Lookup" format="" dbtype="Guid" size="" title="Modified By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedOn" type="DateTime" format="" dbtype="DateTime" size="" title="Created On" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedBy" type="Lookup" format="" dbtype="Guid" size="" title="Created By" description="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" format="" dbtype="String" size="20" title="Created IP" description="" required="false" readonly="false" uimask="001111" />
+    <field name="ApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="Application Id" description="" required="true" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="CopyToCC_Update" type="Picklist" format="" dbtype="Int32" size="" title="Copy To, Update" description="" required="false" readonly="false" uimask="00111" />
+    <field name="ClientURL" type="Text" format="" dbtype="String" size="150" title="Client URL" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

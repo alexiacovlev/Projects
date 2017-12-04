@@ -1,0 +1,54 @@
+﻿html, form, label, p, a, ul, ol, li
+{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-size:10pt; font-family:Verdana;
+}
+
+table, td {
+  font-size:10pt; font-family:Verdana;
+}
+
+
+.redText
+{
+        color: Red;
+        font-size: 12px;
+
+}
+.table
+{
+        border: dashed 1px gray;
+        font-size: 14px;
+
+}
+.div
+{
+        background-color: Green;
+        color: Yellow;
+        font-weight: bold;
+}
+.image
+{
+        margin: 1px 1px 1px 1px;
+        border: solid 1px blue;
+}
+.listSquare
+{
+        list-style-type: square;
+        color: blue;
+}
+.titleText
+{
+        font-family: segoe ui;
+        background-color: #689a05;
+        color: #ffffff;
+        text-align: center;
+}
+
+
+
+

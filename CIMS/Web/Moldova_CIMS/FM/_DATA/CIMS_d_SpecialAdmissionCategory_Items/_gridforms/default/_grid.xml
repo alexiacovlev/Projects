@@ -1,0 +1,8 @@
+<view>
+  <row>
+    <cell name="Title" title="Title" />
+  </row>
+  <header title="" />
+  <description title="" />
+  <autoNewRow>off</autoNewRow>
+</view>

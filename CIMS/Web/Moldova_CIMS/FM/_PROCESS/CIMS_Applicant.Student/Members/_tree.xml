@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Student" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Personal Details" name="Personal_Details" image="folder.png" ico="a0c2" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Additional Information" name="Additional_Information" image="folder.png" ico="a0c2" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Payments" name="Payments" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Study Plan" name="Study_Plan" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Timetable" name="Timetable" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Attendance" name="Attendance" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Practice" name="Practice" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Examination" name="Examination" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Baccalaureate Exams" name="Baccalaureate_Exams" image="folder.png" ico="a0c2" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Attachments" name="Attachments" image="folder.png" ico="a0c2" control="GRID" dependonkey="true">
+      <Folders />
+    </Folder>
+    <Folder title="Admission info" name="Admission_info" image="folder.png" ico="a0c2" control="">
+      <Folders>
+        <Folder title="Admission Details" name="Admission_Details" image="folder.png" ico="a0c2" control="FORM">
+          <Folders />
+        </Folder>
+        <Folder title="Graduated From" name="Graduated_From" image="folder.png" ico="a0c2" control="FORM">
+          <Folders />
+        </Folder>
+        <Folder title="Marks" name="Marks" image="folder.png" ico="a0c2" control="FORM">
+          <Folders />
+        </Folder>
+        <Folder title="Documents" name="Documents" image="folder.png" ico="a0c2" control="FORM">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+  <WindowMask table="CIMS_Applicant">Student: #FirstName# #LastName#</WindowMask>
+</Tree>

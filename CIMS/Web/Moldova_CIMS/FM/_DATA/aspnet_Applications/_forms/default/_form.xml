@@ -1,0 +1,24 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell name="ApplicationId" title="ApplicationId" />
+              <cell name="ApplicationName" title="ApplicationName" />
+            </row>
+            <row>
+              <cell name="Description" title="Description" />
+              <cell name="LoweredApplicationName" title="LoweredApplicationName" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

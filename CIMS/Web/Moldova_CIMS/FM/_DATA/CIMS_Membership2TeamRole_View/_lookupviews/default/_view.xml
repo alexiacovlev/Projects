@@ -1,0 +1,18 @@
+<view select="true" check="false" preview="false" icon="true">
+  <header title="" />
+  <description title="" />
+  <row keyfield="UserId">
+    <cell title="FullName" name="FullName" />
+    <cell title="Email" name="Email" width="200" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="FullName" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+  <handlers>
+    <property enabled="true">FORM:default/READONLY</property>
+    <create enabled="true">FORM:create</create>
+  </handlers>
+</view>

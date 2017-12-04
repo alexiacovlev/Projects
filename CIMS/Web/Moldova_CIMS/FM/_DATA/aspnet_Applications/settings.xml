@@ -1,0 +1,13 @@
+<entity version="1.5">
+  <header title="aspnet_Applications" />
+  <description title="Description ASPNET application Table" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <datasource type="DB" name="aspnet_Applications" />
+  <primarykey>ApplicationId</primarykey>
+  <fields>
+    <field name="ApplicationName" type="Text" format="" dbtype="StringUnicode" size="256" title="ApplicationName" description="" required="true" readonly="false" uimask="00111" />
+    <field name="LoweredApplicationName" type="Text" format="" dbtype="StringUnicode" size="256" title="LoweredApplicationName" description="" required="true" readonly="false" uimask="00111" />
+    <field name="ApplicationId" type="Text" format="" dbtype="Guid" size="" title="ApplicationId" description="" required="true" readonly="true" uimask="00111" />
+    <field name="Description" type="Text" format="textarea" dbtype="StringUnicode" size="256" title="Description" description="" required="false" readonly="false" uimask="00111" />
+  </fields>
+</entity>

@@ -1,0 +1,15 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="StartTime" title="Start Time" width="100" />
+    <cell name="Status" title="Status" width="80" />
+    <cell name="RegardingID" title="Regarding" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="StartTime" ascending="false" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

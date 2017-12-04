@@ -1,0 +1,11 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2013-10-21T14:48:09">
+  <set name="TableName" value="AX_Incidents" />
+  <set name="ViewName" value="Incident_Resolved" />
+  <set name="OpenForm" value="Incident_Info" />
+  <set name="HandlerParameters" value="850,550" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;  &lt;item title=&quot;Report&quot; image=&quot;16_print.png&quot; command=&quot;URL&quot; value=&quot;ASP.Net/FM/DataViewer/Print/DocumentReportDownloader.aspx&quot; attributes=&quot;t,viewName=Incident_Open,template=ReportWithImages&quot; pos=&quot;out&quot; width=&quot;500&quot; height=&quot;240&quot; full=&quot;false&quot; showoutlabel=&quot;true&quot; /&gt;&lt;/menu&gt;" />
+  <set name="CreateForm" value="Incident_Create" />
+  <set name="OnRecordOpen" value="OpenAsReadonly" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

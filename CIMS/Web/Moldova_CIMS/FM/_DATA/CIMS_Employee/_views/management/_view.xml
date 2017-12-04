@@ -1,0 +1,20 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="FullName" title="Full Name" />
+    <cell name="EmployedFrom" title="Employed From" width="125" />
+    <cell name="QuitOn" title="Quit On" width="125" />
+    <cell name="Gender" title="Gender" width="125" />
+    <cell name="Status" title="Status" width="150" />
+    <cell name="TeamId" title="College" width="150" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedIP" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

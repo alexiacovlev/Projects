@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form padding="big">
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Title" name="Title" colspan="2" />
+            </row>
+            <row>
+              <cell title="Start Time" name="StartTime" />
+              <cell title="End Time" name="EndTime" />
+            </row>
+            <row>
+              <cell title="All Day" name="AllDay" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Application Id" name="ApplicationId">
+                <properties oncreatevalue="~APPLICATIONID" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Repeat Mode" name="RepeatMode">
+      <properties oncreatevalue="0" />
+    </cell>
+    <cell title="Repeat Period" name="RepeatPeriod" />
+  </hidden>
+</form>

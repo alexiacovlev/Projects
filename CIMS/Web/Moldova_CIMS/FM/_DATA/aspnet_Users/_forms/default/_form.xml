@@ -1,0 +1,38 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" showlabel="true" columns="2" decoration="line">
+          <rows>
+            <row>
+              <cell name="LoweredUserName" title="LoweredUserName">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="UserId" title="UserId">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="UserName" title="UserName">
+                <properties readonly="true" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell name="ApplicationId" title="ApplicationId" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

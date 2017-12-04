@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-02T15:38:48">
+  <set name="TableName" value="CIMS_Attachments" />
+  <set name="ViewName" value="default" />
+  <set name="InputFilterField" value="ParentId=$id" />
+</mapNode>

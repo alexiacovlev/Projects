@@ -1,0 +1,6 @@
+<mapNode content="AX.ChartDashboard,AX.ChartDashboard.ChartControl" type="SERVERCONTROL" modifiedon="2017-07-12T20:10:37" modifiedby="Michael ">
+  <set name="TableName" value="AX_EventLog" />
+  <set name="GroupBy" value="EventDetailCode" />
+  <set name="Type" value="PIE" />
+  <set name="Header" value="" />
+</mapNode>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Admission Order" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="f1ea" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Enrolled" name="Enrolled" image="folder.png" ico="e8a8" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+    <Folder title="Print Order" name="Print_Order" image="folder.png" ico="b03b" control="WORKFLOW">
+      <Folders />
+    </Folder>
+    <Folder title="Attachments" name="Attachments" image="folder.png" ico="b031" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+  <WindowMask table="CIMS_AdmissionOrders">Order: #OrderNr#, #Specialty#</WindowMask>
+</Tree>

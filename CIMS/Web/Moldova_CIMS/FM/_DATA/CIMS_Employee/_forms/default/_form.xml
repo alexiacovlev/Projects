@@ -1,0 +1,148 @@
+<form>
+  <header title="Employee" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Personal Details" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="College" name="TeamId" colspan="2">
+                <properties requiredlevel="required" readonly="true" oncreatevalue="~TEAM" />
+              </cell>
+              <cell title="Status" name="Status">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="First Name" name="FirstName">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Middle Name" name="MiddleName" />
+              <cell title="Last Name" name="LastName">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row>
+              <cell title="IDNP" name="IDNP" />
+              <cell title="Birthdate" name="Birthdate" />
+              <cell title="Gender" name="Gender" />
+            </row>
+          </rows>
+        </section>
+        <section title="Professional Details" name="sec1288" decoration="line" columns="3" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Education" name="Education" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Didactic Degree" name="DidacticDegree" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Has Pedagogical Studies" name="HasPedagogicalStudies" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Didactic Experience Years" name="DidacticExperienceYears" />
+              <cell />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1195" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="Full Name" name="FullName" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Employment" name="tab2">
+      <sections>
+        <section title="Section 1" name="sec2532" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Position" name="Position" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Employment Type" name="EmploymentType" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Contract Duration" name="ContractDuration" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Hours Per Week" name="HoursPerWeek" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Employed From" name="EmployedFrom" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Quit On" name="QuitOn" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+    <tab title="Subjects" name="tab4">
+      <sections>
+        <section title="Section 1" name="sec4298" decoration="line" columns="2" showlabel="false">
+          <rows>
+            <row>
+              <cell name="control_774" colspan="2">
+                <content>&lt;control type="GRID" height="290"&gt;
+ &lt;set name="TableName" value="CIMS_Employee2Subjects" /&gt;
+ &lt;set name="ViewName" value="default" /&gt;
+ &lt;set name="OpenForm" value="FORM:default" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="true" /&gt;
+ &lt;set name="AllowDelete" value="true" /&gt;
+ &lt;set name="HandlerParameters" value="800,500" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Employee=[KeyValue]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Employee: #FullName#</windowMask>
+</form>

@@ -1,0 +1,18 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="OrderNr" title="Order Nr" width="159" />
+    <cell name="OrderDate" title="Order Date" width="125" />
+    <cell name="Specialty" title="Specialty" />
+    <cell name="AdmissionChairman" title="Admission Chairman" width="261" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="OrderNr" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+</view>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Incident_Open" trace="true" version="2.0" created="0001-01-01T10:00:00+02:00" modified="2006-02-15T18:59:32.27572+02:00">
+  <Sequence>
+    <XmlIsland name="Incident" title="Incident Info">
+      <Settings table="AX_Incidents" />
+      <FieldSet>
+        <Field name="Subject" />
+        <Field name="AssignTo" />
+        <Field name="CreatedBy" />
+        <Field name="ModifiedBy" />
+        <Field name="RequestedBy" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <XmlIsland name="IncidentsProperties" title="Incicdent Settings">
+      <Settings table="AX_Incidents_Properties" form="" />
+      <FieldSet>
+        <Field name="CCopyTo_FullName" />
+        <Field name="CCopyToEmail" />
+        <Field name="CopyToCC" />
+        <Field name="SendToServer" />
+        <Field name="ServerURL" />
+        <Field name="ApplicationId" />
+        <Field name="ClientURL" />
+        <Field name="CopyToCC_Update" />
+        <Field name="Name" />
+      </FieldSet>
+      <Assign>
+        <Field name="ApplicationId" value="~APPLICATIONID" />
+      </Assign>
+    </XmlIsland>
+    <UpdateRecord name="UPDATE9952" title="Update Full User Name">
+      <Settings table="AX_Incidents" form="UpdateUserName" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="AddIncident:_KEYVALUE_" />
+        <Field name="AssignTo_FullName" value="Incident:AssignTo(vw_aspnet_MembershipUsers).FullName" />
+        <Field name="CreatedBy_FullName" value="Incident:CreatedBy(vw_aspnet_MembershipUsers).FullName" />
+        <Field name="ModifiedBy_FullName" value="Incident:ModifiedBy(vw_aspnet_MembershipUsers).FullName" />
+        <Field name="RequestedBy_FullName" value="Incident:RequestedBy(vw_aspnet_MembershipUsers).FullName" />
+        <Field name="ModifiedIP" value="~IP" />
+      </Assign>
+    </UpdateRecord>
+  </Sequence>
+  <Input />
+  <Output />
+  <Variables />
+  <Handlers>
+    <Roundtrip enabled="false" />
+    <Previous title="Previous Step" enabled="false" />
+    <Next title="Save and Close" enabled="true" />
+    <Update title="Update" enabled="false" />
+    <Close title="Close" enabled="true" />
+  </Handlers>
+</Workflow>

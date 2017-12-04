@@ -1,0 +1,22 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="WorkspaceUrl" title="Workspace Url" />
+    <cell name="StartTime" title="Start Time" width="100" />
+    <cell name="Status" title="Status" width="100" />
+    <cell name="EventDateTime" title="Event Date Time" width="100" />
+    <cell name="RegardingID" title="Regarding ID" width="100" />
+    <cell name="RegardingText" title="Regarding Text" width="100" />
+    <cell name="RegardingType" title="Regarding Type" width="100" />
+    <cell name="StartedBy" title="Started By" width="100" />
+    <cell name="TableName" title="Table Name" width="100" />
+    <cell name="WorkflowName" title="Workflow Name" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="StartTime" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

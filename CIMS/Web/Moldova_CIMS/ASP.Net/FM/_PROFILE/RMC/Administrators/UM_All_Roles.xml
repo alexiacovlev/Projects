@@ -1,0 +1,8 @@
+<mapNode xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="GRID" visible="false" modifiedby="Michael " modifiedon="2012-06-06T14:50:50">
+  <set name="TableName" value="aspnet_Roles" />
+  <set name="OpenForm" value="Default1" />
+  <set name="CreateForm" value="Default1" />
+  <set name="OnRecordOpen" />
+  <set name="CreateParameters" value="400,300,false" />
+  <set name="HandlerParameters" value="400,300,false" />
+</mapNode>

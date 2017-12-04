@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_EnrolledToGroup" version="2.0" created="2017-11-07T16:29:16" modified="2017-11-08T14:02:03" author="Admin Admin" trace="false" forceRefresh="true" title="">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_Applicant" form="short" readonly="true" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <Invoke name="FORM76" title="" control="Form">
+      <Settings table="CIMS_DUMMY" form="enrolled2student" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <Switch>
+      <Case test="FORM76:YesNo = '1'" details="Yes;">
+        <Sequence>
+          <UpdateRecord name="Update840" title="Modify">
+            <Settings table="CIMS_Applicant" form="default" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="INPUT:id" />
+              <Field name="PersonStatus" value="'4'" text="Student" />
+              <Field name="GroupId" value="INPUT:pid" />
+            </Assign>
+          </UpdateRecord>
+          <UpdateRecord name="Update841" title="Modify">
+            <Settings table="CIMS_Student" form="default" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="INPUT:id" />
+              <Field name="PersonStatus" value="'4'" text="Student" />
+              <Field name="GroupId" value="INPUT:pid" />
+            </Assign>
+          </UpdateRecord>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence />
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="true" />
+    <Update enabled="false" title="" />
+  </Handlers>
+</Workflow>

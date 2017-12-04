@@ -1,0 +1,13 @@
+<view iconurl="ico.gif" icon="true" select="true" preview="false">
+  <header title="" />
+  <row keyfield="ApplicationId">
+    <cell name="ApplicationName" title="Name" />
+    <cell name="Description" title="Description" width="100" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="ApplicationName" ascending="true" />
+    </sort>
+  </fetch>
+</view>

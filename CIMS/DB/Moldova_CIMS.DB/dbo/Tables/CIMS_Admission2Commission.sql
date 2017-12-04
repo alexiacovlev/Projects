@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[CIMS_Admission2Commission] (
+    [ParentID] UNIQUEIDENTIFIER NOT NULL,
+    [ObjectID] UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_CIMS_Admission2Commission] PRIMARY KEY CLUSTERED ([ParentID] ASC, [ObjectID] ASC)
+);
+

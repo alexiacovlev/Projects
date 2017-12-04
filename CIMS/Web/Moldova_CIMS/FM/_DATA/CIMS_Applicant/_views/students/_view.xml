@@ -1,0 +1,25 @@
+<view check="false" icon="false" mode="Grouping">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="Specialty" title="Specialty" />
+    <cell name="GroupId" title="Group" width="100" />
+    <cell name="FirstName" title="First Name" width="150" />
+    <cell name="LastName" title="Last Name" width="150" />
+    <cell name="ApplicationNr" title="Application Nr" width="174" />
+    <cell name="ApplicationDate" title="Application Date" width="150" />
+    <cell name="AdmissionOrder" title="Admission Order" width="131" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="GroupId" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+      <condition attribute="PersonStatus" operator="eq" value="4" />
+    </filter>
+    <groups>
+      <group name="Specialty" ascending="true" title="" mode="" />
+    </groups>
+  </fetch>
+</view>

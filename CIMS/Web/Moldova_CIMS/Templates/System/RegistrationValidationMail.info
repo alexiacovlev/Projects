@@ -1,0 +1,10 @@
+<info>
+  <description>This email is using to notify new user after registration completed.</description>
+  <more>Available Variables:
+[# FullName #] - User Full Name
+[# UserName #] - User Account Name
+[# Password #] - Password
+[# Ticket #] - Validation ticket
+[# URL #] - Web Site Url
+</more>
+</info>

@@ -1,0 +1,14 @@
+<entity version="1.5">
+  <header title="" />
+  <description title="" />
+  <datasource type="Provider" name="AX.FM.Explorer,AX.FM.Explorer.ProcessBilder.Providers.CompletedInstanceListProvider" />
+  <primarykey>InstanceId</primarykey>
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="InstanceId" type="Text" format="" dbtype="Guid" size="" title="Instance Id" description="" required="true" readonly="false" uimask="001111" />
+    <field name="WorkflowName" type="Text" format="" dbtype="String" size="50" title="Workflow Name" description="" required="false" readonly="false" uimask="001111" />
+    <field name="StateTitle" type="Text" format="" dbtype="String" size="400" title="State Title" description="" required="false" readonly="false" uimask="001111" />
+    <field name="CompletedOn" type="DateTime" format="datetime" dbtype="DateTime" size="" title="Completed On" description="" required="true" readonly="false" uimask="00111" />
+    <field name="Message" type="Text" format="" dbtype="String" size="400" title="Message" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

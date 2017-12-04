@@ -1,0 +1,51 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Section 2" name="sec1644" decoration="line" columns="3" showlabel="false" marginTop="100">
+          <rows>
+            <row>
+              <cell />
+              <cell name="control_476">
+                <content>&lt;control type="BUTTON" style="width:300px;"&gt;
+ &lt;set name="Text" value="Descarca documentul" /&gt;
+ &lt;set name="Command" value="URL" /&gt;
+ &lt;set name="Attributes" value="t=[tmpTableName],template=[tmpTemplateName],id=[tmpRecordID],RefObjectID=[tmpRefObjectID]" /&gt;
+ &lt;set name="Value" value="/ASP.Net/FM/DataViewer/Print/WordReportDownloader.aspx" /&gt;
+ &lt;set name="WindowParameters" value="500,250" /&gt;
+ &lt;set name="WindowTitle" value="Download document dialog" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2" visible="false">
+          <rows>
+            <row>
+              <cell title="tmpRefObjectID" name="tmpRefObjectID" />
+              <cell />
+            </row>
+            <row>
+              <cell title="tmpRecordID" name="tmpRecordID" />
+              <cell />
+            </row>
+            <row>
+              <cell title="tmpTableName" name="tmpTableName" />
+              <cell />
+            </row>
+            <row>
+              <cell title="tmpTemplateName" name="tmpTemplateName" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

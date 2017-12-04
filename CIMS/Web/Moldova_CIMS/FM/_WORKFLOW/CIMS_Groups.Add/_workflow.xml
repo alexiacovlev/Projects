@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Groups.Add" version="2.0" created="2017-11-07T15:02:04" modified="2017-11-07T15:07:50" author="Admin Admin">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_DUMMY" form="admission1" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <Invoke name="FORM832" title="" control="Form">
+      <Settings table="CIMS_Groups" form="default" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+        <Field name="Admission" value="FORM1:AdmissionActive" />
+        <Field name="Specialty" value="FORM1:SpecialtyByAdmission" />
+        <Field name="TeamId" value="~TEAM" />
+        <Field name="GroupStatus" value="'1'" text="Under formation" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+</Workflow>

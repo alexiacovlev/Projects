@@ -1,0 +1,30 @@
+<view select="true" check="false" expandMode="Off" icon="true" preview="true">
+  <header title="" />
+  <description title="" />
+  <row imagetype="MembershipUser" keyfield="UserId">
+    <cell title="FullName" name="FullName" />
+    <cell title="Login" name="UserId" width="150" />
+    <cell title="Email" name="Email" width="200" />
+    <cell title="Status" name="IsApproved" width="100" />
+    <cell title="" name="IsLockedOut" width="100" />
+    <cell title="Registered On" name="CreateDate" width="125" />
+    <cell title="Last Logined On" name="LastLoginDate" width="150" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="FullName" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="TeamId" operator="eq-teams" value="" />
+    </filter>
+  </fetch>
+  <rowstyle>
+    <style value="font-style:italic;color:#b90000;">
+      <condition value="" operator="eq-true" attribute="IsLockedOut" />
+    </style>
+    <style value="color:#b90000;">
+      <condition value="" operator="eq-false" attribute="IsApproved" />
+    </style>
+  </rowstyle>
+</view>

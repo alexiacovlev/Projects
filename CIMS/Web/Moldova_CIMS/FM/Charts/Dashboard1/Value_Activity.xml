@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart title="" type="custom:value" allowClick="true" interval="5">
+  <counter title="Clients" ico="e81f:#1693bc" value="23 654">
+    <dataview table="AX_UserEvents" view="today" />
+  </counter>
+</chart>

@@ -1,0 +1,21 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="InstanceId">
+    <cell name="WorkflowName" title="Workflow Name" />
+    <cell name="LastStateTitle" title="Final State" width="150" />
+    <cell name="StartedOn" title="Started On" width="100" />
+    <cell name="CompletedOn" title="Completed On" width="100" />
+    <cell name="Version" title="Ver" width="50" align="center" />
+    <cell name="Message" title="Message" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CompletedOn" ascending="false" />
+    </sort>
+    <filter />
+    <groups>
+      <group name="WorkflowName" ascending="false" />
+    </groups>
+  </fetch>
+</view>

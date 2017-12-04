@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form labelwidth="140">
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Personal" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="FirstName" title="First Name" />
+              <cell name="AddressLine1" title="Address Line 1" />
+            </row>
+            <row>
+              <cell name="LastName" title="Last Name" />
+              <cell name="AddressLine2" title="Address Line 2" />
+            </row>
+            <row>
+              <cell name="Email" title="Email" />
+              <cell name="City" title="City" />
+            </row>
+            <row>
+              <cell name="Comment" title="Comment" />
+              <cell name="CountryName" title="Country" />
+            </row>
+            <row>
+              <cell />
+              <cell name="ZipCode" title="Zip Code" />
+            </row>
+            <row>
+              <cell name="CreateDate" title="Create Date" />
+              <cell />
+            </row>
+            <row>
+              <cell name="LastLoginDate" title="Last Login Date" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Security" decoration="line" columns="2" marginTop="20" name="sec1621" showlabel="true">
+          <rows>
+            <row>
+              <cell name="UserInRoles" title="UserInRoles" />
+              <cell name="IsLockedOut" title="IsLockedOut">
+                <properties oncreatevalue="0" onupdatevalue="0" />
+              </cell>
+            </row>
+            <row>
+              <cell name="UserInTeams" title="Team" rowspan="2">
+                <properties handlermode="off" />
+              </cell>
+              <cell name="IsApproved" title="Is Approved" />
+            </row>
+            <row>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="ApplicationId" title="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

@@ -1,0 +1,17 @@
+<view select="true" preview="false" icon="true" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id" recordtypefield="IncidentTypeId" imagetype="IncidentType">
+    <cell name="Subject" title="Subject" />
+    <cell name="IncidentStatusId" title="Status" width="100" />
+    <cell name="IncidentTypeId" title="Type" width="100" />
+    <cell name="PriorityCodeId" title="Priority" width="100" />
+    <cell name="CreatedOn" title="Created On" width="100" />
+    <cell name="CreatedBy" title="Created By" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+  </fetch>
+</view>

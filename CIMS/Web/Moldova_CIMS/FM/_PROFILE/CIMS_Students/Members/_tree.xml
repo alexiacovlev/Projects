@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Students" name="" image="" navigator="false" width="330">
+  <Folders>
+    <Folder title="Students" name="All_Students" image="folder.png" ico="a0d0" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Lecturers" name="Lecturers" image="folder.png" ico="e8a8" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Groups" name="Groups" image="folder.png" ico="a0d3" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Subjects" name="Subjects" image="folder.png" ico="b036" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Reports" name="Reports" image="folder.png" ico="b020" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Medical insurance" name="Medical_insurance" image="folder.png" ico="a040" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Alumni" name="Alumni" image="folder.png" ico="e8aa" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Expelled" name="Expelled" image="folder.png" ico="f183" control="">
+      <Folders />
+    </Folder>
+  </Folders>
+</Tree>

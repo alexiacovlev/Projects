@@ -1,0 +1,21 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell title="Title" name="Title" />
+    <cell title="Is Published" name="IsPublished" width="90" align="center" />
+    <cell title="Published By" name="PublishedBy" width="150" />
+    <cell title="Published On" name="PublishedOn" width="80" align="center" />
+    <cell title="Ver" name="Version" width="50" align="center" />
+    <cell title="Category" name="Category" width="150" />
+  </row>
+  <!--rowstyle>
+    <style value="font-weight:bold">
+      <condition attribute="IsPublished" operator="eq-true" value="" />
+    </style>
+  </rowstyle-->
+  <fetch>
+    <sort>
+      <column name="IsPublished" ascending="false" />
+      <column name="PublishedOn" ascending="false" />
+    </sort>
+  </fetch>
+</view>

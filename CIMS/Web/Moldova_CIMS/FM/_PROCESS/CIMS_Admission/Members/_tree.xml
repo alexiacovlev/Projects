@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Admission Module" name="" image="" navigator="false" width="330">
+  <Folders>
+    <Folder title="Online Admission" name="Online_Admission" image="folder.png" ico="a092" control="WORKFLOW">
+      <Folders />
+    </Folder>
+    <Folder title="Admission" name="Admission_Procedure" image="folder.png" ico="e88c" control="">
+      <Folders>
+        <Folder title="Applicants" name="Admi" image="folder.png" ico="a0d0" control="GRID" autocount="">
+          <Folders />
+        </Folder>
+        <Folder title="Admission of candidates" name="Admission_of_candidates" image="folder.png" ico="e856" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Registration" name="Registration" image="folder.png" ico="a093" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Creating groups" name="Creating_groups" image="folder.png" ico="a0d3" control="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Admission Configuration" name="Admission_Configuration" image="folder.png" ico="a082" control="GRID">
+      <Folders />
+    </Folder>
+    <Folder title="Reports" name="Reports" image="folder.png" ico="b020" control="">
+      <Folders>
+        <Folder title="Daily Report" name="Daily_Report" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Admission Report" name="Admission_Report" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Submitted Applications" name="Submitted_Applications" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Accepted" name="Accepted" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Admission Plan and Applications" name="Admission_Plan_and_Applications" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Candidates by specialty and  category" name="Candidates_by_specialty_and__category" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Admitted by type of financing" name="Admitted_by_type_of_financing" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Applications by financing and categories" name="Applications_by_financing_and_categories" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+  <DefaultFolder />
+</Tree>

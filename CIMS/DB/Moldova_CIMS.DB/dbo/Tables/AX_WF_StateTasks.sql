@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[AX_WF_StateTasks] (
+    [ID]           UNIQUEIDENTIFIER NOT NULL,
+    [InstanceId]   UNIQUEIDENTIFIER NOT NULL,
+    [ProcessName]  NVARCHAR (150)   NOT NULL,
+    [StateName]    VARCHAR (150)    NOT NULL,
+    [IsMultiTask]  BIT              NOT NULL,
+    [RegardingId]  VARCHAR (50)     NOT NULL,
+    [Title]        NVARCHAR (400)   NOT NULL,
+    [Description]  NVARCHAR (1000)  NULL,
+    [AssignToUser] UNIQUEIDENTIFIER NULL,
+    [AssignToRole] NVARCHAR (50)    NULL,
+    [Status]       INT              NOT NULL,
+    [IsCompleted]  BIT              NOT NULL,
+    [ActualStart]  DATETIME         NULL,
+    [CreatedOn]    DATETIME         NULL,
+    [CompletedOn]  DATETIME         NULL,
+    [ScheduledEnd] DATETIME         NULL,
+    [ModifiedBy]   UNIQUEIDENTIFIER NULL,
+    [ModifiedOn]   DATETIME         NULL,
+    [ModifiedIP]   VARCHAR (50)     NULL,
+    [TaskNumber]   VARCHAR (20)     NULL,
+    [Comment]      NVARCHAR (200)   NULL,
+    [Phase_Name]   NVARCHAR (200)   NULL,
+    CONSTRAINT [PK_AX_WF_StateTasks] PRIMARY KEY CLUSTERED ([ID] ASC) WITH (FILLFACTOR = 90)
+);
+

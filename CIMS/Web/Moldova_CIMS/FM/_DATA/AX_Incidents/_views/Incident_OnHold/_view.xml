@@ -1,0 +1,22 @@
+<view select="true" preview="false" check="false" icon="true" expandMode="Info">
+  <header title="" />
+  <description title="" />
+  <row keyfield="id" imagetype="IncidentType" recordtypefield="IncidentTypeId">
+    <cell name="IncidentNr" title="Incident Nr" width="80" />
+    <cell name="Subject" title="Subject" />
+    <cell name="CreatedBy" title="Created By" width="150" />
+    <cell name="CreatedOn" title="On" width="125" />
+    <cell name="ModifiedBy" title="Modified By" width="125" />
+    <cell name="ModifiedOn" title="On" width="125" />
+    <cell name="PriorityCodeId" title="Priority" width="50" align="center" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="ModifiedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition attribute="IncidentStatusId" operator="eq" value="3" />
+      <condition attribute="IncidentStatusId" operator="eq" value="10" />
+    </filter>
+  </fetch>
+</view>

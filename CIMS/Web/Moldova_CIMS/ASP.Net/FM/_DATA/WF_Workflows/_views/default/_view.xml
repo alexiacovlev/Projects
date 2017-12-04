@@ -1,0 +1,16 @@
+<view iconurl="ico.png" icon="true">
+  <row keyfield="Name" displayfield="Name">
+    <cell name="Name" title="Name" width="120"/>
+    <cell name="Conditions" title="Start Conditions"/>
+    <cell name="IsPublished" title="Published" width="50" imagetype="Boolean" />
+    <cell name="CreatedBy" title="Created By" width="100"/>
+    <cell name="CreatedOn" title="Created On" width="60"/>
+    <cell name="EventIcons" title="Events" width="75"/>
+  </row>
+
+	<rowstyle>
+    <style value="font-weight:bold">
+      <condition attribute="IsPublished" operator="eq-true" value="" />
+    </style>
+  </rowstyle>
+</view>

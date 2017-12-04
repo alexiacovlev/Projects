@@ -1,0 +1,9 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-17T16:37:03">
+  <set name="TableName" value="CIMS_Applicant" />
+  <set name="ViewName" value="applicants" />
+  <set name="OpenForm" value="PROFILE:CIMS_Applicant.Admission" />
+  <set name="InputFilterField" value="ApplicationStatus=4,Admission=$id" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="HandlerParameters" value="1200,850" />
+</mapNode>

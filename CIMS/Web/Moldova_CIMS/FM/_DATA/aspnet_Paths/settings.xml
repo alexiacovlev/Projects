@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<entity version="3.0">
+	<header title=""/>
+	<description title=""/>
+	<datasource type="DB" name="aspnet_Paths" />
+	<primarykey>ApplicationId,LoweredPath</primarykey>
+	<watermark>Images/Views/Logo_Default.png</watermark>
+	<fields>
+		<field name="ApplicationId" type="Lookup" format="" dbtype="Guid" size="" title="Application Id" description="" required="true" readonly="false" uimask="001111">
+			<extract table="aspnet_Applications" view="default" />
+		</field>
+		<field name="PathId" type="Text" format="" dbtype="Guid" size="" title="Path Id" description="" required="true" readonly="false" uimask="001111" />
+		<field name="Path" type="Text" format="" dbtype="StringUnicode" size="256" title="Path" description="" required="true" readonly="false" uimask="001111" />
+		<field name="LoweredPath" type="Text" format="" dbtype="StringUnicode" size="256" title="Lowered Path" description="" required="true" readonly="false" uimask="001111" />
+	</fields>
+</entity>
+			

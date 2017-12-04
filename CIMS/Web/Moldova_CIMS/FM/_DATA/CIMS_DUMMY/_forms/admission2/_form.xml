@@ -1,0 +1,45 @@
+<form>
+  <header />
+  <description />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Admission" name="AdmissionActive" colspan="2">
+                <properties readonly="true" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Specialty" name="SpecialtyByAdmission" colspan="2">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Candidates" name="sec1391" decoration="line" columns="2" showlabel="true">
+          <rows>
+            <row>
+              <cell name="control_782" colspan="2">
+                <content>&lt;control type="GRID" height="450"&gt;
+ &lt;set name="TableName" value="CIMS_Applicant" /&gt;
+ &lt;set name="ViewName" value="candidates" /&gt;
+ &lt;set name="OpenForm" value="PROFILE:CIMS_Applicant.Admission" /&gt;
+ &lt;set name="CreateForm" value="FORM:default" /&gt;
+ &lt;set name="AllowCreate" value="false" /&gt;
+ &lt;set name="AllowDelete" value="false" /&gt;
+ &lt;set name="HandlerParameters" value="800,500" /&gt;
+ &lt;set name="ShowGridFilterPanel" value="false" /&gt;
+ &lt;set name="ShowActionsMenu" value="true" /&gt;
+ &lt;set name="InputFilterField" value="Admission=[AdmissionActive],Specialty=[SpecialtyByAdmission]" /&gt;
+&lt;/control&gt;</content>
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

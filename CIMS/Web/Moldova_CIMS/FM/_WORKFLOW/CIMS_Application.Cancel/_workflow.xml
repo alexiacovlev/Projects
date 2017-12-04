@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Application.Check" version="2.0" created="2017-10-24T10:53:18" modified="2017-11-17T16:16:51" author="Admin Admin" trace="false" forceRefresh="true" title="Applicant: #FirstName# #LastName#">
+  <Sequence>
+    <XmlIsland name="DATA489" title="Select">
+      <Settings table="CIMS_Applicant" />
+      <FieldSet>
+        <Field name="ApplicationStatus" />
+      </FieldSet>
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </XmlIsland>
+    <Switch>
+      <Case test="DATA489:ApplicationStatus = '1'" details="Submitted;">
+        <Sequence>
+          <Invoke name="FORM221" title="" control="Form">
+            <Settings table="CIMS_Applicant" form="cancel" />
+            <Assign>
+              <Field name="_KEYVALUE_" value="INPUT:id" />
+            </Assign>
+          </Invoke>
+          <Switch>
+            <Case test="FORM221:Cancel = 'true'" details=";">
+              <Sequence>
+                <UpdateRecord name="Update734" title="Modify">
+                  <Settings table="CIMS_Applicant" form="default" />
+                  <Assign>
+                    <Field name="_KEYVALUE_" value="INPUT:id" />
+                    <Field name="ApplicationStatus" value="'3'" text="Canceled" />
+                  </Assign>
+                </UpdateRecord>
+              </Sequence>
+            </Case>
+            <Otherwise>
+              <Sequence>
+              </Sequence>
+            </Otherwise>
+          </Switch>
+        </Sequence>
+      </Case>
+      <Otherwise>
+        <Sequence>
+          <Invoke name="Control276" title="CONTROL" control="HTML" controlInfo="">
+            <Settings table="" form="" />
+            <Assign>
+              <Field name="HTML" value="#&lt;div class='fmForm' style=&quot;font-weight:bold;padding:150px;color:red; text-align:center;font-size:12pt;&quot;&gt;Application status does not allow selected operation.&lt;/div&gt;" />
+            </Assign>
+          </Invoke>
+        </Sequence>
+      </Otherwise>
+    </Switch>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="false" />
+  </Handlers>
+</Workflow>

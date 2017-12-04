@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-10-20T14:26:40">
+  <set name="TableName" value="CIMS_d_SubjectsToStudy" />
+  <set name="ViewName" value="by_team" />
+  <set name="CreateForm" value="WORKFLOW:CIMS_SubjectToStudy.Add" />
+</mapNode>

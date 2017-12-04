@@ -1,0 +1,279 @@
+﻿<!--style>
+	div.wnd {
+	}
+	.dialogWithShadow1 {
+		box-shadow: 0px 2px 10px #383838;
+		-webkit-box-shadow: 0px 2px 10px #383838;
+		-moz-box-shadow: 0px 2px 10px #383838;
+	}
+
+	div.mwnd {
+		width: 100%;
+		overflow:hidden;
+		position: absolute;
+		background-color:#FFF;
+		border:solid 1px gray;
+		border-radius:5px;
+		moz-border-radius:5px;
+		box-shadow: 0px 2px 10px #383838;
+		-webkit-box-shadow: 0px 2px 10px #383838;
+		-moz-box-shadow: 0px 2px 10px #383838;
+
+	}
+
+	div.mwnd div.hdr {
+		width: 100%; height: 24px;
+		position: absolute;
+		background-color:#FFF;
+	}
+	div.mwnd div.content {
+		width: 100%;
+		height:100%;
+		position: absolute;
+		top:24px;
+		background-color:#FFF;
+	}
+	div.mwnd div.hdr span.label {
+		height:24px;
+		background-color:#FFF;
+		width:80%;
+		display:block;
+		padding-left:8px;
+		padding-top:3px;
+		font-size:12pt;
+	}
+
+	div.mwnd div.hdr span.buttons {
+		cursor:pointer;
+		position:absolute;
+		right:3px;
+		top:0px;
+	}
+</style-->
+
+<!--div class="mwnd">
+	<div class="hdr">
+		<span class="label">
+			<label>Window Header</label>
+		</span>
+		<span class="buttons">
+			<img alt="Should you experience any problems with this form - &#10;Please contact us!" src="/ASP.Net/System/Window/Images/btn_!.gif" width="27" height="18"/><img alt="Maximize" src="/ASP.Net/System/Window/Images/btn_max.gif" width="24" height="18"/><img alt="Close" src="/ASP.Net/System/Window/Images/btn_close.gif" width="44" height="18"/>
+		</span>
+	</div>
+	<div class="content">
+		<iframe src="" frameborder="0" scrolling="no"></iframe>
+	</div>
+</div-->
+<!--script>
+
+	AX.Window = function () {
+		this.width = 800;
+		this.height = 500;
+
+		this.bRecalc = true;
+		this.x = 0;
+		this.y = 0;
+		this.bMaximized = false;
+
+
+		if (!AX.Window.$shader) {
+			var bg = document.createElement("DIV");
+			with (bg.style) {
+				backgroundColor = '#000'; opacity = 0.2;
+				position = "absolute"; left = 0; top = 0;
+				width = "100%"; height = "100%"; display = 'none';
+			}
+			document.body.appendChild(bg, document.body.firstChild);
+			AX.Window.$shader = $(bg);
+		}
+
+		this.$wnd = $("<div class='mwnd' style='display:none'><div class='hdr'><span class='label'></span><span class='buttons'></span></div><div class='content'></div></div>");
+		document.body.appendChild(this.$wnd[0]);
+		this.$hdr = $(this.$wnd.children()[0]);
+		this.hdr_height = this.$hdr.height();
+		this.$content = $(this.$wnd.children()[1]);
+
+		this.$label = $('span.label', this.$hdr);
+
+		this.$buttons = $('span.buttons', this.$hdr);
+		this.$buttons.html("<img title='Should you experience any problems with this form - &#10;Please contact us!' cmd='!' src='" + AX.Window.ImagePath + "btn_!.gif' width='27' height='18'/><img title='Maximize' cmd='M' src='" + AX.Window.ImagePath + "btn_max.gif' width='24' height='18'/><img cmd='X' title='Close' src='" + AX.Window.ImagePath + "btn_close.gif' width='44' height='18'/>");
+		this.$buttons.click($.proxy(this.btn_click, this));
+
+		this.$wnd.DragDropExtention({handler: this.$label});
+	}
+
+	AX.Window.prototype = {
+
+
+		setSize: function (w, h) {
+			this.width = w;
+			this.height = h;
+			this.bReset = true;
+
+			var h1 = h + this.hdr_height;
+			this.$wnd.css({ width: w + 'px', height: h1 + 'px' });
+			this.$content.css({ height: h + 'px' });
+		},
+
+		setCenter: function () {
+			var w = this.width;
+			var h = this.height;
+			var x = Math.floor(($(window).width() - w) / 2);
+			var y = Math.floor(($(window).height() - h) / 2);
+
+			this.$wnd.css({ left: x + 'px', top: y + 'px' });
+			this.bReset = false;
+		},
+
+		setHeader: function (s) {
+			this.$label.html(s);
+		},
+
+		loadURL: function (url, scroll) {
+			if (!this.$frame) {
+				this.$frame = $('<iframe style="width:100%;height:100%" frameborder="0" scrolling="'+(scroll ? 'yes':'no')+'"></iframe>');
+				this.$content.append(this.$frame);
+			}
+			this.$frame.attr('src', url);
+		},
+
+		loadHTML: function (s) {
+			this.$content.html(s);
+		},
+
+		show: function () {
+			if (this.bReset) this.setCenter();
+
+			AX.Window.$shader.css({ zIndex: 1000, display: 'block' });
+			this.$wnd.css({ zIndex: 1001, display: 'block' });
+		},
+
+		close: function () {
+			this.$wnd.css({ display: 'none' });
+			AX.Window.$shader.css({ display: 'none' });
+		},
+
+		maximize: function (b) {
+			this.bMaximized = b;
+			var btn = (this.$buttons.children()[1]);
+			if (this.bMaximized) {
+				var w = $(window).width() - 4;
+				var h = $(window).height() - 4;
+				var x = 1;
+				var y = 1;
+				this.$wnd.css({ left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+				this.$content.css({ height: h + 'px' });
+				btn.src = AX.Window.ImagePath + "btn_max_min.gif";
+			} else {
+				this.setSize(this.width, this.height);
+				this.setCenter();
+				btn.src = AX.Window.ImagePath + "btn_max.gif";
+			}
+		},
+
+		btn_click: function (e) {
+			var $o = $(e.target);
+			var cmd = $o.attr('cmd');
+			if (cmd == 'X') this.close();
+			else if (cmd == 'M') this.maximize(!this.bMaximized);
+		}
+
+	}
+	AX.Window.ImagePath= "/ASP.Net/System/Window/Images/";
+
+
+
+
+	var wnd= new AX.Window();
+	wnd.setHeader("Header1");
+	wnd.setSize(600, 300);
+	wnd.loadURL('/Applications/default/html/!wiki1.1049.html', true);
+	wnd.show();
+
+
+
+</script-->
+
+<script>
+var wnd= new AX.Window();
+	wnd.setHeader("Header1");
+	wnd.setSize(600, 300);
+	wnd.loadURL('/Applications/default/html/!wiki1.1049.html', true);
+	wnd.show();
+</script>
+
+<!--
+
+<style>
+	td.hdr-left {
+		width: 5px; height: 26px; background-image: url("/ASP.Net/System/Window/Images/headerL.gif");
+	}
+	td.hdr-main {
+		height: 26px; font-family: Arial CE, Arial; font-size: 10pt; font-weight: bold; cursor: move; background-image: url("/ASP.Net/System/Window/Images/headerBg.gif");
+	}
+	td.hdr-main-end {
+		height: 26px; padding-right: 5px; background-image: url("/ASP.Net/System/Window/Images/headerBg.gif");
+	}
+	td.hdr-buttons {
+		width: 95px; height: 26px; background-image: url("/ASP.Net/System/Window/Images/headerBg.gif");
+	}
+	td.hdr-right {
+		width: 5px; height: 26px; background-image: url("/ASP.Net/System/Window/Images/headerR.gif");
+	}
+	td.content {
+		height: 100%; padding-right: 5px; padding-left: 5px; border-right-color: rgb(58, 67, 75); border-left-color: rgb(58, 67, 75); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; background-color: rgb(192, 215, 235);
+	}
+</style>
+<div class="dialogWithShadow1"  style="left: 472px; top: 51px; width: 400px; height: 300px; position: absolute; z-index: 1100; border:solid 1px gray;">
+		<table style="width: 100%; height: 100%;" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td>
+						<table style="-moz-user-select: none;" cellspacing="0" cellpadding="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="hdr-left">
+									</td>
+									<td class="hdr-main">
+										<img align="absmiddle" src="/ASP.Net/System/Window/Images/ico_top.gif">&nbsp;<label id="_HeaderText">Window content is loading...</label>
+									</td>
+									<td class="hdr-main-end">
+										&nbsp;
+									</td>
+									<td class="hdr-buttons" valign="top" align="right">
+										<img style="margin-top: 1px;" border="0" alt="Should you experience any problems with this form - &#10;Please contact us!" src="/ASP.Net/System/Window/Images/btn_!.gif" width="27" height="18"><img style="margin-top: 1px;" border="0" alt="Maximize" src="/ASP.Net/System/Window/Images/btn_max.gif" width="24" height="18"><img style="margin-top: 1px;" border="0" alt="Close" src="/ASP.Net/System/Window/Images/btn_close.gif" width="44" height="18">
+									</td>
+									<td class="hdr-right">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr style="height: 100%;">
+					<td class="content">
+						<iframe style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" frameborder="0" scrolling="no"></iframe>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<tbody>
+								<tr>
+									<td style='width: 6px; height: 7px; background-image: url("/ASP.Net/System/Window/Images/bottomL.gif");'>
+									</td>
+									<td style='height: 7px; background-image: url("/ASP.Net/System/Window/Images/bottomBg.gif");'>
+										<img border="0" src="/ASP.Net/System/Window/Images/pixel.gif">
+									</td>
+									<td style='width: 6px; height: 7px; background-image: url("/ASP.Net/System/Window/Images/bottomR.gif");'>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+-->
+

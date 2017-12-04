@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="My Profile" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Personal Info" name="Personal_Info" image="client_account_template.png" control="CUSTOM">
+      <Folders />
+    </Folder>
+    <Folder title="Change Password" name="Change_Password" image="Security.png" control="CUSTOM">
+      <Folders />
+    </Folder>
+    <Folder title="Login History" name="Activity" image="date_error.png" control="SERVERCONTROL">
+      <Folders />
+    </Folder>
+    <Folder title="Notifications" name="Notifications" image="SentItems.png" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+    <Folder title="Incoming" name="MY_Tasks" image="email_error.png" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+    <Folder title="Outgoing" name="MY_Out_Tasks" image="16_edit.png" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+  </Folders>
+</Tree>

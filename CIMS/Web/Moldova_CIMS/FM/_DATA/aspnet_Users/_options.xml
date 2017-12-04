@@ -1,0 +1,6 @@
+<options>
+  <list name="IsAnonymous" default="0">
+    <item value="0" title="False" />
+    <item value="1" title="True" />
+  </list>
+</options>

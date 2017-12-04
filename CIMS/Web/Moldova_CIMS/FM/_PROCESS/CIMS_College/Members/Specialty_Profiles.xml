@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Iure Coroban" modifiedon="2017-10-13T15:11:57">
+  <set name="TableName" value="CIMS_SpecialtyProfile" />
+  <set name="CreateForm" value="WORKFLOW:CIMS_SpecialtyProfile.Add" />
+  <set name="ViewName" value="by_team" />
+</mapNode>

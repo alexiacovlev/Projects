@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Staff" name="" image="" navigator="false" width="330">
+  <Folders>
+    <Folder title="Lecturers" name="Lecturers" image="folder.png" ico="e8a8" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+    <Folder title="Management" name="Management" image="folder.png" ico="e8a8" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+    <Folder title="Auxiliary staff" name="Auxiliary_staff" image="folder.png" ico="e8a8" control="GRID" autocount="">
+      <Folders />
+    </Folder>
+  </Folders>
+</Tree>

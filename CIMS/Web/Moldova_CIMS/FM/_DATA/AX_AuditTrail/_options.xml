@@ -1,0 +1,9 @@
+<options>
+  <list name="atAction" default="0">
+    <item value="0" title="NotSet" />
+    <item value="1" title="Read" />
+    <item value="2" title="Create" />
+    <item value="3" title="Update" />
+    <item value="4" title="Delete" />
+  </list>
+</options>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <header title="Error Event Log" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell name="Details" title="Details" colspan="2" rowspan="10" />
+            </row>
+          </rows>
+        </section>
+        <section title="Created by" decoration="line" columns="2" name="sec2748" showlabel="true">
+          <rows>
+            <row>
+              <cell name="IP" title="IP" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

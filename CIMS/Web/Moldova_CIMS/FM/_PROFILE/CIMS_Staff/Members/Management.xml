@@ -1,0 +1,8 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-10-23T17:25:21">
+  <set name="TableName" value="CIMS_Employee" />
+  <set name="ViewName" value="management" />
+  <set name="InputFilterField" value="Type=2" />
+  <set name="CreateForm" value="FORM:default" />
+  <set name="OpenForm" value="PROFILE:CIMS_Employee" />
+  <set name="HandlerParameters" value="1000,550" />
+</mapNode>

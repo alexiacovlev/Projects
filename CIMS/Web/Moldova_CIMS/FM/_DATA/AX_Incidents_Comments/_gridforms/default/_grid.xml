@@ -1,0 +1,27 @@
+<view>
+  <row>
+    <cell name="Comments" title="Question and Answer">
+      <properties requiredlevel="required" />
+    </cell>
+    <cell name="CreatedOn" title="Posted Date" width="100">
+      <properties oncreatevalue="~NOW" readonly="true" />
+    </cell>
+    <cell name="CreatedBy" title="Posted By" width="150">
+      <properties oncreatevalue="~USERID" readonly="true" />
+    </cell>
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+  </fetch>
+  <handlers>
+    <smartedit enabled="true" />
+    <create enabled="true" title="Add Question">
+    </create>
+    <delete enabled="false" />
+  </handlers>
+  <header title="" />
+  <description title="" />
+  <autoNewRow>off</autoNewRow>
+</view>

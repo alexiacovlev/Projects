@@ -1,0 +1,5 @@
+<mapNode type="GRID" modifiedby="Iure Coroban" modifiedon="2017-10-09T15:15:01">
+  <set name="TableName" value="CIMS_Employee2Subjects" />
+  <set name="InputFilterField" value="Employee=$id" />
+  <set name="ShowGridFilterPanel" value="false" />
+</mapNode>

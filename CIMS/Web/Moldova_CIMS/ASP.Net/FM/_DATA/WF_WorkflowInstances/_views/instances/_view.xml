@@ -1,0 +1,13 @@
+<view select="true" preview="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell name="WorkspaceUrl" title="Workspace Url" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="WorkspaceUrl" ascending="true" />
+    </sort>
+    <filter />
+  </fetch>
+</view>

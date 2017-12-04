@@ -1,0 +1,99 @@
+<form labelwidth="160">
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="Graduated From" name="tab3">
+      <sections>
+        <section title="Institution Details" name="sec3196" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Institution Name" name="GraduatedInstitutionName" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Country" name="GraduatedInstitutionCountry" />
+              <cell title="Raion" name="GraduatedInstitutionRaion" />
+              <cell title="Locality" name="GraduatedInstitutionLocality" />
+            </row>
+            <row>
+              <cell title="Environment" name="GraduatedInstitutionEnvironment" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Institution Type" name="GraduatedInstitutionType" />
+              <cell title="Grade" name="GraduatedInstitutionGrade" />
+              <cell title="Year" name="GraduatedInstitutionYear">
+                <properties behavior="1900|2020" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+        <section title="Certificate Of Education" name="sec3413" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Type" name="CertificateOfEducationType" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Series" name="CertificateOfEducationSeries" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Number" name="CertificateOfEducationNumber" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Issued On" name="CertificateOfEducationIssuedOn" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="Marks" name="sec3325" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Average Mark" name="GraduatedInstitutionAverageMark" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1194" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

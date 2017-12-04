@@ -1,0 +1,10 @@
+<mapNode type="GRID" visible="false" modifiedby="Michael " modifiedon="2014-05-06T19:39:12">
+  <set name="TableName" value="BASE:RMC_Workflows" />
+  <set name="ViewName" value="default" />
+  <set name="OpenForm" value="URL:ASP.Net/FM/Explorer/WorkflowBuilder/open.aspx" />
+  <set name="HandlerParameters" value="1200,730,false" />
+  <set name="CreateParameters" value="1200,730,false" />
+  <set name="AllowDelete" value="false" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Open Workflow Designer&quot; image=&quot;16_edit2.png&quot; value=&quot;&quot; attributes=&quot;id&quot; showoutlabel=&quot;true&quot; pos=&quot;out&quot; full=&quot;&quot; height=&quot;730&quot; width=&quot;1200&quot; command=&quot;EDIT&quot; /&gt;&lt;/menu&gt;" />
+  <set name="Label_NEW" value="New Workflow" />
+</mapNode>

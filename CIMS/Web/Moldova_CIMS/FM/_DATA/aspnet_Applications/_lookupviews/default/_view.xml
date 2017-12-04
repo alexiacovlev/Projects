@@ -1,0 +1,15 @@
+<view icon="true" select="true" preview="false" check="false">
+  <row keyfield="ApplicationId">
+    <cell name="ApplicationName" title="Name" width="100" />
+    <cell name="Description" title="Description" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="ApplicationName" ascending="true" />
+    </sort>
+  </fetch>
+  <header title="Application" />
+  <description title="" />
+  <dialogHeader title="" />
+</view>

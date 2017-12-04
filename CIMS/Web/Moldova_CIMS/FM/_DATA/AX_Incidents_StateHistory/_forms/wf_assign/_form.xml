@@ -1,0 +1,55 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell name="IncidentName" title="Incident Name" />
+            </row>
+            <row>
+              <cell name="IncidentId" title="IncidentId" colspan="2">
+                <properties readonly="true" handlermode="editable" />
+              </cell>
+            </row>
+            <row>
+              <cell name="StateID" title="State" />
+              <cell name="SendNotification" title="Send Notification" />
+            </row>
+            <row>
+              <cell name="Reason" title="Reason" colspan="2" titlepos="top" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell name="SendTo" title="Send To" />
+              <cell name="StateName" title="State Name" />
+            </row>
+            <row>
+              <cell name="TeamId" title="Team Id" />
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="ApplicationId" title="Application Id">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+  </hidden>
+</form>

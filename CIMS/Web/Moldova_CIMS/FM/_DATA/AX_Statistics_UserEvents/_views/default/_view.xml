@@ -1,0 +1,19 @@
+<view select="true" preview="true" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="EventId">
+    <cell name="EventType" title="Event" />
+    <cell name="UserName" title="Login" width="100" />
+    <cell name="IPAddress" title="IP Address" width="100" />
+    <cell name="EventTime" title="Time" width="125" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="EventTime" ascending="true" />
+    </sort>
+    <filter>
+      <condition attribute="ApplicationId" operator="eq-appid" />
+    </filter>
+  </fetch>
+</view>

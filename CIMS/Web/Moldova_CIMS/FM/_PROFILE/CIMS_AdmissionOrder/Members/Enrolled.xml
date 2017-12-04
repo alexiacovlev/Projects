@@ -1,0 +1,7 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-02T11:59:42">
+  <set name="TableName" value="CIMS_Applicant" />
+  <set name="ViewName" value="enrolled" />
+  <set name="InputFilterField" value="AdmissionOrder=$id" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+</mapNode>

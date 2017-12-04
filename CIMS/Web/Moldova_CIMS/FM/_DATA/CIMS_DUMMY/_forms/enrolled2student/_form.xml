@@ -1,0 +1,27 @@
+<form>
+  <header title="Are you sure?" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="false" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell name="control_869" colspan="3">
+                <content>&lt;h3 style="color:red; text-align:center;padding-top:50;padding-bottom:25px;"&gt;Do you really want to add selected person to the group?&lt;/h3&gt;</content>
+              </cell>
+            </row>
+            <row>
+              <cell />
+              <cell title="Yes / No" name="YesNo">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+</form>

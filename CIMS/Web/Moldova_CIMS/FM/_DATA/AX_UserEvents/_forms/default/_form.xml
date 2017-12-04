@@ -1,0 +1,39 @@
+<form labelwidth="100" padding="big">
+  <header title="Activity Details" />
+  <description title="Activity Details" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" columns="3" decoration="line" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Event Time" name="EventTime" colspan="2" />
+              <cell title="IP Address" name="IPAddress" />
+            </row>
+            <row>
+              <cell title="Type Name" name="TypeName" colspan="2" />
+              <cell title="Type Code" name="TypeId" />
+            </row>
+            <row>
+              <cell title="User Name" name="UserName" colspan="2" />
+              <cell />
+            </row>
+            <row>
+              <cell title="Activity Details" name="Message" colspan="3" rowspan="2" />
+            </row>
+            <row />
+            <row>
+              <cell title="Activity Data" name="Data" colspan="3" />
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

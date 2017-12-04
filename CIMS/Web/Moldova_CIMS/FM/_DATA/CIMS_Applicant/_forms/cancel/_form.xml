@@ -1,0 +1,41 @@
+<form>
+  <header title="Applicant" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <rows>
+            <row>
+              <cell title="Cancel" name="Cancel">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Reason" name="DecisionReason" colspan="2" rowspan="3">
+                <properties requiredlevel="required" />
+              </cell>
+            </row>
+            <row />
+            <row />
+          </rows>
+        </section>
+        <section title="hidden" name="sec1649" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="FirstName" name="FirstName">
+                <properties readonly="true" />
+              </cell>
+              <cell title="LastName" name="LastName">
+                <properties readonly="true" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden />
+  <windowMask>Applicant: #FirstName# #LastName#</windowMask>
+</form>

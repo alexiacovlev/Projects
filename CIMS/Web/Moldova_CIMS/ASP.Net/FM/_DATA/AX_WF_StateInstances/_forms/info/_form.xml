@@ -1,0 +1,64 @@
+<form>
+  <header title="Instance Properties" />
+  <description title="Instance Properties" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" name="sec_info" columns="2" decoration="line" showlabel="false">
+          <rows>
+            <row>
+              <cell title="Process Name" name="ProcessName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Key Value" name="KeyValue" colspan="2" />
+            </row>
+            <row>
+              <cell title="State Name" name="StateName" colspan="2" />
+            </row>
+            <row>
+              <cell title="State Title" name="StateTitle" colspan="2" />
+            </row>
+            <row>
+              <cell title="Table Name" name="TableName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Key Name" name="KeyName" colspan="2" />
+            </row>
+            <row>
+              <cell title="Created By" name="CreatedBy" colspan="2" />
+            </row>
+            <row>
+              <cell title="Created On" name="CreatedOn" colspan="2" />
+            </row>
+            <row>
+              <cell title="Error Message" name="ErrorMessage" colspan="2" rowspan="2" />
+            </row>
+            <row />
+            <row>
+              <cell title="History" name="History" colspan="2" titlepos="top">
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created By" name="CreatedBy">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Application Id" name="ApplicationId">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

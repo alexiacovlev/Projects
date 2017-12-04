@@ -1,0 +1,104 @@
+<form>
+  <header title="" />
+  <description title="" />
+  <print title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="3">
+          <rows>
+            <row>
+              <cell title="Semester" name="Semester">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Subject" name="Subject">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell title="Mandatory/Optional" name="SubjectMandatory">
+                <properties requiredlevel="required" />
+              </cell>
+              <cell />
+            </row>
+            <row>
+              <cell title="Evaluation" name="TypeOfEvaluation" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Total Hours Per Week" name="TotalHoursPerWeek" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Total Hours Per Semester" name="TotalHoursPerSemester" />
+              <cell />
+              <cell />
+            </row>
+            <row>
+              <cell title="Total Hours for Theory" name="TotalHoursTheory" />
+              <cell title="Lecturers Theory" name="LecturersTheory" colspan="2" />
+            </row>
+            <row>
+              <cell title="Total Hours Seminars" name="TotalHoursSeminars" />
+              <cell title="Lecturers Seminars" name="LecturersSeminars" colspan="2" />
+            </row>
+            <row>
+              <cell title="Total Hours Laboratory" name="TotalHoursLaboratory" />
+              <cell title="Lecturers Laboratory" name="LecturersLaboratory" colspan="2" />
+            </row>
+            <row>
+              <cell title="Total Hours Practical" name="TotalHoursPractical" />
+              <cell title="Lecturers Practical" name="LecturersPractical" colspan="2" />
+            </row>
+            <row>
+              <cell title="Total Hours Individual" name="TotalHoursIndividual" />
+              <cell title="Lecturers Individual" name="LecturersIndividual" colspan="2" />
+            </row>
+            <row>
+              <cell title="Number Of Credit" name="NumberOfCredit" />
+              <cell />
+              <cell />
+            </row>
+          </rows>
+        </section>
+        <section title="hidden" name="sec1190" decoration="line" columns="2" showlabel="true" visible="false">
+          <rows>
+            <row>
+              <cell title="StudyPlan" name="StudyPlan" />
+              <cell title="TeamId" name="TeamId">
+                <properties oncreatevalue="~TEAM" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell name="CreatedBy" title="Created By">
+      <properties oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedIP" title="Created IP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell name="CreatedOn" title="Created On">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell name="ModifiedBy" title="Modified By">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell name="ModifiedIP" title="Modified IP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell name="ModifiedOn" title="Modified On">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell name="ApplicationId" title="Application">
+      <properties oncreatevalue="~APPLICATIONID" />
+    </cell>
+  </hidden>
+</form>

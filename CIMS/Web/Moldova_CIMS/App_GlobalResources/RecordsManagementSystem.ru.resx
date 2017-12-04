@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Search__Go" xml:space="preserve">
+    <value>Выполнить</value>
+  </data>
+  <data name="Search__Find" xml:space="preserve">
+    <value>Найти:</value>
+  </data>
+  <data name="Search__ToolTip" xml:space="preserve">
+    <value>Используйте символ (*) для поиска по фрагменту</value>
+  </data>
+  <data name="Grid__lblView" xml:space="preserve">
+    <value>Просмотр:</value>
+  </data>
+  <data name="Grid__lblAddRow" xml:space="preserve">
+    <value>Добавить строку поиска:</value>
+  </data>
+  <data name="Grid__lblReset" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="Grid__lblSearch" xml:space="preserve">
+    <value>Искать</value>
+  </data>
+  <data name="Grid__Page" xml:space="preserve">
+    <value>Страница</value>
+  </data>
+  <data name="Grid__Refresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Grid__selected" xml:space="preserve">
+    <value>выделено</value>
+  </data>
+  <data name="Form__SmartGridMessage" xml:space="preserve">
+    <value>Для добавленния записи, сохраните пожалуйста теущую. Нажмите кнопку Сохранить.</value>
+  </data>
+  <data name="Grid__btnDesigner" xml:space="preserve">
+    <value>Редактировать текущее отображение грида</value>
+  </data>
+  <data name="Profile__ChangeGroup" xml:space="preserve">
+    <value>Загрузить для другой группы</value>
+  </data>
+  <data name="Profile__ControlProperties" xml:space="preserve">
+    <value>Открыть редактор свойств компонента</value>
+  </data>
+  <data name="Profile__PleaseWait" xml:space="preserve">
+    <value>Пожалуйста подождите,&lt;br&gt;Данные подгружаются</value>
+  </data>
+  <data name="Profile__ProfileManager" xml:space="preserve">
+    <value>Открыть редактор профиля</value>
+  </data>
+  <data name="Profile__RefreshWindow" xml:space="preserve">
+    <value>Обновить всё окно</value>
+  </data>
+  <data name="Lookup__New" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="Lookup__None" xml:space="preserve">
+    <value>Ничего</value>
+  </data>
+  <data name="Lookup__Properties" xml:space="preserve">
+    <value>Свойства</value>
+  </data>
+  <data name="Lookup__AvailableRecords" xml:space="preserve">
+    <value>Доступные записи</value>
+  </data>
+  <data name="Lookup__Desc" xml:space="preserve">
+    <value>Для фильтрации записей по основному полю, введите текст в поле поиска &lt;br /&gt;и нажмите кнопку Искать, затем выберите нужное поле из списка.</value>
+  </data>
+  <data name="Lookup__Find" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Lookup__Go" xml:space="preserve">
+    <value>Искать</value>
+  </data>
+  <data name="Lookup__SelectedRecords" xml:space="preserve">
+    <value>Выбранные записи</value>
+  </data>
+  <data name="Lookup__Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Grid__FirstPage" xml:space="preserve">
+    <value>Перейти к первой странице</value>
+  </data>
+  <data name="Grid__NextPage" xml:space="preserve">
+    <value>Перейти к следующей странице</value>
+  </data>
+  <data name="Grid__PreviousPage" xml:space="preserve">
+    <value>Перейти к предыдущей странице</value>
+  </data>
+  <data name="Grid__SelectAllRecords" xml:space="preserve">
+    <value>Выделить все записи на данной странице</value>
+  </data>
+  <data name="Grid__StartWithLetter" xml:space="preserve">
+    <value>Показать записи которые начинаются с данной буквы</value>
+  </data>
+  <data name="Grid__StartWithNumber" xml:space="preserve">
+    <value>Показать записи которые начинаются с цифры</value>
+  </data>
+  <data name="Grid__ViewAll" xml:space="preserve">
+    <value>Показать все записи</value>
+  </data>
+  <data name="Grid__found" xml:space="preserve">
+    <value>найдено</value>
+  </data>
+  <data name="Grid__Loading" xml:space="preserve">
+    <value>загружается ...</value>
+  </data>
+  <data name="Grid__of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="Search__Reset" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="Search__Search" xml:space="preserve">
+    <value>Искать</value>
+  </data>
+  <data name="Search__Anytime" xml:space="preserve">
+    <value>Когда либо</value>
+  </data>
+  <data name="Search__BeginWith" xml:space="preserve">
+    <value>Начинается с</value>
+  </data>
+  <data name="Search__Contains" xml:space="preserve">
+    <value>Содержит</value>
+  </data>
+  <data name="Search__ContainsData" xml:space="preserve">
+    <value>Содержит данные</value>
+  </data>
+  <data name="Search__EndWith" xml:space="preserve">
+    <value>Заканчивается с</value>
+  </data>
+  <data name="Search__Equals" xml:space="preserve">
+    <value>Равно</value>
+  </data>
+  <data name="Search__EqualUser" xml:space="preserve">
+    <value>Равен текущему пользователю</value>
+  </data>
+  <data name="Search__Future" xml:space="preserve">
+    <value>В будующем</value>
+  </data>
+  <data name="Search__Greater" xml:space="preserve">
+    <value>Больше</value>
+  </data>
+  <data name="Search__GreaterOrEqual" xml:space="preserve">
+    <value>Больше либо равно</value>
+  </data>
+  <data name="Search__Last7" xml:space="preserve">
+    <value>Предыдущие 7 дней</value>
+  </data>
+  <data name="Search__Less" xml:space="preserve">
+    <value>Меньше</value>
+  </data>
+  <data name="Search__LessOrEqual" xml:space="preserve">
+    <value>Меньше либо равно</value>
+  </data>
+  <data name="Search__Next7" xml:space="preserve">
+    <value>Следующие 7 дней</value>
+  </data>
+  <data name="Search__No" xml:space="preserve">
+    <value>Нет (ложь)</value>
+  </data>
+  <data name="Search__NotBeginWith" xml:space="preserve">
+    <value>Не начинается с</value>
+  </data>
+  <data name="Search__NotContains" xml:space="preserve">
+    <value>Не содержит</value>
+  </data>
+  <data name="Search__NotContainsData" xml:space="preserve">
+    <value>Не содержит данные</value>
+  </data>
+  <data name="Search__NotEndWith" xml:space="preserve">
+    <value>Не заканчивается с</value>
+  </data>
+  <data name="Search__NotEquals" xml:space="preserve">
+    <value>Не равно</value>
+  </data>
+  <data name="Search__NotEqualUser" xml:space="preserve">
+    <value>Не равен текущему пользователю</value>
+  </data>
+  <data name="Search__NotRelated" xml:space="preserve">
+    <value>Показать без связей</value>
+  </data>
+  <data name="Search__On" xml:space="preserve">
+    <value>На</value>
+  </data>
+  <data name="Search__OnOrAfter" xml:space="preserve">
+    <value>На или после</value>
+  </data>
+  <data name="Search__OnOrBefore" xml:space="preserve">
+    <value>На или до</value>
+  </data>
+  <data name="Search__Past" xml:space="preserve">
+    <value>В прошлом</value>
+  </data>
+  <data name="Search__Range" xml:space="preserve">
+    <value>В период</value>
+  </data>
+  <data name="Search__Related" xml:space="preserve">
+    <value>Поиск по связным записям</value>
+  </data>
+  <data name="Search__Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Search__Yes" xml:space="preserve">
+    <value>Да (истина)</value>
+  </data>
+  <data name="CALENDAR__TODAY_MASK" xml:space="preserve">
+    <value>Сегодня: {0}</value>
+  </data>
+  <data name="Profile__ShowHide" xml:space="preserve">
+    <value>Показать/спрятать панель</value>
+  </data>
+  <data name="Form__LookupTooltip" xml:space="preserve">
+    <value>Выберите значение для</value>
+  </data>
+  <data name="Form__SelectDate" xml:space="preserve">
+    <value>Выберите дату</value>
+  </data>
+  <data name="Form__LookupAutoCompleteAlert" xml:space="preserve">
+    <value>Записи с введённым значением не существует.</value>
+  </data>
+  <data name="Form__LookupAutoCompleteConfirm" xml:space="preserve">
+    <value>Может вы желаете создать новую запись?</value>
+  </data>
+  <data name="Form__MustValidDate" xml:space="preserve">
+    <value>Введите дату правильно</value>
+  </data>
+  <data name="Form__MustValidTime" xml:space="preserve">
+    <value>Введите время правильно</value>
+  </data>
+  <data name="Form__SG_DeleteConfirm" xml:space="preserve">
+    <value>Вы уверены, что вы хотите удалить данную дочернюю запись?</value>
+  </data>
+  <data name="Form__YouMustProvide" xml:space="preserve">
+    <value>Вам следует ввести значение для поля</value>
+  </data>
+  <data name="Form__AppendRowRequired" xml:space="preserve">
+    <value>Добавте хотя бы одну запись для</value>
+  </data>
+  <data name="Form__DownloadFile" xml:space="preserve">
+    <value>Закгрузить файл</value>
+  </data>
+  <data name="Form__NoOptions" xml:space="preserve">
+    <value>Нет значений</value>
+  </data>
+  <data name="Form__WrongNumber" xml:space="preserve">
+    <value>Число введено не верно</value>
+  </data>
+  <data name="Form__WrongDate" xml:space="preserve">
+    <value>Значение для даты введено не верно, формат: </value>
+  </data>
+  <data name="Form__MustValidNumber" xml:space="preserve">
+    <value>Вы должны ввести число в диапазоне от {0} и до {1}.</value>
+  </data>
+  <data name="Form__Attach" xml:space="preserve">
+    <value>Прикрепить файл</value>
+  </data>
+  <data name="Form__SelectTime" xml:space="preserve">
+    <value>Укажите время</value>
+  </data>
+  <data name="Search__Go1" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="Grid__DeleteRecord" xml:space="preserve">
+    <value>Даная операция приведёт к попытке удаления записей, \nкоторые связанны с выделенными записями. \n\nПродолжить?</value>
+  </data>
+  <data name="Grid__NoRecords" xml:space="preserve">
+    <value>В данном списке нет ни одной записи.</value>
+  </data>
+  <data name="Grid__SearchNoRecords" xml:space="preserve">
+    <value>Записей соответствующих вашему поисковому запросу не найдено. &lt;br/&gt;Попробуйте изменить запрос.</value>
+  </data>
+  <data name="Grid__Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Grid__More" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="Grid__New" xml:space="preserve">
+    <value>Новая</value>
+  </data>
+  <data name="Grid__AreYouSureToDelete" xml:space="preserve">
+    <value>Вы действительно хотите удалить выделенную запись(и)?</value>
+  </data>
+  <data name="Grid__Confirmation" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="Grid__NoOne" xml:space="preserve">
+    <value>Нет выделенных записей</value>
+  </data>
+  <data name="Grid__RequireSelect" xml:space="preserve">
+    <value>Для выполнения этого действия, &lt;br/&gt;необходимо выделить хотябы одну запись.</value>
+  </data>
+  <data name="Wnd__Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Wnd__Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Wnd__SaveClose" xml:space="preserve">
+    <value>Сохранить и закрыть</value>
+  </data>
+  <data name="Grid__InputPage" xml:space="preserve">
+    <value>Введите номер страницы</value>
+  </data>
+  <data name="Wnd__Next" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="Wnd__Previous" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Lookup__DlgTitle" xml:space="preserve">
+    <value>Выберите запись из списка ...</value>
+  </data>
+  <data name="EGrid__Append" xml:space="preserve">
+    <value>Добавить новую строку</value>
+  </data>
+  <data name="EGrid__Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="EGrid__NoRecords" xml:space="preserve">
+    <value>Нет записей.</value>
+  </data>
+  <data name="EGrid__Open" xml:space="preserve">
+    <value>Открыть запись</value>
+  </data>
+  <data name="EGrid__Total" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Окей</value>
+  </data>
+  <data name="Search__After" xml:space="preserve">
+    <value>После</value>
+  </data>
+  <data name="Search__Before" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="Form__DeleteRow" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту запись?</value>
+  </data>
+  <data name="Form__File" xml:space="preserve">
+    <value>Файл получен</value>
+  </data>
+  <data name="Process__Back" xml:space="preserve">
+    <value>Вернуться</value>
+  </data>
+  <data name="Process__StepCompletedDesc" xml:space="preserve">
+    <value>Выберите следующий шаг для продолжения процесса.</value>
+  </data>
+  <data name="Process__StepCompletedHdr" xml:space="preserve">
+    <value>Данный шаг почти закончен</value>
+  </data>
+  <data name="Process__StepDefaultDesc" xml:space="preserve">
+    <value>Заполните все обязательные поля и нажмите кнопку Далее</value>
+  </data>
+  <data name="Process__ProcessCompletedMask" xml:space="preserve">
+    <value>Процесс {0} успешно завершён.</value>
+  </data>
+</root>

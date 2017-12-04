@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow name="CIMS_Admission" version="2.0" created="2017-10-25T10:47:27" modified="2017-10-30T12:04:04" author="Admin Admin" trace="false" forceRefresh="false" title="">
+  <Sequence>
+    <Invoke name="FORM1" title="" control="Form">
+      <Settings table="CIMS_DUMMY" form="admission1" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+      </Assign>
+    </Invoke>
+    <ExecStoredProcedure name="SP744" title="SP">
+      <Settings method="prc_CIMS_AdmissionBySpecialty_Run" />
+      <Assign>
+        <Field name="Admission" value="FORM1:AdmissionActive" />
+        <Field name="Specialty" value="FORM1:SpecialtyByAdmission" />
+      </Assign>
+    </ExecStoredProcedure>
+    <Invoke name="FORM814" title="FORM" control="Form">
+      <Settings table="CIMS_DUMMY" form="admission2" provider="DUMMY" />
+      <Assign>
+        <Field name="_KEYVALUE_" value="INPUT:id" />
+        <Field name="AdmissionActive" value="FORM1:AdmissionActive" />
+        <Field name="SpecialtyByAdmission" value="FORM1:SpecialtyByAdmission" />
+      </Assign>
+    </Invoke>
+  </Sequence>
+  <Handlers>
+    <Roundtrip enabled="true" />
+    <Update enabled="false" title="" />
+  </Handlers>
+</Workflow>

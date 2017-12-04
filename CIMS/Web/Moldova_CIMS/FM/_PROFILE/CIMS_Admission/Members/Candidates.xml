@@ -1,0 +1,10 @@
+<mapNode type="GRID" modifiedby="Admin Admin" modifiedon="2017-11-22T13:56:08">
+  <set name="TableName" value="CIMS_Applicant" />
+  <set name="ViewName" value="candidates" />
+  <set name="AllowCreate" value="false" />
+  <set name="AllowDelete" value="false" />
+  <set name="OpenForm" value="PROFILE:CIMS_Applicant.Admission" />
+  <set name="HandlerParameters" value="1200,850" />
+  <set name="CustomActionsXml" value="&lt;menu&gt;&lt;item title=&quot;Admission&quot; image=&quot;star.png&quot; command=&quot;WORKFLOW&quot; width=&quot;900&quot; height=&quot;550&quot; full=&quot;true&quot; pos=&quot;out&quot; showoutlabel=&quot;true&quot; ico=&quot;a0d1&quot; value=&quot;CIMS_Admission&quot; attributes=&quot;&quot;/&gt;&lt;/menu&gt;" />
+  <set name="InputFilterField" value="AdmissionStatus=1" />
+</mapNode>

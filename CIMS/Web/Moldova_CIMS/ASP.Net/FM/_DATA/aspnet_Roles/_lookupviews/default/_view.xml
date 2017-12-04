@@ -1,0 +1,13 @@
+<view select="true" preview="true" icon="false">
+  <header title="" />
+  <description title="" />
+  <row keyfield="RoleName">
+    <cell name="RoleName" title="RoleName" width="100" />
+  </row>
+  <hidden />
+  <fetch>
+    <sort>
+      <column name="RoleName" ascending="true" />
+    </sort>
+  </fetch>
+</view>

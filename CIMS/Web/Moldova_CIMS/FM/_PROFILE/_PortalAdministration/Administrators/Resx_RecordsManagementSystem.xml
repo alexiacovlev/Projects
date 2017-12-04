@@ -1,0 +1,4 @@
+<mapNode content="/ASP.Net/WebAdmin/ResxManager/AX.ResxManager.ascx" type="SERVERCONTROL" modifiedby="Michael " modifiedon="2017-03-03T19:30:38" visible="false">
+  <set name="FileName" value="RecordsManagementSystem" />
+  <set name="IsSystem" value="true" />
+</mapNode>

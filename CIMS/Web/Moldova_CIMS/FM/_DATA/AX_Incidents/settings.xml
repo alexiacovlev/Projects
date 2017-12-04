@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<entity xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5">
+  <primarykey>id</primarykey>
+  <header title="" />
+  <description title="" />
+  <datasource type="DB" name="AX_Incidents" />
+  <watermark>Images/Views/Logo_Default.gif</watermark>
+  <fields>
+    <field name="id" type="Text" dbtype="Guid" format="" title="id" description="" size="" required="true" readonly="false" uimask="00001" />
+    <field name="RelationObjectID" type="Text" dbtype="Guid" format="" title="Relation Object ID" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="RelationObjectTypeId" type="Integer" dbtype="Int32" format="" title="Relation Object Type Id" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ParentIncidentId" type="Lookup" dbtype="Guid" format="" title="Parent Incident" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="AX_Incidents" view="default" />
+    </field>
+    <field name="IncidentNr" type="Text" dbtype="StringUnicode" format="" title="Incident Nr" description="" size="50" required="false" readonly="true" uimask="00111" />
+    <field name="Subject" type="Text" dbtype="StringUnicode" format="" title="Subject" description="" size="1024" required="true" readonly="false" uimask="00111" />
+    <field name="Description" type="Text" dbtype="StringUnicode" format="textarea" title="Description" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="Comments" type="Text" dbtype="StringUnicode" format="textarea" title="Comments" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="InProgress" type="Boolean" dbtype="Boolean" format="checkbox" title="In Progress" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="Result" type="Text" dbtype="StringUnicode" format="textarea" title="Result" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="ResultDate" type="DateTime" dbtype="DateTime" format="" title="Result Date" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ControlDate" type="DateTime" dbtype="DateTime" format="" title="Control Date" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="IncidentTypeId" type="Picklist" dbtype="Int32" format="" title="Incident Type" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="AX_Incidents_Type" view="default_all" />
+    </field>
+    <field name="PriorityCodeId" type="Picklist" dbtype="Int32" format="radio" title="Priority" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="IncidentStatusId" type="Picklist" dbtype="Int32" format="" title="Incident Status" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="AX_Incidents_Status" view="default" />
+    </field>
+    <field name="IncidentStateId" type="Picklist" dbtype="Int32" format="" title="Incident State" description="" size="" required="false" readonly="false" uimask="00001" />
+    <field name="AssignTo" type="Lookup" dbtype="Guid" format="" title="Assign To" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="RequestedBy" type="Lookup" dbtype="Guid" format="" title="Requested By" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ModifiedIP" type="Text" dbtype="StringUnicode" format="" title="Modified IP" description="" size="20" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedOn" type="DateTime" dbtype="DateTime" format="datetime" title="Modified On" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="ModifiedBy" type="Lookup" dbtype="Guid" format="" title="Modified By" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedOn" type="DateTime" dbtype="DateTime" format="datetime" title="Created On" description="" size="" required="false" readonly="true" uimask="00111" />
+    <field name="CreatedBy" type="Lookup" dbtype="Guid" format="" title="Created By" description="" size="" required="false" readonly="true" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="CreatedIP" type="Text" dbtype="StringUnicode" format="" title="Created IP" description="" size="20" required="false" readonly="false" uimask="00111" />
+    <field name="ApplicationId" type="Lookup" dbtype="Guid" format="" title="Application Id" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field name="TeamId" type="Lookup" dbtype="Guid" format="" title="Team" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Teams" view="default" />
+    </field>
+    <field name="FileAttachments" type="EditableGrid" format="smartgrid" title="File Attachments List" description="" size="255" required="false" readonly="false" uimask="00111">
+      <slavegrid table="AX_Incidents_Attachments" grid="default">
+        <column name="ObjectId" type="parentkey" />
+      </slavegrid>
+    </field>
+    <field name="RequestedName" type="Text" dbtype="StringUnicode" format="" title="Requested Name" description="" size="150" required="false" readonly="false" uimask="001111" />
+    <field name="RequestedDate" type="DateTime" dbtype="DateTime" format="" title="Requested Date" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ApprovedId" type="Lookup" dbtype="Guid" format="" title="Approved Id" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ApprovedName" type="Text" dbtype="StringUnicode" format="" title="Approved Name" description="" size="150" required="false" readonly="false" uimask="001111" />
+    <field name="ApprovedAcceptingPartyId" type="Lookup" dbtype="Guid" format="" title="Approved Accepting Party Id" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field name="ApprovedAcceptingPartyName" type="Text" dbtype="StringUnicode" format="" title="Approved Accepting Party Name" description="" size="150" required="false" readonly="false" uimask="001111" />
+    <field name="ApprovedAcceptingPartyDate" type="DateTime" dbtype="DateTime" format="" title="Approved Accepting Party Date" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="EstimatedTime" type="Text" dbtype="StringUnicode" format="" title="Estimated Time" description="" size="50" required="false" readonly="false" uimask="00111" />
+    <field name="AffectedModules" type="Text" dbtype="StringUnicode" format="textarea" title="Affected Modules" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="ResonForChange" type="Text" dbtype="StringUnicode" format="textarea" title="Reson For Change" description="" size="1024" required="false" readonly="false" uimask="00111" />
+    <field name="ExpectedDeadline" type="DateTime" dbtype="DateTime" format="" title="Expected Deadline" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="StateReason" type="Text" dbtype="StringUnicode" format="textarea" title="Reason" description="" size="250" required="false" readonly="false" uimask="00111" />
+    <field name="SendNotification" type="Boolean" dbtype="Boolean" format="checkbox" title="Send Notification" description="" size="" required="false" readonly="false" uimask="00111" />
+    <field name="StateHistory" type="EditableGrid" format="smartgrid" title="State History" description="" size="255" required="false" readonly="false" uimask="00111">
+      <slavegrid table="AX_Incidents_StateHistory" grid="default">
+        <column name="IncidentId" type="parentkey" />
+      </slavegrid>
+    </field>
+    <field name="ApprovedDate" type="DateTime" dbtype="DateTime" format="" title="Approved Date" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ActualStart" type="DateTime" dbtype="DateTime" format="" title="Actual Start" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="ActualEnd" type="DateTime" dbtype="DateTime" format="" title="Actual End" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="UserComments" type="EditableGrid" format="smartgrid" title="User Comments" description="" size="255" required="false" readonly="false" uimask="00111">
+      <slavegrid table="AX_Incidents_Comments" grid="default">
+        <column name="ObjectId" type="parentkey" />
+      </slavegrid>
+    </field>
+    <field name="ResolutionCode" type="Picklist" dbtype="Int32" format="" title="Resolution Code" description="" size="" required="false" readonly="false" uimask="00111">
+      <extract table="AX_Incidents_Resolution" view="default" />
+    </field>
+    <field name="AssignTo_FullName" type="Text" dbtype="StringUnicode" format="" title="Assign To_Full Name" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="RequestedBy_FullName" type="Text" dbtype="StringUnicode" format="" title="Requested By_Full Name" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="CreatedBy_FullName" type="Text" dbtype="StringUnicode" format="" title="Created By_Full Name" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="ModifiedBy_FullName" type="Text" dbtype="StringUnicode" format="" title="Modified By_Full Name" description="" size="100" required="false" readonly="false" uimask="001111" />
+    <field name="RequestURL" type="Text" dbtype="StringUnicode" format="" title="Request URL" description="" size="150" required="false" readonly="false" uimask="001111" />
+    <field name="IncidentApplicationId" type="Text" dbtype="Guid" format="" title="Incident Application Id" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="Screenshot" type="Image" dbtype="Byte[]" format="" title="Screenshot" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="PostedByUser" type="Boolean" dbtype="Boolean" format="" title="Posted By User" description="" size="" required="false" readonly="false" uimask="001111" />
+    <field name="Category" type="Picklist" dbtype="Int32" format="" title="Category" description="" required="false" readonly="false" uimask="001111">
+      <extract table="AX_Incidents_Categories" view="default" />
+    </field>
+    <field name="Work_Hours" type="Integer" dbtype="Int32" format="" title="Work Hours" description="" required="false" readonly="false" uimask="001111" />
+  </fields>
+</entity>

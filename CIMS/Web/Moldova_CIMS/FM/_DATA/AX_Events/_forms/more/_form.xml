@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form labelwidth="100" padding="big">
+  <header title="" />
+  <description title="" />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section title="Info" decoration="line" columns="2" name="sec_info" showlabel="true">
+          <rows>
+            <row>
+              <cell title="Start Time" name="StartTime">
+                <properties readonly="control" />
+              </cell>
+              <cell title="End Time" name="EndTime">
+                <properties readonly="control" />
+              </cell>
+            </row>
+            <row>
+              <cell title="Title" name="Title" colspan="2" />
+            </row>
+            <row>
+              <cell title="Description" name="Description" colspan="2" rowspan="4" />
+            </row>
+            <row />
+            <row />
+            <row />
+            <row>
+              <cell title="Category" name="CategoryID" />
+              <cell title="Location" name="LocationID" />
+            </row>
+            <row>
+              <cell />
+              <cell title="Created By" name="CreatedBy">
+                <properties readonly="control" oncreatevalue="~USERID" />
+              </cell>
+            </row>
+          </rows>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+    <cell title="Created IP" name="CreatedIP">
+      <properties oncreatevalue="~IP" />
+    </cell>
+    <cell title="Created On" name="CreatedOn">
+      <properties oncreatevalue="~NOW" />
+    </cell>
+    <cell title="Modified By" name="ModifiedBy">
+      <properties oncreatevalue="~USERID" onupdatevalue="~USERID" />
+    </cell>
+    <cell title="Modified IP" name="ModifiedIP">
+      <properties oncreatevalue="~IP" onupdatevalue="~IP" />
+    </cell>
+    <cell title="Modified On" name="ModifiedOn">
+      <properties oncreatevalue="~NOW" onupdatevalue="~NOW" />
+    </cell>
+    <cell title="Repeat Mode" name="RepeatMode">
+      <properties oncreatevalue="0" />
+    </cell>
+    <cell title="Repeat Period" name="RepeatPeriod" />
+  </hidden>
+</form>

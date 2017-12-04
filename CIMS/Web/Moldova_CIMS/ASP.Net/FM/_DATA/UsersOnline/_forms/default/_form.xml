@@ -1,0 +1,25 @@
+<form>
+  <header />
+  <description />
+  <print />
+  <tabs>
+    <tab title="General" name="tab_general">
+      <sections>
+        <section name="sec_info" title="Info" showlabel="true" decoration="line" columns="2">
+          <cells>
+            <cell name="Id" title="Id" column="0" row="0" colspan="2" rowspan="1" />
+            <cell name="UserId" title="UserId" column="0" row="1" colspan="2" rowspan="1" />
+            <cell name="UserName" title="User Name" column="0" row="2" colspan="2" rowspan="1" />
+            <cell name="SessionId" title="SessionId" column="0" row="3" colspan="2" rowspan="1" />
+            <cell name="Page" title="Page" column="0" row="4" colspan="2" rowspan="1" />
+            <cell name="StartTime" title="StartTime" column="0" row="5" colspan="2" rowspan="1" />
+            <cell name="LastActivityTime" title="LastActivityTime" column="0" row="6" colspan="2" rowspan="1" />
+            <cell name="IPAddress" title="IPAddress" column="0" row="7" colspan="2" rowspan="1" />
+          </cells>
+        </section>
+      </sections>
+    </tab>
+  </tabs>
+  <hidden>
+  </hidden>
+</form>

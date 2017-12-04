@@ -1,0 +1,21 @@
+<view>
+  <header title="" />
+  <description title="" />
+  <row keyfield="ID">
+    <cell title="Title" name="Title" />
+    <cell title="CreatedOn" name="CreatedOn" width="100" />
+    <cell title="Instance Id" name="InstanceId" width="100" />
+    <cell title="Status" name="Status" width="100" align="center" />
+    <cell title="Assign To Role" name="AssignToRole" width="100" />
+    <cell title="Assign To User" name="AssignToUser" width="100" />
+    <cell name="ProcessName" title="Process Name" width="100" />
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+    <filter>
+      <condition value="STATE_TaskOriented1" attribute="ProcessName" operator="eq" />
+    </filter>
+  </fetch>
+</view>

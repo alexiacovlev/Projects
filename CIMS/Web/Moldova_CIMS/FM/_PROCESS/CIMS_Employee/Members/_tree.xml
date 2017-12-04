@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Employee" name="" image="" navigator="false">
+  <Folders>
+    <Folder title="Details" name="Details" image="folder.png" ico="a0c3" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Employment" name="Employment" image="folder.png" ico="a0c3" control="FORM">
+      <Folders />
+    </Folder>
+    <Folder title="Subjects" name="Subjects" image="folder.png" ico="a0c3" control="GRID">
+      <Folders />
+    </Folder>
+  </Folders>
+  <WindowMask table="CIMS_Employee">Employee: #FullName#</WindowMask>
+</Tree>

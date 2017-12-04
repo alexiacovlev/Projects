@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tree xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="Accounting" name="" image="" navigator="false" width="330">
+  <Folders>
+    <Folder title="Cashing" name="Cashing" image="folder.png" ico="a0e4" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Refunds" name="Refunds" image="folder.png" ico="a0e5" control="">
+      <Folders />
+    </Folder>
+    <Folder title="Settings" name="Settings" image="folder.png" ico="a082" control="">
+      <Folders>
+        <Folder title="Settings" name="Settings1" image="folder.png" ico="a082" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Encashiment plan" name="Encashiment_plan" image="folder.png" ico="a082" control="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Reports" name="Reports" image="folder.png" ico="b020" control="">
+      <Folders>
+        <Folder title="Payments by day" name="Payments_by_day" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Payments by month" name="Payments_by_month" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Debts by day" name="Debts_by_day" image="folder.png" ico="b020" control="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+    <Folder title="Classifiers" name="Classifiers" image="folder.png" ico="e806" control="">
+      <Folders>
+        <Folder title="Cashing articles" name="Cashing_articles" image="folder.png" ico="e806" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Payment articles" name="Payment_articles" image="folder.png" ico="e806" control="">
+          <Folders />
+        </Folder>
+        <Folder title="Cashing taxes" name="Cashing_taxes" image="folder.png" ico="e806" control="">
+          <Folders />
+        </Folder>
+      </Folders>
+    </Folder>
+  </Folders>
+</Tree>

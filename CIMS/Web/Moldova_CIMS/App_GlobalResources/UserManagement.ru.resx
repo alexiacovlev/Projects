@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="info_ChangePassword_Header" xml:space="preserve">
+    <value>Изменение пароля для эккаунта</value>
+  </data>
+  <data name="info_ConfirmPassword" xml:space="preserve">
+    <value>Введите ещё раз</value>
+  </data>
+  <data name="info_CurrentPassword" xml:space="preserve">
+    <value>Текщий пароль</value>
+  </data>
+  <data name="info_Email" xml:space="preserve">
+    <value>Емэйл</value>
+  </data>
+  <data name="info_FirstName" xml:space="preserve">
+    <value>Ваше имя</value>
+  </data>
+  <data name="info_LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="info_NewPassword" xml:space="preserve">
+    <value>Укажиет новый пароль</value>
+  </data>
+  <data name="info_PasswordCommentMask" xml:space="preserve">
+    <value>Пароль должен быть не короче чем {0} символов&lt;br /&gt;и должен содержать хотябы один символ т.к. @ или #.</value>
+  </data>
+  <data name="Personal Info" xml:space="preserve">
+    <value>Персональные данные</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="info_msg_CompleteAll" xml:space="preserve">
+    <value>Заполните все обязательные поля.</value>
+  </data>
+  <data name="info_msg_InfoChanged" xml:space="preserve">
+    <value>Ваши персональные данные успешно изменены.</value>
+  </data>
+  <data name="info_msg_InfoChangedComment" xml:space="preserve">
+    <value>Для отражения изменений на странице сайта, обновите окошко браузера.</value>
+  </data>
+  <data name="info_msg_PasswordChanged" xml:space="preserve">
+    <value>Ваш пароль успешно изменён.</value>
+  </data>
+  <data name="info_msg_PasswordConfirmFailed" xml:space="preserve">
+    <value>Поле 'Подтвердить пароль' не соответствует данным 'Новый пароль'. &lt;br/&gt;Повторите ввод пароля.</value>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="btnRegister" xml:space="preserve">
+    <value>Зарегестрировать</value>
+  </data>
+  <data name="btnSubmit" xml:space="preserve">
+    <value>Подтвердить</value>
+  </data>
+  <data name="btnApply" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="ChPwd_EnforcePassword" xml:space="preserve">
+    <value>Ваш пароль должен быть определённой длины и содержать хоть один специальный символ.</value>
+  </data>
+  <data name="ChPwd_Header" xml:space="preserve">
+    <value>Изменение пароля пользователя</value>
+  </data>
+  <data name="ChPwd_msg_changed" xml:space="preserve">
+    <value>Пароль был успешно изменён.</value>
+  </data>
+  <data name="ChPwd_NewPassword" xml:space="preserve">
+    <value>Новый пароль</value>
+  </data>
+  <data name="Reg_Description" xml:space="preserve">
+    <value>Для успешной регистарции, заполните все поля помеченные жирным шрифтом</value>
+  </data>
+  <data name="Reg_Email" xml:space="preserve">
+    <value>Электронный адрес</value>
+  </data>
+  <data name="Reg_FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Reg_Header" xml:space="preserve">
+    <value>Регистрация нового пользователя</value>
+  </data>
+  <data name="Reg_LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Reg_msg_PasswordLength" xml:space="preserve">
+    <value>Пароль пользователя должен содержать больше символов.</value>
+  </data>
+  <data name="Reg_msg_Required" xml:space="preserve">
+    <value>Поле является обязательным.</value>
+  </data>
+  <data name="Reg_msg_UserNameLength" xml:space="preserve">
+    <value>Логин пользователя должен содержать больше символов.</value>
+  </data>
+  <data name="Reg_msg_WrongEmail" xml:space="preserve">
+    <value>Вы ввели некорректный емэйл. Проверьте написание.</value>
+  </data>
+  <data name="Reg_Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="Reg_PortalRole" xml:space="preserve">
+    <value>Роль в портале</value>
+  </data>
+  <data name="Reg_Section1" xml:space="preserve">
+    <value>Основные данные</value>
+  </data>
+  <data name="Reg_Section2" xml:space="preserve">
+    <value>Системные данные</value>
+  </data>
+  <data name="Reg_UserName" xml:space="preserve">
+    <value>Логин пользователя</value>
+  </data>
+  <data name="Req_PasswordCommentMask" xml:space="preserve">
+    <value>Пароль должен быть не короче чем {0} символов&lt;br /&gt;и должен содержать хотябы один символ т.к. @ или #.</value>
+  </data>
+  <data name="Recovery_Hdr" xml:space="preserve">
+    <value>Запрос на изменение пароля</value>
+  </data>
+  <data name="Recovery_Desc" xml:space="preserve">
+    <value>Укажите свой емэйл, прикреплённый к вашему эккаунту.&lt;br/&gt;Мы вышлем вам дальнейшие инструкции.</value>
+  </data>
+  <data name="msg_changepassword_failed" xml:space="preserve">
+    <value>Пароль не может быть изменён.&lt;br/&gt;Проверьте введённые данные.</value>
+  </data>
+  <data name="msg_changepassword_enforce" xml:space="preserve">
+    <value>Ваш пароль должен быть определённой длины и содержать хоть один специальный символ.</value>
+  </data>
+  <data name="info_BackToLogin" xml:space="preserve">
+    <value>Вернуться на логин</value>
+  </data>
+  <data name="info_Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Recovery_processing" xml:space="preserve">
+    <value>Обрабатываем вашу заявку</value>
+  </data>
+  <data name="Recovery_msg_sent" xml:space="preserve">
+    <value>Мы отправили письмо с дальнейшими инструкциями на ваш емэйл.</value>
+  </data>
+  <data name="btnContinue" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="info_msg_TicketNotValid" xml:space="preserve">
+    <value>Этот линк для сброса пароля уже не действителен.</value>
+  </data>
+  <data name="The account not found" xml:space="preserve">
+    <value>Учётная запись с таким емэйлом не зарегестрирована</value>
+  </data>
+  <data name="The user account has been locked out." xml:space="preserve">
+    <value>Учётная запись заблокирована.</value>
+  </data>
+  <data name="CommandText_LOCK" xml:space="preserve">
+    <value>Приложение заблокировано.</value>
+  </data>
+  <data name="msg_changepassword_usedbefore" xml:space="preserve">
+    <value>Этот пароль вы уже использовали.&lt;br/&gt;Укажите другой пароль.</value>
+  </data>
+</root>

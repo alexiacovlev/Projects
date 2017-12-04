@@ -1,0 +1,9 @@
+<set>
+<column name="InProgress" value="1"/>
+  <column name="IncidentStateId" value="1"/>
+  <column name="ModifiedIP" value="~IP"/>
+  <column name="ModifiedBy" value="~USERID"/>
+  <column name="ModifiedOn" value="~NOW"/>
+  <column name="IsWorkflowCreated" value="0"/>
+  <column name="IncidentStatusId" value="3"/>
+</set>

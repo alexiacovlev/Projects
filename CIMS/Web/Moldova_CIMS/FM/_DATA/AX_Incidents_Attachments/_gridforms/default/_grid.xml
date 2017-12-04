@@ -1,0 +1,27 @@
+<view ordernumber="false">
+  <row>
+    <cell name="FileAttachment" title="File Attachment">
+      <properties requiredlevel="required" />
+    </cell>
+    <cell name="CreatedBy" title="Created By" width="150">
+      <properties requiredlevel="recommended" readonly="true" oncreatevalue="~USERID" />
+    </cell>
+    <cell name="CreatedOn" title="Created On" width="100">
+      <properties requiredlevel="recommended" oncreatevalue="~NOW" />
+    </cell>
+  </row>
+  <fetch>
+    <sort>
+      <column name="CreatedOn" ascending="false" />
+    </sort>
+  </fetch>
+  <handlers>
+    <smartedit enabled="true" />
+    <select enabled="false">
+    </select>
+    <create enabled="true">
+    </create>
+    <delete enabled="true" />
+  </handlers>
+  <autoNewRow>off</autoNewRow>
+</view>

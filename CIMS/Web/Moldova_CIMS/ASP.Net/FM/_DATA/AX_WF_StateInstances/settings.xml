@@ -1,0 +1,34 @@
+<entity version="4.0">
+  <header title="" />
+  <description title="" />
+  <datasource name="AX_WF_StateInstances" type="DB" />
+  <primarykey>ID</primarykey>
+  <watermark>Images/Views/Logo_Default.png</watermark>
+  <fields>
+    <field title="ID" name="ID" type="Text" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Guid" />
+    <field title="Application Id" name="ApplicationId" type="Text" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Guid">
+      <extract table="aspnet_Applications" view="default" />
+    </field>
+    <field title="Process Name" name="ProcessName" type="Text" uimask="00111" readonly="false" required="true" size="100" description="" format="" dbtype="String" />
+    <field title="Key Value" name="KeyValue" type="Text" uimask="00111" readonly="false" required="true" size="100" description="" format="" dbtype="String" />
+    <field title="State Name" name="StateName" type="Text" uimask="00111" readonly="false" required="true" size="100" description="" format="" dbtype="String" />
+    <field title="State Title" name="StateTitle" type="Text" uimask="00111" readonly="false" required="false" size="200" description="" format="" dbtype="StringUnicode" />
+    <field title="Table Name" name="TableName" type="Text" uimask="00111" readonly="false" required="true" size="50" description="" format="" dbtype="String" />
+    <field title="Key Name" name="KeyName" type="Text" uimask="00111" readonly="false" required="true" size="50" description="" format="" dbtype="String" />
+    <field title="Created By" name="CreatedBy" type="Text" uimask="00111" readonly="false" required="true" size="" description="" format="" dbtype="Guid">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field title="Created On" name="CreatedOn" type="DateTime" uimask="00111" readonly="false" required="true" size="" description="" format="datetime" dbtype="DateTime" />
+    <field title="Modified By" name="ModifiedBy" type="Text" uimask="00111" readonly="false" required="false" size="" description="" format="" dbtype="Guid">
+      <extract table="aspnet_Membership" view="default" />
+    </field>
+    <field title="Modified On" name="ModifiedOn" type="DateTime" uimask="00111" readonly="false" required="false" size="" description="" format="datetime" dbtype="DateTime" />
+    <field title="Error Message" name="ErrorMessage" type="Text" uimask="00111" readonly="false" required="false" size="200" description="" format="textarea" dbtype="String" />
+    <field title="Timeout" name="Timeout" type="DateTime" uimask="00111" readonly="false" required="false" size="" description="" format="datetime" dbtype="DateTime" />
+    <field title="History" name="History" type="EditableGrid" uimask="00111" readonly="false" required="false" size="" description="" format="" dbtype="">
+      <slavegrid table="AX_WF_StateHistory" grid="default">
+        <column name="InstanceId" type="parentkey" />
+      </slavegrid>
+    </field>
+  </fields>
+</entity>
